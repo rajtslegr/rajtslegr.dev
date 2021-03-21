@@ -1,45 +1,23 @@
-import { GetServerSideProps, NextPage } from 'next';
-interface Props {
-  launch: {
-    mission: string;
-    site: string;
-    timestamp: number;
-    rocket: string;
-  };
-}
+import { NextPage } from 'next';
+import { useTheme } from 'next-themes';
+import React from 'react';
+import ThemeButton from '../components/ThemeButton';
 
-const IndexPage: NextPage<Props> = ({ launch }) => {
-  const date = new Date(launch.timestamp);
+const IndexPage: NextPage = () => {
+  const { theme, setTheme } = useTheme();
+
   return (
-    <div className="container mx-auto flex justify-center align-middle">
-      <div className="min-w-0 max-w-lg m-4 p-4 text-black border border-solid border-gray-400 rounded-lg shadow-xs">
-        <h4 className="mb-4 font-semibold"> Next SpaceX Launch: {launch.mission}</h4>
-        <p>
-          {launch.rocket} will take off from {launch.site} on {date.toDateString()}
-        </p>
+    <>
+      <ThemeButton handleClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+        asd
+      </ThemeButton>
+      <div className="container flex justify-center items-top h-screen mx-auto">
+        <div className="flex justify-center items-center w-full md:w-1/3 h-1/5 m-4 p-4 border border-solid border-gray-400 rounded-lg shadow-xs">
+          <h1 className="mb-4 font-semibold">Coming soon...</h1>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
 export default IndexPage;
-
-/*
- * More information about getServerSideProps:
- * https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering
- */
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const response = await fetch('https://api.spacexdata.com/v3/launches/next');
-  const nextLaunch = await response.json();
-
-  return {
-    props: {
-      launch: {
-        mission: nextLaunch.mission_name,
-        site: nextLaunch.launch_site.site_name_long,
-        timestamp: nextLaunch.launch_date_unix * 1000,
-        rocket: nextLaunch.rocket.rocket_name,
-      },
-    },
-  };
-};

@@ -1,11 +1,15 @@
 import { ThemeProvider } from 'next-themes';
 import { AppProps } from 'next/app';
+import React from 'react';
+import Layout from '../components/Layout';
 import '../styles/index.css';
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <ThemeProvider defaultTheme="light" attribute="class">
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   );
 };

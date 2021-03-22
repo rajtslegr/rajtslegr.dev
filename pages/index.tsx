@@ -1,15 +1,11 @@
 import { NextPage } from 'next';
-import { useTheme } from 'next-themes';
-import ThemeButton from '../components/ThemeButton';
+import React from 'react';
 
 const IndexPage: NextPage = () => {
-  const { theme, setTheme } = useTheme();
-
   return (
     <>
-      <ThemeButton handleClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} />
-      <div className="container flex justify-center items-top h-screen mx-auto">
-        <div className="flex justify-center items-center w-full md:w-1/3 h-1/5 m-4 p-4 border border-solid border-gray-400 rounded-lg shadow-xs">
+      <div className="container flex justify-center mx-auto">
+        <div className="flex justify-center items-center w-full m-4 p-4">
           <h1 className="mb-4 font-semibold">Coming soon...</h1>
         </div>
       </div>

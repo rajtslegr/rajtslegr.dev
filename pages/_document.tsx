@@ -9,7 +9,7 @@ class MyDocument extends Document {
   render() {
     const GA_TRACKING_ID = process.env.GTAG;
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
           <script
@@ -25,6 +25,13 @@ class MyDocument extends Document {
                 `,
             }}
           />
+          <link rel="preconnect" href="https://www.google-analytics.com" />
+          <meta property="title" content="Petr Rajtslegr | Full-stack Dev" />
+          <meta
+            name="description"
+            content="Petr Rajtslegr - Full-stack developer based in Prague, Czech Republic."
+          ></meta>
+          <meta name="keywords" content="HTML, CSS, JavaScript, developer, Petr, Rajtslegr"></meta>
         </Head>
         <body>
           <Main />

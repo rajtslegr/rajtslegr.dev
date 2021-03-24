@@ -10,7 +10,7 @@ const NavBar: React.FC<Props> = ({ children }) => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <nav className="fixed w-full">
+    <nav className="fixed w-full backdrop-blur">
       <div className="container flex h-full justify-between items-center mx-1 sm:mx-auto px-4">
         {children}
         <ThemeButton handleClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} />

@@ -8,10 +8,8 @@ const IndexPage: NextPage = () => {
       <Head>
         <title>Petr Rajtslegr | Full-stack Dev</title>
       </Head>
-      <div className="container flex justify-center mx-auto">
-        <div className="flex justify-center items-center w-full m-4 p-4">
-          <h1 className="mb-4 font-semibold">Coming soon...</h1>
-        </div>
+      <div className="container flex flex-col items-center mx-auto m-4 p-4">
+        <h1 className="mb-4 font-semibold">Coming soon...</h1>
       </div>
     </>
   );

@@ -3,9 +3,13 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {},
+    backdropFilter: {
+      none: 'none',
+      blur: 'blur(5px)',
+    },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('tailwindcss-filters')],
 };

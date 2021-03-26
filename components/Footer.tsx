@@ -5,7 +5,7 @@ interface IExternalLink {
   children: string;
 }
 
-const ExternalLink = ({ href, children }: IExternalLink) => (
+const ExternalLink: React.FC<IExternalLink> = ({ href, children }) => (
   <a
     className="text-gray-500 hover:text-gray-600 dark:hover:text-gray-400  transition"
     target="_blank"

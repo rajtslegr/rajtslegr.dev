@@ -1,13 +1,22 @@
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
+import { JSXElementConstructor, ReactElement, ReactFragment } from 'react';
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
+  static async getInitialProps(
+    ctx: DocumentContext,
+  ): Promise<{
+    html: string;
+    head?: (JSX.Element | null)[] | undefined;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    styles?: ReactElement<any, string | JSXElementConstructor<any>>[] | ReactFragment | undefined;
+  }> {
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
   }
 
-  render() {
+  render(): JSX.Element {
     const GA_TRACKING_ID = process.env.GTAG;
+
     return (
       <Html lang="en">
         <Head>
@@ -26,6 +35,7 @@ class MyDocument extends Document {
             }}
           />
           <link rel="preconnect" href="https://www.google-analytics.com" />
+          <link rel="shortcut icon" type="image/jpg" href="/hero.png" />
           <meta property="title" content="Petr Rajtslegr | Full-stack Dev" />
           <meta
             name="description"

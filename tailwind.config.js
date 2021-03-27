@@ -3,10 +3,6 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {},
-    filter: {
-      none: 'none',
-      grayscale: 'grayscale(90%)',
-    },
     backdropFilter: {
       none: 'none',
       blur: 'blur(5px)',

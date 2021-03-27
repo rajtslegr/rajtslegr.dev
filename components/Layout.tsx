@@ -9,7 +9,7 @@ interface Props {
 const Layout: React.FC<Props> = ({ children }) => {
   return (
     <div className="flex flex-col items-center min-h-screen">
-      <NavBar>Petr Rajtslegr</NavBar>
+      <NavBar />
       <main className="flex-auto w-full pt-16">{children}</main>
       <Footer />
     </div>

@@ -7,7 +7,7 @@ interface IExternalLink {
 
 const ExternalLink: React.FC<IExternalLink> = ({ href, children }) => (
   <a
-    className="text-gray-500 hover:text-gray-600 dark:hover:text-gray-400  transition"
+    className="text-gray-500 hover:text-gray-600 dark:hover:text-gray-400 transition"
     target="_blank"
     rel="noopener noreferrer"
     href={href}
@@ -18,7 +18,7 @@ const ExternalLink: React.FC<IExternalLink> = ({ href, children }) => (
 
 const Footer: React.FC = () => {
   return (
-    <div className="bottom-0 w-11/12 flex flex-row justify-start sm:w-1/2 p-2 sm:p-6 border-t border-gray-500">
+    <div className="bottom-0 w-11/12 flex flex-row justify-start sm:w-3/4 md:w-1/2 p-2 sm:p-6 border-t border-gray-500">
       <div className="flex flex-col space-y-2">
         <ExternalLink href="https://github.com/RajceP">GitHub</ExternalLink>
         <ExternalLink href="https://twitter.com/RajceP">Twitter</ExternalLink>

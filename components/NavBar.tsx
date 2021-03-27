@@ -7,7 +7,7 @@ const NavBar: React.FC = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <nav className="fixed w-full backdrop-blur">
+    <nav className="fixed w-full shadow bg-white dark:bg-black">
       <div className="container flex h-full lg:w-4/6 justify-between items-center mx-1 sm:mx-auto px-4">
         <ul>
           <li className="space-x-2">

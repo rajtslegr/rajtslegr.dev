@@ -1,8 +1,14 @@
-import { NextPage } from 'next';
+import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
+import GitHub from '../components/GitGub';
+import { IGitHubData } from '../types/types';
 
-const IndexPage: NextPage = () => {
+interface Props {
+  gitHubData: IGitHubData[];
+}
+
+const IndexPage: NextPage<Props> = ({ gitHubData }) => {
   return (
     <>
       <Head>
@@ -15,10 +21,25 @@ const IndexPage: NextPage = () => {
           alt="Hero"
           className="rounded-full shadow-xl"
         ></img>
-        <h1 className="hidden lg:block text-2xl">Petr Rajtslegr</h1>
+        <h1 className="hidden 5xl:block text-2xl">Petr Rajtslegr</h1>
       </div>
+      <GitHub data={gitHubData} />
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const res = await fetch(
+    'https://api.github.com/users/rajcep/repos?per_page=6&sort=pushed&direction=desc',
+  );
+  const gitHubData = await res.json();
+
+  return {
+    props: {
+      gitHubData,
+    },
+    revalidate: 3600,
+  };
 };
 
 export default IndexPage;

@@ -1,11 +1,10 @@
 {
-  "name": "nextjs-typescript",
+  "name": "rajtslegr.com",
   "version": "v1.0.0",
-  "license": "MIT",
   "author": {
-    "name": "Paulin TROGNON",
-    "email": "contact@paulintrognon.fr",
-    "url": "https://paulintrognon.fr"
+    "name": "Petr Rajtslegr",
+    "email": "petr.rajtslegr@gmail.com",
+    "url": "https://rajtslegr.com"
   },
   "scripts": {
     "dev": "next dev",

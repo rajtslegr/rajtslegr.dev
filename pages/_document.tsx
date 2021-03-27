@@ -35,7 +35,7 @@ class MyDocument extends Document {
             }}
           />
           <link rel="preconnect" href="https://www.google-analytics.com" />
-          <link rel="shortcut icon" type="image/jpg" href="/hero.png" />
+          <link rel="shortcut icon" type="image/jpg" href="/hero-1.jpg" />
           <meta property="title" content="Petr Rajtslegr | Full-stack Dev" />
           <meta
             name="description"

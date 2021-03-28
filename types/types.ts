@@ -7,4 +7,16 @@ interface IGitHubData {
   watchers_count: number;
 }
 
-export type { IGitHubData };
+interface ILastFmData {
+  recenttracks: {
+    track: {
+      name: string;
+      date: { '#text': string };
+      album: { '#text': string };
+      artist: { '#text': string };
+      image: { '#text': string }[];
+    }[];
+  };
+}
+
+export type { IGitHubData, ILastFmData };

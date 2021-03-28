@@ -1,5 +1,4 @@
 import { useTheme } from 'next-themes';
-import React from 'react';
 import NavLink from './NavLink';
 import ThemeButton from './ThemeButton';
 
@@ -7,7 +6,7 @@ const NavBar: React.FC = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <nav className="fixed w-full shadow bg-white dark:bg-black">
+    <nav className="fixed w-full shadow bg-white dark:bg-dark">
       <div className="container flex h-full lg:w-4/6 justify-between items-center mx-1 sm:mx-auto px-4">
         <ul>
           <li className="space-x-2">

@@ -13,7 +13,7 @@ const NavLink: React.FC<Props> = ({ children, href, ...props }) => {
       {router.pathname === href ? (
         React.cloneElement(<a>{children}</a>)
       ) : (
-        <a className="text-gray-500 hover:text-gray-600 dark:hover:text-gray-400 transition">
+        <a className="text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition">
           {children}
         </a>
       )}

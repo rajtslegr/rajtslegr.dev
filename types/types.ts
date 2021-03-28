@@ -11,7 +11,7 @@ interface ILastFmData {
   recenttracks: {
     track: {
       name: string;
-      date: { '#text': string };
+      date: { uts: string; '#text': string };
       album: { '#text': string };
       artist: { '#text': string };
       image: { '#text': string }[];

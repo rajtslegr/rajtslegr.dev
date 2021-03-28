@@ -1,4 +1,3 @@
-import React from 'react';
 import { IGitHubData } from '../types/types';
 
 interface IGitHubCard {
@@ -41,7 +40,7 @@ const eyeIcon = (
 );
 
 const GitHubCard: React.FC<IGitHubCard> = ({ children, link, language, stars, watches }) => (
-  <div className="flex flex-col border rounded p-2 m-2 border-gray-600 shadow">
+  <div className="flex flex-col border rounded p-2 m-2 border-gray-600 shadow hover:shadow-lg transition">
     <a href={link} rel="noopener noreferrer" target="_blank">
       <div className="flex flex-row h-6">
         {DocIcon}
@@ -67,20 +66,23 @@ const GitHub: React.FC<Props> = ({ data }) => {
 
   if (Array.isArray(data)) {
     render = (
-      <div className="py-12 md:grid xl:grid-cols-2">
-        {data?.map(
-          ({ node_id, full_name, html_url, language, stargazers_count, watchers_count }) => (
-            <GitHubCard
-              key={node_id}
-              link={html_url}
-              language={language}
-              stars={stargazers_count}
-              watches={watchers_count}
-            >
-              {full_name}
-            </GitHubCard>
-          ),
-        )}
+      <div className="pt-12">
+        <p className="text-2xl m-2">GitHub</p>
+        <div className="md:grid xl:grid-cols-2">
+          {data?.map(
+            ({ node_id, full_name, html_url, language, stargazers_count, watchers_count }) => (
+              <GitHubCard
+                key={node_id}
+                link={html_url}
+                language={language}
+                stars={stargazers_count}
+                watches={watchers_count}
+              >
+                {full_name}
+              </GitHubCard>
+            ),
+          )}
+        </div>
       </div>
     );
   }

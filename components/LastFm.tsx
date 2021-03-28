@@ -15,7 +15,6 @@ const PlayIcon = (
 );
 
 const LastFm: React.FC<Props> = ({ data }) => {
-  console.log(data);
   return (
     <>
       <p className="text-2xl m-2 my-2">Last.fm</p>

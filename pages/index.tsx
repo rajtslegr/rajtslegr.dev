@@ -11,7 +11,6 @@ interface Props {
 }
 
 const IndexPage: NextPage<Props> = ({ gitHubData, lastFmData }) => {
-  console.log(lastFmData);
   return (
     <>
       <Head>

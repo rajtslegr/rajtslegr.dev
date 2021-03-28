@@ -11,6 +11,7 @@ interface Props {
 }
 
 const IndexPage: NextPage<Props> = ({ gitHubData, lastFmData }) => {
+  console.log(lastFmData);
   return (
     <>
       <Head>
@@ -37,7 +38,7 @@ export const getStaticProps: GetStaticProps = async () => {
       gitHubData,
       lastFmData,
     },
-    revalidate: 120,
+    revalidate: 60,
   };
 };
 

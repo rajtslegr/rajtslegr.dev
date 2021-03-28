@@ -10,6 +10,7 @@ interface IGitHubData {
 interface ILastFmData {
   recenttracks: {
     track: {
+      '@attr'?: { nowplaying: boolean };
       name: string;
       date: { uts: string; '#text': string };
       album: { '#text': string };

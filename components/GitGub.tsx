@@ -42,9 +42,9 @@ const eyeIcon = (
 const GitHubCard: React.FC<IGitHubCard> = ({ children, link, language, stars, watches }) => (
   <div className="flex flex-col border rounded p-2 m-2 border-gray-600 shadow hover:shadow-lg transition">
     <a href={link} rel="noopener noreferrer" target="_blank">
-      <div className="flex flex-row h-6">
+      <div className="flex flex-row h-6 my-2">
         {DocIcon}
-        <span>{children}</span>
+        <span className="text-lg">{children}</span>
       </div>
       <div className="flex flex-row h-6 text-gray-500 dark:text-gray-400">
         <span>{language}</span>

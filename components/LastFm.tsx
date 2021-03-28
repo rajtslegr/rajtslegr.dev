@@ -38,7 +38,7 @@ const LastFm: React.FC<Props> = ({ data }) => {
                       className="border rounded border-gray-600 shadow"
                     />
                     <div className="flex flex-col">
-                      <p>{t.name}</p>
+                      <p className="text-lg my-2">{t.name}</p>
                       <p className="text-gray-500 dark:text-gray-400">{t.artist['#text']}</p>
                       <p className="text-gray-500 dark:text-gray-400">{t.album['#text']}</p>
                     </div>

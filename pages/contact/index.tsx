@@ -7,7 +7,7 @@ const About: NextPage = () => {
       <Head>
         <title>Petr Rajtslegr | About</title>
       </Head>
-      <div>Projects Works!</div>
+      <div>Contact Works!</div>
     </>
   );
 };

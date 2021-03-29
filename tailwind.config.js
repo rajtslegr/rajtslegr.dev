@@ -6,6 +6,9 @@ module.exports = {
       backgroundColor: {
         dark: '#131312',
       },
+      zIndex: {
+        '-1': '-1',
+      },
     },
   },
   variants: {

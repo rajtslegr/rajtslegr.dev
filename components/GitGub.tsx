@@ -61,13 +61,14 @@ const GitHubCard: React.FC<IGitHubCard> = ({ children, link, language, stars, wa
 
 const GitHub: React.FC<Props> = ({ data }) => {
   let render: JSX.Element | JSX.Element[] = (
-    <p className="flex justify-center py-12">Error fetching data from GitHub.</p>
+    <p className="flex justify-center p-6 italic text-gray-500 dark:text-gray-400">
+      Error fetching data from GitHub.
+    </p>
   );
 
   if (Array.isArray(data)) {
     render = (
-      <div className="pt-12">
-        <p className="text-2xl m-2">GitHub</p>
+      <>
         <div className="md:grid xl:grid-cols-2">
           {data?.map(
             ({ node_id, full_name, html_url, language, stargazers_count, watchers_count }) => (
@@ -83,11 +84,16 @@ const GitHub: React.FC<Props> = ({ data }) => {
             ),
           )}
         </div>
-      </div>
+      </>
     );
   }
 
-  return <>{render}</>;
+  return (
+    <>
+      <p className="text-4xl mx-2 my-4 pt-12">GitHub</p>
+      {render}
+    </>
+  );
 };
 
 export default GitHub;

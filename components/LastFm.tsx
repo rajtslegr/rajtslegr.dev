@@ -15,44 +15,58 @@ const PlayIcon = (
 );
 
 const LastFm: React.FC<Props> = ({ data }) => {
+  let render: JSX.Element | JSX.Element[] = (
+    <p className="flex justify-center p-6 italic text-gray-500 dark:text-gray-400">
+      Error fetching data from Last.fm.
+    </p>
+  );
+
+  if (data.recenttracks) {
+    render = (
+      <>
+        <div className="md:grid xl:grid-cols-2">
+          {data.recenttracks?.track.map((t, i) => {
+            if (i < 10) {
+              return (
+                <div
+                  key={i}
+                  className="flex flex-col m-2 p-2 border rounded border-gray-600 shadow hover:shadow-lg transition"
+                >
+                  <a href="https://last.fm/user/RajceP" rel="noopener noreferrer" target="_blank">
+                    <div className="flex flex-row items-center space-x-4">
+                      <img
+                        srcSet={`${t.image[0]['#text']} 32w, ${t.image[1]['#text']} 64w, ${t.image[2]['#text']} 128w, ${t.image[3]['#text']} 300w`}
+                        sizes="(max-width: 89px) 25vw, 89px"
+                        width={89}
+                        height={89}
+                        alt="Album art"
+                        className="border rounded border-gray-600 shadow"
+                      />
+                      <div className="flex flex-col">
+                        <p className="text-lg my-2">{t.name}</p>
+                        <p className="text-gray-500 dark:text-gray-400">{t.artist['#text']}</p>
+                        <p className="text-gray-500 dark:text-gray-400">{t.album['#text']}</p>
+                      </div>
+                      {t['@attr']?.nowplaying && (
+                        <div className="flex justify-end items-top flex-grow h-12 text-red-600 animate-pulse">
+                          {PlayIcon}
+                        </div>
+                      )}
+                    </div>
+                  </a>
+                </div>
+              );
+            }
+          })}
+        </div>
+      </>
+    );
+  }
+
   return (
     <>
-      <p className="text-2xl m-2 my-2">Last.fm</p>
-      <div className="md:grid xl:grid-cols-2">
-        {data.recenttracks?.track.map((t, i) => {
-          if (i < 10) {
-            return (
-              <div
-                key={i}
-                className="flex flex-col m-2 p-2 border rounded border-gray-600 shadow hover:shadow-lg transition"
-              >
-                <a href="https://last.fm/user/RajceP" rel="noopener noreferrer" target="_blank">
-                  <div className="flex flex-row items-center space-x-4">
-                    <img
-                      srcSet={`${t.image[0]['#text']} 32w, ${t.image[1]['#text']} 64w, ${t.image[2]['#text']} 128w, ${t.image[3]['#text']} 300w`}
-                      sizes="(max-width: 89px) 25vw, 89px"
-                      width={89}
-                      height={89}
-                      alt="Album art"
-                      className="border rounded border-gray-600 shadow"
-                    />
-                    <div className="flex flex-col">
-                      <p className="text-lg my-2">{t.name}</p>
-                      <p className="text-gray-500 dark:text-gray-400">{t.artist['#text']}</p>
-                      <p className="text-gray-500 dark:text-gray-400">{t.album['#text']}</p>
-                    </div>
-                    {t['@attr']?.nowplaying && (
-                      <div className="flex justify-end items-top flex-grow h-12 text-red-600 animate-pulse">
-                        {PlayIcon}
-                      </div>
-                    )}
-                  </div>
-                </a>
-              </div>
-            );
-          }
-        })}
-      </div>
+      <p className="text-4xl mx-2 my-4">Last.fm</p>
+      {render}
     </>
   );
 };

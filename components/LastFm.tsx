@@ -24,16 +24,16 @@ const LastFm: React.FC<Props> = ({ data }) => {
   if (data.recenttracks) {
     render = (
       <>
-        <div className="md:grid xl:grid-cols-2">
-          {data.recenttracks?.track.map((t, i) => {
+        <div className="md:grid xl:grid-cols-2 gap-4">
+          {data?.recenttracks?.track?.map((t, i) => {
             if (i < 10) {
               return (
                 <div
                   key={i}
-                  className="flex flex-col m-2 p-2 border rounded border-gray-600 shadow hover:shadow-lg transition"
+                  className="flex flex-col p-2 border rounded border-gray-600 shadow hover:shadow-lg transition"
                 >
                   <a href="https://last.fm/user/RajceP" rel="noopener noreferrer" target="_blank">
-                    <div className="flex flex-row items-center space-x-4">
+                    <div className="flex flex-row items-center space-x-2">
                       <img
                         srcSet={`${t.image[0]['#text']} 32w, ${t.image[1]['#text']} 64w, ${t.image[2]['#text']} 128w, ${t.image[3]['#text']} 300w`}
                         sizes="(max-width: 89px) 25vw, 89px"
@@ -65,7 +65,7 @@ const LastFm: React.FC<Props> = ({ data }) => {
 
   return (
     <>
-      <p className="text-4xl mx-2 my-4">Last.fm</p>
+      <p className="text-4xl my-4">Last.fm</p>
       {render}
     </>
   );

@@ -20,4 +20,22 @@ interface ILastFmData {
   };
 }
 
-export type { IGitHubData, ILastFmData };
+interface IIgData {
+  data: {
+    user: {
+      edge_owner_to_timeline_media: {
+        edges: {
+          node: {
+            id: string;
+            thumbnail_src: string;
+            edge_media_to_caption: { edges: { node: { text: string } }[] };
+            edge_media_preview_like: { count: number };
+            shortcode: string;
+          };
+        }[];
+      };
+    };
+  };
+}
+
+export type { IGitHubData, ILastFmData, IIgData };

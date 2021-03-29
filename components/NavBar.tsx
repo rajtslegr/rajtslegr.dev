@@ -12,7 +12,7 @@ const NavBar: React.FC = () => {
     <nav
       className={`fixed w-full bg-white dark:bg-dark ${!onTop ? 'shadow' : null} transition-shadow`}
     >
-      <div className="container flex h-full lg:w-4/6 justify-between items-center mx-1 sm:mx-auto px-4">
+      <div className="container flex h-full xl:w-4/6 justify-between items-center mx-auto px-4">
         <ul>
           <li className="space-x-2">
             <NavLink href="/">Home</NavLink>

@@ -40,9 +40,9 @@ const eyeIcon = (
 );
 
 const GitHubCard: React.FC<IGitHubCard> = ({ children, link, language, stars, watches }) => (
-  <div className="flex flex-col border rounded p-2 m-2 border-gray-600 shadow hover:shadow-lg transition">
+  <div className="flex flex-col p-2 border rounded border-gray-600 shadow hover:shadow-lg transition">
     <a href={link} rel="noopener noreferrer" target="_blank">
-      <div className="flex flex-row h-6 my-2">
+      <div className="flex flex-row h-6">
         {DocIcon}
         <span className="text-lg">{children}</span>
       </div>
@@ -69,7 +69,7 @@ const GitHub: React.FC<Props> = ({ data }) => {
   if (Array.isArray(data)) {
     render = (
       <>
-        <div className="md:grid xl:grid-cols-2">
+        <div className="md:grid xl:grid-cols-2 gap-4">
           {data?.map(
             ({ node_id, full_name, html_url, language, stargazers_count, watchers_count }) => (
               <GitHubCard
@@ -90,7 +90,7 @@ const GitHub: React.FC<Props> = ({ data }) => {
 
   return (
     <>
-      <p className="text-4xl mx-2 my-4 pt-12">GitHub</p>
+      <p className="text-4xl my-4 pt-12">GitHub</p>
       {render}
     </>
   );

@@ -24,7 +24,7 @@ const LastFm: React.FC<Props> = ({ data }) => {
   if (data.recenttracks) {
     render = (
       <>
-        <div className="md:grid xl:grid-cols-2 gap-4">
+        <div className="grid xl:grid-cols-2 gap-4">
           {data?.recenttracks?.track?.map((t, i) => {
             if (i < 10) {
               return (

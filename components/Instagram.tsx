@@ -47,10 +47,10 @@ const Instagram: React.FC<Props> = ({ data }) => {
                     backgroundImage: `url(${e.node.thumbnail_src})`,
                   }}
                 ></div>
-                <div className="absolute flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition inset-0 z-10 text-white text-6xl">
+                <div className="absolute flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition inset-0 z-10 text-gray-200 text-6xl">
                   <span className="">
-                    {heartIcon}
                     <span>{e.node.edge_media_preview_like.count}</span>
+                    {heartIcon}
                   </span>
                   <div className="absolute min-h-full bg-black opacity-25 left-0 right-0 -z-1"></div>
                 </div>

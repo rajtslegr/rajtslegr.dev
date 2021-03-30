@@ -69,7 +69,7 @@ const GitHub: React.FC<Props> = ({ data }) => {
   if (Array.isArray(data)) {
     render = (
       <>
-        <div className="md:grid xl:grid-cols-2 gap-4">
+        <div className="grid xl:grid-cols-2 gap-4">
           {data?.map(
             ({ node_id, full_name, html_url, language, stargazers_count, watchers_count }) => (
               <GitHubCard

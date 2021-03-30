@@ -22,20 +22,12 @@ interface ILastFmData {
 
 interface IIgData {
   data: {
-    user: {
-      edge_owner_to_timeline_media: {
-        edges: {
-          node: {
-            id: string;
-            thumbnail_src: string;
-            edge_media_to_caption: { edges: { node: { text: string } }[] };
-            edge_media_preview_like: { count: number };
-            shortcode: string;
-          };
-        }[];
-      };
-    };
-  };
+    id: string;
+    permalink: string;
+    media_url: string;
+    thumbnail_url: string;
+    caption: string;
+  }[];
 }
 
 export type { IGitHubData, ILastFmData, IIgData };

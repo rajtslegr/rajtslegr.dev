@@ -9,6 +9,9 @@ module.exports = {
       zIndex: {
         '-1': '-1',
       },
+      spacing: {
+        '1/1': '100%',
+      },
     },
   },
   variants: {

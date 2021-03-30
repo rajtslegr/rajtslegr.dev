@@ -40,7 +40,7 @@ export const getStaticProps: GetStaticProps = async () => {
     .catch(() => null);
 
   const igData = await fetch(
-    'https://www.instagram.com/graphql/query/?query_hash=472f257a40c653c64c666ce877d59d2b&variables={"id":"427246549","first":9}',
+    `https://graph.instagram.com/me/media?fields=id,permalink,media_url,thumbnail_url,caption&access_token=${process.env.INSTAGRAM_TOKEN}`,
   )
     .then((res) => res.json())
     .catch(() => null);

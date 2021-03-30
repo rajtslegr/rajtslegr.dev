@@ -21,7 +21,7 @@ const Instagram: React.FC<Props> = ({ data }) => {
                 key={e.id}
                 className={`${
                   i === 0 ? 'xl:row-span-2 xl:col-span-2' : null
-                } relative pb-1/1 border rounded border-gray-600 shadow hover:shadow-lg transition`}
+                } relative pb-1/1 -z-1 border rounded border-gray-600 shadow hover:shadow-lg transition`}
               >
                 <a href={e.permalink} rel="noopener noreferrer" target="_blank">
                   <img

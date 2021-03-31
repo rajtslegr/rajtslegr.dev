@@ -10,7 +10,9 @@ const NavBar: React.FC = () => {
 
   return (
     <nav
-      className={`fixed w-full bg-white dark:bg-dark ${!onTop ? 'shadow' : null} transition-shadow`}
+      className={`fixed w-full bg-white dark:bg-dark z-10 ${
+        !onTop ? 'shadow' : null
+      } transition-shadow`}
     >
       <div className="container flex h-full xl:w-4/6 justify-between items-center mx-auto px-4">
         <ul>

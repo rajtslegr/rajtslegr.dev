@@ -8,7 +8,7 @@ interface IExternalLink {
 
 const ExternalLink: React.FC<IExternalLink> = ({ href, children }) => (
   <a
-    className="text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition"
+    className="text-gray-500 transition dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
     target="_blank"
     rel="noopener noreferrer"
     href={href}
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
   const [year] = useState(new Date().getFullYear());
 
   return (
-    <div className="bottom-0 w-11/12 flex flex-row justify-evenly sm:w-3/4 md:w-1/2 p-2 sm:p-6 border-t border-gray-600">
+    <div className="bottom-0 flex flex-row w-11/12 p-2 border-t border-gray-600 justify-evenly sm:w-3/4 sm:p-6 md:w-1/2">
       <div className="flex flex-col space-y-2">
         <NavLink href="/">Home</NavLink>
         <NavLink href="/projects">Projects</NavLink>

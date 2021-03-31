@@ -14,7 +14,7 @@ const NavBar: React.FC = () => {
         !onTop ? 'shadow' : null
       } transition-shadow`}
     >
-      <div className="container flex h-full xl:w-4/6 justify-between items-center mx-auto px-4">
+      <div className="container flex items-center justify-between h-full px-4 mx-auto xl:w-4/6">
         <ul>
           <li className="space-x-2">
             <NavLink href="/">Home</NavLink>

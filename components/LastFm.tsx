@@ -24,13 +24,13 @@ const LastFm: React.FC<Props> = ({ data }) => {
   if (data.recenttracks) {
     render = (
       <>
-        <div className="grid xl:grid-cols-2 gap-4">
+        <div className="grid gap-4 xl:grid-cols-2">
           {data?.recenttracks?.track?.map((t, i) => {
             if (i < 10) {
               return (
                 <div
                   key={i}
-                  className="flex flex-col p-2 border rounded border-gray-600 shadow hover:shadow-lg transition"
+                  className="flex flex-col p-2 transition border border-gray-600 rounded shadow hover:shadow-lg"
                 >
                   <a href="https://last.fm/user/RajceP" rel="noopener noreferrer" target="_blank">
                     <div className="flex flex-row items-center space-x-2">
@@ -40,15 +40,15 @@ const LastFm: React.FC<Props> = ({ data }) => {
                         width={89}
                         height={89}
                         alt="Album art"
-                        className="border rounded border-gray-600 shadow"
+                        className="border border-gray-600 rounded shadow"
                       />
                       <div className="flex flex-col">
-                        <p className="text-lg my-2">{t.name}</p>
+                        <p className="my-2 text-lg">{t.name}</p>
                         <p className="text-gray-500 dark:text-gray-400">{t.artist['#text']}</p>
                         <p className="text-gray-500 dark:text-gray-400">{t.album['#text']}</p>
                       </div>
                       {t['@attr']?.nowplaying && (
-                        <div className="flex justify-end items-top flex-grow h-12 -z-1 text-red-600 animate-pulse">
+                        <div className="flex justify-end flex-grow h-12 text-red-600 items-top -z-1 animate-pulse">
                           {PlayIcon}
                         </div>
                       )}
@@ -65,7 +65,7 @@ const LastFm: React.FC<Props> = ({ data }) => {
 
   return (
     <>
-      <p className="text-4xl my-4">Last.fm</p>
+      <p className="my-4 text-4xl">Last.fm</p>
       {render}
     </>
   );

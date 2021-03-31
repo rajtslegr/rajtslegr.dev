@@ -13,7 +13,7 @@ const Instagram: React.FC<Props> = ({ data }) => {
 
   if (data) {
     render = (
-      <div className="grid grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 w-full gap-4">
+      <div className="grid w-full grid-cols-3 gap-4 xl:grid-cols-4 2xl:grid-cols-6">
         {data?.data?.map((e, i) => {
           if (i < 9) {
             return (
@@ -21,11 +21,11 @@ const Instagram: React.FC<Props> = ({ data }) => {
                 key={e.id}
                 className={`${
                   i === 0 ? 'xl:row-span-2 xl:col-span-2' : null
-                } relative pb-1/1 border rounded border-gray-600 shadow hover:shadow-lg transition`}
+                } relative transition border border-gray-600 rounded shadow pb-1/1 hover:shadow-lg`}
               >
-                <a className="z-10" href={e.permalink} rel="noopener noreferrer" target="_blank">
+                <a href={e.permalink} rel="noopener noreferrer" target="_blank">
                   <img
-                    className="absolute h-full w-full object-cover"
+                    className="absolute object-cover w-full h-full"
                     src={e.thumbnail_url || e.media_url}
                     alt={e.caption}
                     width={328}
@@ -42,7 +42,7 @@ const Instagram: React.FC<Props> = ({ data }) => {
 
   return (
     <>
-      <p className="text-4xl my-4">Instagram</p>
+      <p className="my-4 text-4xl">Instagram</p>
       {render}
     </>
   );

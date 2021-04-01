@@ -1,4 +1,4 @@
-interface IGitHubData {
+export interface IGitHubData {
   node_id: string;
   full_name: string;
   html_url: string;
@@ -7,7 +7,7 @@ interface IGitHubData {
   watchers_count: number;
 }
 
-interface ILastFmData {
+export interface ILastFmData {
   recenttracks: {
     track: {
       '@attr'?: { nowplaying: boolean };
@@ -20,7 +20,7 @@ interface ILastFmData {
   };
 }
 
-interface IIgData {
+export interface IIgData {
   data: {
     id: string;
     permalink: string;
@@ -29,5 +29,3 @@ interface IIgData {
     caption: string;
   }[];
 }
-
-export type { IGitHubData, ILastFmData, IIgData };

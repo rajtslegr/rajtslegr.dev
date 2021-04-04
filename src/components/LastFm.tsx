@@ -30,7 +30,7 @@ const LastFm: React.FC<Props> = ({ data }) => {
               return (
                 <div
                   key={i}
-                  className="flex flex-col p-2 transition border border-gray-600 rounded shadow hover:shadow-lg"
+                  className="flex flex-col p-2 transition border border-gray-200 rounded shadow hover:shadow-lg"
                 >
                   <a href="https://last.fm/user/RajceP" rel="noopener noreferrer" target="_blank">
                     <div className="flex flex-row items-center space-x-2">
@@ -40,7 +40,7 @@ const LastFm: React.FC<Props> = ({ data }) => {
                         width={89}
                         height={89}
                         alt="Album art"
-                        className="border border-gray-600 rounded shadow"
+                        className="border border-gray-200 rounded shadow"
                       />
                       <div className="flex flex-col">
                         <p className="my-2 text-lg">{t.name}</p>

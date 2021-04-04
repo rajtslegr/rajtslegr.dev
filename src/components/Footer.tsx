@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
   const [year] = useState(new Date().getFullYear());
 
   return (
-    <div className="bottom-0 flex flex-row w-11/12 p-2 border-t border-gray-600 justify-evenly sm:w-3/4 sm:p-6 md:w-1/2">
+    <div className="bottom-0 flex flex-row w-11/12 p-2 border-t border-gray-200 justify-evenly sm:w-3/4 sm:p-6 md:w-1/2">
       <div className="flex flex-col space-y-2">
         <NavLink href="/">Home</NavLink>
         <NavLink href="/projects">Projects</NavLink>

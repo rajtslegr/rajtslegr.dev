@@ -25,7 +25,7 @@ const ThemeButton: React.FC<Props> = ({ handleClick: handleClick }) => {
     <button
       aria-label="Toggle Dark Mode"
       type="button"
-      className="w-12 h-12 p-3 my-3 transition bg-gray-200 border border-gray-400 rounded-lg shadow dark:bg-gray-600 hover:shadow-lg"
+      className="w-12 h-12 p-3 my-3 transition bg-gray-200 rounded-lg shadow dark:bg-gray-600 hover:shadow-lg"
       onClick={handleClick}
     >
       {mounted && (

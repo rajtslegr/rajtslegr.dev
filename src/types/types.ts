@@ -29,3 +29,12 @@ export interface IIgData {
     caption: string;
   }[];
 }
+
+export interface IProject {
+  title: string;
+  description: string;
+  build: string;
+  image: string;
+  live?: string;
+  repo?: string;
+}

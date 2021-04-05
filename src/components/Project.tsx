@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import Image from 'next/image';
 import { IProject } from '../types/types';
 
 interface Props {
@@ -9,15 +10,14 @@ const Project: NextPage<Props> = ({ project: { title, description, build, image,
   return (
     <div className="flex flex-col overflow-hidden transition border rounded shadow hover:shadow-lg">
       <a href={repo} rel="noopener noreferrer" target="_blank">
-        <img
-          className="w-full border-b"
+        <Image
           src={`/static/images/projects/${image}`}
           alt={`${title} mockup`}
-          width={678}
-          height={400}
+          width={1100}
+          height={600}
         />
         <div className="flex flex-col px-2 py-4 sm:px-4">
-          <div className="mb-2 text-xl font-bold">{title}</div>
+          <span className="mb-2 text-xl font-bold">{title}</span>
           <p className="text-base text-gray-500 dark:text-gray-400">{description}</p>
           <p className="text-base text-gray-500 dark:text-gray-400">{build}</p>
         </div>

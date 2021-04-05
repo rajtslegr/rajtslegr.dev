@@ -1,5 +1,5 @@
+import Image from 'next/image';
 import { ILastFmData } from '../types/types';
-
 interface Props {
   data: ILastFmData;
 }
@@ -34,14 +34,15 @@ const LastFm: React.FC<Props> = ({ data }) => {
                 >
                   <a href="https://last.fm/user/RajceP" rel="noopener noreferrer" target="_blank">
                     <div className="flex flex-row items-center space-x-2">
-                      <img
-                        srcSet={`${t.image[0]['#text']} 32w, ${t.image[1]['#text']} 64w, ${t.image[2]['#text']} 128w, ${t.image[3]['#text']} 300w`}
-                        sizes="(max-width: 89px) 25vw, 89px"
-                        width={89}
-                        height={89}
-                        alt="Album art"
-                        className="border border-gray-200 rounded shadow"
-                      />
+                      <div className="relative w-24 h-24 border border-gray-200 rounded shadow">
+                        <Image
+                          src={t.image[3]['#text']}
+                          alt="Album art"
+                          layout="fill"
+                          objectFit="cover"
+                          sizes="100%"
+                        />
+                      </div>
                       <div className="flex flex-col">
                         <p className="my-2 text-lg">{t.name}</p>
                         <p className="text-gray-500 dark:text-gray-400">{t.artist['#text']}</p>

@@ -14,7 +14,7 @@ const Projects: NextPage<Props> = ({ projects }) => {
       <Head>
         <title>Petr Rajtslegr | Projects</title>
       </Head>
-      <div className="grid w-full gap-4 md:grid-cols-2">
+      <div className="grid w-full gap-4 lg:grid-cols-2">
         {projects.map((p, i) => {
           return <Project key={i} project={p} />;
         })}

@@ -23,6 +23,7 @@ const Project: NextPage<Props> = ({ project: { title, description, build, image,
             className={`w-full border-b  ${loaded ? 'opacity-100' : 'opacity-0'}`}
             src={`/static/images/projects/${image}`}
             alt={`${title} mockup`}
+            onLoad={() => setLoaded(true)}
           />
         </div>
         <div className="flex flex-col px-2 py-4 sm:px-4">

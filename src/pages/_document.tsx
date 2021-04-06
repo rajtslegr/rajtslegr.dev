@@ -43,7 +43,7 @@ class MyDocument extends Document {
           ></meta>
           <meta name="keywords" content="HTML, CSS, JavaScript, developer, Petr, Rajtslegr"></meta>
         </Head>
-        <body>
+        <body className="text-black bg-white dark:bg-dark dark:text-white">
           <Main />
           <NextScript />
         </body>

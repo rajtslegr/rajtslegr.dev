@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
+import ContactForm from '../../components/ContactFrom';
 
 const About: NextPage = () => {
   return (
@@ -7,7 +8,9 @@ const About: NextPage = () => {
       <Head>
         <title>Petr Rajtslegr | About</title>
       </Head>
-      <div>Contact Works!</div>
+      <div className="flex flex-col items-center justify-center">
+        <ContactForm />
+      </div>
     </>
   );
 };

@@ -49,7 +49,7 @@ const LastFm: React.FC<Props> = ({ data }) => {
                         <p className="text-gray-500 dark:text-gray-400">{t.album['#text']}</p>
                       </div>
                       {t['@attr']?.nowplaying && (
-                        <div className="flex justify-end flex-grow h-12 text-red-600 items-top -z-1 animate-pulse">
+                        <div className="flex justify-end flex-grow w-12 h-12 text-red-600 items-top -z-1 animate-pulse">
                           {PlayIcon}
                         </div>
                       )}

@@ -38,3 +38,22 @@ export interface IProject {
   live?: string;
   repo?: string;
 }
+
+export interface ISortedPostData {
+  date: string;
+  title: string;
+  id: string;
+}
+
+export interface IPostId {
+  params: {
+    id: string;
+  };
+}
+
+export interface IPostData {
+  date: string;
+  title: string;
+  id: string;
+  contentHtml: string;
+}

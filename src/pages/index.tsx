@@ -4,6 +4,8 @@ import GitHub from '../components/GitGub';
 import Hero from '../components/Hero';
 import Instagram from '../components/Instagram';
 import LastFm from '../components/LastFm';
+import { getRecentRepos } from '../lib/github';
+import { getRecentPosts } from '../lib/instagram';
 import { IGitHubData, IIgData } from '../types/types';
 
 interface Props {
@@ -26,17 +28,8 @@ const IndexPage: NextPage<Props> = ({ gitHubData, igData }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const gitHubData = await fetch(
-    'https://api.github.com/users/rajcep/repos?per_page=6&sort=pushed&direction=desc',
-  )
-    .then((res) => res.json())
-    .catch(() => null);
-
-  const igData = await fetch(
-    `https://graph.instagram.com/me/media?fields=id,permalink,media_url,thumbnail_url,caption&access_token=${process.env.INSTAGRAM_TOKEN}`,
-  )
-    .then((res) => res.json())
-    .catch(() => null);
+  const gitHubData = await getRecentRepos();
+  const igData = await getRecentPosts();
 
   return {
     props: {

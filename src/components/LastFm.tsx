@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import React from 'react';
 import useSWR from 'swr';
 import { ILastFmData } from '../types/types';
 import { fetcher } from '../utils/fetcher';
@@ -22,6 +23,27 @@ const LastFm: React.FC = () => {
     </p>
   );
 
+  if (!error) {
+    render = (
+      <div className="grid gap-4 xl:grid-cols-2">
+        {new Array(10).fill(undefined).map((i) => {
+          return (
+            <div key={i} className="flex flex-col p-2 transition border rounded shadow h-28">
+              <div className="flex flex-row space-x-2">
+                <div className="relative w-24 h-24 bg-gray-200 border rounded shadow animate-pulse"></div>
+                <div className="flex flex-col justify-between w-full">
+                  <div className="w-1/3 h-6 mb-4 bg-gray-200 rounded-sm animate-pulse"></div>
+                  <div className="w-3/5 h-4 bg-gray-200 rounded-sm animate-pulse"></div>
+                  <div className="w-3/5 h-4 bg-gray-200 rounded-sm animate-pulse"></div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
+
   if (!error && data?.recenttracks) {
     render = (
       <>
@@ -44,8 +66,8 @@ const LastFm: React.FC = () => {
                           sizes="100%"
                         />
                       </div>
-                      <div className="flex flex-col">
-                        <p className="my-2 text-lg">{t.name}</p>
+                      <div className="flex flex-col justify-between">
+                        <p className="mb-4 text-lg">{t.name}</p>
                         <p className="text-gray-500 dark:text-gray-400">{t.artist['#text']}</p>
                         <p className="text-gray-500 dark:text-gray-400">{t.album['#text']}</p>
                       </div>

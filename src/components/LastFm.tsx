@@ -1,8 +1,7 @@
 import Image from 'next/image';
+import useSWR from 'swr';
 import { ILastFmData } from '../types/types';
-interface Props {
-  data: ILastFmData;
-}
+import { fetcher } from '../utils/fetcher';
 
 const PlayIcon = (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -14,14 +13,16 @@ const PlayIcon = (
   </svg>
 );
 
-const LastFm: React.FC<Props> = ({ data }) => {
+const LastFm: React.FC = () => {
+  const { data, error } = useSWR<ILastFmData>('api/last-fm', fetcher, { refreshInterval: 60000 });
+
   let render: JSX.Element | JSX.Element[] = (
     <p className="flex justify-center p-6 italic text-gray-500 dark:text-gray-400">
       Error fetching data from Last.fm.
     </p>
   );
 
-  if (data.recenttracks) {
+  if (!error && data?.recenttracks) {
     render = (
       <>
         <div className="grid gap-4 xl:grid-cols-2">

@@ -4,15 +4,14 @@ import GitHub from '../components/GitGub';
 import Hero from '../components/Hero';
 import Instagram from '../components/Instagram';
 import LastFm from '../components/LastFm';
-import { IGitHubData, IIgData, ILastFmData } from '../types/types';
+import { IGitHubData, IIgData } from '../types/types';
 
 interface Props {
   gitHubData: IGitHubData[];
-  lastFmData: ILastFmData;
   igData: IIgData;
 }
 
-const IndexPage: NextPage<Props> = ({ gitHubData, lastFmData, igData }) => {
+const IndexPage: NextPage<Props> = ({ gitHubData, igData }) => {
   return (
     <>
       <Head>
@@ -20,7 +19,7 @@ const IndexPage: NextPage<Props> = ({ gitHubData, lastFmData, igData }) => {
       </Head>
       <Hero />
       <GitHub data={gitHubData} />
-      <LastFm data={lastFmData} />
+      <LastFm />
       <Instagram data={igData} />
     </>
   );
@@ -29,12 +28,6 @@ const IndexPage: NextPage<Props> = ({ gitHubData, lastFmData, igData }) => {
 export const getStaticProps: GetStaticProps = async () => {
   const gitHubData = await fetch(
     'https://api.github.com/users/rajcep/repos?per_page=6&sort=pushed&direction=desc',
-  )
-    .then((res) => res.json())
-    .catch(() => null);
-
-  const lastFmData = await fetch(
-    `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=rajcep&api_key=${process.env.LASTFM_API_KEY}&format=json&limit=10`,
   )
     .then((res) => res.json())
     .catch(() => null);
@@ -48,10 +41,9 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       gitHubData,
-      lastFmData,
       igData,
     },
-    revalidate: 60,
+    revalidate: 10800,
   };
 };
 

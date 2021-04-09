@@ -13,7 +13,7 @@ const Instagram: React.FC<Props> = ({ data }) => {
 
   if (data) {
     render = (
-      <div className="grid w-full grid-cols-3 gap-4 xl:grid-cols-4 2xl:grid-cols-6">
+      <div className="grid w-full grid-cols-3 gap-2 xl:gap-4 xl:grid-cols-4 2xl:grid-cols-6">
         {data?.data?.map((e, i) => {
           if (i < 9) {
             return (

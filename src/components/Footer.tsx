@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import NavLink from './NavLink';
 
 interface IExternalLink {
@@ -18,8 +17,6 @@ const ExternalLink: React.FC<IExternalLink> = ({ href, children }) => (
 );
 
 const Footer: React.FC = () => {
-  const [year] = useState(new Date().getFullYear());
-
   return (
     <div className="bottom-0 flex flex-row w-11/12 p-2 border-t border-gray-200 justify-evenly sm:w-3/4 sm:p-6 md:w-1/2">
       <div className="flex flex-col space-y-2">
@@ -36,7 +33,7 @@ const Footer: React.FC = () => {
         </ExternalLink>
       </div>
       <div className="text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
-        Petr Rajtslegr &copy; {year}
+        Petr Rajtslegr &copy; {new Date().getFullYear()}
       </div>
     </div>
   );

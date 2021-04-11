@@ -26,7 +26,7 @@ const LastFm: React.FC = () => {
   if (!error) {
     render = (
       <div className="grid gap-4 xl:grid-cols-2">
-        {new Array(10).fill(undefined).map((i) => {
+        {new Array(10).fill(undefined).map((_value, i) => {
           return (
             <div key={i} className="flex flex-col p-2 transition border rounded shadow h-28">
               <div className="flex flex-row space-x-2">

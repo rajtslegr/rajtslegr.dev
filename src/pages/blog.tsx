@@ -13,7 +13,7 @@ const Blog: NextPage<Props> = ({ allPostsData }) => {
   return (
     <>
       <Head>
-        <title>Petr Rajtslegr | About</title>
+        <title>Petr Rajtslegr | Blog</title>
       </Head>
       <div className="flex flex-col items-center">
         <ul className="w-full space-y-4 lg:w-1/2">

@@ -2,7 +2,7 @@ export default [
   {
     title: 'cov19cz',
     description: 'Czech COVID-19 tracker application.',
-    build: 'Built with React, Axios, Reaviz and styled-components.',
+    build: 'Built with React, Axios, Recharts and styled-components.',
     image: 'cov19cz.png',
     live: 'https://cov19cz.vercel.app/',
     repo: 'https://github.com/RajceP/cov19cz',

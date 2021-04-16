@@ -26,12 +26,8 @@ const LoadingIcon = (
 const ContactForm: React.FC = () => {
   const [state, handleSubmit] = useForm('xyylyppy');
 
-  // if (state.errors) {
-  //   alert('duh');
-  // }
-
   if (state.succeeded) {
-    return <p>Thank&#39;s for your message! I&#39;ll get back to you as soon as possible.</p>;
+    return <p>Thank you for your message! I&#39;ll get back to you as soon as possible.</p>;
   }
 
   return (

@@ -11,7 +11,9 @@ const ThemeButton: React.FC<Props> = ({ handleClick: handleClick }) => {
 
   useEffect(() => setMounted(true), []);
 
-  const darkIcon = <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />;
+  const darkIcon = (
+    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+  );
 
   const lightIcon = (
     <path
@@ -29,7 +31,11 @@ const ThemeButton: React.FC<Props> = ({ handleClick: handleClick }) => {
       onClick={handleClick}
     >
       {mounted && (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
           {theme === 'light' ? darkIcon : lightIcon}
         </svg>
       )}

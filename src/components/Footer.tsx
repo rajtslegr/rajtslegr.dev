@@ -48,14 +48,22 @@ const Footer: React.FC = () => {
           <ExternalLink href="https://www.linkedin.com/in/petr-rajtšlégr-5aa84a16b">
             LinkedIn
           </ExternalLink>
-          <ExternalLink href="https://www.facebook.com/petr.rajtslegr">Facebook</ExternalLink>
+          <ExternalLink href="https://www.facebook.com/petr.rajtslegr">
+            Facebook
+          </ExternalLink>
           <ExternalLink href="https://twitter.com/RajceP">Twitter</ExternalLink>
         </div>
         <div className="flex flex-col space-y-2">
-          <ExternalLink href="https://www.instagram.com/rajce">Instagram</ExternalLink>
+          <ExternalLink href="https://www.instagram.com/rajce">
+            Instagram
+          </ExternalLink>
           <ExternalLink href="https://t.me/rajcep">Telegram</ExternalLink>
-          <ExternalLink href="https://www.last.fm/user/RajceP">Last.fm</ExternalLink>
-          <ExternalLink href="https://soundcloud.com/rajcep">SoundCloud</ExternalLink>
+          <ExternalLink href="https://www.last.fm/user/RajceP">
+            Last.fm
+          </ExternalLink>
+          <ExternalLink href="https://soundcloud.com/rajcep">
+            SoundCloud
+          </ExternalLink>
         </div>
       </div>
       <div className="flex flex-row justify-center">
@@ -66,7 +74,8 @@ const Footer: React.FC = () => {
               {theme === 'light' ? '🖤' : '🤍'}
             </span>
           )}
-          &nbsp; and {theme && NextJsLogo(theme)} &copy; {new Date().getFullYear()}
+          &nbsp; and {theme && NextJsLogo(theme)} &copy;{' '}
+          {new Date().getFullYear()}
         </div>
       </div>
     </div>

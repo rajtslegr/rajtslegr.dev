@@ -1,4 +1,10 @@
-import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
+import Document, {
+  DocumentContext,
+  Head,
+  Html,
+  Main,
+  NextScript,
+} from 'next/document';
 import { JSXElementConstructor, ReactElement, ReactFragment } from 'react';
 
 class MyDocument extends Document {
@@ -8,7 +14,10 @@ class MyDocument extends Document {
     html: string;
     head?: (JSX.Element | null)[] | undefined;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    styles?: ReactElement<any, string | JSXElementConstructor<any>>[] | ReactFragment | undefined;
+    styles?:
+      | ReactElement<any, string | JSXElementConstructor<any>>[]
+      | ReactFragment
+      | undefined;
   }> {
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
@@ -20,7 +29,10 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          />
           <script
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{
@@ -35,13 +47,20 @@ class MyDocument extends Document {
             }}
           />
           <link rel="preconnect" href="https://www.google-analytics.com" />
-          <link rel="shortcut icon" type="image/jpg" href="/static/images/hero.png" />
+          <link
+            rel="shortcut icon"
+            type="image/jpg"
+            href="/static/images/hero.png"
+          />
           <meta property="title" content="Petr Rajtslegr | Full-stack Dev" />
           <meta
             name="description"
             content="Petr Rajtslegr - Full-stack developer based in Prague, Czech Republic."
           ></meta>
-          <meta name="keywords" content="HTML, CSS, JavaScript, developer, Petr, Rajtslegr"></meta>
+          <meta
+            name="keywords"
+            content="HTML, CSS, JavaScript, developer, Petr, Rajtslegr"
+          ></meta>
         </Head>
         <body className="text-black transition bg-white dark:bg-dark dark:text-white">
           <Main />

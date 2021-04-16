@@ -19,7 +19,8 @@ export default [
   {
     title: 'TypeWriter',
     description: 'Small typing game.',
-    build: 'Built with React, React Hooks, TypeScript, Faker and styled-components.',
+    build:
+      'Built with React, React Hooks, TypeScript, Faker and styled-components.',
     image: 'typewriter.png',
     live: 'https://typewriter-theta.vercel.app',
     repo: 'https://github.com/RajceP/typewriter',

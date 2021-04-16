@@ -2,7 +2,10 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { getRecentSongs } from '../../lib/last-fm';
 import { ILastFmData } from '../../types/types';
 
-export default async (_req: NextApiRequest, res: NextApiResponse<ILastFmData>): Promise<void> => {
+export default async (
+  _req: NextApiRequest,
+  res: NextApiResponse<ILastFmData>,
+): Promise<void> => {
   const recentSongsresponse = await getRecentSongs();
   const recentSongs: ILastFmData = await recentSongsresponse.json();
 

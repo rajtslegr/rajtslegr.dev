@@ -23,7 +23,9 @@ const NavBar: React.FC = () => {
             <NavLink href="/contact">Contact</NavLink>
           </li>
         </ul>
-        <ThemeButton handleClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} />
+        <ThemeButton
+          handleClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+        />
       </div>
     </nav>
   );

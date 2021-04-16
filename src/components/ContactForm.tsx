@@ -27,7 +27,12 @@ const ContactForm: React.FC = () => {
   const [state, handleSubmit] = useForm('xyylyppy');
 
   if (state.succeeded) {
-    return <p>Thank you for your message! I&#39;ll get back to you as soon as possible.</p>;
+    return (
+      <p>
+        Thank you for your message! I&#39;ll get back to you as soon as
+        possible.
+      </p>
+    );
   }
 
   return (

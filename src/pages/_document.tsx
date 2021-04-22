@@ -13,9 +13,8 @@ class MyDocument extends Document {
   ): Promise<{
     html: string;
     head?: (JSX.Element | null)[] | undefined;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    styles?:
-      | ReactElement<any, string | JSXElementConstructor<any>>[]
+    styles?: // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    | ReactElement<any, string | JSXElementConstructor<any>>[]
       | ReactFragment
       | undefined;
   }> {
@@ -52,10 +51,10 @@ class MyDocument extends Document {
             type="image/jpg"
             href="/static/images/hero.png"
           />
-          <meta property="title" content="Petr Rajtslegr | Full-stack Dev" />
+          <meta property="title" content="Petr Rajtslegr | Full Stack Dev" />
           <meta
             name="description"
-            content="Petr Rajtslegr - Full-stack developer based in Prague, Czech Republic."
+            content="Petr Rajtslegr - Full Stack developer based in Prague, Czech Republic."
           ></meta>
           <meta
             name="keywords"

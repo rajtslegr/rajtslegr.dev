@@ -17,7 +17,7 @@ const IndexPage: NextPage<Props> = ({ gitHubData, igData }) => {
   return (
     <>
       <Head>
-        <title>Petr Rajtslegr | Full-stack Dev</title>
+        <title>Petr Rajtslegr | Full Stack Dev</title>
       </Head>
       <Hero />
       <GitHub data={gitHubData} />

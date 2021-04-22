@@ -3,7 +3,7 @@ import { AppProps } from 'next/app';
 import Layout from '../components/Layout';
 import '../styles/index.css';
 
-const App = ({ Component, pageProps }: AppProps) => {
+const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <ThemeProvider defaultTheme="light" attribute="class">
       <Layout>

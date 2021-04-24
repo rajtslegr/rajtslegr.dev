@@ -5,3 +5,7 @@
 html {
   overflow-y: overlay;
 }
+
+body {
+  @apply antialiased text-black transition bg-white dark:bg-dark dark:text-white;
+}

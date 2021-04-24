@@ -61,7 +61,7 @@ class MyDocument extends Document {
             content="HTML, CSS, JavaScript, developer, Petr, Rajtslegr"
           ></meta>
         </Head>
-        <body className="text-black transition bg-white dark:bg-dark dark:text-white">
+        <body>
           <Main />
           <NextScript />
         </body>

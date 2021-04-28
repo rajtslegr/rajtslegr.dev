@@ -60,6 +60,16 @@ class MyDocument extends Document {
             name="keywords"
             content="HTML, CSS, JavaScript, developer, Petr, Rajtslegr"
           ></meta>
+          <meta property="og:type" content="website"></meta>
+          <meta property="og:url" content="https://rajtslegr.com/"></meta>
+          <meta
+            property="og:title"
+            content="Petr Rajtslegr | Full Stack Dev"
+          ></meta>
+          <meta
+            property="og:description"
+            content="Petr Rajtslegr - Full Stack developer based in Prague, Czech Republic."
+          ></meta>
         </Head>
         <body>
           <Main />

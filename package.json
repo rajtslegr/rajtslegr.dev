@@ -13,6 +13,7 @@
     "start": "next start",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
     "lint": "eslint --ext ts --ext tsx",
+    "lint-staged": "lint-staged",
     "test": "jest",
     "postinstall": "husky install"
   },

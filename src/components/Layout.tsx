@@ -10,11 +10,11 @@ const Layout: React.FC<Props> = ({ children }) => {
   return (
     <div className="flex flex-col items-center min-h-screen">
       <NavBar />
-      <main className="flex-auto w-full pt-16">
-        <div className="container px-4 py-6 mx-auto my-4 md:py-12 xl:w-4/6">
+      <div className="flex-auto w-full pt-16">
+        <main className="container px-4 py-6 mx-auto my-4 md:py-12 xl:w-5/6 2xl:w-2/3">
           {children}
-        </div>
-      </main>
+        </main>
+      </div>
       <Footer />
     </div>
   );

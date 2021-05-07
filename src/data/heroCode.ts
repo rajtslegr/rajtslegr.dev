@@ -1,0 +1,18 @@
+export default [
+  `// About me`,
+  `const name = 'Petr Rajtslegr';`,
+  `const profession = 'Full Stack Developer';`,
+  ``,
+  `// What I do`,
+  `const languages = [`,
+  `  'JavaScript',`,
+  `  'TypeScript'`,
+  `];`,
+  ``,
+  `const technologies = [`,
+  `  'React',`,
+  `  'Angular',`,
+  `  'Next.js',`,
+  `  'Node.js'`,
+  `];`,
+];

@@ -68,13 +68,13 @@ const Footer: React.FC = () => {
       </div>
       <div className="flex flex-row justify-center">
         <div className="flex flex-row items-center text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
-          Made by Petr Rajtslegr with &nbsp;
+          Made by Petr Rajtslegr with&nbsp;
           {mounted && (
             <span role="img" aria-label="Hearth emoji">
               {theme === 'light' ? '🖤' : '🤍'}
             </span>
           )}
-          &nbsp; and {theme && NextJsLogo(theme)} &copy;{' '}
+          &nbsp;and{theme && mounted && NextJsLogo(theme)}&nbsp;&copy;&nbsp;
           {new Date().getFullYear()}
         </div>
       </div>

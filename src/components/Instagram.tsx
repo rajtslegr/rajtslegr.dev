@@ -25,7 +25,7 @@ const Instagram: React.FC<Props> = ({ data }) => {
               >
                 <a href={e.permalink} rel="noopener noreferrer" target="_blank">
                   <img
-                    className="absolute object-cover w-full h-full"
+                    className="absolute object-cover w-full h-full rounded via-black"
                     src={e.thumbnail_url || e.media_url}
                     alt={e.caption}
                     width={328}

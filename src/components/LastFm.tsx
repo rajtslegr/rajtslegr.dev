@@ -72,6 +72,7 @@ const LastFm: React.FC = () => {
                     <div className="flex flex-row items-center space-x-2">
                       <div className="relative w-24 h-24 border border-gray-200 rounded shadow">
                         <Image
+                          className="rounded"
                           src={t.image[3]['#text']}
                           alt="Album art"
                           layout="fill"

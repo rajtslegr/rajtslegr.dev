@@ -18,6 +18,7 @@ const NavBar: React.FC = () => {
         <ul>
           <li className="space-x-2">
             <NavLink href="/">Home</NavLink>
+            <NavLink href="/dashboard">Dashboard</NavLink>
             <NavLink href="/projects">Projects</NavLink>
             <NavLink href="/blog">Blog</NavLink>
             <NavLink href="/contact">Contact</NavLink>

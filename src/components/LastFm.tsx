@@ -62,15 +62,15 @@ const LastFm: React.FC = () => {
               return (
                 <div
                   key={i}
-                  className="flex flex-col p-2 transition border border-gray-200 rounded shadow hover:shadow-lg"
+                  className="flex flex-col p-2 transition border border-gray-200 rounded shadow min-h-36 hover:shadow-lg"
                 >
                   <a
                     href="https://last.fm/user/RajceP"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <div className="flex flex-row items-center space-x-2">
-                      <div className="relative w-24 h-24 border border-gray-200 rounded shadow">
+                    <div className="flex flex-row space-x-2">
+                      <div className="relative w-32 h-32 border border-gray-200 rounded shadow">
                         <Image
                           className="rounded"
                           src={t.image[3]['#text']}
@@ -80,8 +80,9 @@ const LastFm: React.FC = () => {
                           sizes="100%"
                         />
                       </div>
-                      <div className="flex flex-col justify-between">
-                        <p className="mb-4 text-lg">{t.name}</p>
+                      <div className="flex flex-col min-h-full">
+                        <p className="text-lg">{t.name}</p>
+                        <div className="flex flex-1"></div>
                         <p className="text-gray-500 dark:text-gray-400">
                           {t.artist['#text']}
                         </p>

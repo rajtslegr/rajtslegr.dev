@@ -5,7 +5,7 @@ specifiers:
   '@formspree/react': ^2.2.3
   '@tailwindcss/typography': ^0.4.0
   '@types/jest': ^26.0.23
-  '@types/node': ^15.0.3
+  '@types/node': ^15.3.0
   '@types/react': ^17.0.5
   '@types/react-test-renderer': ^17.0.1
   '@typescript-eslint/eslint-plugin': ^4.23.0
@@ -54,7 +54,7 @@ dependencies:
 devDependencies:
   '@babel/core': 7.14.2
   '@types/jest': 26.0.23
-  '@types/node': 15.0.3
+  '@types/node': 15.3.0
   '@types/react': 17.0.5
   '@types/react-test-renderer': 17.0.1
   '@typescript-eslint/eslint-plugin': 4.23.0_7cfaee78cda985ff9bc3d8b5cb92a136
@@ -1051,8 +1051,8 @@ packages:
   /@types/node/15.0.2:
     resolution: {integrity: sha512-p68+a+KoxpoB47015IeYZYRrdqMUcpbK8re/zpFB8Ld46LHC1lPEbp3EXgkEhAYEcPvjJF6ZO+869SQ0aH1dcA==}
 
-  /@types/node/15.0.3:
-    resolution: {integrity: sha512-/WbxFeBU+0F79z9RdEOXH4CsDga+ibi5M8uEYr91u3CkT/pdWcV8MCook+4wDPnZBexRdwWS+PiVZ2xJviAzcQ==}
+  /@types/node/15.3.0:
+    resolution: {integrity: sha512-8/bnjSZD86ZfpBsDlCIkNXIvm+h6wi9g7IqL+kmFkQ+Wvu3JrasgLElfiPgoo8V8vVfnEi0QVS12gbl94h9YsQ==}
     dev: true
 
   /@types/normalize-package-data/2.4.0:

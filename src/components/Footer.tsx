@@ -35,38 +35,42 @@ const Footer: React.FC = () => {
   useEffect(() => setMounted(true), []);
 
   return (
-    <div className="flex flex-col w-11/12 p-2 space-y-12 border-t border-gray-200 sm:w-3/4 sm:p-6 md:w-1/2">
-      <div className="flex flex-row justify-between md:justify-evenly">
-        <div className="flex flex-col space-y-2">
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="/projects">Projects</NavLink>
-          <NavLink href="/blog">Blog</NavLink>
-          <NavLink href="/contact">Contact</NavLink>
-        </div>
-        <div className="flex flex-col space-y-2">
-          <ExternalLink href="https://github.com/RajceP">GitHub</ExternalLink>
-          <ExternalLink href="https://www.linkedin.com/in/petr-rajtšlégr-5aa84a16b">
-            LinkedIn
-          </ExternalLink>
-          <ExternalLink href="https://www.facebook.com/petr.rajtslegr">
-            Facebook
-          </ExternalLink>
-          <ExternalLink href="https://twitter.com/RajceP">Twitter</ExternalLink>
-        </div>
-        <div className="flex flex-col space-y-2">
-          <ExternalLink href="https://www.instagram.com/rajce">
-            Instagram
-          </ExternalLink>
-          <ExternalLink href="https://t.me/rajcep">Telegram</ExternalLink>
-          <ExternalLink href="https://www.last.fm/user/RajceP">
-            Last.fm
-          </ExternalLink>
-          <ExternalLink href="https://soundcloud.com/rajcep">
-            SoundCloud
-          </ExternalLink>
+    <div className="flex flex-col items-center w-full p-2 space-y-12">
+      <div className="flex flex-col w-11/12 border-t border-gray-200 sm:w-3/4 sm:p-6 md:w-1/2">
+        <div className="flex flex-row justify-between md:justify-evenly">
+          <div className="flex flex-col space-y-2">
+            <NavLink href="/">Home</NavLink>
+            <NavLink href="/projects">Projects</NavLink>
+            <NavLink href="/blog">Blog</NavLink>
+            <NavLink href="/contact">Contact</NavLink>
+          </div>
+          <div className="flex flex-col space-y-2">
+            <ExternalLink href="https://github.com/RajceP">GitHub</ExternalLink>
+            <ExternalLink href="https://www.linkedin.com/in/petr-rajtšlégr-5aa84a16b">
+              LinkedIn
+            </ExternalLink>
+            <ExternalLink href="https://www.facebook.com/petr.rajtslegr">
+              Facebook
+            </ExternalLink>
+            <ExternalLink href="https://twitter.com/RajceP">
+              Twitter
+            </ExternalLink>
+          </div>
+          <div className="flex flex-col space-y-2">
+            <ExternalLink href="https://www.instagram.com/rajce">
+              Instagram
+            </ExternalLink>
+            <ExternalLink href="https://t.me/rajcep">Telegram</ExternalLink>
+            <ExternalLink href="https://www.last.fm/user/RajceP">
+              Last.fm
+            </ExternalLink>
+            <ExternalLink href="https://soundcloud.com/rajcep">
+              SoundCloud
+            </ExternalLink>
+          </div>
         </div>
       </div>
-      <div className="flex flex-row justify-center">
+      <div className="flex flex-row justify-center w-full">
         <div className="flex flex-row items-center text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
           Made by Petr Rajtslegr with&nbsp;
           {mounted && (

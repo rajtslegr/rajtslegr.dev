@@ -1,6 +1,6 @@
 import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import GitHub from '../components/GitGub';
+import GitHub from '../components/GitHub';
 import Instagram from '../components/Instagram';
 import LastFm from '../components/LastFm';
 import { getRecentRepos } from '../lib/github';

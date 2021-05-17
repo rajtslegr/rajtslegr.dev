@@ -1,5 +1,5 @@
 interface Props {
-  code: [string];
+  code: string[];
 }
 
 const CodeBlock: React.FC<Props> = ({ code }) => {

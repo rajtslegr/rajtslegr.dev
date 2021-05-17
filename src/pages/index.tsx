@@ -4,7 +4,7 @@ import Hero from '../components/Hero';
 import heroCode from '../data/heroCode';
 
 interface Props {
-  heroCode: [string];
+  heroCode: string[];
 }
 
 const IndexPage: NextPage<Props> = ({ heroCode }) => {

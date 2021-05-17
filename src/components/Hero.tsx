@@ -2,7 +2,7 @@ import Image from 'next/image';
 import CodeBlock from './CodeBlock';
 
 interface Props {
-  heroCode: [string];
+  heroCode: string[];
 }
 
 const Hero: React.FC<Props> = ({ heroCode }) => {

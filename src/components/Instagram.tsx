@@ -1,7 +1,7 @@
 import { IIgData } from '../types/types';
 
 interface Props {
-  data: IIgData;
+  data?: IIgData;
 }
 
 const Instagram: React.FC<Props> = ({ data }) => {

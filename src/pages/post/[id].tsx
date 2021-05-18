@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import { IPostData } from '../../types/types';
-import { parseDate } from '../../utils/date';
+import parseDate from '../../utils/date';
 
 interface Props {
   postData: IPostData;

@@ -1,10 +1,12 @@
-export const getRecentRepos = async (): Promise<Response | string> => {
+import { IGitHubData } from '../types/types';
+import fetcher from '../utils/fetcher';
+
+export const getRecentRepos = async (): Promise<IGitHubData | undefined> => {
   try {
-    const res = await fetch(
+    return await fetcher<IGitHubData>(
       'https://api.github.com/users/rajcep/repos?per_page=6&sort=pushed&direction=desc',
     );
-    return await res.json();
   } catch (e) {
-    return e.message;
+    return undefined;
   }
 };

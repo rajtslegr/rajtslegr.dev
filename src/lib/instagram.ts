@@ -1,10 +1,12 @@
-export const getRecentPosts = async (): Promise<Response | string> => {
+import { IIgData } from '../types/types';
+import fetcher from '../utils/fetcher';
+
+export const getRecentPosts = async (): Promise<IIgData | undefined> => {
   try {
-    const res = await fetch(
+    return await fetcher<IIgData>(
       `https://graph.instagram.com/me/media?fields=id,permalink,media_url,thumbnail_url,caption&access_token=${process.env.INSTAGRAM_TOKEN}`,
     );
-    return await res.json();
   } catch (e) {
-    return e.message;
+    return undefined;
   }
 };

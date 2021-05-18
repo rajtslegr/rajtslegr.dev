@@ -9,7 +9,7 @@ interface IGitHubCard {
 }
 
 interface Props {
-  data: IGitHubData[];
+  data?: IGitHubData[];
 }
 
 const DocIcon = (

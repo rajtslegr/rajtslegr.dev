@@ -4,7 +4,7 @@ import Hero from '../../components/Hero';
 import heroCode from '../../data/heroCode';
 
 describe('Hero', () => {
-  test('should contain hero image', () => {
+  it('should contain hero image', () => {
     const { getByAltText } = render(<Hero heroCode={heroCode} />);
 
     const heroImage = getByAltText('Hero');

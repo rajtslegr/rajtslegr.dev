@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import ContactForm from '../../components/ContactForm';
 
 describe('ContactForm', () => {
-  test('renders the form correctly', () => {
+  it('renders the form correctly', () => {
     const { getByPlaceholderText } = render(<ContactForm />);
 
     const email = getByPlaceholderText('john@doe.com');

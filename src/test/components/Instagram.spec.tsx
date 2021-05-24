@@ -21,7 +21,7 @@ describe('Instagram', () => {
     };
   });
 
-  test('should render instagram image', () => {
+  it('should render instagram image', () => {
     const { getByAltText } = render(<Instagram data={expectedProps.data} />);
 
     const image = getByAltText('#instagram');
@@ -29,7 +29,7 @@ describe('Instagram', () => {
     expect(image).toHaveAttribute('src', 'https://www.instagram.com/');
   });
 
-  test('should use thumbnail_url if media_url is not present', () => {
+  it('should use thumbnail_url if media_url is not present', () => {
     expectedProps.data!.data[0].media_url = undefined;
     expectedProps.data!.data[0].thumbnail_url = 'https://www.instagram.com/';
 
@@ -39,7 +39,7 @@ describe('Instagram', () => {
     expect(image).toHaveAttribute('src', 'https://www.instagram.com/');
   });
 
-  test('should render only 9 image elements', () => {
+  it('should render only 9 image elements', () => {
     for (let i = 0; i < 12; i++) {
       expectedProps.data!.data[i] = {
         caption: '#instagram',

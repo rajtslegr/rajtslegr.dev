@@ -11,7 +11,7 @@ describe('Footer', () => {
     pathname: '/',
   }));
 
-  test('should navigate properly', () => {
+  it('should navigate properly', () => {
     const { getByText } = render(<Footer />);
 
     fireEvent.click(getByText('Home'));
@@ -32,14 +32,14 @@ describe('Footer', () => {
     );
   });
 
-  test('should countain heart emoji', () => {
+  it('should countain heart emoji', () => {
     const { getByLabelText } = render(<Footer />);
 
     const emoji = getByLabelText('Hearth emoji');
     expect(emoji).toBeInTheDocument();
   });
 
-  test('should containt current year', () => {
+  it('should containt current year', () => {
     const { getByText } = render(<Footer />);
 
     const curYear = getByText(

@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@formspree/react": "^2.2.3",
+    "@heroicons/react": "^1.0.1",
     "@tailwindcss/typography": "^0.4.0",
     "date-fns": "^2.21.3",
     "gray-matter": "^4.0.3",

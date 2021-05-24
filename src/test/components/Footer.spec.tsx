@@ -32,14 +32,7 @@ describe('Footer', () => {
     );
   });
 
-  it('should countain heart emoji', () => {
-    const { getByLabelText } = render(<Footer />);
-
-    const emoji = getByLabelText('Hearth emoji');
-    expect(emoji).toBeInTheDocument();
-  });
-
-  it('should containt current year', () => {
+  it('should contain current year', () => {
     const { getByText } = render(<Footer />);
 
     const curYear = getByText(

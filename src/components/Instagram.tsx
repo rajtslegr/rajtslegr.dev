@@ -1,6 +1,6 @@
 import { IIgData } from '../types/types';
 
-interface Props {
+export interface Props {
   data?: IIgData;
 }
 

@@ -33,9 +33,6 @@ jobs:
         run: curl -f https://get.pnpm.io/v6.js | node - add --global pnpm@6
 
       - name: Install
-        env:
-          LASTFM_API_KEY: ${{secrets.LASTFM_API_KEY}}
-          INSTAGRAM_TOKEN: ${{secrets.INSTAGRAM_TOKEN}}
         run: pnpm install
 
       - name: Type Check
@@ -48,4 +45,7 @@ jobs:
         run: pnpm run test
 
       - name: Build
+        env:
+          LASTFM_API_KEY: ${{secrets.LASTFM_API_KEY}}
+          INSTAGRAM_TOKEN: ${{secrets.INSTAGRAM_TOKEN}}
         run: pnpm run build

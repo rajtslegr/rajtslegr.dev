@@ -26,8 +26,8 @@ const LastFm: React.FC = () => {
               className="flex flex-col p-2 transition border rounded shadow h-36"
             >
               <div className="flex flex-row space-x-2">
-                <div className="relative w-32 h-32 bg-gray-200 border rounded shadow animate-pulse"></div>
-                <div className="flex flex-col justify-between w-full">
+                <div className="w-32 h-32 bg-gray-200 border rounded shadow animate-pulse"></div>
+                <div className="flex flex-col justify-between w-3/5">
                   <div className="w-1/3 h-6 mb-4 bg-gray-200 rounded-sm animate-pulse"></div>
                   <div className="w-3/5 h-4 bg-gray-200 rounded-sm animate-pulse"></div>
                   <div className="w-3/5 h-4 bg-gray-200 rounded-sm animate-pulse"></div>

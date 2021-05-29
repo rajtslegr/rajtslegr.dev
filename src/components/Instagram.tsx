@@ -11,7 +11,7 @@ const Instagram: React.FC<Props> = ({ data }) => {
     </p>
   );
 
-  if (data) {
+  if (data?.data) {
     render = (
       <div className="grid w-full grid-cols-3 gap-2 xl:gap-4 xl:grid-cols-4 2xl:grid-cols-6">
         {data?.data?.map((e, i) => {
@@ -42,7 +42,7 @@ const Instagram: React.FC<Props> = ({ data }) => {
 
   return (
     <>
-      <p className="my-4 text-4xl">Instagram</p>
+      <p className="mb-4 text-4xl">Instagram</p>
       {render}
     </>
   );

@@ -77,7 +77,7 @@ const GitHub: React.FC<Props> = ({ data }) => {
 
   return (
     <>
-      <p className="mb-4 text-4xl">GitHub</p>
+      <p className="my-4 text-4xl">GitHub</p>
       {render}
     </>
   );

@@ -55,4 +55,13 @@ describe('Instagram', () => {
     const images = getAllByRole('img');
     expect(images).toHaveLength(9);
   });
+
+  it('should render error message', () => {
+    expectedProps.data! = undefined!;
+
+    const { getByText } = render(<Instagram data={expectedProps.data} />);
+
+    const text = getByText('Error fetching data from Instagram.');
+    expect(text).toBeInTheDocument();
+  });
 });

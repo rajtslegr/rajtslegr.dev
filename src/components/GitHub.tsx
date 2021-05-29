@@ -9,7 +9,7 @@ interface IGitHubCard {
   watches: number;
 }
 
-interface Props {
+export interface Props {
   data?: IGitHubData[];
 }
 

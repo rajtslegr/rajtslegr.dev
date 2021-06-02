@@ -8,9 +8,7 @@ import Document, {
 import { JSXElementConstructor, ReactElement, ReactFragment } from 'react';
 
 class MyDocument extends Document {
-  static async getInitialProps(
-    ctx: DocumentContext,
-  ): Promise<{
+  static async getInitialProps(ctx: DocumentContext): Promise<{
     html: string;
     head?: (JSX.Element | null)[] | undefined;
     styles?: // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -49,7 +47,7 @@ class MyDocument extends Document {
           <link
             rel="shortcut icon"
             type="image/jpg"
-            href="/static/images/hero.png"
+            href="/static/images/hero.jpg"
           />
           <meta property="title" content="Petr Rajtslegr | Full Stack Dev" />
           <meta

@@ -10,7 +10,7 @@ const Hero: React.FC<Props> = ({ heroCode }) => {
       <CodeBlock code={heroCode} />
       <img
         className="rounded-full shadow-xl"
-        src="/static/images/hero.png"
+        src="/static/images/hero.jpg"
         alt="Hero"
         width={344}
         height={344}

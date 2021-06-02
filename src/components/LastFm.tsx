@@ -1,5 +1,4 @@
 import { PlayIcon } from '@heroicons/react/solid';
-import Image from 'next/image';
 import React from 'react';
 import useSWR from 'swr';
 import { ILastFmData } from '../types/types';
@@ -57,16 +56,13 @@ const LastFm: React.FC = () => {
                     target="_blank"
                   >
                     <div className="flex flex-row space-x-2">
-                      <div className="relative w-32 h-32 border border-gray-200 rounded shadow">
-                        <Image
-                          className="rounded"
-                          src={t.image[3]['#text']}
-                          alt="Album art"
-                          layout="fill"
-                          objectFit="cover"
-                          sizes="100%"
-                        />
-                      </div>
+                      <img
+                        className="relative w-32 h-32 border border-gray-200 rounded shadow"
+                        src={t.image[2]['#text']}
+                        alt="Album art"
+                        width={128}
+                        height={128}
+                      />
                       <div className="flex flex-col min-h-full">
                         <p className="text-lg">{t.name}</p>
                         <div className="flex flex-1"></div>

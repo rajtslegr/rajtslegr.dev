@@ -5,10 +5,6 @@ import React from 'react';
 import { cache, SWRConfig } from 'swr';
 import LastFm from '../../components/LastFm';
 
-jest.mock('next/image', () => ({ src, alt }: { src: string; alt: string }) => (
-  <img src={src} alt={alt} />
-));
-
 describe('LastFm', () => {
   enableFetchMocks();
   beforeEach(() => {

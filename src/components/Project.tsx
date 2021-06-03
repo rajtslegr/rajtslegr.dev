@@ -11,6 +11,7 @@ const Project: NextPage<Props> = ({
   return (
     <div className="flex flex-col overflow-hidden transition border rounded shadow hover:shadow-lg">
       <a href={repo} rel="noopener noreferrer" target="_blank">
+        <div className="bg-gray-200 animate-pulse"></div>
         <img
           src={`/static/images/projects/${image}`}
           alt={`${title} mockup`}

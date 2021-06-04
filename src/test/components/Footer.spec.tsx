@@ -1,7 +1,9 @@
 import '@testing-library/jest-dom';
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent, screen } from '@testing-library/react';
 import Footer from '../../components/Footer';
+import { render } from '../test-utils';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const useRouter = jest.spyOn(require('next/router'), 'useRouter');
 
 describe('Footer', () => {
@@ -12,19 +14,19 @@ describe('Footer', () => {
   }));
 
   it('should navigate properly', () => {
-    const { getByText } = render(<Footer />);
+    render(<Footer />);
 
-    fireEvent.click(getByText('Home'));
+    fireEvent.click(screen.getByText('Home'));
     expect(push).toHaveBeenCalledWith('/', '/', expect.anything());
-    fireEvent.click(getByText('Projects'));
+    fireEvent.click(screen.getByText('Projects'));
     expect(push).toHaveBeenCalledWith(
       '/projects',
       '/projects',
       expect.anything(),
     );
-    fireEvent.click(getByText('Blog'));
+    fireEvent.click(screen.getByText('Blog'));
     expect(push).toHaveBeenCalledWith('/blog', '/blog', expect.anything());
-    fireEvent.click(getByText('Contact'));
+    fireEvent.click(screen.getByText('Contact'));
     expect(push).toHaveBeenCalledWith(
       '/contact',
       '/contact',
@@ -33,9 +35,9 @@ describe('Footer', () => {
   });
 
   it('should contain current year', () => {
-    const { getByText } = render(<Footer />);
+    render(<Footer />);
 
-    const curYear = getByText(
+    const curYear = screen.getByText(
       new RegExp(new Date().getFullYear().toString(), 'i'),
     );
     expect(curYear).toBeInTheDocument();

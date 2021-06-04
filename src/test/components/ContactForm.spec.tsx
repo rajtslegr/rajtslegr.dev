@@ -1,13 +1,14 @@
 import '@testing-library/jest-dom';
-import { render } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import ContactForm from '../../components/ContactForm';
+import { render } from '../test-utils';
 
 describe('ContactForm', () => {
   it('renders the form correctly', () => {
-    const { getByPlaceholderText } = render(<ContactForm />);
+    render(<ContactForm />);
 
-    const email = getByPlaceholderText('john@doe.com');
-    const message = getByPlaceholderText('Your Message...');
+    const email = screen.getByPlaceholderText('john@doe.com');
+    const message = screen.getByPlaceholderText('Your Message...');
     expect(email).toHaveAttribute('id', 'email');
     expect(message).toHaveAttribute('id', 'message');
   });

@@ -1,7 +1,9 @@
 import '@testing-library/jest-dom';
-import { render } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import Layout from '../../components/Layout';
+import { render } from '../test-utils';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const useRouter = jest.spyOn(require('next/router'), 'useRouter');
 
 describe('Layout', () => {
@@ -12,13 +14,13 @@ describe('Layout', () => {
   }));
 
   it('should have main element in structure', () => {
-    const { getByRole } = render(
+    render(
       <Layout>
         <p>Children Mock</p>
       </Layout>,
     );
 
-    const main = getByRole('main');
+    const main = screen.getByRole('main');
     expect(main).toBeInTheDocument();
   });
 });

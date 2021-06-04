@@ -1,13 +1,14 @@
 import '@testing-library/jest-dom';
-import { render } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import Hero from '../../components/Hero';
 import heroCode from '../../data/heroCode';
+import { render } from '../test-utils';
 
 describe('Hero', () => {
   it('should contain hero image', () => {
-    const { getByAltText } = render(<Hero heroCode={heroCode} />);
+    render(<Hero heroCode={heroCode} />);
 
-    const heroImage = getByAltText('Hero');
+    const heroImage = screen.getByAltText('Hero');
     expect(heroImage).toBeInTheDocument();
   });
 });

@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import '@testing-library/jest-dom';
-import { render } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import Instagram, { Props } from '../../components/Instagram';
+import { render } from '../test-utils';
 
 describe('Instagram', () => {
   let expectedProps: Props;
@@ -22,9 +24,9 @@ describe('Instagram', () => {
   });
 
   it('should render instagram image', () => {
-    const { getByAltText } = render(<Instagram data={expectedProps.data} />);
+    render(<Instagram data={expectedProps.data} />);
 
-    const image = getByAltText('#instagram');
+    const image = screen.getByAltText('#instagram');
     expect(image).toBeInTheDocument();
     expect(image).toHaveAttribute('src', 'https://www.instagram.com/');
   });
@@ -33,9 +35,9 @@ describe('Instagram', () => {
     expectedProps.data!.data[0].media_url = undefined;
     expectedProps.data!.data[0].thumbnail_url = 'https://www.instagram.com/';
 
-    const { getByAltText } = render(<Instagram data={expectedProps.data} />);
+    render(<Instagram data={expectedProps.data} />);
 
-    const image = getByAltText('#instagram');
+    const image = screen.getByAltText('#instagram');
     expect(image).toHaveAttribute('src', 'https://www.instagram.com/');
   });
 
@@ -50,18 +52,18 @@ describe('Instagram', () => {
       };
     }
 
-    const { getAllByRole } = render(<Instagram data={expectedProps.data} />);
+    render(<Instagram data={expectedProps.data} />);
 
-    const images = getAllByRole('img');
+    const images = screen.getAllByRole('img');
     expect(images).toHaveLength(9);
   });
 
   it('should render error message', () => {
     expectedProps.data! = undefined!;
 
-    const { getByText } = render(<Instagram data={expectedProps.data} />);
+    render(<Instagram data={expectedProps.data} />);
 
-    const text = getByText('Error fetching data from Instagram.');
+    const text = screen.getByText('Error fetching data from Instagram.');
     expect(text).toBeInTheDocument();
   });
 });

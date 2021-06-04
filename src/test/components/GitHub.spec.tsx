@@ -1,7 +1,8 @@
 import '@testing-library/jest-dom';
-import { render } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import React from 'react';
 import GitHub, { Props } from '../../components/GitHub';
+import { render } from '../test-utils';
 
 describe('GitHub', () => {
   let expectedProps: Props;
@@ -22,18 +23,19 @@ describe('GitHub', () => {
   });
 
   it('should render github card', () => {
-    const { getByText } = render(<GitHub data={expectedProps.data} />);
+    render(<GitHub data={expectedProps.data} />);
 
-    const text = getByText(/RajceP/);
+    const text = screen.getByText(/RajceP/);
     expect(text).toBeInTheDocument();
   });
 
   it('should render error message', () => {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     expectedProps.data! = undefined!;
 
-    const { getByText } = render(<GitHub data={expectedProps.data} />);
+    render(<GitHub data={expectedProps.data} />);
 
-    const text = getByText('Error fetching data from GitHub.');
+    const text = screen.getByText('Error fetching data from GitHub.');
     expect(text).toBeInTheDocument();
   });
 });

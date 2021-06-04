@@ -1,14 +1,15 @@
 import '@testing-library/jest-dom';
-import { fireEvent, render, waitFor } from '@testing-library/react';
+import { fireEvent, screen, waitFor } from '@testing-library/react';
 import React from 'react';
 import NavBar from '../../components/NavBar';
+import { render } from '../test-utils';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const useRouter = jest.spyOn(require('next/router'), 'useRouter');
 
-let mockOnTop = true;
 jest.mock('../../hooks/useOnTop', () => ({
   __esModule: true,
-  default: () => mockOnTop,
+  default: () => true,
 }));
 
 describe('NavBar', () => {
@@ -19,19 +20,19 @@ describe('NavBar', () => {
   }));
 
   it('should navigate properly', () => {
-    const { getByText } = render(<NavBar />);
+    render(<NavBar />);
 
-    fireEvent.click(getByText('Home'));
+    fireEvent.click(screen.getByText('Home'));
     expect(push).toHaveBeenCalledWith('/', '/', expect.anything());
-    fireEvent.click(getByText('Projects'));
+    fireEvent.click(screen.getByText('Projects'));
     expect(push).toHaveBeenCalledWith(
       '/projects',
       '/projects',
       expect.anything(),
     );
-    fireEvent.click(getByText('Blog'));
+    fireEvent.click(screen.getByText('Blog'));
     expect(push).toHaveBeenCalledWith('/blog', '/blog', expect.anything());
-    fireEvent.click(getByText('Contact'));
+    fireEvent.click(screen.getByText('Contact'));
     expect(push).toHaveBeenCalledWith(
       '/contact',
       '/contact',
@@ -40,13 +41,15 @@ describe('NavBar', () => {
   });
 
   it('should render shadow on scroll', async () => {
-    const { getByRole } = render(<NavBar />);
+    render(<NavBar />);
 
-    const nav = getByRole('navigation');
+    const nav = screen.getByRole('navigation');
     expect(nav).not.toHaveClass('shadow');
     fireEvent.scroll(window, { target: { pageYOffset: 300 } });
-    waitFor(() => {
-      expect(nav).toHaveClass('shadow');
-    });
+    Promise.all([
+      waitFor(() => {
+        expect(nav).toHaveClass('shadow');
+      }),
+    ]);
   });
 });

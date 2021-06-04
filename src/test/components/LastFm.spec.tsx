@@ -1,9 +1,10 @@
 import '@testing-library/jest-dom';
-import { render, waitFor } from '@testing-library/react';
+import { screen, waitFor } from '@testing-library/react';
 import fetchMock, { enableFetchMocks } from 'jest-fetch-mock';
 import React from 'react';
 import { cache, SWRConfig } from 'swr';
 import LastFm from '../../components/LastFm';
+import { render } from '../test-utils';
 
 describe('LastFm', () => {
   enableFetchMocks();
@@ -64,13 +65,13 @@ describe('LastFm', () => {
       }),
     );
 
-    const { findByAltText } = render(
+    render(
       <SWRConfig value={{ dedupingInterval: 0 }}>
         <LastFm />
       </SWRConfig>,
     );
 
-    const image = await findByAltText('Album art');
+    const image = await screen.findByAltText('Album art');
     expect(image).toBeInTheDocument();
   });
 
@@ -82,28 +83,28 @@ describe('LastFm', () => {
         ),
     );
 
-    const { queryByText, queryByAltText } = render(
+    render(
       <SWRConfig value={{ dedupingInterval: 0 }}>
         <LastFm />
       </SWRConfig>,
     );
 
-    const text = queryByText('Error fetching data from Last.fm.');
+    const text = screen.queryByText('Error fetching data from Last.fm.');
     expect(text).not.toBeInTheDocument();
-    const image = queryByAltText('Album art');
+    const image = screen.queryByAltText('Album art');
     expect(image).not.toBeInTheDocument();
   });
 
   it('should render error message', async () => {
     fetchMock.mockReject(() => Promise.reject('Error'));
 
-    const { findByText } = render(
+    render(
       <SWRConfig value={{ dedupingInterval: 0 }}>
         <LastFm />
       </SWRConfig>,
     );
 
-    const text = await findByText('Error fetching data from Last.fm.');
+    const text = await screen.findByText('Error fetching data from Last.fm.');
     expect(text).toBeInTheDocument();
   });
 });

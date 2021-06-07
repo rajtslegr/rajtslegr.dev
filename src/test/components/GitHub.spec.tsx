@@ -1,6 +1,5 @@
 import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
-import React from 'react';
 import GitHub, { Props } from '../../components/GitHub';
 import { render } from '../test-utils';
 

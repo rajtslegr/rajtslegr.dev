@@ -1,7 +1,6 @@
 import '@testing-library/jest-dom';
 import { screen, waitFor } from '@testing-library/react';
 import fetchMock, { enableFetchMocks } from 'jest-fetch-mock';
-import React from 'react';
 import { cache, SWRConfig } from 'swr';
 import LastFm from '../../components/LastFm';
 import { render } from '../test-utils';

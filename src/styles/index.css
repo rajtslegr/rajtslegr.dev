@@ -7,5 +7,5 @@ html {
 }
 
 body {
-  @apply antialiased text-black transition bg-white dark:bg-dark dark:text-white;
+  @apply antialiased text-black bg-white dark:bg-dark dark:text-white;
 }

@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
 import CodeBlock, { Props } from '../../components/CodeBlock';
-import heroCode from '../../data/heroCode';
+import heroCode from '../../data/hero-code';
 import { render } from '../test-utils';
 
 describe('CodeBlock', () => {

@@ -1,7 +1,7 @@
 import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import Hero from '../components/Hero';
-import heroCode from '../data/heroCode';
+import heroCode from '../data/hero-code';
 
 interface Props {
   heroCode: string[];

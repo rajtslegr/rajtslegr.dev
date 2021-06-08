@@ -2,7 +2,7 @@ import Link, { LinkProps } from 'next/link';
 import { useRouter } from 'next/router';
 import { cloneElement } from 'react';
 
-interface Props extends LinkProps {
+export interface Props extends LinkProps {
   children: string;
 }
 

@@ -1,6 +1,6 @@
+import ContactForm from 'components/ContactForm';
 import { NextPage } from 'next';
 import Head from 'next/head';
-import ContactForm from '../components/ContactForm';
 
 const Contact: NextPage = () => {
   return (

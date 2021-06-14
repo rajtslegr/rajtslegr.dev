@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import { IProject } from '../types/types';
+import { IProject } from 'types/types';
 
 interface Props {
   project: IProject;

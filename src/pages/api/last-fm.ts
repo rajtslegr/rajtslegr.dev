@@ -1,6 +1,6 @@
+import { getRecentSongs } from 'lib/last-fm';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getRecentSongs } from '../../lib/last-fm';
-import { ILastFmData } from '../../types/types';
+import { ILastFmData } from 'types/types';
 
 export default async (
   _req: NextApiRequest,

@@ -1,8 +1,8 @@
 import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
-import CodeBlock, { Props } from '../../components/CodeBlock';
-import heroCode from '../../data/hero-code';
-import { render } from '../test-utils';
+import CodeBlock, { Props } from 'components/CodeBlock';
+import heroCode from 'data/hero-code';
+import { render } from 'test/test-utils';
 
 describe('CodeBlock', () => {
   let expectedProps: Props;

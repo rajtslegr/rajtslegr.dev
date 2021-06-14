@@ -1,8 +1,8 @@
 import { PlayIcon } from '@heroicons/react/solid';
 import React from 'react';
 import useSWR from 'swr';
-import { ILastFmData } from '../types/types';
-import fetcher from '../utils/fetcher';
+import { ILastFmData } from 'types/types';
+import fetcher from 'utils/fetcher';
 
 const LastFm: React.FC = () => {
   const { data, error } = useSWR<ILastFmData>('api/last-fm', fetcher, {

@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
-import GitHub, { Props } from '../../components/GitHub';
-import { render } from '../test-utils';
+import GitHub, { Props } from 'components/GitHub';
+import { render } from 'test/test-utils';
 
 describe('GitHub', () => {
   let expectedProps: Props;

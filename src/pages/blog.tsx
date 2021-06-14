@@ -1,9 +1,9 @@
+import { getSortedPostsData } from 'lib/posts';
 import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { getSortedPostsData } from '../lib/posts';
-import { ISortedPostData } from '../types/types';
-import parseDate from '../utils/date';
+import { ISortedPostData } from 'types/types';
+import parseDate from 'utils/date';
 
 interface Props {
   allPostsData: ISortedPostData[];

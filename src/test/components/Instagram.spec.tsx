@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
-import Instagram, { Props } from '../../components/Instagram';
-import { render } from '../test-utils';
+import Instagram, { Props } from 'components/Instagram';
+import { render } from 'test/test-utils';
 
 describe('Instagram', () => {
   let expectedProps: Props;

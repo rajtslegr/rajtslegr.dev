@@ -1,6 +1,6 @@
+import Footer from 'components/Footer';
+import NavBar from 'components/NavBar';
 import { ReactElement } from 'react';
-import Footer from './Footer';
-import NavBar from './NavBar';
 
 interface Props {
   children: ReactElement | ReactElement[];

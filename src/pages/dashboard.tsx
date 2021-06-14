@@ -1,11 +1,11 @@
+import GitHub from 'components/GitHub';
+import Instagram from 'components/Instagram';
+import LastFm from 'components/LastFm';
+import { getRecentRepos } from 'lib/github';
+import { getRecentPosts } from 'lib/instagram';
 import { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import GitHub from '../components/GitHub';
-import Instagram from '../components/Instagram';
-import LastFm from '../components/LastFm';
-import { getRecentRepos } from '../lib/github';
-import { getRecentPosts } from '../lib/instagram';
-import { IGitHubData, IIgData } from '../types/types';
+import { IGitHubData, IIgData } from 'types/types';
 
 interface Props {
   gitHubData: IGitHubData[];

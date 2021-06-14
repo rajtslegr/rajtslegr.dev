@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
-import NavLink from '../../components/NavLink';
-import { render } from '../test-utils';
+import NavLink from 'components/NavLink';
+import { render } from 'test/test-utils';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const useRouter = jest.spyOn(require('next/router'), 'useRouter');

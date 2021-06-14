@@ -1,5 +1,6 @@
 module.exports = {
   roots: ['<rootDir>'],
+  moduleDirectories: ['node_modules', 'src'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'jsx'],
   testPathIgnorePatterns: [
     '<rootDir>[/\\\\](node_modules|.next|.vscode)[/\\\\]',

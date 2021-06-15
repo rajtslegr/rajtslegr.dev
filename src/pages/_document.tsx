@@ -30,7 +30,7 @@ class MyDocument extends Document {
           <Script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-            strategy="afterInteractive"
+            strategy="beforeInteractive"
           />
           <Script
             // eslint-disable-next-line react/no-danger
@@ -44,7 +44,7 @@ class MyDocument extends Document {
                     });
                 `,
             }}
-            strategy="afterInteractive"
+            strategy="beforeInteractive"
           />
           <link rel="preconnect" href="https://www.google-analytics.com" />
           <link

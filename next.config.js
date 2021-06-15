@@ -1,7 +1,7 @@
 // next.config.js
 module.exports = {
   images: {
-    domains: ['lastfm.freetls.fastly.net', 'scontent-prg1-1.cdninstagram.com'],
+    domains: ['lastfm.freetls.fastly.net'],
   },
   webpack: (config, { dev, isServer }) => {
     // Replace React with Preact only in client production build
@@ -28,7 +28,7 @@ module.exports = {
 // https://securityheaders.com
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.youtube.com *.twitter.com cdn.usefathom.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.youtube.com *.twitter.com cdn.usefathom.com *.googletagmanager.com;
   child-src *.youtube.com *.google.com *.twitter.com;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
   img-src * blob: data:;

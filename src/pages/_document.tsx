@@ -5,7 +5,6 @@ import Document, {
   Main,
   NextScript,
 } from 'next/document';
-import Script from 'next/script';
 import { JSXElementConstructor, ReactElement, ReactFragment } from 'react';
 
 class MyDocument extends Document {
@@ -27,12 +26,11 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <Script
+          <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-            strategy="beforeInteractive"
           />
-          <Script
+          <script
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{
               __html: `
@@ -44,7 +42,6 @@ class MyDocument extends Document {
                     });
                 `,
             }}
-            strategy="beforeInteractive"
           />
           <link rel="preconnect" href="https://www.google-analytics.com" />
           <link

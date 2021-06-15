@@ -3,6 +3,14 @@ module.exports = {
   images: {
     domains: ['lastfm.freetls.fastly.net'],
   },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: securityHeaders,
+      },
+    ];
+  },
   webpack: (config, { dev, isServer }) => {
     // Replace React with Preact only in client production build
     if (!dev && !isServer) {
@@ -15,24 +23,15 @@ module.exports = {
 
     return config;
   },
-  headers: () => [
-    {
-      source: '/',
-      headers: securityHeaders,
-    },
-    {
-      source: '/:path*',
-      headers: securityHeaders,
-    },
-  ],
 };
 
+// https://securityheaders.com
 const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com;
-  child-src 'none';
-  style-src 'self' 'unsafe-inline';
-  img-src * blob: data:';
+  child-src *.youtube.com *.google.com *.twitter.com;
+  style-src 'self' 'unsafe-inline' *.googleapis.com;
+  img-src * blob: data:;
   media-src 'none';
   connect-src *;
   font-src 'self';
@@ -68,5 +67,11 @@ const securityHeaders = [
   {
     key: 'Strict-Transport-Security',
     value: 'max-age=31536000; includeSubDomains; preload',
+  },
+  // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy
+  // Opt-out of Google FLoC: https://amifloced.org/
+  {
+    key: 'Permissions-Policy',
+    value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
   },
 ];

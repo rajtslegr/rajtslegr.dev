@@ -30,7 +30,6 @@ class MyDocument extends Document {
           <Script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-            strategy="afterInteractive"
           />
           <script
             // eslint-disable-next-line react/no-danger

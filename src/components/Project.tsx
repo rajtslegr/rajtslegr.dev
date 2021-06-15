@@ -1,6 +1,17 @@
 import { NextPage } from 'next';
+import Image from 'next/image';
 import { IProject } from 'types/types';
+import cov19cz from '../../public/static/images/projects/cov19cz.png';
+import rajtslegr from '../../public/static/images/projects/rajtslegr.png';
+import typewriter from '../../public/static/images/projects/typewriter.png';
+import vaccbot from '../../public/static/images/projects/vaccbot.png';
 
+const IMAGES: { [key: string]: StaticImageData } = {
+  cov19cz,
+  rajtslegr,
+  typewriter,
+  vaccbot,
+};
 interface Props {
   project: IProject;
 }
@@ -12,13 +23,8 @@ const Project: NextPage<Props> = ({
     <div className="flex flex-col overflow-hidden transition border rounded shadow hover:shadow-lg">
       <a href={repo} rel="noopener noreferrer" target="_blank">
         <div className="bg-gray-200 animate-pulse"></div>
-        <img
-          src={`/static/images/projects/${image}`}
-          alt={`${title} mockup`}
-          width={734}
-          height={400}
-        />
-        <div className="flex flex-col px-2 py-4 border-t-2 sm:px-4">
+        <Image src={IMAGES[image]} alt={`${title} mockup`} placeholder="blur" />
+        <div className="flex flex-col px-2 py-4 sm:px-4">
           <span className="mb-2 text-xl font-bold">{title}</span>
           <p className="text-base text-gray-500 dark:text-gray-400">
             {description}

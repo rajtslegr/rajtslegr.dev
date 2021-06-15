@@ -1,4 +1,4 @@
-import { IIgData } from 'types/types';
+import { IIgData } from '@/types/types';
 
 export interface Props {
   data?: IIgData;
@@ -25,6 +25,7 @@ const Instagram: React.FC<Props> = ({ data }) => {
               >
                 <a href={e.permalink} rel="noopener noreferrer" target="_blank">
                   <div className="absolute object-cover w-full h-full bg-gray-200 rounded animate-pulse"></div>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     className="absolute object-cover w-full h-full rounded"
                     src={e.thumbnail_url || e.media_url}

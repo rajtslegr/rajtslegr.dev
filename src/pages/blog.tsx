@@ -19,7 +19,7 @@ const Blog: NextPage<Props> = ({ allPostsData }) => {
         <ul className="w-full space-y-4 lg:w-1/2">
           {allPostsData.map(({ id, date, title }) => (
             <li key={id}>
-              <Link href={`/post/${id}`}>
+              <Link href={`/post/${id}`} passHref>
                 <div className="flex flex-col p-4 transition border border-gray-200 rounded shadow cursor-pointer hover:shadow-lg">
                   <a>
                     <div className="text-xl font-bold">{title}</div>

@@ -1,4 +1,4 @@
-export default [
+const heroCode = [
   `// About me`,
   `const name = 'Petr Rajtslegr';`,
   `const profession = 'Full Stack Developer';`,
@@ -17,3 +17,5 @@ export default [
   `  'Node.js'`,
   `];`,
 ];
+
+export default heroCode;

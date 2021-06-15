@@ -2,7 +2,7 @@ import { getRecentSongs } from 'lib/last-fm';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { ILastFmData } from 'types/types';
 
-export default async (
+const get = async (
   _req: NextApiRequest,
   res: NextApiResponse<ILastFmData>,
 ): Promise<void> => {
@@ -11,3 +11,5 @@ export default async (
 
   return res.send(recentSongs);
 };
+
+export default get;

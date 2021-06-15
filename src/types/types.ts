@@ -24,8 +24,8 @@ export interface IIgData {
   data: {
     id: string;
     permalink: string;
-    media_url?: string;
-    thumbnail_url?: string;
+    media_url: string;
+    thumbnail_url: string;
     caption: string;
   }[];
 }

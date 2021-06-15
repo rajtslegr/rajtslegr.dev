@@ -5,6 +5,12 @@ import fetchMock, { enableFetchMocks } from 'jest-fetch-mock';
 import { cache, SWRConfig } from 'swr';
 import { render } from 'test/test-utils';
 
+// eslint-disable-next-line react/display-name
+jest.mock('next/image', () => ({ src, alt }: { src: string; alt: string }) => (
+  // eslint-disable-next-line @next/next/no-img-element
+  <img src={src} alt={alt} />
+));
+
 describe('LastFm', () => {
   enableFetchMocks();
   beforeEach(() => {

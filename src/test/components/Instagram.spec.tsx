@@ -14,7 +14,7 @@ describe('Instagram', () => {
           {
             caption: '#instagram',
             id: '1',
-            thumbnail_url: undefined,
+            thumbnail_url: undefined!,
             media_url: 'https://www.instagram.com/',
             permalink: 'https://www.instagram.com/',
           },
@@ -32,7 +32,7 @@ describe('Instagram', () => {
   });
 
   it('should use thumbnail_url if media_url is not present', () => {
-    expectedProps.data!.data[0].media_url = undefined;
+    expectedProps.data!.data[0].media_url = undefined!;
     expectedProps.data!.data[0].thumbnail_url = 'https://www.instagram.com/';
 
     render(<Instagram data={expectedProps.data} />);
@@ -46,7 +46,7 @@ describe('Instagram', () => {
       expectedProps.data!.data[i] = {
         caption: '#instagram',
         id: (i + 1).toString(),
-        thumbnail_url: undefined,
+        thumbnail_url: undefined!,
         media_url: 'https://www.instagram.com/',
         permalink: 'https://www.instagram.com/',
       };

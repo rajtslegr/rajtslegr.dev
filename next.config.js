@@ -1,7 +1,7 @@
 // next.config.js
 module.exports = {
   images: {
-    domains: ['lastfm.freetls.fastly.net'],
+    domains: ['lastfm.freetls.fastly.net', 'scontent-prg1-1.cdninstagram.com'],
   },
   webpack: (config, { dev, isServer }) => {
     // Replace React with Preact only in client production build

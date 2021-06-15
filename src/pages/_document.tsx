@@ -5,6 +5,7 @@ import Document, {
   Main,
   NextScript,
 } from 'next/document';
+import Script from 'next/script';
 import { JSXElementConstructor, ReactElement, ReactFragment } from 'react';
 
 class MyDocument extends Document {
@@ -26,9 +27,10 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <script
+          <Script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+            strategy="afterInteractive"
           />
           <script
             // eslint-disable-next-line react/no-danger

@@ -1,4 +1,6 @@
 import CodeBlock from 'components/CodeBlock';
+import Image from 'next/image';
+import hero from '../../public/static/images/hero.jpg';
 
 interface Props {
   heroCode: string[];
@@ -8,13 +10,7 @@ const Hero: React.FC<Props> = ({ heroCode }) => {
   return (
     <div className="flex flex-col-reverse items-center justify-between xl:justify-around gap-y-8 lg:flex-row">
       <CodeBlock code={heroCode} />
-      <img
-        className="rounded-full shadow-xl"
-        src="/static/images/hero.jpg"
-        alt="Hero"
-        width={344}
-        height={344}
-      ></img>
+      <Image className="rounded-full shadow" src={hero} alt="Hero"></Image>
     </div>
   );
 };

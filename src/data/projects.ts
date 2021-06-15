@@ -1,9 +1,9 @@
-export default [
+const projects = [
   {
     title: 'cov19cz',
     description: 'Czech COVID-19 tracker application.',
     build: 'Built with React, Axios, Recharts and styled-components.',
-    image: 'cov19cz.png',
+    image: 'cov19cz',
     live: 'https://cov19cz.vercel.app/',
     repo: 'https://github.com/RajceP/cov19cz',
   },
@@ -12,7 +12,7 @@ export default [
     description:
       'Twitter bot tweeting daily number of people vaccinated in Czechia and other interesting statistics.',
     build: 'Built with Node.js, TypeScript, Puppeteer and Twitter API.',
-    image: 'vaccbot.png',
+    image: 'vaccbot',
     live: 'https://twitter.com/ockovano',
     repo: 'https://github.com/RajceP/twitter-bot-vaccinated-in-czechia',
   },
@@ -21,7 +21,7 @@ export default [
     description: 'Small typing game.',
     build:
       'Built with React, React Hooks, TypeScript, Faker and styled-components.',
-    image: 'typewriter.png',
+    image: 'typewriter',
     live: 'https://typewriter-theta.vercel.app',
     repo: 'https://github.com/RajceP/typewriter',
   },
@@ -29,8 +29,10 @@ export default [
     title: 'rajtslegr.com',
     description: 'You are here right now! Cool, right?',
     build: 'Built with Next.js, TypeScript and Tailwind.',
-    image: 'rajtslegr.png',
+    image: 'rajtslegr',
     live: 'https://rajtslegr.com/',
     repo: 'https://github.com/RajceP/rajtslegr.com',
   },
 ];
+
+export default projects;

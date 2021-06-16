@@ -37,10 +37,11 @@ const Footer: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center w-full p-4 space-y-12 lg:pb-12">
-      <div className="flex flex-col w-11/12 border-t border-gray-200 sm:w-3/4 sm:p-6 md:w-1/2">
+      <div className="flex flex-col w-11/12 p-4 border-t border-gray-200 sm:w-3/4 sm:p-6 md:w-1/2">
         <div className="flex flex-row justify-between md:justify-evenly">
           <div className="flex flex-col space-y-2">
             <NavLink href="/">Home</NavLink>
+            <NavLink href="/dashboard">Dashboard</NavLink>
             <NavLink href="/projects">Projects</NavLink>
             <NavLink href="/blog">Blog</NavLink>
             <NavLink href="/contact">Contact</NavLink>

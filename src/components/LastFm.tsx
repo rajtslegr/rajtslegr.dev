@@ -57,14 +57,14 @@ const LastFm: React.FC = () => {
                     target="_blank"
                   >
                     <div className="flex flex-row space-x-2">
-                      <div className="relative w-32 h-32 border border-gray-200 rounded shadow">
+                      <div className="w-32 h-32 border border-gray-200 rounded shadow">
                         <Image
-                          className="rounded"
+                          className="border-gray-200 rounded"
                           src={t.image[2]['#text']}
                           alt="Album art"
                           layout="fixed"
-                          width={128}
-                          height={128}
+                          width={126}
+                          height={126}
                           placeholder="blur"
                           blurDataURL={t.image[0]['#text']}
                         />

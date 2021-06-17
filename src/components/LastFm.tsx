@@ -62,9 +62,9 @@ const LastFm: React.FC = () => {
                           className="rounded"
                           src={t.image[2]['#text']}
                           alt="Album art"
-                          layout="fill"
-                          objectFit="cover"
-                          sizes="100%"
+                          layout="fixed"
+                          width={128}
+                          height={128}
                           placeholder="blur"
                           blurDataURL={t.image[0]['#text']}
                         />

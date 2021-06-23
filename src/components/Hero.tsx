@@ -7,10 +7,13 @@ interface Props {
 }
 
 const Hero: React.FC<Props> = ({ heroCode }) => {
+  const IS_DEV = process.env.NODE_ENV === 'development';
+
   return (
     <div className="flex flex-col-reverse items-center justify-between xl:justify-around gap-y-8 lg:flex-row">
       <CodeBlock code={heroCode} />
       <Image
+        unoptimized={IS_DEV}
         className="rounded-full shadow"
         src={hero}
         alt="Hero"

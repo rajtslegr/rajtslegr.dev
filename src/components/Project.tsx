@@ -19,11 +19,18 @@ interface Props {
 const Project: NextPage<Props> = ({
   project: { title, description, build, image, repo },
 }) => {
+  const IS_DEV = process.env.NODE_ENV === 'development';
+
   return (
     <div className="flex flex-col overflow-hidden transition border rounded shadow hover:shadow-lg">
       <a href={repo} rel="noopener noreferrer" target="_blank">
         <div className="bg-gray-200 animate-pulse"></div>
-        <Image src={IMAGES[image]} alt={`${title} mockup`} placeholder="blur" />
+        <Image
+          unoptimized={IS_DEV}
+          src={IMAGES[image]}
+          alt={`${title} mockup`}
+          placeholder="blur"
+        />
         <div className="flex flex-col px-2 py-4 sm:px-4">
           <span className="mb-2 text-xl font-bold">{title}</span>
           <p className="text-base text-gray-500 dark:text-gray-400">

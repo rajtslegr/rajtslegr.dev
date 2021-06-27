@@ -9,3 +9,9 @@ html {
 body {
   @apply antialiased text-black bg-white dark:bg-dark dark:text-white;
 }
+
+@supports not (backdrop-filter: none) {
+  .header {
+    @apply bg-opacity-100 backdrop-blur-none;
+  }
+}

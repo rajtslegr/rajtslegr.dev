@@ -10,7 +10,7 @@ const NavBar: React.FC = () => {
 
   return (
     <nav
-      className={`fixed w-full bg-white dark:bg-dark z-10 ${
+      className={`fixed z-10 w-full bg-white bg-opacity-50 dark:bg-dark dark:bg-opacity-50 backdrop-blur ${
         !onTop ? 'shadow' : null
       } transition-shadow`}
     >

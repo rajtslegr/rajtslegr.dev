@@ -1,5 +1,5 @@
 import { MoonIcon, SunIcon } from '@heroicons/react/solid';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { useTheme } from 'next-themes';
 import { MouseEventHandler, useEffect, useState } from 'react';
 
@@ -10,6 +10,7 @@ interface Props {
 const ThemeButton: React.FC<Props> = ({ handleClick: handleClick }) => {
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
+  const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => setMounted(true), []);
 
@@ -21,12 +22,16 @@ const ThemeButton: React.FC<Props> = ({ handleClick: handleClick }) => {
       onClick={handleClick}
     >
       <motion.div
-        whileTap={{
-          translateX: '-90px',
-          scale: 0.8,
-          rotate: -90,
-          borderRadius: '100%',
-        }}
+        whileTap={
+          !shouldReduceMotion
+            ? {
+                translateX: '-90px',
+                scale: 0.8,
+                rotate: -90,
+                borderRadius: '100%',
+              }
+            : {}
+        }
         className="p-3"
       >
         {mounted && (theme === 'light' ? <MoonIcon /> : <SunIcon />)}

@@ -1,4 +1,5 @@
 import { MoonIcon, SunIcon } from '@heroicons/react/solid';
+import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
 import { MouseEventHandler, useEffect, useState } from 'react';
 
@@ -16,10 +17,20 @@ const ThemeButton: React.FC<Props> = ({ handleClick: handleClick }) => {
     <button
       aria-label="Toggle Dark Mode"
       type="button"
-      className="w-12 h-12 p-3 my-3 transition bg-gray-200 rounded-lg shadow dark:bg-gray-600 hover:shadow-lg"
+      className="w-12 h-12 my-3 overflow-hidden transition bg-gray-200 rounded-lg shadow dark:bg-gray-600 hover:shadow-lg"
       onClick={handleClick}
     >
-      {mounted && (theme === 'light' ? <MoonIcon /> : <SunIcon />)}
+      <motion.div
+        whileTap={{
+          translateX: '-90px',
+          scale: 0.8,
+          rotate: -90,
+          borderRadius: '100%',
+        }}
+        className="p-3"
+      >
+        {mounted && (theme === 'light' ? <MoonIcon /> : <SunIcon />)}
+      </motion.div>
     </button>
   );
 };

@@ -23,6 +23,7 @@
     "@heroicons/react": "^1.0.1",
     "@tailwindcss/typography": "^0.4.1",
     "date-fns": "^2.22.1",
+    "framer-motion": "^4.1.17",
     "gray-matter": "^4.0.3",
     "next": "^11.0.1",
     "next-themes": "^0.0.15",

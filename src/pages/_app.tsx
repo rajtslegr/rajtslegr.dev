@@ -11,7 +11,6 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
         src={'https://www.googletagmanager.com/gtag/js?id=UA-158860802-2'}
       />
       <Script
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];

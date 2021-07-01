@@ -4,7 +4,6 @@ import Hero from 'components/Hero';
 import heroCode from 'data/hero-code';
 import { render } from 'test/test-utils';
 
-// eslint-disable-next-line react/display-name
 jest.mock('next/image', () => ({ alt }: { alt: string }) => (
   // eslint-disable-next-line @next/next/no-img-element
   <img src="/static/images/hero.jpg" alt={alt} />

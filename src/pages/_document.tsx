@@ -11,8 +11,8 @@ class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<{
     html: string;
     head?: (JSX.Element | null)[] | undefined;
-    styles?: // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    | ReactElement<any, string | JSXElementConstructor<any>>[]
+    styles?:
+      | ReactElement<any, string | JSXElementConstructor<any>>[]
       | ReactFragment
       | undefined;
   }> {

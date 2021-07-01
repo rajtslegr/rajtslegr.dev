@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 const fetcher = async <JSON = any>(
   input: RequestInfo,
   init?: RequestInit,

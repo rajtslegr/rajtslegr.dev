@@ -18,6 +18,7 @@ const Hero: React.FC<Props> = ({ heroCode }) => {
         src={hero}
         alt="Hero"
         placeholder="blur"
+        priority
       ></Image>
     </div>
   );

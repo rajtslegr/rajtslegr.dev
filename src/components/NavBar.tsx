@@ -5,7 +5,7 @@ import React from 'react';
 import ThemeButton from './ThemeButton';
 
 const NavBar: React.FC = () => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const onTop = useOnTop();
 
   return (
@@ -25,7 +25,9 @@ const NavBar: React.FC = () => {
           </li>
         </ul>
         <ThemeButton
-          handleClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+          handleClick={() =>
+            setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
+          }
         />
       </div>
     </nav>

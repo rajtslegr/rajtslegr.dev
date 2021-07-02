@@ -9,7 +9,7 @@ interface Props {
 
 const ThemeButton: React.FC<Props> = ({ handleClick: handleClick }) => {
   const [mounted, setMounted] = useState(false);
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => setMounted(true), []);
@@ -34,7 +34,7 @@ const ThemeButton: React.FC<Props> = ({ handleClick: handleClick }) => {
         }
         className="p-3"
       >
-        {mounted && (theme === 'light' ? <MoonIcon /> : <SunIcon />)}
+        {mounted && (resolvedTheme === 'light' ? <MoonIcon /> : <SunIcon />)}
       </motion.div>
     </button>
   );

@@ -22,7 +22,11 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
         `,
         }}
       />
-      <ThemeProvider defaultTheme="light" attribute="class">
+      <ThemeProvider
+        disableTransitionOnChange
+        defaultTheme="system"
+        attribute="class"
+      >
         <Layout>
           <Component {...pageProps} />
         </Layout>

@@ -82,7 +82,7 @@ const LastFm: React.FC = () => {
                         </p>
                       </div>
                       {t['@attr']?.nowplaying && (
-                        <div className="flex justify-end flex-grow w-12 h-12 text-red-600 items-top -z-1 animate-pulse">
+                        <div className="flex justify-end flex-grow w-12 h-12 text-red-600 items-top animate-pulse">
                           <PlayIcon />
                         </div>
                       )}

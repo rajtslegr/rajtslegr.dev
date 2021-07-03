@@ -16,6 +16,7 @@ const heroCode = [
   `  'Next.js',`,
   `  'Node.js'`,
   `];`,
+  ``,
 ];
 
 export default heroCode;

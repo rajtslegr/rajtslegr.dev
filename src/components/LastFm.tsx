@@ -1,6 +1,5 @@
 import { PlayIcon } from '@heroicons/react/solid';
 import Image from 'next/image';
-import React from 'react';
 import useSWR from 'swr';
 import { ILastFmData } from 'types/types';
 import fetcher from 'utils/fetcher';

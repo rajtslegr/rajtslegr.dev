@@ -1,7 +1,6 @@
 import NavLink from 'components/NavLink';
 import useOnTop from 'hooks/useOnTop';
 import { useTheme } from 'next-themes';
-import React from 'react';
 import ThemeButton from './ThemeButton';
 
 const NavBar: React.FC = () => {

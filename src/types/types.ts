@@ -1,3 +1,5 @@
+import { MDXRemoteSerializeResult } from 'next-mdx-remote/dist/types';
+
 export interface IGitHubData {
   node_id: string;
   full_name: string;
@@ -55,5 +57,5 @@ export interface IPostData {
   date: string;
   title: string;
   id: string;
-  contentHtml: string;
+  content: MDXRemoteSerializeResult<Record<string, unknown>>;
 }

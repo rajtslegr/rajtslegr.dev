@@ -1,24 +1,27 @@
+import parseDate from '@/utils/date';
 import { getAllPostIds, getPostData } from 'lib/posts';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import { MDXRemote } from 'next-mdx-remote';
 import Head from 'next/head';
 import { IPostData } from 'types/types';
-import parseDate from 'utils/date';
 
 interface Props {
   postData: IPostData;
 }
 
-const Post: NextPage<Props> = ({ postData }) => {
+const Post: NextPage<Props> = ({ postData: { title, date, content } }) => {
   return (
     <>
       <Head>
-        <title>{postData.title}</title>
+        <title>{title}</title>
       </Head>
       <div className="flex flex-col items-center">
-        <article className="prose lg:prose-xl dark:prose-dark ">
-          <h1>{postData.title}</h1>
-          <div>{parseDate(postData.date)}</div>
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <article className="prose text-black dark:prose-dark dark:text-white">
+          <h1 className="text-black dark:text-white">{title}</h1>
+          <div className="text-gray-500 dark:text-gray-400">
+            {parseDate(date)}
+          </div>
+          <MDXRemote {...content} />
         </article>
       </div>
     </>

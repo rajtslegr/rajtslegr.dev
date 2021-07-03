@@ -20,7 +20,7 @@ const Blog: NextPage<Props> = ({ allPostsData }) => {
           {allPostsData.map(({ id, date, title }) => (
             <li key={id}>
               <Link href={`/post/${id}`} passHref>
-                <div className="flex flex-col p-4 transition border border-gray-200 rounded shadow cursor-pointer hover:shadow-lg">
+                <div className="flex flex-col p-4 transition  rounded shadow cursor-pointer hover:shadow-lg bg-white dark:bg-card">
                   <a>
                     <div className="text-xl font-bold">{title}</div>
                     <div className="font-light">{parseDate(date)}</div>

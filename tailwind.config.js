@@ -70,7 +70,8 @@ module.exports = {
         },
       }),
       backgroundColor: {
-        dark: '#131312',
+        dark: '#111827',
+        card: '#1F2937',
       },
       zIndex: {
         '-1': '-1',

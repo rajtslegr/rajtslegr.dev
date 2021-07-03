@@ -42,7 +42,7 @@ const ContactForm: React.FC = () => {
     >
       <div className="self-start text-xl">Get in touch!</div>
       <input
-        className="w-full p-2 border border-gray-200 rounded-md shadow focus:shadow-lg sm:text-sm dark:bg-gray-600"
+        className="w-full p-2  rounded-md shadow focus:shadow-lg sm:text-sm bg-white dark:bg-card"
         placeholder="john@doe.com"
         id="email"
         type="email"
@@ -51,7 +51,7 @@ const ContactForm: React.FC = () => {
       />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
       <textarea
-        className="w-full h-48 p-2 border border-gray-200 rounded-md shadow focus:shadow-lg sm:text-sm dark:bg-gray-600"
+        className="w-full h-48 p-2  rounded-md shadow focus:shadow-lg sm:text-sm bg-white dark:bg-card"
         placeholder="Your Message..."
         id="message"
         name="message"

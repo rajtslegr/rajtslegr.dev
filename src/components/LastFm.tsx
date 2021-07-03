@@ -24,7 +24,7 @@ const LastFm: React.FC = () => {
           return (
             <div
               key={i}
-              className="flex flex-col p-2 transition border rounded shadow h-36"
+              className="flex flex-col p-2 transition bg-white border rounded shadow h-36 dark:bg-card"
             >
               <div className="flex flex-row space-x-2">
                 <div className="w-32 h-32 bg-gray-200 border rounded shadow animate-pulse"></div>
@@ -50,7 +50,7 @@ const LastFm: React.FC = () => {
               return (
                 <div
                   key={i}
-                  className="flex flex-col p-2 transition border border-gray-200 rounded shadow min-h-36 hover:shadow-lg"
+                  className="flex flex-col p-2 transition bg-white rounded shadow min-h-36 hover:shadow-lg dark:bg-card"
                 >
                   <a
                     href="https://last.fm/user/RajceP"
@@ -58,15 +58,15 @@ const LastFm: React.FC = () => {
                     target="_blank"
                   >
                     <div className="flex flex-row space-x-2">
-                      <div className="w-32 h-32 border border-gray-200 rounded shadow">
+                      <div className="w-32 h-32 rounded shadow">
                         <Image
                           unoptimized={IS_DEV}
                           className="border-gray-200 rounded"
                           src={t.image[2]['#text']}
                           alt="Album art"
                           layout="fixed"
-                          width={126}
-                          height={126}
+                          width={128}
+                          height={128}
                           placeholder="blur"
                           blurDataURL={t.image[0]['#text']}
                         />

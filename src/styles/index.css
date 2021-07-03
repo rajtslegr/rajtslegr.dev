@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  @apply antialiased text-black bg-white dark:bg-dark dark:text-white;
+  @apply antialiased text-black bg-gray-50 dark:bg-dark dark:text-white;
 }
 
 @supports not (backdrop-filter: none) {

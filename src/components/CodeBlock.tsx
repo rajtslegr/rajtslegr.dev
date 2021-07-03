@@ -4,7 +4,7 @@ export interface Props {
 
 const CodeBlock: React.FC<Props> = ({ code }) => {
   return (
-    <div className="flex flex-col w-full p-4 overflow-auto text-sm transition border border-gray-200 rounded shadow font-monos lg:max-w-lg">
+    <div className="flex flex-col w-full p-4 overflow-auto text-sm transition  rounded shadow font-monos lg:max-w-lg bg-white dark:bg-card">
       {code.map((row, i) => {
         return (
           <pre

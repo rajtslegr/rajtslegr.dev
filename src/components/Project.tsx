@@ -22,7 +22,7 @@ const Project: NextPage<Props> = ({
   const IS_DEV = process.env.NODE_ENV === 'development';
 
   return (
-    <div className="flex flex-col overflow-hidden transition border rounded shadow hover:shadow-lg">
+    <div className="flex flex-col overflow-hidden transition rounded shadow bg-white dark:bg-card hover:shadow-lg">
       <a href={repo} rel="noopener noreferrer" target="_blank">
         <div className="bg-gray-200 animate-pulse"></div>
         <Image

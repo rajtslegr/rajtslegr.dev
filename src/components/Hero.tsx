@@ -12,14 +12,16 @@ const Hero: React.FC<Props> = ({ heroCode }) => {
   return (
     <div className="flex flex-col-reverse items-center justify-between xl:justify-around gap-y-8 lg:flex-row">
       <CodeBlock code={heroCode} />
-      <Image
-        unoptimized={IS_DEV}
-        className="rounded-full shadow"
-        src={hero}
-        alt="Hero"
-        placeholder="blur"
-        priority
-      ></Image>
+      <div className="overflow-hidden rounded-full">
+        <Image
+          unoptimized={IS_DEV}
+          className="rounded-full shadow"
+          src={hero}
+          alt="Hero"
+          placeholder="blur"
+          priority
+        ></Image>
+      </div>
     </div>
   );
 };

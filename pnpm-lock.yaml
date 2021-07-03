@@ -4,6 +4,7 @@ specifiers:
   '@babel/core': ^7.14.6
   '@formspree/react': ^2.2.3
   '@heroicons/react': ^1.0.1
+  '@tailwindcss/forms': ^0.3.3
   '@tailwindcss/typography': ^0.4.1
   '@testing-library/jest-dom': ^5.14.1
   '@testing-library/react': ^12.0.0
@@ -49,6 +50,7 @@ specifiers:
 dependencies:
   '@formspree/react': 2.2.3_react@17.0.2
   '@heroicons/react': 1.0.1_react@17.0.2
+  '@tailwindcss/forms': 0.3.3_tailwindcss@2.2.4
   '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.4
   date-fns: 2.22.1
   framer-motion: 4.1.17_react-dom@17.0.2+react@17.0.2
@@ -1166,6 +1168,18 @@ packages:
     dependencies:
       '@sinonjs/commons': 1.8.3
     dev: true
+
+  /@tailwindcss/forms/0.3.3_tailwindcss@2.2.4:
+    resolution:
+      {
+        integrity: sha512-U8Fi/gq4mSuaLyLtFISwuDYzPB73YzgozjxOIHsK6NXgg/IWD1FLaHbFlWmurAMyy98O+ao74ksdQefsquBV1Q==,
+      }
+    peerDependencies:
+      tailwindcss: '>=2.0.0'
+    dependencies:
+      mini-svg-data-uri: 1.3.3
+      tailwindcss: 2.2.4_72be89de93206f86f2d67dd5290ec14d
+    dev: false
 
   /@tailwindcss/typography/0.4.1_tailwindcss@2.2.4:
     resolution:
@@ -6368,6 +6382,14 @@ packages:
       }
     engines: { node: '>=4' }
     dev: true
+
+  /mini-svg-data-uri/1.3.3:
+    resolution:
+      {
+        integrity: sha512-+fA2oRcR1dJI/7ITmeQJDrYWks0wodlOz0pAEhKYJ2IVc1z0AnwJUsKY2fzFmPAM3Jo9J0rBx8JAA9QQSJ5PuA==,
+      }
+    hasBin: true
+    dev: false
 
   /minimalistic-assert/1.0.1:
     resolution:

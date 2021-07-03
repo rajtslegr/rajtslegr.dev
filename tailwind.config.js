@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   mode: 'jit',
   purge: [
@@ -7,13 +9,14 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+      },
       backgroundColor: {
         dark: '#111827',
         card: '#1F2937',
       },
-      zIndex: {
-        '-1': '-1',
-      },
+
       spacing: {
         '1/1': '100%',
       },

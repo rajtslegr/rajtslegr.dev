@@ -30,11 +30,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
             rel="stylesheet"
           />
-          <link
-            rel="shortcut icon"
-            type="image/jpg"
-            href="/static/images/hero.jpg"
-          />
+          <link rel="shortcut icon" href="/static/favicon/favicon.ico" />
           <meta property="title" content="Petr Rajtslegr | Full Stack Dev" />
           <meta
             name="description"

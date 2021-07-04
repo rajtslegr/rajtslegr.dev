@@ -22,7 +22,7 @@ const Project: NextPage<Props> = ({
   const IS_DEV = process.env.NODE_ENV === 'development';
 
   return (
-    <div className="flex flex-col overflow-hidden transition rounded shadow bg-white dark:bg-card hover:shadow-lg">
+    <div className="flex flex-col overflow-hidden transition bg-white rounded shadow dark:bg-card hover:shadow-lg">
       <a href={repo} rel="noopener noreferrer" target="_blank">
         <div className="bg-gray-200 animate-pulse"></div>
         <Image
@@ -32,7 +32,7 @@ const Project: NextPage<Props> = ({
           placeholder="blur"
         />
         <div className="flex flex-col px-2 py-4 sm:px-4">
-          <span className="mb-2 text-xl font-bold">{title}</span>
+          <h3 className="mb-2 text-xl font-bold">{title}</h3>
           <p className="text-base text-gray-500 dark:text-gray-400">
             {description}
           </p>

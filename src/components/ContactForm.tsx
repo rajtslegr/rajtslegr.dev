@@ -40,9 +40,9 @@ const ContactForm: React.FC = () => {
       className="flex flex-col items-center justify-center w-full space-y-4 sm:w-4/6 lg:w-1/2"
       onSubmit={handleSubmit}
     >
-      <div className="self-start text-xl">Get in touch!</div>
+      <p className="self-start text-xl">Get in touch!</p>
       <input
-        className="w-full p-2  rounded-md shadow focus:shadow-lg sm:text-sm bg-white dark:bg-card"
+        className="w-full p-2 bg-white rounded-md shadow focus:shadow-lg sm:text-sm dark:bg-card"
         placeholder="john@doe.com"
         id="email"
         type="email"
@@ -51,7 +51,7 @@ const ContactForm: React.FC = () => {
       />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
       <textarea
-        className="w-full h-48 p-2  rounded-md shadow focus:shadow-lg sm:text-sm bg-white dark:bg-card"
+        className="w-full h-48 p-2 bg-white rounded-md shadow focus:shadow-lg sm:text-sm dark:bg-card"
         placeholder="Your Message..."
         id="message"
         name="message"

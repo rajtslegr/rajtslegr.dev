@@ -1,0 +1,45 @@
+---
+title: 'React useOnTop hook'
+date: '2021-07-04'
+---
+
+Hello everyone!
+
+I want to show you how to build a simple hook to determine position of scroll,
+more precisely, if the position is at the top of the page.
+
+Here is the code:
+
+```jsx
+// useOnTop.tsx
+import { useEffect, useState } from 'react';
+
+const useOnTop = (): boolean => {
+  const [onTop, setOntTop] = useState < boolean > true;
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  });
+
+  const handleScroll = (): void => {
+    if (window.pageYOffset > 0) {
+      if (onTop) setOntTop(false);
+    } else {
+      if (!onTop) setOntTop(true);
+    }
+  };
+
+  return onTop;
+};
+
+export default useOnTop;
+```
+
+As you can see, it's quite simple. Using the useEffect hook,
+we add an event listener bound to the scroll that calls the handleScroll method.
+We then use the Window API to detect the page offset and set the state using the setState hook,
+which we then return from our method.
+
+Thank you and see you soon!

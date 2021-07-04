@@ -15,22 +15,28 @@ const Blog: NextPage<Props> = ({ allPostsData }) => {
       <Head>
         <title>Petr Rajtslegr | Blog</title>
       </Head>
-      <div className="flex flex-col items-center">
-        <ul className="w-full space-y-4 lg:w-1/2">
-          {allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
-              <Link href={`/post/${id}`} passHref>
-                <div className="flex flex-col p-4 transition  rounded shadow cursor-pointer hover:shadow-lg bg-white dark:bg-card">
-                  <a>
-                    <div className="text-xl font-bold">{title}</div>
-                    <div className="font-light">{parseDate(date)}</div>
-                  </a>
-                </div>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <h1 className="mb-4 text-4xl font-bold md:mb-12">Blog</h1>
+      <ul className="grid w-full gap-4 lg:grid-cols-2">
+        {allPostsData.map(({ id, date, title, readingTime }) => (
+          <li key={id}>
+            <Link href={`/post/${id}`} passHref>
+              <div className="flex flex-col p-4 transition bg-white rounded shadow cursor-pointer hover:shadow-lg dark:bg-card">
+                <a>
+                  <h2 className="text-xl font-bold">{title}</h2>
+                  <div className="flex flex-row justify-between">
+                    <span className="text-base text-gray-500 dark:text-gray-400">
+                      {parseDate(date)}
+                    </span>
+                    <span className="text-base text-gray-500 dark:text-gray-400">
+                      {readingTime.text}
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </>
   );
 };

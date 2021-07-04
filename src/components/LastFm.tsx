@@ -71,7 +71,7 @@ const LastFm: React.FC = () => {
                         />
                       </div>
                       <div className="flex flex-col min-h-full">
-                        <p className="text-lg">{t.name}</p>
+                        <h3 className="text-lg font-bold">{t.name}</h3>
                         <div className="flex flex-1"></div>
                         <p className="text-gray-500 dark:text-gray-400">
                           {t.artist['#text']}
@@ -98,7 +98,7 @@ const LastFm: React.FC = () => {
 
   return (
     <>
-      <p className="my-4 text-4xl">Last.fm</p>
+      <h2 className="my-4 text-3xl font-bold">Last.fm</h2>
       {render}
     </>
   );

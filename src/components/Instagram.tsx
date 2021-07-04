@@ -44,7 +44,7 @@ const Instagram: React.FC<Props> = ({ data }) => {
 
   return (
     <>
-      <p className="mb-4 text-4xl">Instagram</p>
+      <h2 className="mb-4 text-3xl font-bold">Instagram</h2>
       {render}
     </>
   );

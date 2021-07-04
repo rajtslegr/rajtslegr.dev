@@ -42,9 +42,10 @@ export interface IProject {
 }
 
 export interface ISortedPostData {
-  date: string;
-  title: string;
   id: string;
+  title: string;
+  date: string;
+  readingTime: IReadTimeResults;
 }
 
 export interface IPostId {
@@ -53,9 +54,13 @@ export interface IPostId {
   };
 }
 
-export interface IPostData {
-  date: string;
-  title: string;
-  id: string;
+export interface IPostData extends ISortedPostData {
   content: MDXRemoteSerializeResult<Record<string, unknown>>;
 }
+
+type IReadTimeResults = {
+  text: string;
+  time: number;
+  words: number;
+  minutes: number;
+};

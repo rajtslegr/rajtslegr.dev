@@ -3,6 +3,7 @@ import matter from 'gray-matter';
 import mdxPrism from 'mdx-prism';
 import { serialize } from 'next-mdx-remote/serialize';
 import path from 'path';
+import readingTime from 'reading-time';
 import { IPostData, IPostId, ISortedPostData } from 'types/types';
 
 const postsDirectory = path.join(process.cwd(), 'src/data/posts');
@@ -19,7 +20,8 @@ export const getSortedPostsData = (): ISortedPostData[] => {
 
     return {
       id,
-      ...(matterResult.data as { date: string; title: string }),
+      readingTime: readingTime(matterResult.content),
+      ...(matterResult.data as { title: string; date: string }),
     };
   });
 
@@ -56,6 +58,7 @@ export const getPostData = async (id: string): Promise<IPostData> => {
   return {
     id,
     content,
-    ...(matterResult.data as { date: string; title: string }),
+    readingTime: readingTime(matterResult.content),
+    ...(matterResult.data as { title: string; date: string }),
   };
 };

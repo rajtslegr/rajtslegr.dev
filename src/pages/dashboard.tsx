@@ -18,6 +18,7 @@ const Dashboard: NextPage<Props> = ({ gitHubData, igData }) => {
       <Head>
         <title>Petr Rajtslegr | Dashboard</title>
       </Head>
+      <h1 className="mb-4 text-4xl font-bold md:mb-12">Dashboard</h1>
       <Instagram data={igData} />
       <LastFm />
       <GitHub data={gitHubData} />

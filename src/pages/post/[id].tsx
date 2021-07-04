@@ -9,7 +9,9 @@ interface Props {
   postData: IPostData;
 }
 
-const Post: NextPage<Props> = ({ postData: { title, date, content } }) => {
+const Post: NextPage<Props> = ({
+  postData: { title, date, content, readingTime },
+}) => {
   return (
     <>
       <Head>
@@ -18,8 +20,9 @@ const Post: NextPage<Props> = ({ postData: { title, date, content } }) => {
       <div className="flex flex-col items-center">
         <article className="prose text-black dark:prose-dark dark:text-white">
           <h1 className="text-black dark:text-white">{title}</h1>
-          <div className="text-gray-500 dark:text-gray-400">
-            {parseDate(date)}
+          <div className="flex flex-row justify-between text-gray-500 dark:text-gray-400">
+            <p>{parseDate(date)}</p>
+            <p>{readingTime.text}</p>
           </div>
           <MDXRemote {...content} />
         </article>

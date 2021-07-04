@@ -1,7 +1,7 @@
+import MetaData from 'components/MetaData';
 import Project from 'components/Project';
 import projects from 'data/projects';
 import { GetStaticProps, NextPage } from 'next';
-import Head from 'next/head';
 import { IProject } from 'types/types';
 
 interface Props {
@@ -11,9 +11,7 @@ interface Props {
 const Projects: NextPage<Props> = ({ projects }) => {
   return (
     <>
-      <Head>
-        <title>Petr Rajtslegr | Projects</title>
-      </Head>
+      <MetaData title="Petr Rajtslegr | Projects" />
       <h1 className="mb-4 text-4xl font-bold md:mb-12">Projects</h1>
       <div className="grid w-full gap-4 lg:grid-cols-2">
         {projects.map((p, i) => {

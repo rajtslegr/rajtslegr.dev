@@ -30,26 +30,24 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
             rel="stylesheet"
           />
-          <link rel="shortcut icon" href="/static/favicon/favicon.ico" />
-          <meta property="title" content="Petr Rajtslegr | Full Stack Dev" />
-          <meta
-            name="description"
-            content="Petr Rajtslegr - Full Stack developer based in Prague, Czech Republic."
-          ></meta>
-          <meta
-            name="keywords"
-            content="HTML, CSS, JavaScript, developer, Petr, Rajtslegr"
-          ></meta>
-          <meta property="og:type" content="website"></meta>
-          <meta property="og:url" content="https://rajtslegr.com/"></meta>
-          <meta
-            property="og:title"
-            content="Petr Rajtslegr | Full Stack Dev"
-          ></meta>
-          <meta
-            property="og:description"
-            content="Petr Rajtslegr - Full Stack developer based in Prague, Czech Republic."
-          ></meta>
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/static/favicon/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/static/favicon/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+          />
+          <link rel="manifest" href="/static/favicon/site.webmanifest" />
         </Head>
         <body>
           <Main />

@@ -1,22 +1,25 @@
-import parseDate from '@/utils/date';
+import MetaData from 'components/MetaData';
 import { getAllPostIds, getPostData } from 'lib/posts';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
-import Head from 'next/head';
 import { IPostData } from 'types/types';
+import parseDate from 'utils/date';
 
 interface Props {
   postData: IPostData;
 }
 
 const Post: NextPage<Props> = ({
-  postData: { title, date, content, readingTime },
+  postData: { title, description, date, content, readingTime },
 }) => {
   return (
     <>
-      <Head>
-        <title>{title}</title>
-      </Head>
+      <MetaData
+        title={`${title} | Petr Rajtslegr`}
+        description={description}
+        type="article"
+        date={new Date(date).toISOString()}
+      />
       <div className="flex flex-col items-center">
         <article className="w-full prose text-black lg:w-2/3 dark:prose-dark dark:text-white max-w-none">
           <h1 className="text-black dark:text-white">{title}</h1>

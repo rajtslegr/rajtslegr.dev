@@ -1,10 +1,10 @@
 import GitHub from 'components/GitHub';
 import Instagram from 'components/Instagram';
 import LastFm from 'components/LastFm';
+import MetaData from 'components/MetaData';
 import { getRecentRepos } from 'lib/github';
 import { getRecentPosts } from 'lib/instagram';
 import { GetStaticProps, NextPage } from 'next';
-import Head from 'next/head';
 import { IGitHubData, IIgData } from 'types/types';
 
 interface Props {
@@ -15,9 +15,7 @@ interface Props {
 const Dashboard: NextPage<Props> = ({ gitHubData, igData }) => {
   return (
     <>
-      <Head>
-        <title>Petr Rajtslegr | Dashboard</title>
-      </Head>
+      <MetaData title="Petr Rajtslegr | Dashboard" />
       <h1 className="mb-4 text-4xl font-bold md:mb-12">Dashboard</h1>
       <Instagram data={igData} />
       <LastFm />

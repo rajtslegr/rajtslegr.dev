@@ -44,6 +44,7 @@ export interface IProject {
 export interface ISortedPostData {
   id: string;
   title: string;
+  description: string;
   date: string;
   readingTime: IReadTimeResults;
 }

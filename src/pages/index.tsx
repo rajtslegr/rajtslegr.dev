@@ -1,7 +1,7 @@
 import Hero from 'components/Hero';
+import MetaData from 'components/MetaData';
 import heroCode from 'data/hero-code';
 import { GetStaticProps, NextPage } from 'next';
-import Head from 'next/head';
 
 interface Props {
   heroCode: string[];
@@ -10,9 +10,7 @@ interface Props {
 const IndexPage: NextPage<Props> = ({ heroCode }) => {
   return (
     <>
-      <Head>
-        <title>Petr Rajtslegr | Full Stack Dev</title>
-      </Head>
+      <MetaData title="Petr Rajtslegr | Full Stack Dev" />
       <Hero heroCode={heroCode} />
     </>
   );

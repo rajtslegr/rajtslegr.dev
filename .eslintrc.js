@@ -4,8 +4,8 @@ module.exports = {
     node: true,
     es6: true,
   },
-  parserOptions: { ecmaVersion: 8 }, // to enable features such as async/await
-  ignorePatterns: ['node_modules/*', '.next/*', '.out/*', '!.prettierrc.js'], // We don't want to lint generated files nor node_modules, but we want to lint .prettierrc.js (ignored by default by eslint)
+  parserOptions: { ecmaVersion: 8 },
+  ignorePatterns: ['node_modules/*', '.next/*', '.out/*', '!.prettierrc.js'],
   extends: ['eslint:recommended'],
   overrides: [
     {
@@ -19,12 +19,12 @@ module.exports = {
       },
       extends: [
         'eslint:recommended',
-        'plugin:@typescript-eslint/recommended', // TypeScript rules
-        'next', // Next rules
-        'plugin:react/recommended', // React rules
-        'plugin:react-hooks/recommended', // React hooks rules
-        'plugin:jsx-a11y/recommended', // Accessibility rules
-        'plugin:prettier/recommended', // Prettier recommended rules
+        'plugin:@typescript-eslint/recommended',
+        'next',
+        'plugin:react/recommended',
+        'plugin:react-hooks/recommended',
+        'plugin:jsx-a11y/recommended',
+        'plugin:prettier/recommended',
       ],
       rules: {
         'react/react-in-jsx-scope': 0,
@@ -57,6 +57,11 @@ module.exports = {
       env: { jest: true },
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       extends: ['plugin:jest-dom/recommended', 'plugin:testing-library/react'],
+    },
+    {
+      files: ['**/*.mdx'],
+      extends: ['plugin:mdx/recommended'],
+      settings: { 'mdx/code-blocks': false },
     },
   ],
 };

@@ -12,7 +12,7 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
-    "lint": "eslint --ext ts --ext tsx",
+    "lint": "eslint --ext ts --ext tsx --ext mdx",
     "lint-staged": "lint-staged",
     "test": "jest --env=jsdom",
     "test:related": "jest --env=jsdom --bail --passWithNoTests --findRelatedTests ./src/test/**/*",
@@ -53,6 +53,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jest-dom": "^3.9.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-mdx": "^1.13.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
@@ -66,6 +67,7 @@
     "postcss": "^8.3.5",
     "prettier": "^2.3.2",
     "pretty-quick": "^3.1.1",
+    "remark-preset-prettier": "^0.4.1",
     "tailwindcss": "^2.2.4",
     "typescript": "^4.3.5"
   }

@@ -24,7 +24,7 @@ const Project: NextPage<Props> = ({
   return (
     <div className="flex flex-col overflow-hidden transition bg-white rounded shadow dark:bg-card hover:shadow-lg">
       <a href={repo} rel="noopener noreferrer" target="_blank">
-        <div className="bg-gray-200 animate-pulse"></div>
+        <div className="bg-gray-200 animate-pulse dark:bg-gray-600"></div>
         <Image
           unoptimized={IS_DEV}
           src={IMAGES[image]}

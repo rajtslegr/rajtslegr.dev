@@ -5,7 +5,13 @@ module.exports = {
     es6: true,
   },
   parserOptions: { ecmaVersion: 8 },
-  ignorePatterns: ['node_modules/*', '.next/*', '.out/*', '!.prettierrc.js'],
+  ignorePatterns: [
+    'node_modules/*',
+    '.next/*',
+    '.out/*',
+    'scripts/*',
+    '!.prettierrc.js',
+  ],
   extends: ['eslint:recommended'],
   overrides: [
     {

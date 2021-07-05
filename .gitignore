@@ -9,6 +9,7 @@
 /out
 .vercel
 .env.*
+public/sitemap.xml
 
 # test
 /coverage

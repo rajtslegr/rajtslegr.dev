@@ -23,11 +23,11 @@ const Blog: NextPage<Props> = ({ allPostsData }) => {
       <h1 className="mb-4 text-4xl font-bold md:mb-12">Blog</h1>
       <div className="relative flex flex-col w-full mb-4 md:w-1/3">
         <Input
-          label="Search"
+          aria-label="Search"
           placeholder="Search..."
           onChange={(e) => setSearch(e.target.value)}
         />
-        <span className="absolute w-5 h-5 text-gray-500 right-3 top-[38px] dark:text-gray-400">
+        <span className="absolute w-5 h-5 text-gray-500 right-3 top-[10px] dark:text-gray-400">
           <SearchIcon />
         </span>
       </div>

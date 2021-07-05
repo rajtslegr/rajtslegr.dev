@@ -19,19 +19,21 @@ const MetaData: React.FC<Props> = ({
   return (
     <Head>
       <title>{title}</title>
-      <meta property="title" content={title} />
       <meta name="description" content={description}></meta>
       <link rel="canonical" href={`https://rajtslegr.com${router.asPath}`} />
       <meta property="og:title" content={title}></meta>
       <meta property="og:description" content={description}></meta>
       <meta property="og:site_name" content="Petr Rajtslegr" />
       <meta property="og:type" content={type}></meta>
+      <meta property="og:image" content="/static/images/meta-image.jpg" />
       <meta
         property="og:url"
         content={`https://rajtslegr.com${router.asPath}`}
       />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image" content="/static/images/meta-image.jpg" />
       {date && <meta property="article:published_time" content={date} />}
     </Head>
   );

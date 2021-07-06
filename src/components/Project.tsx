@@ -32,7 +32,7 @@ const Project: NextPage<Props> = ({
           placeholder="blur"
         />
         <div className="flex flex-col px-2 py-4 sm:px-4">
-          <h3 className="mb-2 text-xl font-bold">{title}</h3>
+          <h2 className="mb-2 text-xl font-bold">{title}</h2>
           <p className="text-base text-gray-500 dark:text-gray-400">
             {description}
           </p>

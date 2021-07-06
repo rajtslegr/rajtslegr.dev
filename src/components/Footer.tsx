@@ -73,12 +73,12 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div className="flex flex-row justify-center w-full">
-        <div className="flex flex-row items-center text-gray-500 dark:text-gray-400">
+        <p className="flex flex-row items-center text-gray-500 dark:text-gray-400">
           Made by Petr Rajtslegr with&nbsp;
           <HeartIcon className="w-5 h-5" />
           &nbsp;and{theme && mounted && NextJsLogo(theme)}&nbsp;&copy;&nbsp;
           {new Date().getFullYear()}
-        </div>
+        </p>
       </div>
     </div>
   );

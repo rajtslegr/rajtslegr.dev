@@ -9,7 +9,7 @@ const NavBar: React.FC = () => {
 
   return (
     <nav
-      className={`header fixed z-10 w-full dark:border-b dark:border-gray-200 dark:border-opacity-20 bg-white bg-opacity-50 dark:bg-dark dark:bg-opacity-50 backdrop-blur ${
+      className={`header fixed z-10 w-full dark:border-b dark:border-gray-200 dark:border-opacity-20 ${
         !onTop ? 'shadow' : 'border-b border-gray-200'
       } transition-shadow`}
     >

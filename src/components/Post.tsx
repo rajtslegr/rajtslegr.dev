@@ -12,15 +12,11 @@ const Post: React.FC<Props> = ({
   return (
     <Link href={`/post/${id}`} passHref>
       <div className="flex flex-col p-4 space-y-2 transition bg-white rounded shadow cursor-pointer hover:shadow-lg dark:bg-card">
-        <h2 className="text-xl font-bold">{title}</h2>
+        <h2 className="text-xl font-semibold">{title}</h2>
         <p>{description}</p>
         <div className="flex flex-row justify-between">
-          <span className="text-base text-gray-500 dark:text-gray-400">
-            {parseDate(date)}
-          </span>
-          <span className="text-base text-gray-500 dark:text-gray-400">
-            {readingTime.text}
-          </span>
+          <p className="text-gray-500 dark:text-gray-400">{parseDate(date)}</p>
+          <p className="text-gray-500 dark:text-gray-400">{readingTime.text}</p>
         </div>
       </div>
     </Link>

@@ -71,7 +71,7 @@ const LastFm: React.FC = () => {
                         />
                       </div>
                       <div className="flex flex-col min-h-full">
-                        <h3 className="text-lg font-bold">{t.name}</h3>
+                        <h3 className="text-lg font-semibold">{t.name}</h3>
                         <div className="flex flex-1"></div>
                         <p className="text-gray-500 dark:text-gray-400">
                           {t.artist['#text']}
@@ -81,9 +81,9 @@ const LastFm: React.FC = () => {
                         </p>
                       </div>
                       {t['@attr']?.nowplaying && (
-                        <div className="flex justify-end flex-grow w-12 h-12 text-red-600 items-top animate-pulse">
+                        <span className="flex justify-end flex-grow w-12 h-12 text-red-600 items-top animate-pulse">
                           <PlayIcon />
-                        </div>
+                        </span>
                       )}
                     </div>
                   </a>

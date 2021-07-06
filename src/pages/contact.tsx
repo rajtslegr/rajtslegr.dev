@@ -6,7 +6,7 @@ const Contact: NextPage = () => {
   return (
     <>
       <MetaData title="Petr Rajtslegr | Contact" />
-      <h1 className="mb-4 text-4xl font-bold md:mb-12">Contact</h1>
+      <h1 className="mb-4 text-4xl font-extrabold md:mb-12">Contact</h1>
       <div className="flex flex-col items-center justify-center">
         <ContactForm />
       </div>

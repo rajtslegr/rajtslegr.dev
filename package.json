@@ -13,9 +13,9 @@
     "start": "next start",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
     "lint": "eslint --ext ts --ext tsx --ext mdx",
-    "lint-staged": "lint-staged",
     "test": "jest --env=jsdom",
-    "test:related": "jest --env=jsdom --bail --passWithNoTests --findRelatedTests ./src/test/**/*",
+    "test:related": "jest --env=jsdom --bail --passWithNoTests --findRelatedTests",
+    "lint-staged": "lint-staged",
     "postinstall": "husky install"
   },
   "dependencies": {

@@ -11,7 +11,7 @@ const CodeBlock: React.FC<Props> = ({ code }) => {
   return (
     <div className="relative flex flex-col w-full max-w-4xl overflow-auto bg-white rounded-b shadow dark:bg-card">
       <WindowHeader />
-      <div className="absolute hidden w-32 h-32 rounded-full md:w-56 md:h-56overflow-hidden sm:block top-12 right-6">
+      <div className="absolute hidden w-32 h-32 rounded-full md:w-56 md:h-56 overflow-hidden sm:block top-12 right-6">
         <Image
           unoptimized={IS_DEV}
           className="rounded-full shadow"

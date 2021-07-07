@@ -60,6 +60,7 @@ const LastFm: React.FC = () => {
                       <div className="w-32 h-32 rounded shadow">
                         <Image
                           unoptimized={IS_DEV}
+                          className="rounded"
                           src={t.image[2]['#text']}
                           alt="Album art"
                           layout="fixed"

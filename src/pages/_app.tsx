@@ -1,8 +1,8 @@
-import Layout from 'components/Layout';
+import Layout from '@/components/Layout';
+import '@/styles/globals.css';
 import { ThemeProvider } from 'next-themes';
 import { AppProps } from 'next/app';
 import Script from 'next/script';
-import 'styles/globals.css';
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (

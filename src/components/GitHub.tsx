@@ -1,5 +1,5 @@
+import { IGitHubData } from '@/types/types';
 import { DocumentIcon, EyeIcon, StarIcon } from '@heroicons/react/solid';
-import { IGitHubData } from 'types/types';
 
 interface IGitHubCard {
   children: string;

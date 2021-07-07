@@ -1,7 +1,7 @@
+import NavBar from '@/components/NavBar';
+import { render } from '@/test/test-utils';
 import '@testing-library/jest-dom';
 import { fireEvent, screen, waitFor } from '@testing-library/react';
-import NavBar from 'components/NavBar';
-import { render } from 'test/test-utils';
 
 const useRouter = jest.spyOn(require('next/router'), 'useRouter');
 

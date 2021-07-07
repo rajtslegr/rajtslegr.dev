@@ -1,5 +1,5 @@
-import { IIgData } from 'types/types';
-import fetcher from 'utils/fetcher';
+import { IIgData } from '@/types/types';
+import fetcher from '@/utils/fetcher';
 
 export const getRecentPosts = async (): Promise<IIgData> => {
   return await fetcher<IIgData>(

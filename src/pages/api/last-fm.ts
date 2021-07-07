@@ -1,6 +1,6 @@
-import { getRecentSongs } from 'lib/last-fm';
+import { getRecentSongs } from '@/lib/last-fm';
+import { ILastFmData } from '@/types/types';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { ILastFmData } from 'types/types';
 
 const get = async (
   _req: NextApiRequest,

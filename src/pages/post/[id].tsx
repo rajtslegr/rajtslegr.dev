@@ -1,9 +1,9 @@
-import MetaData from 'components/MetaData';
-import { getAllPostIds, getPostData } from 'lib/posts';
+import MetaData from '@/components/MetaData';
+import { getAllPostIds, getPostData } from '@/lib/posts';
+import { IPostData } from '@/types/types';
+import parseDate from '@/utils/date';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
-import { IPostData } from 'types/types';
-import parseDate from 'utils/date';
 
 interface Props {
   postData: IPostData;

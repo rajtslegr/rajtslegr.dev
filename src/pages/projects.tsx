@@ -1,8 +1,8 @@
-import MetaData from 'components/MetaData';
-import Project from 'components/Project';
-import projects from 'data/projects';
+import MetaData from '@/components/MetaData';
+import Project from '@/components/Project';
+import projects from '@/data/projects';
+import { IProject } from '@/types/types';
 import { GetStaticProps, NextPage } from 'next';
-import { IProject } from 'types/types';
 
 interface Props {
   projects: IProject[];

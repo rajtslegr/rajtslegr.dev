@@ -1,6 +1,6 @@
+import { ISortedPostData } from '@/types/types';
+import parseDate from '@/utils/date';
 import Link from 'next/link';
-import { ISortedPostData } from 'types/types';
-import parseDate from 'utils/date';
 
 interface Props {
   post: ISortedPostData;

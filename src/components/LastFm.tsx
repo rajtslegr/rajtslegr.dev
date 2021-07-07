@@ -1,8 +1,8 @@
+import { ILastFmData } from '@/types/types';
+import fetcher from '@/utils/fetcher';
 import { PlayIcon } from '@heroicons/react/solid';
 import Image from 'next/image';
 import useSWR from 'swr';
-import { ILastFmData } from 'types/types';
-import fetcher from 'utils/fetcher';
 
 const LastFm: React.FC = () => {
   const IS_DEV = process.env.NODE_ENV === 'development';
@@ -49,7 +49,7 @@ const LastFm: React.FC = () => {
               return (
                 <div
                   key={i}
-                  className="flex flex-col p-2 transition bg-white rounded shadow min-h-36 hover:shadow-lg dark:bg-card"
+                  className="flex flex-col h-full p-2 transition bg-white rounded shadow min-h-36 hover:shadow-lg dark:bg-card"
                 >
                   <a
                     href="https://last.fm/user/RajceP"
@@ -60,7 +60,6 @@ const LastFm: React.FC = () => {
                       <div className="w-32 h-32 rounded shadow">
                         <Image
                           unoptimized={IS_DEV}
-                          className="border-gray-200 rounded"
                           src={t.image[2]['#text']}
                           alt="Album art"
                           layout="fixed"

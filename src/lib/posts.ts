@@ -1,10 +1,10 @@
+import { IPostData, IPostId, ISortedPostData } from '@/types/types';
 import fs from 'fs';
 import matter from 'gray-matter';
 import mdxPrism from 'mdx-prism';
 import { serialize } from 'next-mdx-remote/serialize';
 import path from 'path';
 import readingTime from 'reading-time';
-import { IPostData, IPostId, ISortedPostData } from 'types/types';
 
 const postsDirectory = path.join(process.cwd(), 'src/data/posts');
 

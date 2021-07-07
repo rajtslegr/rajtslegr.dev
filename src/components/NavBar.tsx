@@ -1,5 +1,5 @@
-import NavLink from 'components/NavLink';
-import useOnTop from 'hooks/useOnTop';
+import NavLink from '@/components/NavLink';
+import useOnTop from '@/hooks/useOnTop';
 import { useTheme } from 'next-themes';
 import ThemeButton from './ThemeButton';
 

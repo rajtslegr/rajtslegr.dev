@@ -1,7 +1,7 @@
+import Layout from '@/components/Layout';
+import { render } from '@/test/test-utils';
 import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
-import Layout from 'components/Layout';
-import { render } from 'test/test-utils';
 
 const useRouter = jest.spyOn(require('next/router'), 'useRouter');
 

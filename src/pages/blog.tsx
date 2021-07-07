@@ -1,11 +1,11 @@
+import Input from '@/components/Input';
+import MetaData from '@/components/MetaData';
+import Post from '@/components/Post';
+import { getSortedPostsData } from '@/lib/posts';
+import { ISortedPostData } from '@/types/types';
 import { SearchIcon } from '@heroicons/react/solid';
-import Input from 'components/Input';
-import MetaData from 'components/MetaData';
-import Post from 'components/Post';
-import { getSortedPostsData } from 'lib/posts';
 import { GetStaticProps, NextPage } from 'next';
 import React, { useState } from 'react';
-import { ISortedPostData } from 'types/types';
 
 interface Props {
   allPostsData: ISortedPostData[];

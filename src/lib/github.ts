@@ -1,5 +1,5 @@
-import { IGitHubData } from 'types/types';
-import fetcher from 'utils/fetcher';
+import { IGitHubData } from '@/types/types';
+import fetcher from '@/utils/fetcher';
 
 export const getRecentRepos = async (): Promise<IGitHubData> => {
   return await fetcher<IGitHubData>(

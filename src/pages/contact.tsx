@@ -1,5 +1,5 @@
-import ContactForm from 'components/ContactForm';
-import MetaData from 'components/MetaData';
+import ContactForm from '@/components/ContactForm';
+import MetaData from '@/components/MetaData';
 import { NextPage } from 'next';
 
 const Contact: NextPage = () => {

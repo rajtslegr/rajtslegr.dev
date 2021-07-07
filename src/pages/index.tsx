@@ -1,6 +1,6 @@
-import Hero from 'components/Hero';
-import MetaData from 'components/MetaData';
-import heroCode from 'data/hero-code';
+import Hero from '@/components/Hero';
+import MetaData from '@/components/MetaData';
+import heroCode from '@/data/hero-code';
 import { GetStaticProps, NextPage } from 'next';
 
 interface Props {

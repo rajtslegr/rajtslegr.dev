@@ -35,7 +35,7 @@ export interface IIgData {
 export interface IProject {
   title: string;
   description: string;
-  build: string;
+  build: string[];
   image: string;
   live?: string;
   repo?: string;

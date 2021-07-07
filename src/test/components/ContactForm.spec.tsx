@@ -1,7 +1,7 @@
+import ContactForm from '@/components/ContactForm';
+import { render } from '@/test/test-utils';
 import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
-import ContactForm from 'components/ContactForm';
-import { render } from 'test/test-utils';
 
 describe('ContactForm', () => {
   it('renders the form correctly', () => {

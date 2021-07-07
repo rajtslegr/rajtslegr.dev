@@ -1,5 +1,5 @@
+import NavLink from '@/components/NavLink';
 import { HeartIcon } from '@heroicons/react/solid';
-import NavLink from 'components/NavLink';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 

@@ -1,4 +1,4 @@
-import CodeBlock from 'components/CodeBlock';
+import CodeBlock from '@/components/CodeBlock';
 import Image from 'next/image';
 import hero from '../../public/static/images/hero.jpg';
 

@@ -12,7 +12,7 @@ body {
 
 @supports not (backdrop-filter: none) {
   .header {
-    @apply bg-opacity-100 dark:bg-opacity-100 backdrop-blur-none;
+    @apply bg-opacity-100 backdrop-blur-none dark:bg-opacity-100;
   }
 }
 

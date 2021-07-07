@@ -1,4 +1,4 @@
-import { IIgData } from 'types/types';
+import { IIgData } from '@/types/types';
 
 export interface Props {
   data?: IIgData;

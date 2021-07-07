@@ -18,7 +18,7 @@ const LastFm: React.FC = () => {
 
   if (!error) {
     render = (
-      <div className="grid gap-4 xl:grid-cols-2">
+      <div className="grid gap-4 md:grid-cols-2">
         {new Array(10).fill(undefined).map((_value, i) => {
           return (
             <div
@@ -43,7 +43,7 @@ const LastFm: React.FC = () => {
   if (!error && data?.recenttracks) {
     render = (
       <>
-        <div className="grid gap-4 xl:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2">
           {data?.recenttracks?.track?.map((t, i) => {
             if (i < 10) {
               return (
@@ -97,7 +97,7 @@ const LastFm: React.FC = () => {
 
   return (
     <>
-      <h2 className="my-4 text-3xl font-bold">Last.fm</h2>
+      <h2 className="my-4 text-3xl font-bold ">Last.fm</h2>
       {render}
     </>
   );

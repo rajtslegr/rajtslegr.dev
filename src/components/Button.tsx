@@ -10,7 +10,7 @@ const Button = forwardRef<HTMLButtonElement, Props>(
   ({ children, submitting, ...props }, ref) => {
     return (
       <button
-        className="flex justify-center w-24 p-3 mt-3 transition bg-gray-200 rounded-lg shadow mx:auto dark:bg-gray-600 hover:shadow-lg"
+        className="flex self-end justify-center w-24 p-3 mt-3 transition bg-gray-200 rounded-lg shadow mx:auto dark:bg-gray-600 hover:shadow-lg"
         ref={ref}
         disabled={submitting}
         {...props}

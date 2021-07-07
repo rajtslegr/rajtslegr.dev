@@ -49,7 +49,7 @@ const GitHub: React.FC<Props> = ({ data }) => {
   if (Array.isArray(data)) {
     render = (
       <>
-        <div className="grid gap-4 xl:grid-cols-2">
+        <div className="grid gap-4 lg:grid-cols-2">
           {data?.map(
             ({
               node_id,
@@ -77,7 +77,7 @@ const GitHub: React.FC<Props> = ({ data }) => {
 
   return (
     <>
-      <h2 className="my-4 text-3xl font-bold">GitHub</h2>
+      <h2 className="my-4 text-3xl font-bold ">GitHub</h2>
       {render}
     </>
   );

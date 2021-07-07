@@ -10,7 +10,10 @@ interface Props {
 const IndexPage: NextPage<Props> = ({ heroCode }) => {
   return (
     <>
-      <MetaData title="Petr Rajtslegr | Full Stack Dev" />
+      <MetaData title="Petr Rajtslegr" />
+      <h1 className="mb-4 text-4xl font-extrabold md:mb-12">
+        Hello, I&apos;m Petr
+      </h1>
       <Hero heroCode={heroCode} />
     </>
   );

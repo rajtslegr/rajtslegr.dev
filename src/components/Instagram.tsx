@@ -13,14 +13,14 @@ const Instagram: React.FC<Props> = ({ data }) => {
 
   if (data?.data) {
     render = (
-      <div className="grid w-full grid-cols-3 gap-2 xl:gap-4 xl:grid-cols-4 2xl:grid-cols-6">
+      <div className="grid grid-cols-3 gap-2 lg:gap-4 lg:grid-cols-4 xl:grid-cols-6">
         {data?.data?.map((e, i) => {
           if (i < 9) {
             return (
               <div
                 key={e.id}
                 className={`${
-                  i === 0 ? 'xl:row-span-2 xl:col-span-2' : null
+                  i === 0 ? 'lg:row-span-2 lg:col-span-2' : null
                 } relative transition rounded shadow pb-1/1 hover:shadow-lg`}
               >
                 <a href={e.permalink} rel="noopener noreferrer" target="_blank">

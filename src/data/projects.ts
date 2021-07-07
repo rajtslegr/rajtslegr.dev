@@ -1,7 +1,8 @@
 const projects = [
   {
     title: 'cov19cz',
-    description: 'Czech COVID-19 tracker application.',
+    description:
+      'Czech COVID-19 tracker application with several data visualization.',
     build: ['React', 'Axios', 'Recharts', 'styled-components'],
     image: 'cov19cz',
     live: 'https://cov19cz.vercel.app/',
@@ -9,7 +10,7 @@ const projects = [
   },
   {
     title: 'TypeWriter',
-    description: 'Small typing game.',
+    description: 'Simple typing game storing your performances.',
     build: [
       'React',
       'TypeScript',
@@ -32,7 +33,7 @@ const projects = [
     repo: 'https://github.com/RajceP/twitter-bot-vaccinated-in-czechia',
   },
   {
-    title: 'rajtslegr.com',
+    title: 'Personal website',
     description: 'You are here right now! Cool, right?',
     build: ['Next.js', 'TypeScript', 'Tailwind CSS', 'MDX'],
     image: 'rajtslegr',

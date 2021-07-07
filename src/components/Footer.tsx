@@ -36,8 +36,8 @@ const Footer: React.FC = () => {
   useEffect(() => setMounted(true), []);
 
   return (
-    <div className="flex flex-col items-center w-full p-4 space-y-8 lg:pb-12">
-      <div className="flex flex-col w-full p-4 border-t border-gray-200 dark:border-opacity-20 sm:p-6 xl:w-5/6 2xl:w-2/3">
+    <div className="flex flex-col items-center p-4 space-y-4 sm:space-y-8 lg:pb-12">
+      <div className="flex flex-col w-full max-w-4xl p-4 border-t border-gray-200 dark:border-opacity-20 sm:p-6">
         <div className="flex flex-row justify-between md:justify-evenly">
           <div className="flex flex-col space-y-2">
             <NavLink href="/">Home</NavLink>
@@ -72,9 +72,10 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-row justify-center w-full">
-        <p className="flex flex-row items-center text-gray-500 dark:text-gray-400">
-          Made by Petr Rajtslegr with&nbsp;
+      <div className="flex flex-col items-center justify-center w-full text-gray-500 sm:flex-row dark:text-gray-400">
+        <p className="flex flex-row items-center">Made by Petr Rajtslegr</p>
+        <p className="flex flex-row items-center">
+          &nbsp;with&nbsp;
           <HeartIcon className="w-5 h-5" />
           &nbsp;and{theme && mounted && NextJsLogo(theme)}&nbsp;&copy;&nbsp;
           {new Date().getFullYear()}

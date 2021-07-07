@@ -9,11 +9,11 @@ const NavBar: React.FC = () => {
 
   return (
     <nav
-      className={`header fixed z-10 w-full dark:border-b dark:border-gray-200 dark:border-opacity-20 ${
+      className={`header sticky top-0 z-10 dark:border-b dark:border-gray-200 dark:border-opacity-20 ${
         !onTop ? 'shadow' : 'border-b border-gray-200'
       } transition-shadow`}
     >
-      <div className="container flex items-center justify-between h-full px-4 mx-auto xl:w-5/6 2xl:w-2/3">
+      <div className="container flex items-center justify-between h-full max-w-4xl px-4 mx-auto">
         <ul>
           <li className="space-x-2">
             <NavLink href="/">Home</NavLink>

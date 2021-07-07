@@ -32,8 +32,10 @@ const Project: NextPage<Props> = ({
           src={IMAGES[image]}
           alt={`${title} mockup`}
           placeholder="blur"
+          height={393}
+          width={700}
         />
-        <div className="flex flex-col p-4 -mt-1.5 space-y-2 border-t border-gray-200 dark:border-opacity-20 lg:h-48">
+        <div className="flex flex-col p-4 -mt-1.5 space-y-2 border-t border-gray-200 dark:border-opacity-20 sm:h-64 lg:h-48">
           <h2 className="text-xl font-semibold">{title}</h2>
           <p className="flex-grow text-gray-500 dark:text-gray-400">
             {description}

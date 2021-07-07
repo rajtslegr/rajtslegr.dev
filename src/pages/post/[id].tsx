@@ -20,8 +20,8 @@ const Post: NextPage<Props> = ({
         type="article"
         date={new Date(date).toISOString()}
       />
-      <div className="flex flex-col items-center">
-        <article className="w-full prose text-black lg:w-2/3 dark:prose-dark dark:text-white max-w-none">
+      <div className="flex flex-col items-center max-w-2xl mx-auto">
+        <article className="w-full prose text-black max-w-none dark:prose-dark dark:text-white">
           <h1 className="text-black dark:text-white">{title}</h1>
           <div className="flex flex-row justify-between text-gray-500 dark:text-gray-400">
             <p>{parseDate(date)}</p>

@@ -14,6 +14,7 @@ const Post: React.FC<Props> = ({
       <div className="flex flex-col p-4 space-y-2 transition bg-white rounded shadow cursor-pointer hover:shadow-lg dark:bg-card">
         <h2 className="text-xl font-semibold">{title}</h2>
         <p>{description}</p>
+        <div className="flex flex-1"></div>
         <div className="flex flex-row justify-between">
           <p className="text-gray-500 dark:text-gray-400">{parseDate(date)}</p>
           <p className="text-gray-500 dark:text-gray-400">{readingTime.text}</p>

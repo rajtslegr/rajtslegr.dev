@@ -17,7 +17,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <form
-      className="flex flex-col items-center justify-center w-full space-y-4 sm:w-4/6 lg:w-1/2"
+      className="flex flex-col items-center justify-center w-full space-y-4"
       onSubmit={handleSubmit}
     >
       <p className="self-start text-xl font-bold">Get in touch!</p>
@@ -32,7 +32,6 @@ const ContactForm: React.FC = () => {
       <ValidationError prefix="Email" field="email" errors={errors} />
       <TextArea
         label="Message"
-        className="w-full h-48 p-2 bg-white rounded-md shadow focus:shadow-lg sm:text-sm dark:bg-card"
         placeholder="Your Message..."
         id="message"
         name="message"

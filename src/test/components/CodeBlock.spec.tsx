@@ -1,4 +1,4 @@
-import CodeBlock, { Props } from '@/components/CodeBlock';
+import CodeBlock, { Props } from '@/components/ui/CodeBlock';
 import heroCode from '@/data/hero-code';
 import { render } from '@/test/test-utils';
 import '@testing-library/jest-dom';

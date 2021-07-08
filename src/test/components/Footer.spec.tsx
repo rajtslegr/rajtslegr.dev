@@ -1,4 +1,4 @@
-import Footer from '@/components/Footer';
+import Footer from '@/components/ui/Footer';
 import { render } from '@/test/test-utils';
 import '@testing-library/jest-dom';
 import { fireEvent, screen } from '@testing-library/react';

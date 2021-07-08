@@ -6,11 +6,11 @@ interface Props {
   post: ISortedPostData;
 }
 
-const Post: React.FC<Props> = ({
+const PostCard: React.FC<Props> = ({
   post: { id, date, title, description, readingTime },
 }) => {
   return (
-    <Link href={`/post/${id}`} passHref>
+    <Link href={`/blog/${id}`} passHref>
       <div className="flex flex-col p-4 space-y-2 transition bg-white rounded shadow cursor-pointer hover:shadow-lg dark:bg-card">
         <h2 className="text-xl font-semibold">{title}</h2>
         <p>{description}</p>
@@ -27,4 +27,4 @@ const Post: React.FC<Props> = ({
   );
 };
 
-export default Post;
+export default PostCard;

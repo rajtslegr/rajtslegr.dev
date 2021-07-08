@@ -1,7 +1,7 @@
 import { useForm, ValidationError } from '@formspree/react';
-import Button from './Button';
-import Input from './Input';
-import TextArea from './TextArea';
+import Button from './ui/Button';
+import Input from './ui/Input';
+import TextArea from './ui/TextArea';
 
 const ContactForm: React.FC = () => {
   const [{ submitting, succeeded, errors }, handleSubmit] = useForm('xyylyppy');

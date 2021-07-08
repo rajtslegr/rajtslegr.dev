@@ -1,4 +1,4 @@
-import NavLink from '@/components/NavLink';
+import NavLink from '@/components/ui/NavLink';
 import { render } from '@/test/test-utils';
 import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';

@@ -24,8 +24,7 @@ const prettier = require('prettier');
                   .replace('data', '')
                   .replace('.tsx', '')
                   .replace('.mdx', '')
-                  .replace('src/', '')
-                  .replace('/posts/', '/post/');
+                  .replace('src/', '');
                 const route = path === '/index' ? '' : path;
                 return `
                         <url>

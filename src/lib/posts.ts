@@ -6,7 +6,7 @@ import { serialize } from 'next-mdx-remote/serialize';
 import path from 'path';
 import readingTime from 'reading-time';
 
-const postsDirectory = path.join(process.cwd(), 'src/data/posts');
+const postsDirectory = path.join(process.cwd(), 'src/data/blog');
 
 export const getSortedPostsData = (): ISortedPostData[] => {
   const fileNames = fs.readdirSync(postsDirectory);

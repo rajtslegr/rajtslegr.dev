@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import hero from '../../public/static/images/hero.jpg';
+import hero from '../../../public/static/images/hero.jpg';
 import WindowHeader from './WindowHeader';
 export interface Props {
   code: string[];

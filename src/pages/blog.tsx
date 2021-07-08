@@ -1,6 +1,6 @@
-import Input from '@/components/Input';
+import Input from '@/components/ui/Input';
 import MetaData from '@/components/MetaData';
-import Post from '@/components/Post';
+import PostCard from '@/components/PostCard';
 import { getSortedPostsData } from '@/lib/posts';
 import { ISortedPostData } from '@/types/types';
 import { SearchIcon } from '@heroicons/react/solid';
@@ -33,7 +33,7 @@ const Blog: NextPage<Props> = ({ allPostsData }) => {
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
         {filteredPosts.map((post) => (
-          <Post key={post.id} post={post} />
+          <PostCard key={post.id} post={post} />
         ))}
       </div>
       {filteredPosts.length < 1 && (

@@ -15,9 +15,12 @@ const Post: React.FC<Props> = ({
         <h2 className="text-xl font-semibold">{title}</h2>
         <p>{description}</p>
         <div className="flex flex-1"></div>
-        <div className="flex flex-row justify-between">
-          <p className="text-gray-500 dark:text-gray-400">{parseDate(date)}</p>
-          <p className="text-gray-500 dark:text-gray-400">{readingTime.text}</p>
+        <div className="flex flex-row text-gray-500 dark:text-gray-400">
+          <p>
+            {parseDate(date)}
+            {` • `}
+            {readingTime.text}
+          </p>
         </div>
       </div>
     </Link>

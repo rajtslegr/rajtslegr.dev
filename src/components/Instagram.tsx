@@ -21,10 +21,10 @@ const Instagram: React.FC<Props> = ({ data }) => {
                 key={e.id}
                 className={`${
                   i === 0 ? 'lg:row-span-2 lg:col-span-2' : null
-                } relative transition rounded shadow pb-1/1 hover:shadow-lg`}
+                } relative  rounded shadow pb-1/1 `}
               >
                 <a href={e.permalink} rel="noopener noreferrer" target="_blank">
-                  <div className="absolute object-cover w-full h-full bg-gray-200 rounded animate-pulse dark:bg-gray-600"></div>
+                  <div className="absolute object-cover w-full h-full bg-gray-200 rounded animate-pulse dark:bg-gray-700"></div>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     className="absolute object-cover w-full h-full rounded"
@@ -44,7 +44,7 @@ const Instagram: React.FC<Props> = ({ data }) => {
 
   return (
     <>
-      <h2 className="mb-4 text-3xl font-bold">Instagram</h2>
+      <h2 className="mb-4 text-3xl font-bold dark:text-gray-100">Instagram</h2>
       {render}
     </>
   );

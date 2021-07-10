@@ -23,14 +23,14 @@ const LastFm: React.FC = () => {
           return (
             <div
               key={i}
-              className="flex flex-col p-2 transition bg-white rounded shadow h-36 dark:bg-card"
+              className="flex flex-col p-2 bg-white rounded shadow h-36 dark:bg-card"
             >
               <div className="flex flex-row space-x-2">
-                <div className="w-32 h-32 bg-gray-200 rounded shadow dark:bg-gray-600 animate-pulse"></div>
+                <div className="w-32 h-32 bg-gray-200 rounded shadow dark:bg-gray-700 animate-pulse"></div>
                 <div className="flex flex-col justify-between w-3/5">
-                  <div className="w-1/3 h-6 mb-4 bg-gray-200 rounded-sm dark:bg-gray-600 animate-pulse"></div>
-                  <div className="w-3/5 h-4 bg-gray-200 rounded-sm dark:bg-gray-600 animate-pulse"></div>
-                  <div className="w-3/5 h-4 bg-gray-200 rounded-sm dark:bg-gray-600 animate-pulse"></div>
+                  <div className="w-1/3 h-6 mb-4 bg-gray-200 rounded-sm dark:bg-gray-700 animate-pulse"></div>
+                  <div className="w-3/5 h-4 bg-gray-200 rounded-sm dark:bg-gray-700 animate-pulse"></div>
+                  <div className="w-3/5 h-4 bg-gray-200 rounded-sm dark:bg-gray-700 animate-pulse"></div>
                 </div>
               </div>
             </div>
@@ -49,7 +49,7 @@ const LastFm: React.FC = () => {
               return (
                 <div
                   key={i}
-                  className="flex flex-col h-full p-2 transition bg-white rounded shadow min-h-36 hover:shadow-lg dark:bg-card"
+                  className="flex flex-col h-full p-2 bg-white rounded shadow min-h-36 dark:bg-card"
                 >
                   <a
                     href="https://last.fm/user/RajceP"
@@ -100,7 +100,7 @@ const LastFm: React.FC = () => {
 
   return (
     <>
-      <h2 className="my-4 text-3xl font-bold ">Last.fm</h2>
+      <h2 className="my-4 text-3xl font-bold dark:text-gray-100">Last.fm</h2>
       {render}
     </>
   );

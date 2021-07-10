@@ -20,11 +20,11 @@ const GitHubCard: React.FC<IGitHubCard> = ({
   stars,
   watches,
 }) => (
-  <div className="flex flex-col p-2 transition bg-white rounded shadow dark:bg-card hover:shadow-lg">
+  <div className="flex flex-col p-2 bg-white rounded shadow dark:bg-card ">
     <a href={link} rel="noopener noreferrer" target="_blank">
-      <div className="flex flex-row h-6">
+      <div className="flex flex-row h-6 dark:text-gray-100">
         <DocumentIcon />
-        <h3 className="text-lg font-semibold dark:text-gray-100">{children}</h3>
+        <h3 className="text-lg font-semibold">{children}</h3>
       </div>
       <div className="flex flex-row h-6 text-gray-500 dark:text-gray-400">
         <p>{language}</p>

@@ -12,6 +12,10 @@
   }
 }
 
+input:-webkit-autofill {
+  -webkit-text-fill-color: theme('colors.gray.700') !important;
+}
+
 code[class*='language-'],
 pre[class*='language-'] {
   @apply text-gray-800 dark:text-blue-300;

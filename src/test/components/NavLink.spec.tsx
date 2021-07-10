@@ -7,7 +7,7 @@ const useRouter = jest.spyOn(require('next/router'), 'useRouter');
 
 describe('NavLink', () => {
   const selectedClass =
-    'text-gray-500 transition dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300';
+    'text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300';
 
   const pathname = '/';
   useRouter.mockImplementation(() => ({

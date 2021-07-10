@@ -99,10 +99,10 @@ const LastFm: React.FC = () => {
   }
 
   return (
-    <>
+    <div>
       <h2 className="my-4 text-3xl font-bold dark:text-gray-100">Last.fm</h2>
       {render}
-    </>
+    </div>
   );
 };
 

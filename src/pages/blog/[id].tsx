@@ -16,6 +16,7 @@ const Blog: NextPage<Props> = ({ postData }) => {
         description={postData.description}
         type="article"
         date={new Date(postData.date).toISOString()}
+        image={`/static/images/blog/${postData.image}`}
       />
       <PostLayout postData={postData} />
     </>

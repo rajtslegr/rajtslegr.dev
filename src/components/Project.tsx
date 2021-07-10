@@ -24,7 +24,7 @@ const Project: NextPage<Props> = ({
   const IS_DEV = process.env.NODE_ENV === 'development';
 
   return (
-    <div className="flex flex-col  bg-white rounded shadow dark:bg-card ">
+    <div className="flex flex-col bg-white rounded shadow dark:bg-card">
       <a href={repo} rel="noopener noreferrer" target="_blank">
         <WindowHeader />
         <Image

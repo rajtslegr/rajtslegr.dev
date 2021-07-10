@@ -76,7 +76,6 @@ module.exports = {
         dark: '#000000',
         card: '#171a1e',
       },
-
       spacing: {
         '1/1': '100%',
       },

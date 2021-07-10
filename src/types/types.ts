@@ -46,6 +46,7 @@ export interface ISortedPostData {
   title: string;
   description: string;
   date: string;
+  image: string;
   readingTime: IReadTimeResults;
 }
 

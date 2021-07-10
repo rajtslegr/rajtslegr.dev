@@ -25,6 +25,7 @@ export const getSortedPostsData = (): ISortedPostData[] => {
         title: string;
         description: string;
         date: string;
+        image: string;
       }),
     };
   });
@@ -67,6 +68,7 @@ export const getPostData = async (id: string): Promise<IPostData> => {
       title: string;
       description: string;
       date: string;
+      image: string;
     }),
   };
 };

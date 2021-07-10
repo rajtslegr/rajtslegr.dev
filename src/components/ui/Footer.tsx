@@ -10,7 +10,7 @@ interface IExternalLink {
 
 const ExternalLink: React.FC<IExternalLink> = ({ href, children }) => (
   <a
-    className="text-gray-500 transition dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+    className="font-medium text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
     target="_blank"
     rel="noopener noreferrer"
     href={href}

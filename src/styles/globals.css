@@ -18,26 +18,26 @@ input:-webkit-autofill {
 
 code[class*='language-'],
 pre[class*='language-'] {
-  @apply text-gray-800 dark:text-blue-300;
+  @apply text-gray-700 dark:text-blue-300;
 }
 
 .prose pre {
-  @apply text-gray-800 bg-white shadow dark:bg-card dark:text-blue-300;
+  @apply text-gray-700 bg-white shadow dark:bg-card dark:text-blue-300;
 }
 
 .prose code {
-  @apply px-1 py-0.5 text-gray-800 bg-white dark:bg-card dark:text-blue-300;
+  @apply px-1 py-0.5 text-gray-700 bg-white dark:bg-card dark:text-blue-300;
 }
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  @apply text-gray-500 dark:text-gray-400;
+  @apply text-gray-700 dark:text-gray-300;
 }
 
 .token.punctuation {
-  @apply text-gray-500 dark:text-gray-400;
+  @apply text-gray-700 dark:text-gray-300;
 }
 
 .token.parameter,

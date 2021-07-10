@@ -24,7 +24,7 @@ const Instagram: React.FC<Props> = ({ data }) => {
                 } relative  rounded shadow pb-1/1 `}
               >
                 <a href={e.permalink} rel="noopener noreferrer" target="_blank">
-                  <div className="absolute object-cover w-full h-full bg-gray-200 rounded animate-pulse dark:bg-gray-700"></div>
+                  <div className="absolute object-cover w-full h-full bg-gray-200 rounded motion-safe:animate-pulse dark:bg-gray-700"></div>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     className="absolute object-cover w-full h-full rounded"

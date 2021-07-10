@@ -11,7 +11,7 @@ const NavBar: React.FC = () => {
     <nav
       className={`header sticky top-0 z-10 dark:border-b dark:border-gray-200 dark:border-opacity-20 ${
         !onTop ? 'shadow' : 'border-b border-gray-200'
-      } transition-shadow`}
+      } motion-safe:transition-shadow`}
     >
       <div className="container flex items-center justify-between h-full max-w-4xl px-4 mx-auto">
         <ul>

@@ -15,7 +15,7 @@ const PostLayout: React.FC<Props> = ({
   return (
     <div className="flex flex-col items-center max-w-2xl mx-auto">
       <article className="w-full text-black max-w-none dark:text-white">
-        <h1 className="text-4xl font-bold text-black dark:text-white md:text-5xl">
+        <h1 className="text-4xl font-bold text-black md:text-5xl dark:text-gray-100">
           {title}
         </h1>
         <div className="flex flex-row items-center mt-4 mb-12 space-x-2 text-gray-500 dark:text-gray-400">

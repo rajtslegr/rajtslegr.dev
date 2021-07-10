@@ -1,6 +1,6 @@
-import Input from '@/components/ui/Input';
 import MetaData from '@/components/MetaData';
 import PostCard from '@/components/PostCard';
+import Input from '@/components/ui/Input';
 import { getSortedPostsData } from '@/lib/posts';
 import { ISortedPostData } from '@/types/types';
 import { SearchIcon } from '@heroicons/react/solid';
@@ -20,7 +20,9 @@ const Blog: NextPage<Props> = ({ allPostsData }) => {
   return (
     <>
       <MetaData title="Petr Rajtslegr | Blog" />
-      <h1 className="mb-4 text-4xl font-extrabold md:mb-12">Blog</h1>
+      <h1 className="mb-4 text-4xl font-extrabold md:mb-12 dark:text-gray-100">
+        Blog
+      </h1>
       <div className="relative flex flex-col mb-4 md:w-1/3">
         <Input
           aria-label="Search"

@@ -32,7 +32,7 @@ const CodeBlock: React.FC<Props> = ({ code }) => {
                   className={`${
                     row.indexOf('//') === 0
                       ? 'text-gray-500 dark:text-gray-400'
-                      : ''
+                      : 'text-gray-700 dark:text-gray-300'
                   }`}
                 >
                   {row}

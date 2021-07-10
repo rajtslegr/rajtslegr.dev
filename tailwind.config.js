@@ -73,8 +73,8 @@ module.exports = {
         },
       }),
       backgroundColor: {
-        dark: '#111827',
-        card: '#1F2937',
+        dark: '#000000',
+        card: '#171a1e',
       },
 
       spacing: {

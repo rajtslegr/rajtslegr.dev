@@ -71,7 +71,9 @@ const LastFm: React.FC = () => {
                         />
                       </div>
                       <div className="flex flex-col min-h-full">
-                        <h3 className="text-lg font-semibold">{t.name}</h3>
+                        <h3 className="text-lg font-semibold dark:text-gray-100">
+                          {t.name}
+                        </h3>
                         <div className="flex flex-1"></div>
                         <p className="text-gray-500 dark:text-gray-400">
                           {t.artist['#text']}

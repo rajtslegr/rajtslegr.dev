@@ -24,7 +24,7 @@ const GitHubCard: React.FC<IGitHubCard> = ({
     <a href={link} rel="noopener noreferrer" target="_blank">
       <div className="flex flex-row h-6">
         <DocumentIcon />
-        <h3 className="text-lg font-semibold">{children}</h3>
+        <h3 className="text-lg font-semibold dark:text-gray-100">{children}</h3>
       </div>
       <div className="flex flex-row h-6 text-gray-500 dark:text-gray-400">
         <p>{language}</p>
@@ -77,7 +77,7 @@ const GitHub: React.FC<Props> = ({ data }) => {
 
   return (
     <>
-      <h2 className="my-4 text-3xl font-bold ">GitHub</h2>
+      <h2 className="my-4 text-3xl font-bold dark:text-gray-100">GitHub</h2>
       {render}
     </>
   );

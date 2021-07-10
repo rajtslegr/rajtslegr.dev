@@ -5,7 +5,9 @@ interface Props {
 const Pill: React.FC<Props> = ({ children }) => {
   return (
     <span className="px-3 py-1 bg-gray-200 rounded-full shadow dark:bg-gray-600">
-      <p className="text-sm font-thin text-center">{children}</p>
+      <p className="text-sm font-thin text-center text-gray-700 dark:text-gray-300">
+        {children}
+      </p>
     </span>
   );
 };

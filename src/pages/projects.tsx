@@ -12,7 +12,9 @@ const Projects: NextPage<Props> = ({ projects }) => {
   return (
     <>
       <MetaData title="Petr Rajtslegr | Projects" />
-      <h1 className="mb-4 text-4xl font-extrabold md:mb-12">Projects</h1>
+      <h1 className="mb-4 text-4xl font-extrabold md:mb-12 dark:text-gray-100">
+        Projects
+      </h1>
       <div className="grid gap-4 sm:grid-cols-2">
         {projects.map((p, i) => {
           return <Project key={i} project={p} />;

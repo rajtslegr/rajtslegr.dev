@@ -20,7 +20,9 @@ const ContactForm: React.FC = () => {
       className="flex flex-col items-center justify-center w-full space-y-4"
       onSubmit={handleSubmit}
     >
-      <p className="self-start text-xl font-bold">Get in touch!</p>
+      <p className="self-start text-xl font-bold dark:text-gray-100">
+        Get in touch!
+      </p>
       <Input
         label="Email"
         placeholder="john@doe.com"

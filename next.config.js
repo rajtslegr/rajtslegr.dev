@@ -1,7 +1,7 @@
 // next.config.js
 module.exports = {
   images: {
-    domains: ['lastfm.freetls.fastly.net'],
+    domains: ['lastfm.freetls.fastly.net', 'scontent-lga3-1.cdninstagram.com'],
   },
   async headers() {
     return [

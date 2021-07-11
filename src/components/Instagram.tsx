@@ -22,7 +22,7 @@ const Instagram: React.FC<Props> = ({ data }) => {
                 key={e.id}
                 className={`${
                   i === 0 ? 'lg:row-span-2 lg:col-span-2' : null
-                } relative  rounded shadow pb-1/1 `}
+                } relative rounded shadow pb-1/1 `}
               >
                 <a href={e.permalink} rel="noopener noreferrer" target="_blank">
                   <Image

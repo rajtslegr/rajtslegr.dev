@@ -16,12 +16,12 @@ const PostLayout: React.FC<Props> = ({
   return (
     <div className="flex flex-col items-center max-w-2xl mx-auto">
       <article className="w-full text-black max-w-none dark:text-white">
-        <h1 className="text-4xl font-bold text-black md:text-5xl dark:text-gray-100">
+        <h1 className="text-4xl font-bold tracking-tight text-black md:text-5xl dark:text-gray-100">
           {title}
         </h1>
         <div className="flex flex-row items-center mt-4 space-x-2 text-gray-500 dark:text-gray-400">
           <div className="flex flex-col">
-            <div className="w-8 h-8 overflow-hidden rounded-full shadow">
+            <div className="w-10 h-10 overflow-hidden rounded-full shadow">
               <Image
                 unoptimized={IS_DEV}
                 src={hero}

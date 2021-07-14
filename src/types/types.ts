@@ -57,10 +57,10 @@ export interface IPostId {
 }
 
 export interface IPostData extends ISortedPostData {
-  content: MDXRemoteSerializeResult<Record<string, unknown>>;
+  mdxContent: MDXRemoteSerializeResult<Record<string, unknown>>;
 }
 
-type IReadTimeResults = {
+export type IReadTimeResults = {
   text: string;
   time: number;
   words: number;

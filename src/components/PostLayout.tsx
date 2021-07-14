@@ -9,7 +9,7 @@ interface Props {
 }
 
 const PostLayout: React.FC<Props> = ({
-  postData: { title, date, content, image, readingTime },
+  postData: { title, date, mdxContent, image, readingTime },
 }) => {
   return (
     <div className="flex flex-col items-center max-w-2xl mx-auto">
@@ -47,7 +47,7 @@ const PostLayout: React.FC<Props> = ({
           </div>
         )}
         <div className="mt-12 prose max-w-none dark:prose-dark">
-          <MDXRemote {...content} />
+          <MDXRemote {...mdxContent} />
         </div>
       </article>
     </div>

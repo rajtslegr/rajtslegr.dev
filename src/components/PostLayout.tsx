@@ -28,7 +28,7 @@ const PostLayout: React.FC<Props> = ({
             <div className="flex flex-row">
               <p>
                 {parseDate(date)}
-                {` • `}
+                {' • '}
                 {readingTime.text}
               </p>
             </div>

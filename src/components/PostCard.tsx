@@ -18,7 +18,7 @@ const PostCard: React.FC<Props> = ({
         <div className="flex flex-row text-gray-500 dark:text-gray-400">
           <p>
             {parseDate(date)}
-            {` • `}
+            {' • '}
             {readingTime.text}
           </p>
         </div>

@@ -21,14 +21,11 @@ interface Props {
 const Project: NextPage<Props> = ({
   project: { title, description, build, image, repo },
 }) => {
-  const IS_DEV = process.env.NODE_ENV === 'development';
-
   return (
     <div className="flex flex-col bg-white rounded shadow dark:bg-card">
       <a href={repo} rel="noopener noreferrer" target="_blank">
         <WindowHeader />
         <Image
-          unoptimized={IS_DEV}
           src={IMAGES[image]}
           alt={`${title} mockup`}
           placeholder="blur"

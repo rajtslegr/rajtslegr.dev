@@ -5,7 +5,6 @@ import Image from 'next/image';
 import useSWR from 'swr';
 
 const LastFm: React.FC = () => {
-  const IS_DEV = process.env.NODE_ENV === 'development';
   const { data, error } = useSWR<ILastFmData>('api/last-fm', fetcher, {
     refreshInterval: 60000,
   });
@@ -59,7 +58,6 @@ const LastFm: React.FC = () => {
                     <div className="flex flex-row space-x-2">
                       <div className="w-32 h-32 rounded shadow">
                         <Image
-                          unoptimized={IS_DEV}
                           className="rounded"
                           src={t.image[2]['#text']}
                           alt="Album art"

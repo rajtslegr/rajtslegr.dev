@@ -5,7 +5,6 @@ export interface Props {
 }
 
 const Instagram: React.FC<Props> = ({ data }) => {
-  const IS_DEV = process.env.NODE_ENV === 'development';
   let render: JSX.Element | JSX.Element[] = (
     <p className="flex justify-center p-6 italic text-gray-500 dark:text-gray-400">
       Error fetching data from Instagram.
@@ -26,7 +25,6 @@ const Instagram: React.FC<Props> = ({ data }) => {
               >
                 <a href={e.permalink} rel="noopener noreferrer" target="_blank">
                   <Image
-                    unoptimized={IS_DEV}
                     className="rounded"
                     src={e.thumbnail_url || e.media_url}
                     alt={e.caption}

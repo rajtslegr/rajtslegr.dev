@@ -11,7 +11,7 @@ interface Props {
 
 const MetaData: React.FC<Props> = ({
   title,
-  description = 'Software Engineer based in Prague, Czechia.',
+  description = 'Software Developer based in Prague, Czechia.',
   image = 'https://rajtslegr.com/static/images/meta-image.jpg',
   type = 'website',
   date,

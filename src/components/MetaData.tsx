@@ -12,7 +12,7 @@ interface Props {
 const MetaData: React.FC<Props> = ({
   title,
   description = 'Software Developer based in Prague, Czechia.',
-  image = '/images/meta-image.jpg',
+  image = '/static/images/meta-image.jpg',
   type = 'website',
   date,
 }) => {

@@ -65,7 +65,7 @@ const LastFm: React.FC = () => {
                           width={128}
                           height={128}
                           placeholder="blur"
-                          blurDataURL={t.image[0]['#text']}
+                          blurDataURL={t.image[2]['#text']}
                         />
                       </div>
                       <div className="flex flex-col min-h-full">

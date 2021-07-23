@@ -1,11 +1,11 @@
 const fs = require('fs');
 
-const globby = require('globby');
+const fg = require('fast-glob');
 const prettier = require('prettier');
 
 (async () => {
   const prettierConfig = await prettier.resolveConfig('./.prettierrc.js');
-  const pages = await globby([
+  const pages = await fg([
     'src/pages/*.tsx',
     'src/data/**/*.mdx',
     '!src/data/*.mdx',

@@ -1,5 +1,6 @@
 import { IIgData } from '@/types/types';
 import Image from 'next/image';
+
 export interface Props {
   data?: IIgData;
 }

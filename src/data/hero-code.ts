@@ -1,8 +1,9 @@
 const heroCode = [
   `// About me`,
   `const name = 'Petr Rajtslegr';`,
-  `const profession = 'Software Developer;`,
   `const location = 'Prague, Czechia';`,
+  `const profession = 'Software Developer;`,
+  `const employer = 'Economia, a.s.'`,
   ``,
   `// What I do`,
   `const languages = [`,

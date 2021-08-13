@@ -16,7 +16,7 @@
     "test": "jest --env=jsdom",
     "test:related": "jest --env=jsdom --bail --passWithNoTests --findRelatedTests",
     "lint-staged": "lint-staged",
-    "postinstall": "husky install --unsafe-perm"
+    "postinstall": "husky install"
   },
   "dependencies": {
     "@formspree/react": "^2.2.3",
@@ -42,8 +42,8 @@
     "@babel/core": "^7.15.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
-    "@types/jest": "^27.0.0",
-    "@types/node": "^16.4.14",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.6.1",
     "@types/react": "^17.0.17",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "@typescript-eslint/parser": "^4.29.1",

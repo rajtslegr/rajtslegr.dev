@@ -8,7 +8,7 @@ describe('button', () => {
     const innerHTML = 'My name is button!';
     render(<Button>{innerHTML}</Button>);
 
-    const text = screen.getByText(innerHTML);
-    expect(text).toBeInTheDocument();
+    const buttonByText = screen.getByText(innerHTML);
+    expect(buttonByText).toBeInTheDocument();
   });
 });

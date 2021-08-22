@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
 import { render } from '../test-utils';
 
-describe('button', () => {
+describe('Input', () => {
   it('should contain render input', () => {
     render(<Input label="Cute input" />);
 

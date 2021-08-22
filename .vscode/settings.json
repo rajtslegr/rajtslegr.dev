@@ -6,5 +6,9 @@
     "source.fixAll.stylelint",
     "source.fixAll.eslint"
   ],
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "eslint.options": {
+    "extensions": ["md", "mdx"]
+  },
+  "eslint.validate": ["md", "mdx"]
 }

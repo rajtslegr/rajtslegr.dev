@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
 import { render } from '../test-utils';
 
-describe('button', () => {
+describe('Button', () => {
   it('should contain given children', () => {
     const innerHTML = 'My name is button!';
     render(<Button>{innerHTML}</Button>);

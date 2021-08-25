@@ -47,7 +47,9 @@ const Footer: React.FC = () => {
             <NavLink href="/contact">Contact</NavLink>
           </div>
           <div className="flex flex-col space-y-2">
-            <ExternalLink href="https://github.com/RajceP">GitHub</ExternalLink>
+            <ExternalLink href="https://github.com/rajtslegr">
+              GitHub
+            </ExternalLink>
             <ExternalLink href="https://www.linkedin.com/in/petr-rajtšlégr-5aa84a16b">
               LinkedIn
             </ExternalLink>

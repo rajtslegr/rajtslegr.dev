@@ -11,8 +11,8 @@ describe('GitHub', () => {
       data: [
         {
           node_id: 'MDEwOlJlcG9zaXRvcnkzNTAwMDIzODQ=',
-          full_name: 'RajceP/rajtslegr.com',
-          html_url: 'https://github.com/RajceP/rajtslegr.com',
+          full_name: 'rajtslegr/rajtslegr.com',
+          html_url: 'https://github.com/rajtslegr/rajtslegr.com',
           stargazers_count: 0,
           watchers_count: 0,
           language: 'TypeScript',
@@ -24,7 +24,7 @@ describe('GitHub', () => {
   it('should render github card', () => {
     render(<GitHub data={expectedProps.data} />);
 
-    const text = screen.getByText(/RajceP/);
+    const text = screen.getByText(/rajtslegr/);
     expect(text).toBeInTheDocument();
   });
 

@@ -6,7 +6,7 @@ const projects = [
     build: ['React', 'Axios', 'Recharts', 'styled-components'],
     image: 'cov19cz',
     live: 'https://cov19cz.vercel.app/',
-    repo: 'https://github.com/RajceP/cov19cz',
+    repo: 'https://github.com/rajtslegr/cov19cz',
   },
   {
     title: 'TypeWriter',
@@ -21,7 +21,7 @@ const projects = [
     ],
     image: 'typewriter',
     live: 'https://typewriter-theta.vercel.app',
-    repo: 'https://github.com/RajceP/typewriter',
+    repo: 'https://github.com/rajtslegr/typewriter',
   },
   {
     title: 'Twitter Bot - Vaccinated in Czechia',
@@ -30,7 +30,7 @@ const projects = [
     build: ['Node.js', 'TypeScript', 'Puppeteer', 'Twitter API'],
     image: 'vaccbot',
     live: 'https://twitter.com/ockovano',
-    repo: 'https://github.com/RajceP/twitter-bot-vaccinated-in-czechia',
+    repo: 'https://github.com/rajtslegr/twitter-bot-vaccinated-in-czechia',
   },
   {
     title: 'Personal website',
@@ -38,7 +38,7 @@ const projects = [
     build: ['Next.js', 'TypeScript', 'Tailwind CSS', 'MDX'],
     image: 'rajtslegr',
     live: 'https://rajtslegr.com/',
-    repo: 'https://github.com/RajceP/rajtslegr.com',
+    repo: 'https://github.com/rajtslegr/rajtslegr.com',
   },
 ];
 

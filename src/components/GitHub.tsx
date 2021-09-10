@@ -26,6 +26,7 @@ const GitHubCard: React.FC<IGitHubCard> = ({
         <DocumentIcon />
         <h3 className="text-lg font-semibold">{children}</h3>
       </div>
+      <div className="flex flex-row h-6" />
       <div className="flex flex-row h-6 text-gray-500 dark:text-gray-400">
         <p>{language}</p>
         <div className="flex justify-end flex-grow space-x-2">

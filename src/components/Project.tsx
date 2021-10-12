@@ -1,4 +1,4 @@
-import { IProject } from '@/types/types';
+import { ProjectData } from '@/types/entities';
 import { NextPage } from 'next';
 import Image from 'next/image';
 import cov19cz from '../../public/static/images/projects/cov19cz.jpg';
@@ -15,7 +15,7 @@ const IMAGES: { [key: string]: StaticImageData } = {
   vaccbot,
 };
 interface Props {
-  project: IProject;
+  project: ProjectData;
 }
 
 const Project: NextPage<Props> = ({

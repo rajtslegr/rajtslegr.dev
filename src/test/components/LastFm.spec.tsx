@@ -5,19 +5,11 @@ import { screen } from '@testing-library/react';
 import fetchMock, { enableFetchMocks } from 'jest-fetch-mock';
 import { SWRConfig } from 'swr';
 
-jest.mock('next/image', () => ({ src, alt }: { src: string; alt: string }) => (
-  // eslint-disable-next-line @next/next/no-img-element
-  <img src={src} alt={alt} />
-));
-
 describe('LastFm', () => {
   enableFetchMocks();
   beforeEach(() => {
     fetchMock.resetMocks();
   });
-  // afterEach(async () => {
-  //   await waitFor(() => cache.clear());
-  // });
 
   test('should render image', async () => {
     fetchMock.mockResponseOnce(
@@ -78,37 +70,4 @@ describe('LastFm', () => {
     const image = await screen.findByAltText('Album art');
     expect(image).toBeInTheDocument();
   });
-
-  // it('should render skeleton', () => {
-  //   fetchMock.mockResponseOnce(
-  //     () =>
-  //       new Promise((resolve) =>
-  //         setTimeout(() => resolve({ body: 'ok' }), 100),
-  //       ),
-  //   );
-
-  //   render(
-  //     <SWRConfig value={{ dedupingInterval: 0 }}>
-  //       <LastFm />
-  //     </SWRConfig>,
-  //   );
-
-  //   const text = screen.queryByText('Error fetching data from Last.fm.');
-  //   expect(text).not.toBeInTheDocument();
-  //   const image = screen.queryByAltText('Album art');
-  //   expect(image).not.toBeInTheDocument();
-  // });
-
-  // it('should render error message', async () => {
-  //   fetchMock.mockReject(() => Promise.reject('Error'));
-
-  //   render(
-  //     <SWRConfig value={{ dedupingInterval: 0 }}>
-  //       <LastFm />
-  //     </SWRConfig>,
-  //   );
-
-  //   const text = await screen.findByText('Error fetching data from Last.fm.');
-  //   expect(text).toBeInTheDocument();
-  // });
 });

@@ -8,6 +8,7 @@ export interface Props extends LinkProps {
 
 const NavLink: React.FC<Props> = ({ children, href, ...props }) => {
   const router = useRouter();
+
   return (
     <Link href={href} {...props}>
       {router.pathname === href ? (

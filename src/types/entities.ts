@@ -1,6 +1,6 @@
 import { MDXRemoteSerializeResult } from 'next-mdx-remote/dist/types';
 
-export interface IGitHubData {
+export interface GitHubData {
   node_id: string;
   full_name: string;
   html_url: string;
@@ -9,7 +9,7 @@ export interface IGitHubData {
   watchers_count: number;
 }
 
-export interface ILastFmData {
+export interface LastFmData {
   recenttracks: {
     track: {
       '@attr'?: { nowplaying: boolean };
@@ -22,7 +22,7 @@ export interface ILastFmData {
   };
 }
 
-export interface IIgData {
+export interface InstagramData {
   data: {
     id: string;
     permalink: string;
@@ -32,7 +32,7 @@ export interface IIgData {
   }[];
 }
 
-export interface IProject {
+export interface ProjectData {
   title: string;
   description: string;
   build: string[];
@@ -41,28 +41,28 @@ export interface IProject {
   repo?: string;
 }
 
-export interface ISortedPostData {
+export interface PostData {
   id: string;
   title: string;
   description: string;
   date: string;
   image: string;
-  readingTime: IReadTimeResults;
+  readingTime: ReadTime;
 }
 
-export interface IPostId {
+export interface PostId {
   params: {
-    id: string;
+    id: PostData['id'];
   };
 }
 
-export interface IPostData extends ISortedPostData {
+export interface ContentPostData extends PostData {
   mdxContent: MDXRemoteSerializeResult<Record<string, unknown>>;
 }
 
-export type IReadTimeResults = {
+export interface ReadTime {
   text: string;
   time: number;
   words: number;
   minutes: number;
-};
+}

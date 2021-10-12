@@ -2,17 +2,18 @@ import MetaData from '@/components/MetaData';
 import PostCard from '@/components/PostCard';
 import Input from '@/components/ui/Input';
 import { getSortedPostsData } from '@/lib/posts';
-import { ISortedPostData } from '@/types/types';
+import { PostData } from '@/types/entities';
 import { SearchIcon } from '@heroicons/react/solid';
 import { GetStaticProps, NextPage } from 'next';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 interface Props {
-  allPostsData: ISortedPostData[];
+  allPostsData: PostData[];
 }
 
 const Blog: NextPage<Props> = ({ allPostsData }) => {
   const [search, setSearch] = useState('');
+
   const filteredPosts = allPostsData.filter((post) =>
     post.title.toLowerCase().includes(search.toLowerCase()),
   );
@@ -38,7 +39,7 @@ const Blog: NextPage<Props> = ({ allPostsData }) => {
           <PostCard key={post.id} post={post} />
         ))}
       </div>
-      {filteredPosts.length < 1 && (
+      {filteredPosts.length === 0 && (
         <p className="flex justify-center p-6 italic text-gray-500 dark:text-gray-400">
           These aren&apos;t the droids you&apos;re looking for...
         </p>
@@ -49,6 +50,7 @@ const Blog: NextPage<Props> = ({ allPostsData }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
+
   return {
     props: {
       allPostsData,

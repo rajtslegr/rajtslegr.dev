@@ -1,13 +1,13 @@
 import { getRecentSongs } from '@/lib/last-fm';
-import { ILastFmData } from '@/types/types';
+import { LastFmData } from '@/types/entities';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const get = async (
   _req: NextApiRequest,
-  res: NextApiResponse<ILastFmData>,
+  res: NextApiResponse<LastFmData>,
 ): Promise<void> => {
   const recentSongsresponse = await getRecentSongs();
-  const recentSongs: ILastFmData = await recentSongsresponse.json();
+  const recentSongs: LastFmData = await recentSongsresponse.json();
 
   return res.send(recentSongs);
 };

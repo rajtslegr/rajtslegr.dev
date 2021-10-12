@@ -1,9 +1,9 @@
 import Footer from '@/components/ui/Footer';
 import NavBar from '@/components/ui/NavBar';
-import { ReactElement } from 'react';
+import { ReactNode } from 'react';
 
 interface Props {
-  children: ReactElement | ReactElement[];
+  children: ReactNode;
 }
 
 const Layout: React.FC<Props> = ({ children }) => {

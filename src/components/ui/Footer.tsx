@@ -1,7 +1,7 @@
 import NavLink from '@/components/ui/NavLink';
+import useIsMounted from '@/hooks/useIsMounted';
 import { HeartIcon } from '@heroicons/react/solid';
 import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
 
 interface IExternalLink {
   href: string;
@@ -30,10 +30,8 @@ const NextJsLogo = (theme: string): JSX.Element => (
 );
 
 const Footer: React.FC = () => {
-  const [mounted, setMounted] = useState(false);
+  const isMounted = useIsMounted();
   const { theme } = useTheme();
-
-  useEffect(() => setMounted(true), []);
 
   return (
     <div className="flex flex-col items-center p-4 space-y-4 sm:space-y-8 lg:pb-12">
@@ -79,7 +77,7 @@ const Footer: React.FC = () => {
         <p className="flex flex-row items-center">
           &nbsp;with&nbsp;
           <HeartIcon className="w-5 h-5" />
-          &nbsp;and{theme && mounted && NextJsLogo(theme)}&nbsp;&copy;&nbsp;
+          &nbsp;and{theme && isMounted && NextJsLogo(theme)}&nbsp;&copy;&nbsp;
           {new Date().getFullYear()}
         </p>
       </div>

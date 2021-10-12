@@ -1,11 +1,11 @@
 import MetaData from '@/components/MetaData';
 import PostLayout from '@/components/PostLayout';
 import { getAllPostIds, getPostData } from '@/lib/posts';
-import { IPostData } from '@/types/types';
+import { ContentPostData } from '@/types/entities';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
 interface Props {
-  postData: IPostData;
+  postData: ContentPostData;
 }
 
 const Blog: NextPage<Props> = ({ postData }) => {
@@ -25,6 +25,7 @@ const Blog: NextPage<Props> = ({ postData }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllPostIds();
+
   return {
     paths,
     fallback: false,
@@ -33,6 +34,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const postData = await getPostData(params?.id as string);
+
   return {
     props: {
       postData,

@@ -1,8 +1,8 @@
-import { IIgData } from '@/types/types';
+import { InstagramData } from '@/types/entities';
 import Image from 'next/image';
 
 export interface Props {
-  data?: IIgData;
+  data?: InstagramData;
 }
 
 const Instagram: React.FC<Props> = ({ data }) => {
@@ -15,30 +15,32 @@ const Instagram: React.FC<Props> = ({ data }) => {
   if (data?.data) {
     render = (
       <div className="grid grid-cols-3 gap-2 lg:gap-4 lg:grid-cols-4 xl:grid-cols-6">
-        {data?.data?.map((e, i) => {
-          if (i < 9) {
-            return (
-              <div
-                key={e.id}
-                className={`${
-                  i === 0 ? 'lg:row-span-2 lg:col-span-2' : null
-                } relative rounded shadow pb-1/1 `}
+        {data?.data
+          ?.filter((_edge, index) => index < 9)
+          .map((edge, i) => (
+            <div
+              key={edge.id}
+              className={`${
+                i === 0 ? 'lg:row-span-2 lg:col-span-2' : null
+              } relative rounded shadow pb-1/1 `}
+            >
+              <a
+                href={edge.permalink}
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                <a href={e.permalink} rel="noopener noreferrer" target="_blank">
-                  <Image
-                    className="rounded"
-                    src={e.thumbnail_url || e.media_url}
-                    alt={e.caption}
-                    placeholder="blur"
-                    blurDataURL={e.thumbnail_url || e.media_url}
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </a>
-              </div>
-            );
-          }
-        })}
+                <Image
+                  className="rounded"
+                  src={edge.thumbnail_url || edge.media_url}
+                  alt={edge.caption}
+                  placeholder="blur"
+                  blurDataURL={edge.thumbnail_url || edge.media_url}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </a>
+            </div>
+          ))}
       </div>
     );
   }

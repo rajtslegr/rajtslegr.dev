@@ -1,13 +1,14 @@
 module.exports = {
-  // Run type-check on changes to TypeScript files
-  '**/*.ts?(x)': (filenames) => [
-    'pnpm run type-check',
-    `pnpm run test:related ${filenames.join(' ')}`,
+  // Type check TypeScript files
+  '**/*.(ts|tsx)': () => 'pnpm tsc --noEmit',
+
+  // Lint and format TypeScript and JS files
+  '**/*.(ts|tsx|js)': (filenames) => [
+    `pnpm eslint --fix ${filenames.join(' ')}`,
+    `pnpm prettier --write ${filenames.join(' ')}`,
   ],
-  // Run Prettier and ESLint on all JavaScript/TypeScript files
-  '**/*.(ts|js|mdx)?(x)': (filenames) => [
-    'pretty-quick --staged',
-    'eslint --fix',
-    `pnpm run lint ${filenames.join(' ')}`,
-  ],
+
+  // Format MarkDown and JSON
+  '**/*.(md|json)': (filenames) =>
+    `pnpm prettier --write ${filenames.join(' ')}`,
 };

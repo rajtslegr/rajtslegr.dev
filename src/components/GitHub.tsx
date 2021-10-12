@@ -1,4 +1,4 @@
-import { IGitHubData } from '@/types/types';
+import { GitHubData } from '@/types/entities';
 import { DocumentIcon, EyeIcon, StarIcon } from '@heroicons/react/solid';
 
 interface IGitHubCard {
@@ -10,7 +10,7 @@ interface IGitHubCard {
 }
 
 export interface Props {
-  data?: IGitHubData[];
+  data?: GitHubData[];
 }
 
 const GitHubCard: React.FC<IGitHubCard> = ({

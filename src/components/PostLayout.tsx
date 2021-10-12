@@ -1,11 +1,11 @@
-import { IPostData } from '@/types/types';
+import { ContentPostData } from '@/types/entities';
 import parseDate from '@/utils/date';
 import { MDXRemote } from 'next-mdx-remote';
 import Image from 'next/image';
 import hero from '../../public/static/images/hero.jpg';
 
 interface Props {
-  postData: IPostData;
+  postData: ContentPostData;
 }
 
 const PostLayout: React.FC<Props> = ({

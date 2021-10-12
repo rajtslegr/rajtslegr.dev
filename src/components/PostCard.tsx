@@ -1,9 +1,9 @@
-import { ISortedPostData } from '@/types/types';
+import { PostData } from '@/types/entities';
 import parseDate from '@/utils/date';
 import Link from 'next/link';
 
 interface Props {
-  post: ISortedPostData;
+  post: PostData;
 }
 
 const PostCard: React.FC<Props> = ({

@@ -1,4 +1,4 @@
-import { IPostData, IPostId, ISortedPostData } from '@/types/types';
+import { ContentPostData, PostId, PostData } from '@/types/entities';
 import fs from 'fs';
 import matter from 'gray-matter';
 import mdxPrism from 'mdx-prism';
@@ -8,9 +8,9 @@ import readingTime from 'reading-time';
 
 const postsDirectory = path.join(process.cwd(), 'src/data/blog');
 
-export const getSortedPostsData = (): ISortedPostData[] => {
+export const getSortedPostsData = (): PostData[] => {
   const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData: ISortedPostData[] = fileNames.map((fileName) => {
+  const allPostsData: PostData[] = fileNames.map((fileName) => {
     const id = fileName.replace(/\.mdx$/, '');
 
     const fullPath = path.join(postsDirectory, fileName);
@@ -22,7 +22,7 @@ export const getSortedPostsData = (): ISortedPostData[] => {
       id,
       ...data,
       readingTime: readingTime(content),
-    } as ISortedPostData;
+    } as PostData;
   });
 
   return allPostsData.sort((a, b) => {
@@ -34,8 +34,9 @@ export const getSortedPostsData = (): ISortedPostData[] => {
   });
 };
 
-export const getAllPostIds = (): IPostId[] => {
+export const getAllPostIds = (): PostId[] => {
   const fileNames = fs.readdirSync(postsDirectory);
+
   return fileNames.map((fileName) => {
     return {
       params: {
@@ -45,7 +46,7 @@ export const getAllPostIds = (): IPostId[] => {
   });
 };
 
-export const getPostData = async (id: string): Promise<IPostData> => {
+export const getPostData = async (id: string): Promise<ContentPostData> => {
   const fullPath = path.join(postsDirectory, `${id}.mdx`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
@@ -60,5 +61,5 @@ export const getPostData = async (id: string): Promise<IPostData> => {
     mdxContent,
     ...data,
     readingTime: readingTime(content),
-  } as IPostData;
+  } as ContentPostData;
 };

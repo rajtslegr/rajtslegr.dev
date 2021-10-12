@@ -1,8 +1,8 @@
-import { IGitHubData } from '@/types/types';
+import { GitHubData } from '@/types/entities';
 import fetcher from '@/utils/fetcher';
 
-export const getRecentRepos = async (): Promise<IGitHubData> => {
-  return await fetcher<IGitHubData>(
+export const getRecentRepos = async (): Promise<GitHubData> => {
+  return await fetcher<GitHubData>(
     'https://api.github.com/users/rajtslegr/repos?per_page=6&sort=pushed&direction=desc',
   );
 };

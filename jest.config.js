@@ -9,10 +9,6 @@ module.exports = {
   transform: {
     '^.+\\.(ts|tsx)$': 'babel-jest',
   },
-  watchPlugins: [
-    'jest-watch-typeahead/filename',
-    'jest-watch-typeahead/testname',
-  ],
   moduleNameMapper: {
     '^@[/](.+)': '<rootDir>/src/$1',
     '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$':

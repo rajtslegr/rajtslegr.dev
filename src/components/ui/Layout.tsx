@@ -1,12 +1,18 @@
 import Footer from '@/components/ui/Footer';
 import NavBar from '@/components/ui/NavBar';
-import { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
+import { useKonami } from 'react-konami-code';
+import KonamiParticles from '../Particles';
 
 interface Props {
   children: ReactNode;
 }
 
 const Layout: React.FC<Props> = ({ children }) => {
+  const [showConfetti, setshowConfetti] = useState(false);
+
+  useKonami(() => setshowConfetti(true));
+
   return (
     <>
       <NavBar />
@@ -14,6 +20,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         {children}
       </main>
       <Footer />
+      {showConfetti && <KonamiParticles />}
     </>
   );
 };

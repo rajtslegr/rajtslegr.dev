@@ -1,5 +1,4 @@
 import { ProjectData } from '@/types/entities';
-import { NextPage } from 'next';
 import Image from 'next/image';
 import cov19cz from '../../public/static/images/projects/cov19cz.jpg';
 import rajtslegr from '../../public/static/images/projects/rajtslegr.jpg';
@@ -18,7 +17,7 @@ interface Props {
   project: ProjectData;
 }
 
-const Project: NextPage<Props> = ({
+const Project: React.FC<Props> = ({
   project: { title, description, build, image, repo },
 }) => {
   return (
@@ -38,9 +37,9 @@ const Project: NextPage<Props> = ({
             {description}
           </p>
           <div className="flex flex-row flex-wrap gap-2 pt-4">
-            {build.map((tech, i) => {
-              return <Pill key={i}>{tech}</Pill>;
-            })}
+            {build.map((tech, i) => (
+              <Pill key={i}>{tech}</Pill>
+            ))}
           </div>
         </div>
       </a>

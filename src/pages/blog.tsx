@@ -1,4 +1,5 @@
 import MetaData from '@/components/MetaData';
+import MotionSection from '@/components/MotionSection';
 import PostCard from '@/components/PostCard';
 import Input from '@/components/ui/Input';
 import { getSortedPostsData } from '@/lib/posts';
@@ -21,22 +22,28 @@ const Blog: NextPage<Props> = ({ allPostsData }) => {
   return (
     <>
       <MetaData title="Petr Rajtslegr | Blog" />
-      <h1 className="mb-4 text-4xl font-extrabold md:mb-12 dark:text-gray-100">
-        Blog
-      </h1>
-      <div className="relative flex flex-col mb-4 md:w-1/3">
-        <Input
-          aria-label="Search"
-          placeholder="Search..."
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        <span className="absolute w-5 h-5 text-gray-500 right-3 top-[10px] dark:text-gray-400">
-          <SearchIcon />
-        </span>
-      </div>
+      <MotionSection>
+        <h1 className="mb-4 text-4xl font-extrabold md:mb-12 dark:text-gray-100">
+          Blog
+        </h1>
+      </MotionSection>
+      <MotionSection delay={0.1}>
+        <div className="relative flex flex-col mb-4 md:w-1/3">
+          <Input
+            aria-label="Search"
+            placeholder="Search..."
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <span className="absolute w-5 h-5 text-gray-500 right-3 top-[10px] dark:text-gray-400">
+            <SearchIcon />
+          </span>
+        </div>
+      </MotionSection>
       <div className="grid gap-4 sm:grid-cols-2">
-        {filteredPosts.map((post) => (
-          <PostCard key={post.id} post={post} />
+        {filteredPosts.map((post, index) => (
+          <MotionSection key={post.id} delay={0.2 + index / 10}>
+            <PostCard post={post} />
+          </MotionSection>
         ))}
       </div>
       {filteredPosts.length === 0 && (

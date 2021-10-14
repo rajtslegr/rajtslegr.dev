@@ -17,11 +17,11 @@ const Instagram: React.FC<Props> = ({ data }) => {
       <div className="grid grid-cols-3 gap-2 lg:gap-4 lg:grid-cols-4 xl:grid-cols-6">
         {data?.data
           ?.filter((_edge, index) => index < 9)
-          .map((edge, i) => (
+          .map((edge, index) => (
             <div
               key={edge.id}
               className={`${
-                i === 0 ? 'lg:row-span-2 lg:col-span-2' : null
+                index === 0 ? 'lg:row-span-2 lg:col-span-2' : null
               } relative rounded shadow pb-1/1 `}
             >
               <a

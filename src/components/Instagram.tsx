@@ -1,4 +1,5 @@
 import { InstagramData } from '@/types/entities';
+import classNames from '@/utils/classNames';
 import Image from 'next/image';
 
 export interface Props {
@@ -20,9 +21,10 @@ const Instagram: React.FC<Props> = ({ data }) => {
           .map((edge, index) => (
             <div
               key={edge.id}
-              className={`${
-                index === 0 ? 'lg:row-span-2 lg:col-span-2' : null
-              } relative rounded shadow pb-1/1 `}
+              className={classNames(
+                index === 0 ? 'lg:row-span-2 lg:col-span-2' : '',
+                'relative rounded shadow pb-1/1 ',
+              )}
             >
               <a
                 href={edge.permalink}

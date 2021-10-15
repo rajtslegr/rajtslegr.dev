@@ -1,3 +1,4 @@
+import classNames from '@/utils/classNames';
 import Image from 'next/image';
 import hero from '../../../public/static/images/hero.jpg';
 import WindowHeader from './WindowHeader';
@@ -6,18 +7,18 @@ export interface Props {
 }
 
 const CodeBlock: React.FC<Props> = ({ code }) => {
-  const codeBlockMemo = code.map((row, i) => (
-    <pre key={i}>
+  const codeBlockMemo = code.map((row, index) => (
+    <pre key={index}>
       <code className="flex flex-row gap-3 font-mono break-all whitespace-pre-wrap sm:gap-6">
         <span className="leading-relaxed text-gray-500 select-none dark:text-gray-400">
-          {i < 9 ? ` ${i + 1}` : i + 1}
+          {index < 9 ? ` ${index + 1}` : index + 1}
         </span>
         <span
-          className={`${
+          className={classNames(
             row.includes('//')
               ? 'text-gray-500 dark:text-gray-400'
-              : 'text-gray-700 dark:text-gray-300'
-          }`}
+              : 'text-gray-700 dark:text-gray-300',
+          )}
         >
           {row}
         </span>

@@ -1,6 +1,9 @@
 import NavLink from '@/components/ui/NavLink';
 import useOnTop from '@/hooks/useOnTop';
+import classNames from '@/utils/classNames';
 import { useTheme } from 'next-themes';
+import React from 'react';
+import MobileNavigation from './MobileNavigation';
 import ThemeButton from './ThemeButton';
 
 const NavBar: React.FC = () => {
@@ -9,13 +12,17 @@ const NavBar: React.FC = () => {
 
   return (
     <nav
-      className={`header sticky top-0 z-10 dark:border-b dark:border-gray-200 dark:border-opacity-20 ${
-        !onTop ? 'shadow' : 'border-b border-gray-200'
-      } motion-safe:transition-shadow`}
+      className={classNames(
+        !onTop ? 'shadow' : 'border-b border-gray-200',
+        'header sticky top-0 z-10 dark:border-b dark:border-gray-200 dark:border-opacity-20 motion-safe:transition-shadow',
+      )}
     >
       <div className="container flex items-center justify-between h-full max-w-4xl px-4 mx-auto">
+        <div className="sm:hidden">
+          <MobileNavigation />
+        </div>
         <ul>
-          <li className="space-x-2">
+          <li className="hidden space-x-2 sm:block">
             <NavLink href="/">Home</NavLink>
             <NavLink href="/dashboard">Dashboard</NavLink>
             <NavLink href="/projects">Projects</NavLink>

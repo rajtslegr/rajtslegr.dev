@@ -19,29 +19,33 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Cache .pnpm-store
-        uses: actions/cache@v1
+      - name: Cache Node modules
+        uses: actions/cache@v2
         with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-node${{ matrix.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          path: ~/.npm
+          key: ${{ runner.OS }}-node-${{ matrix.node-version }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-node-${{ matrix.node-version }}
+            ${{ runner.OS }}-node-
+            ${{ runner.OS }}-f
 
-      - name: Install pnpm
-        run: curl -f https://get.pnpm.io/v6.js | node - add --global pnpm@6
+      - name: Install depenencies
+        run: npm ci
 
       - name: Install
-        run: pnpm install
+        run: npm install
 
       - name: Type Check
-        run: pnpm run type-check
+        run: npm run type-check
 
       - name: Lint
-        run: pnpm run lint
+        run: npm run lint
 
       - name: Test
-        run: pnpm run test
+        run: npm run test
 
       - name: Build
         env:
           LASTFM_API_KEY: ${{secrets.LASTFM_API_KEY}}
           INSTAGRAM_TOKEN: ${{secrets.INSTAGRAM_TOKEN}}
-        run: pnpm run build
+        run: npm run build

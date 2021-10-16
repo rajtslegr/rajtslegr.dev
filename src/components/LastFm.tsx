@@ -42,10 +42,10 @@ const LastFm: React.FC = () => {
       <div className="grid gap-4 md:grid-cols-2">
         {data?.recenttracks?.track
           ?.filter((_track, index) => index < 10)
-          .map((t) => {
+          .map((track, index) => {
             return (
               <div
-                key={parseInt(t.date.uts)}
+                key={index}
                 className="flex flex-col h-full p-2 bg-white rounded shadow min-h-36 dark:bg-card"
               >
                 <a
@@ -57,28 +57,28 @@ const LastFm: React.FC = () => {
                     <div className="w-32 h-32 rounded shadow">
                       <Image
                         className="rounded"
-                        src={t.image[2]['#text']}
+                        src={track.image[2]['#text']}
                         alt="Album art"
                         layout="fixed"
                         width={128}
                         height={128}
                         placeholder="blur"
-                        blurDataURL={t.image[0]['#text']}
+                        blurDataURL={track.image[0]['#text']}
                       />
                     </div>
                     <div className="flex flex-col min-h-full">
                       <h3 className="text-lg font-semibold dark:text-gray-100">
-                        {t.name}
+                        {track.name}
                       </h3>
                       <div className="flex flex-1"></div>
                       <p className="text-gray-500 dark:text-gray-400">
-                        {t.artist['#text']}
+                        {track.artist['#text']}
                       </p>
                       <p className="text-gray-500 dark:text-gray-400">
-                        {t.album['#text']}
+                        {track.album['#text']}
                       </p>
                     </div>
-                    {t['@attr']?.nowplaying && (
+                    {track['@attr']?.nowplaying && (
                       <span className="flex justify-end flex-grow w-12 h-12 text-red-600 items-top motion-safe:animate-pulse">
                         <PlayIcon />
                       </span>

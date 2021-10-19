@@ -1,11 +1,10 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import Instagram, { Props } from '@/components/Instagram';
+import Instagram, { Props } from '@/components/instagram/Instagram';
 import { render } from '@/test/test-utils';
 import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
 
 jest.mock('next/image', () => ({ alt }: { alt: string }) => (
-  // eslint-disable-next-line @next/next/no-img-element
   <img src="https://www.instagram.com/" alt={alt} />
 ));
 

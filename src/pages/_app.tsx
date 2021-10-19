@@ -1,4 +1,4 @@
-import Layout from '@/components/ui/Layout';
+import Layout from '@/components/layout/Layout';
 import usePanelbear from '@/hooks/usePanelbear';
 import '@/styles/globals.css';
 import { AnimatePresence } from 'framer-motion';
@@ -9,15 +9,13 @@ const App: React.FC<AppProps> = ({ Component, pageProps, router }) => {
   usePanelbear('8nvtaxIaLJM');
 
   return (
-    <>
-      <ThemeProvider defaultTheme="system" attribute="class">
+    <ThemeProvider defaultTheme="system" attribute="class">
+      <AnimatePresence exitBeforeEnter>
         <Layout>
-          <AnimatePresence exitBeforeEnter>
-            <Component {...pageProps} key={router.route} />
-          </AnimatePresence>
+          <Component {...pageProps} key={router.route} />
         </Layout>
-      </ThemeProvider>
-    </>
+      </AnimatePresence>
+    </ThemeProvider>
   );
 };
 

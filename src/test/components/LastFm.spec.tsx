@@ -1,4 +1,4 @@
-import LastFm from '@/components/LastFm';
+import LastFm from '@/components/last-fm/LastFm';
 import { render } from '@/test/test-utils';
 import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';

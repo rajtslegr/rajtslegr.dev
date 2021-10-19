@@ -1,7 +1,7 @@
-import MetaData from '@/components/MetaData';
-import MotionSection from '@/components/MotionSection';
-import PostCard from '@/components/PostCard';
-import Input from '@/components/ui/Input';
+import Input from '@/components/form/Input';
+import MotionSection from '@/components/layout/MotionSection';
+import MetaData from '@/components/meta-data/MetaData';
+import PostCard from '@/components/post/PostCard';
 import { getSortedPostsData } from '@/lib/posts';
 import { PostData } from '@/types/entities';
 import { SearchIcon } from '@heroicons/react/solid';
@@ -41,7 +41,7 @@ const Blog: NextPage<Props> = ({ allPostsData }) => {
       </MotionSection>
       <div className="grid gap-4 sm:grid-cols-2">
         {filteredPosts.map((post, index) => (
-          <MotionSection key={post.id} delay={0.2 + index / 10}>
+          <MotionSection key={post.id} delay={index / 10 + 0.2}>
             <PostCard post={post} />
           </MotionSection>
         ))}

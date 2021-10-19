@@ -1,4 +1,4 @@
-import ContactForm from '@/components/ContactForm';
+import ContactForm from '@/components/form/ContactForm';
 import { render } from '@/test/test-utils';
 import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';

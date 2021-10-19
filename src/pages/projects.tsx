@@ -1,6 +1,6 @@
-import MetaData from '@/components/MetaData';
-import MotionSection from '@/components/MotionSection';
-import Project from '@/components/Project';
+import MotionSection from '@/components/layout/MotionSection';
+import MetaData from '@/components/meta-data/MetaData';
+import Project from '@/components/project/Project';
 import projects from '@/data/projects';
 import { ProjectData } from '@/types/entities';
 import { GetStaticProps, NextPage } from 'next';
@@ -19,9 +19,7 @@ const Projects: NextPage<Props> = ({ projects }) => (
     </MotionSection>
     <div className="grid gap-4 sm:grid-cols-2">
       {projects.map((project, index) => (
-        <MotionSection key={index} delay={0.1 + index / 10}>
-          <Project project={project} />
-        </MotionSection>
+        <Project key={index} project={project} index={index} />
       ))}
     </div>
   </>

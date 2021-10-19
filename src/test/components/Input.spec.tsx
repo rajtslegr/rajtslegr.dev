@@ -1,4 +1,4 @@
-import Input from '@/components/ui/Input';
+import Input from '@/components/form/Input';
 import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
 import { render } from '../test-utils';

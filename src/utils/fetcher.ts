@@ -1,4 +1,4 @@
-const fetcher = async <JSON = any>(
+const fetcher = async <JSON>(
   input: RequestInfo,
   init?: RequestInit,
 ): Promise<JSON> => {

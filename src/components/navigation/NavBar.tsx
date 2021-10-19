@@ -1,10 +1,10 @@
-import NavLink from '@/components/ui/NavLink';
+import NavLink from '@/components/navigation/NavLink';
 import useOnTop from '@/hooks/useOnTop';
 import classNames from '@/utils/classNames';
 import { useTheme } from 'next-themes';
 import React from 'react';
 import MobileNavigation from './MobileNavigation';
-import ThemeButton from './ThemeButton';
+import ThemeButton from '../buttons/ThemeButton';
 
 const NavBar: React.FC = () => {
   const { resolvedTheme, setTheme } = useTheme();

@@ -1,4 +1,4 @@
-import MetaData from '@/components/MetaData';
+import MetaData from '@/components/meta-data/MetaData';
 import { ExclamationCircleIcon } from '@heroicons/react/solid';
 import { NextPage } from 'next';
 

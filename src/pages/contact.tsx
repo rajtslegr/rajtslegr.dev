@@ -1,6 +1,6 @@
-import ContactForm from '@/components/ContactForm';
-import MetaData from '@/components/MetaData';
-import MotionSection from '@/components/MotionSection';
+import ContactForm from '@/components/form/ContactForm';
+import MotionSection from '@/components/layout/MotionSection';
+import MetaData from '@/components/meta-data/MetaData';
 import { NextPage } from 'next';
 import React from 'react';
 
@@ -12,10 +12,8 @@ const Contact: NextPage = () => (
         Contact
       </h1>
     </MotionSection>
-    <MotionSection delay={0.1}>
-      <div className="flex flex-col">
-        <ContactForm />
-      </div>
+    <MotionSection delay={0.1} className="flex flex-col">
+      <ContactForm />
     </MotionSection>
   </>
 );

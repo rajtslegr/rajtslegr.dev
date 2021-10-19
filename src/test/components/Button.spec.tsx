@@ -1,4 +1,4 @@
-import Button from '@/components/ui/Button';
+import Button from '@/components/buttons/Button';
 import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
 import { render } from '../test-utils';

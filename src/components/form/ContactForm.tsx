@@ -1,18 +1,16 @@
 import { useForm, ValidationError } from '@formspree/react';
-import Button from './ui/Button';
-import Input from './ui/Input';
-import TextArea from './ui/TextArea';
+import React from 'react';
+import Button from '../buttons/Button';
+import Input from './Input';
+import TextArea from './TextArea';
 
 const ContactForm: React.FC = () => {
   const [{ submitting, succeeded, errors }, handleSubmit] = useForm('xyylyppy');
 
   if (succeeded) {
-    return (
-      <p>
-        Thank you for your message! I&#39;ll get back to you as soon as
-        possible.
-      </p>
-    );
+    <p>
+      Thank you for your message! I&#39;ll get back to you as soon as possible.
+    </p>;
   }
 
   return (

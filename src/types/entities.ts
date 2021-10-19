@@ -9,27 +9,29 @@ export interface GitHubData {
   watchers_count: number;
 }
 
+export interface LastFmTrack {
+  '@attr'?: { nowplaying: boolean };
+  name: string;
+  date: { uts: string; '#text': string };
+  album: { '#text': string };
+  artist: { '#text': string };
+  image: { '#text': string }[];
+}
 export interface LastFmData {
   recenttracks: {
-    track: {
-      '@attr'?: { nowplaying: boolean };
-      name: string;
-      date: { uts: string; '#text': string };
-      album: { '#text': string };
-      artist: { '#text': string };
-      image: { '#text': string }[];
-    }[];
+    track: LastFmTrack[];
   };
 }
 
+export interface InstagramDataEdge {
+  id: string;
+  permalink: string;
+  media_url: string;
+  thumbnail_url: string;
+  caption: string;
+}
 export interface InstagramData {
-  data: {
-    id: string;
-    permalink: string;
-    media_url: string;
-    thumbnail_url: string;
-    caption: string;
-  }[];
+  data: InstagramDataEdge[];
 }
 
 export interface ProjectData {

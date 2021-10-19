@@ -1,4 +1,4 @@
-import NavBar from '@/components/ui/NavBar';
+import NavBar from '@/components/navigation/NavBar';
 import { render } from '@/test/test-utils';
 import '@testing-library/jest-dom';
 import { fireEvent, screen, waitFor } from '@testing-library/react';

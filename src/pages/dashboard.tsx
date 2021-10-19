@@ -1,8 +1,8 @@
-import GitHub from '@/components/GitHub';
-import Instagram from '@/components/Instagram';
-import LastFm from '@/components/LastFm';
-import MetaData from '@/components/MetaData';
-import MotionSection from '@/components/MotionSection';
+import GitHub from '@/components/github/GitHub';
+import Instagram from '@/components/instagram/Instagram';
+import LastFm from '@/components/last-fm/LastFm';
+import MotionSection from '@/components/layout/MotionSection';
+import MetaData from '@/components/meta-data/MetaData';
 import { getRecentRepos } from '@/lib/github';
 import { getRecentPosts } from '@/lib/instagram';
 import { GitHubData, InstagramData } from '@/types/entities';
@@ -21,15 +21,9 @@ const Dashboard: NextPage<Props> = ({ gitHubData, instagramData: igData }) => (
           Dashboard
         </h1>
       </MotionSection>
-      <MotionSection delay={0.1}>
-        <Instagram data={igData} />
-      </MotionSection>
-      <MotionSection delay={0.2}>
-        <LastFm />
-      </MotionSection>
-      <MotionSection delay={0.3}>
-        <GitHub data={gitHubData} />
-      </MotionSection>
+      <Instagram data={igData} />
+      <LastFm />
+      <GitHub data={gitHubData} />
     </div>
   </>
 );

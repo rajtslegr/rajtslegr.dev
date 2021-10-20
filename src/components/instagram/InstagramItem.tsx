@@ -1,5 +1,5 @@
 import { InstagramDataEdge } from '@/types/entities';
-import classNames from '@/utils/classNames';
+import clsx from 'clsx';
 import Image from 'next/image';
 import MotionSection from '../layout/MotionSection';
 
@@ -12,7 +12,7 @@ const InstagramItem: React.FC<Props> = ({ index, edge }) => (
   <MotionSection
     key={edge.id}
     delay={index / 10 + 0.1}
-    className={classNames(
+    className={clsx(
       index === 0 ? 'lg:row-span-2 lg:col-span-2' : '',
       'relative rounded shadow pb-1/1 ',
     )}

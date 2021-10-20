@@ -1,4 +1,3 @@
-import React from 'react';
 import MotionSection from '../layout/MotionSection';
 
 interface Props {
@@ -7,20 +6,20 @@ interface Props {
 }
 
 const TimelineItem: React.FC<Props> = ({
-  data: { timeRange, job, description },
   index,
+  data: { timeRange, job, description },
 }) => (
   <MotionSection delay={index / 10 + 0.1} className="flex">
     <div className="relative flex-row">
-      <div className="flex items-center justify-center w-4 h-full">
-        <div className="w-[2px] dark:bg-gray-100 bg-black h-full"></div>
+      <div className="flex items-center justify-center w-3 h-full">
+        <div className="w-[1px] h-full bg-black dark:bg-gray-100"></div>
       </div>
-      <div className="absolute w-4 h-4 -mt-3 bg-gray-500 rounded-full shadow dark:bg-gray-400 top-1/2"></div>
+      <div className="absolute w-3 h-3 bg-gray-500 rounded-full shadow top-6 dark:bg-gray-400"></div>
     </div>
-    <div className="my-4 ml-6 text-justify sm:ml-12">
+    <div className="my-4 ml-6 sm:ml-12">
       <h3 className="text-lg font-semibold dark:text-gray-100">{job}</h3>
       <h4 className="mb-2 font-semibold dark:text-gray-300">{timeRange}</h4>
-      <p className="dark:text-gray-100">{description}</p>
+      <p className="text-gray-700 dark:text-gray-300">{description}</p>
     </div>
   </MotionSection>
 );

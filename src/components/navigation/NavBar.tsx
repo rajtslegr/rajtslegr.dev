@@ -1,10 +1,10 @@
 import NavLink from '@/components/navigation/NavLink';
 import useOnTop from '@/hooks/useOnTop';
-import classNames from '@/utils/classNames';
+import clsx from 'clsx';
 import { useTheme } from 'next-themes';
 import React from 'react';
-import MobileNavigation from './MobileNavigation';
 import ThemeButton from '../buttons/ThemeButton';
+import MobileNavigation from './MobileNavigation';
 
 const NavBar: React.FC = () => {
   const { resolvedTheme, setTheme } = useTheme();
@@ -12,7 +12,7 @@ const NavBar: React.FC = () => {
 
   return (
     <nav
-      className={classNames(
+      className={clsx(
         !onTop ? 'shadow' : 'border-b border-gray-200',
         'header sticky top-0 z-10 dark:border-b dark:border-gray-200 dark:border-opacity-20 motion-safe:transition-shadow',
       )}

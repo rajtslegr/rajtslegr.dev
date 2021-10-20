@@ -3,22 +3,7 @@ import useIsMounted from '@/hooks/useIsMounted';
 import { HeartIcon } from '@heroicons/react/solid';
 import { useTheme } from 'next-themes';
 import NextJsIcon from '../icons/NextJsIcon';
-
-interface IExternalLink {
-  href: string;
-  children: string;
-}
-
-const ExternalLink: React.FC<IExternalLink> = ({ href, children }) => (
-  <a
-    className="font-medium text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
-    target="_blank"
-    rel="noopener noreferrer"
-    href={href}
-  >
-    {children}
-  </a>
-);
+import ExternalLink from '../navigation/ExternalLink';
 
 const Footer: React.FC = () => {
   const isMounted = useIsMounted();
@@ -67,8 +52,14 @@ const Footer: React.FC = () => {
         <p className="flex flex-row items-center">Made by Petr Rajtslegr</p>
         <p className="flex flex-row items-center">
           &nbsp;with&nbsp;
-          {!isMounted && <HeartIcon className="w-5 h-5" />}
-          &nbsp;and{theme && isMounted && NextJsIcon(theme)}&nbsp;&copy;&nbsp;
+          <HeartIcon className="w-5 h-5" />
+          &nbsp;and
+          {theme && isMounted && (
+            <ExternalLink href="https://nextjs.com">
+              {NextJsIcon(theme)}
+            </ExternalLink>
+          )}
+          &nbsp;&copy;&nbsp;
           {new Date().getFullYear()}
         </p>
       </div>

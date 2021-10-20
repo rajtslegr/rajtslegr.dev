@@ -23,7 +23,7 @@ const LastFm: React.FC = () => {
 
   if (!error && data?.recenttracks) {
     render = (
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-4 m-0 md:grid-cols-2">
         {data?.recenttracks?.track
           ?.filter((_track, index) => index < 10)
           .map((track, index) => (
@@ -36,7 +36,9 @@ const LastFm: React.FC = () => {
   return (
     <>
       <MotionSection delay={0.2}>
-        <h2 className="my-4 text-3xl font-bold dark:text-gray-100">Last.fm</h2>
+        <h2 className="mt-12 mb-4 text-3xl font-bold dark:text-gray-100">
+          Last.fm
+        </h2>
       </MotionSection>
       {render}
     </>

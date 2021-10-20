@@ -16,41 +16,41 @@ const GitHub: React.FC<Props> = ({ data }) => {
 
   if (Array.isArray(data)) {
     render = (
-      <>
-        <div className="grid gap-4 lg:grid-cols-2">
-          {data?.map(
-            (
-              {
-                node_id,
-                full_name,
-                html_url,
-                language,
-                stargazers_count,
-                watchers_count,
-              },
-              index,
-            ) => (
-              <GitHubCard
-                index={index}
-                key={node_id}
-                link={html_url}
-                language={language}
-                stars={stargazers_count}
-                watches={watchers_count}
-              >
-                {full_name}
-              </GitHubCard>
-            ),
-          )}
-        </div>
-      </>
+      <div className="grid gap-4 lg:grid-cols-2">
+        {data?.map(
+          (
+            {
+              node_id,
+              full_name,
+              html_url,
+              language,
+              stargazers_count,
+              watchers_count,
+            },
+            index,
+          ) => (
+            <GitHubCard
+              index={index}
+              key={node_id}
+              link={html_url}
+              language={language}
+              stars={stargazers_count}
+              watches={watchers_count}
+            >
+              {full_name}
+            </GitHubCard>
+          ),
+        )}
+      </div>
     );
   }
 
   return (
     <div>
       <MotionSection delay={0.3}>
-        <h2 className="my-4 text-3xl font-bold dark:text-gray-100">GitHub</h2>
+        <h2 className="mt-12 mb-4 text-3xl font-bold dark:text-gray-100">
+          GitHub
+        </h2>
       </MotionSection>
       {render}
     </div>

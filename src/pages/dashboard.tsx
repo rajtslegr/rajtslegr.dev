@@ -15,7 +15,7 @@ interface Props {
 const Dashboard: NextPage<Props> = ({ gitHubData, instagramData: igData }) => (
   <>
     <MetaData title="Petr Rajtslegr | Dashboard" />
-    <div className="space-y-4 sm:space-y-12">
+    <div className="">
       <MotionSection>
         <h1 className="mb-4 text-4xl font-extrabold md:mb-12 dark:text-gray-100">
           Dashboard

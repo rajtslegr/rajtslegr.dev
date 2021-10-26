@@ -9,10 +9,6 @@ type DefaultParams = Parameters<typeof defaultRender>;
 type RenderUI = DefaultParams[0];
 type RenderOptions = DefaultParams[1] & { router?: Partial<NextRouter> };
 
-jest.mock('next/image', () => ({ src, alt }: { src: string; alt: string }) => (
-  <img src={src} alt={alt} />
-));
-
 export function render(
   ui: RenderUI,
   { wrapper, router, ...options }: RenderOptions = {},

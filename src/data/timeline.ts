@@ -3,7 +3,7 @@ const timeline = [
     timeRange: '2021 - present',
     job: 'Economia',
     description:
-      'I currently work at Economia (Aktualne.cz, hn.cz, Hospodarske noviny, Ekonom, Respekt). I am mainly involved in creating JavaScript applications using React.',
+      'I currently work at Economia (Aktualne.cz, hn.cz, Hospodarske noviny, Ekonom, Respekt). I am mainly involved in creating JavaScript applications using React and Next.js',
   },
   {
     timeRange: '2018 - 2021',

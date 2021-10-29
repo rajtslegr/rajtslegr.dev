@@ -19,10 +19,8 @@ const Layout: React.FC<Props> = ({ children }) => {
   useKonami(() => setshowConfetti(true));
 
   useEffect(() => {
-    if (showMobileNavigation) {
-      setShowMobileNavigation(!showMobileNavigation);
-    }
-  }, [router.asPath, showMobileNavigation]);
+    setShowMobileNavigation(false);
+  }, [router.asPath]);
 
   const mobileNavigationHandler = (): void => {
     setShowMobileNavigation((showMobileNavigation) => !showMobileNavigation);

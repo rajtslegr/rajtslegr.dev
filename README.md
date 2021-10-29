@@ -2,4 +2,4 @@
 
 ![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=rajtslegr-com-git-main-rajcep)
 
-Personal portfolio website built with Next.js, TypeScript and Tailwind.
+Personal portfolio website built with Next.js.

@@ -22,7 +22,7 @@ const Layout: React.FC<Props> = ({ children }) => {
     if (showMobileNavigation) {
       setShowMobileNavigation(!showMobileNavigation);
     }
-  }, [router.asPath, showMobileNavigation, setShowMobileNavigation]);
+  }, [router.asPath, showMobileNavigation]);
 
   const mobileNavigationHandler = (): void => {
     setShowMobileNavigation((showMobileNavigation) => !showMobileNavigation);

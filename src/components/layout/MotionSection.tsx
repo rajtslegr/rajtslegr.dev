@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion';
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 interface Props {
   delay?: number;

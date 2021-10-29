@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import React from 'react';
 import heroImage from '../../../public/static/images/hero.jpg';
 import MotionSection from '../layout/MotionSection';
 import ExternalLink from '../navigation/ExternalLink';

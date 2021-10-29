@@ -1,7 +1,6 @@
 import { LastFmTrack } from '@/types/entities';
 import { PlayIcon } from '@heroicons/react/solid';
 import Image from 'next/image';
-import React from 'react';
 
 interface Props {
   track: LastFmTrack;

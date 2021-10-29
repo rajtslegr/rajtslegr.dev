@@ -1,5 +1,5 @@
 import { GitHubData } from '@/types/entities';
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import MotionSection from '../layout/MotionSection';
 import GitHubCard from './GitHubCard';
 

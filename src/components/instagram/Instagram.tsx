@@ -1,5 +1,5 @@
 import { InstagramData } from '@/types/entities';
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import MotionSection from '../layout/MotionSection';
 import InstagramItem from './InstagramItem';
 

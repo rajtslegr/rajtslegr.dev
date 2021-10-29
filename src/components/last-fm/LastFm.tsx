@@ -1,6 +1,6 @@
 import { LastFmData } from '@/types/entities';
 import fetcher from '@/utils/fetcher';
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import useSWR from 'swr';
 import MotionSection from '../layout/MotionSection';
 import LastFmItem from './LastFmItem';

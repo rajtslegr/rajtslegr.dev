@@ -4,6 +4,7 @@ import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
 
 jest.mock('next/image', () => ({ alt }: { alt: string }) => (
+  // eslint-disable-next-line @next/next/no-img-element
   <img src="/static/images/hero.jpg" alt={alt} />
 ));
 

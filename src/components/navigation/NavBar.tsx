@@ -2,11 +2,15 @@ import NavLink from '@/components/navigation/NavLink';
 import useOnTop from '@/hooks/useOnTop';
 import clsx from 'clsx';
 import { useTheme } from 'next-themes';
-import React from 'react';
+import { MouseEventHandler } from 'react';
 import ThemeButton from '../buttons/ThemeButton';
-import MobileNavigation from './MobileNavigation';
+import NavigationButton from './NavigationButton';
+interface Props {
+  handleClick: MouseEventHandler<HTMLButtonElement>;
+  showMobileNavigation: boolean;
+}
 
-const NavBar: React.FC = () => {
+const NavBar: React.FC<Props> = ({ showMobileNavigation, handleClick }) => {
   const { resolvedTheme, setTheme } = useTheme();
   const onTop = useOnTop();
 
@@ -19,7 +23,10 @@ const NavBar: React.FC = () => {
     >
       <div className="container flex items-center justify-between h-full max-w-4xl px-4 mx-auto">
         <div className="sm:hidden">
-          <MobileNavigation />
+          <NavigationButton
+            showMobileNavigation={showMobileNavigation}
+            handleClick={handleClick}
+          />
         </div>
         <ul>
           <li className="hidden space-x-2 sm:block">

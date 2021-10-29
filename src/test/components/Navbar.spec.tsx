@@ -18,7 +18,9 @@ describe('NavBar', () => {
   }));
 
   it('should navigate properly', () => {
-    render(<NavBar />);
+    render(
+      <NavBar handleClick={() => undefined} showMobileNavigation={false} />,
+    );
 
     fireEvent.click(screen.getByText('Home'));
     expect(push).toHaveBeenCalledWith('/', '/', expect.anything());
@@ -39,7 +41,9 @@ describe('NavBar', () => {
   });
 
   it('should render shadow on scroll', async () => {
-    render(<NavBar />);
+    render(
+      <NavBar handleClick={() => undefined} showMobileNavigation={false} />,
+    );
 
     const nav = screen.getByRole('navigation');
     expect(nav).not.toHaveClass('shadow');

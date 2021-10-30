@@ -2,7 +2,7 @@ import MotionSection from '../layout/MotionSection';
 import NavLink from './NavLink';
 
 const MobileNavigation: React.FC = () => (
-  <nav className="absolute z-10 flex justify-center w-full h-full bg-dark">
+  <MotionSection className="absolute z-10 flex justify-center w-full h-full bg-dark">
     <div className="flex flex-col mt-24 space-y-4 text-center">
       <MotionSection>
         <NavLink href="/" isMobileNavigation>
@@ -30,7 +30,7 @@ const MobileNavigation: React.FC = () => (
         </NavLink>
       </MotionSection>
     </div>
-  </nav>
+  </MotionSection>
 );
 
 export default MobileNavigation;

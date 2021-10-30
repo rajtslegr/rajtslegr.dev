@@ -36,7 +36,7 @@ const Layout: React.FC<Props> = ({ children }) => {
       <main className="flex-auto max-w-4xl min-h-[calc(100vh-8rem)] px-4 mx-auto my-8 md:mt-12">
         {children}
       </main>
-      <Footer />
+      {!showMobileNavigation && <Footer />}
       {showConfetti && <KonamiParticles />}
     </>
   );

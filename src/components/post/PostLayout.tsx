@@ -1,9 +1,7 @@
 import { ContentPostData } from '@/types/entities';
 import parseDate from '@/utils/date';
-import fetcher from '@/utils/fetcher';
 import { MDXRemote } from 'next-mdx-remote';
 import Image from 'next/image';
-import useSWR from 'swr';
 import hero from '../../../public/static/images/hero.jpg';
 import MotionSection from '../layout/MotionSection';
 
@@ -12,13 +10,8 @@ interface Props {
 }
 
 const PostLayout: React.FC<Props> = ({
-  postData: { id, title, date, mdxContent, image, readingTime },
+  postData: { title, date, mdxContent, image, readingTime, views },
 }) => {
-  const { data, error } = useSWR<{ total: number }>(
-    `/api/views/${id}`,
-    fetcher,
-  );
-
   return (
     <div className="flex flex-col items-center max-w-2xl mx-auto">
       <article className="w-full text-black max-w-none dark:text-white">
@@ -43,11 +36,8 @@ const PostLayout: React.FC<Props> = ({
                 {parseDate(date)}
                 {' • '}
                 {readingTime.text}
-                {(() => {
-                  if (data && !error) {
-                    return ` • ${data.total} views`;
-                  }
-                })()}
+                {' • '}
+                {views} views
               </p>
             </div>
           </div>

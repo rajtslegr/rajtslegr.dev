@@ -2,7 +2,7 @@ import { getRecentSongs } from '@/lib/last-fm';
 import { LastFmData } from '@/types/entities';
 import { NextApiRequest, NextApiResponse } from 'next';
 
-const get = async (
+const handler = async (
   _req: NextApiRequest,
   res: NextApiResponse<LastFmData>,
 ): Promise<void> => {
@@ -12,4 +12,4 @@ const get = async (
   return res.send(recentSongs);
 };
 
-export default get;
+export default handler;

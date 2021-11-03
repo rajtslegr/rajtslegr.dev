@@ -7,7 +7,7 @@ import LastFmItem from './LastFmItem';
 import LastFmSkeleton from './LastFmSkeleton';
 
 const LastFm: React.FC = () => {
-  const { data, error } = useSWR<LastFmData>('api/last-fm', fetcher, {
+  const { data, error } = useSWR<LastFmData>('/api/last-fm', fetcher, {
     refreshInterval: 60000,
   });
 

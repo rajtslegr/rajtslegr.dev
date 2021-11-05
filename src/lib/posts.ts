@@ -1,19 +1,16 @@
-import { ContentPostData, PostData, PostId } from '@/types/entities';
+import { ContentPostData, PostId, PostData } from '@/types/entities';
 import fs from 'fs';
 import matter from 'gray-matter';
 import mdxPrism from 'mdx-prism';
 import { serialize } from 'next-mdx-remote/serialize';
 import path from 'path';
 import readingTime from 'reading-time';
-import { getBlogViews } from './blog-views';
 
 const postsDirectory = path.join(process.cwd(), 'src/data/blog');
 
-export const getSortedPostsData = async (): Promise<PostData[]> => {
+export const getSortedPostsData = (): PostData[] => {
   const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData: PostData[] = [];
-
-  for await (const fileName of fileNames) {
+  const allPostsData: PostData[] = fileNames.map((fileName) => {
     const id = fileName.replace(/\.mdx$/, '');
 
     const fullPath = path.join(postsDirectory, fileName);
@@ -21,15 +18,12 @@ export const getSortedPostsData = async (): Promise<PostData[]> => {
 
     const { content, data } = matter(fileContents);
 
-    const views = await getBlogViews(id);
-
-    allPostsData.push({
+    return {
       id,
       ...data,
       readingTime: readingTime(content),
-      views,
-    } as PostData);
-  }
+    } as PostData;
+  });
 
   return allPostsData.sort((a, b) => {
     if (a.date < b.date) {
@@ -58,8 +52,6 @@ export const getPostData = async (id: string): Promise<ContentPostData> => {
 
   const { content, data } = matter(fileContents);
 
-  const views = await getBlogViews(id);
-
   const mdxContent = await serialize(content, {
     mdxOptions: { rehypePlugins: [mdxPrism] },
   });
@@ -69,6 +61,5 @@ export const getPostData = async (id: string): Promise<ContentPostData> => {
     mdxContent,
     ...data,
     readingTime: readingTime(content),
-    views,
   } as ContentPostData;
 };

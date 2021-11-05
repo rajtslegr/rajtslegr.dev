@@ -7,10 +7,12 @@ import MotionSection from '../layout/MotionSection';
 
 interface Props {
   postData: ContentPostData;
+  views?: number;
 }
 
 const PostLayout: React.FC<Props> = ({
-  postData: { title, date, mdxContent, image, readingTime, views },
+  postData: { title, date, mdxContent, image, readingTime },
+  views,
 }) => {
   return (
     <div className="flex flex-col items-center max-w-2xl mx-auto">

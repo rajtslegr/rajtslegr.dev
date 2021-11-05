@@ -56,13 +56,12 @@ const Blog: NextPage<Props> = ({ allPostsData }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = await getSortedPostsData();
+  const allPostsData = getSortedPostsData();
 
   return {
     props: {
       allPostsData,
     },
-    revalidate: 10800,
   };
 };
 

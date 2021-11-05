@@ -50,7 +50,6 @@ export interface PostData {
   date: string;
   image: string;
   readingTime: ReadTime;
-  views: string;
 }
 
 export interface PostId {

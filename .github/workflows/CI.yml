@@ -46,6 +46,7 @@ jobs:
 
       - name: Build
         env:
+          DATABASE_URL: ${{secrets.DATABASE_URL}}
           LASTFM_API_KEY: ${{secrets.LASTFM_API_KEY}}
           INSTAGRAM_TOKEN: ${{secrets.INSTAGRAM_TOKEN}}
         run: npm run build

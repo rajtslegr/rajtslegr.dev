@@ -22,16 +22,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         total: newOrUpdatedViews.count.toString(),
       });
     }
-
-    if (req.method === 'GET') {
-      const views = await prisma.views.findUnique({
-        where: {
-          id,
-        },
-      });
-
-      return res.status(200).json({ total: views.count.toString() });
-    }
   } catch (e) {
     const error = e as Error;
     return res.status(500).json({ message: error.message });

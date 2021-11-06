@@ -2,21 +2,14 @@ import MetaData from '@/components/meta-data/MetaData';
 import PostLayout from '@/components/post/PostLayout';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 import { ContentPostData } from '@/types/entities';
-import fetcher from '@/utils/fetcher';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { useEffect } from 'react';
-import useSWR from 'swr';
 
 interface Props {
   postData: ContentPostData;
 }
 
 const Blog: NextPage<Props> = ({ postData }) => {
-  const { data } = useSWR<{ total: number }>(
-    `/api/views/${postData.id}`,
-    fetcher,
-  );
-
   useEffect(() => {
     const incrementView = async () => {
       await fetch(`/api/views/${postData.id}`, {
@@ -36,7 +29,7 @@ const Blog: NextPage<Props> = ({ postData }) => {
         date={new Date(postData.date).toISOString()}
         image={`/static/images/blog/${postData.image}`}
       />
-      <PostLayout postData={postData} views={data?.total} />
+      <PostLayout postData={postData} />
     </>
   );
 };

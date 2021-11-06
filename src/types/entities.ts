@@ -49,7 +49,8 @@ export interface PostData {
   description: string;
   date: string;
   image: string;
-  readingTime: ReadTime;
+  readingTime?: ReadTime;
+  views?: string;
 }
 
 export interface PostId {

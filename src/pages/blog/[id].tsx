@@ -1,24 +1,16 @@
 import MetaData from '@/components/meta-data/MetaData';
 import PostLayout from '@/components/post/PostLayout';
+import useIncrementView from '@/hooks/useIncrementViews';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 import { ContentPostData } from '@/types/entities';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import { useEffect } from 'react';
 
 interface Props {
   postData: ContentPostData;
 }
 
 const Blog: NextPage<Props> = ({ postData }) => {
-  useEffect(() => {
-    const incrementView = async () => {
-      await fetch(`/api/views/${postData.id}`, {
-        method: 'POST',
-      });
-    };
-
-    incrementView();
-  });
+  useIncrementView(postData.id);
 
   return (
     <>

@@ -1,10 +1,12 @@
+import isbot from 'isbot';
 import { useEffect } from 'react';
 
 const useIncrementView = async (id: string) => {
   useEffect(() => {
-    const isHeadless = /HeadlessChrome/.test(window.navigator.userAgent);
+    const isBrowser = typeof window !== undefined;
+    const isBot = isbot(navigator.userAgent);
 
-    if (!isHeadless && typeof window !== undefined) {
+    if (isBrowser && !isBot) {
       incrementView(id);
     }
   }, [id]);

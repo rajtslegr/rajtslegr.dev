@@ -9,7 +9,11 @@ const App: React.FC<AppProps> = ({ Component, pageProps, router }) => {
   usePanelbear('8nvtaxIaLJM');
 
   return (
-    <ThemeProvider defaultTheme="system" attribute="class">
+    <ThemeProvider
+      defaultTheme="system"
+      attribute="class"
+      disableTransitionOnChange
+    >
       <AnimatePresence exitBeforeEnter>
         <Layout>
           <Component {...pageProps} key={router.route} />

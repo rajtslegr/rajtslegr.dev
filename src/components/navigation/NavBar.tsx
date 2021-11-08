@@ -28,15 +28,23 @@ const NavBar: React.FC<Props> = ({ showMobileNavigation, handleClick }) => {
             handleClick={handleClick}
           />
         </div>
-        <ul>
-          <li className="hidden space-x-2 sm:block">
-            <NavLink href="/">Home</NavLink>
-            <NavLink href="/dashboard">Dashboard</NavLink>
-            <NavLink href="/projects">Projects</NavLink>
-            <NavLink href="/blog">Blog</NavLink>
-            <NavLink href="/contact">Contact</NavLink>
-          </li>
-        </ul>
+        <div className="hidden h-full sm:block">
+          <NavLink href="/" isHeader={true}>
+            Home
+          </NavLink>
+          <NavLink href="/dashboard" isHeader={true}>
+            Dashboard
+          </NavLink>
+          <NavLink href="/projects" isHeader={true}>
+            Projects
+          </NavLink>
+          <NavLink href="/blog" isHeader={true}>
+            Blog
+          </NavLink>
+          <NavLink href="/contact" isHeader={true}>
+            Contact
+          </NavLink>
+        </div>
         <ThemeButton
           handleClick={() =>
             setTheme(resolvedTheme === 'light' ? 'dark' : 'light')

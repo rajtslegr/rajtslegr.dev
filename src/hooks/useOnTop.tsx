@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const useOnTop = (): boolean => {
-  const [onTop, setOntTop] = useState<boolean>(true);
+  const [onTop, setOntTop] = useState(true);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);

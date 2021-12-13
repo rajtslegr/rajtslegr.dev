@@ -17,14 +17,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps, router }) => {
     >
       <AnimatePresence exitBeforeEnter>
         <Layout>
-          <NextNProgress
-          // color={
-          //   resolvedTheme === 'light'
-          //     ? 'rgb(229, 231, 235)'
-          //     : 'rgb(55, 65, 81)'
-          // }
-          // options={{ showSpinner: false }}
-          />
+          <NextNProgress options={{ showSpinner: false }} />
           <Component {...pageProps} key={router.route} />
         </Layout>
       </AnimatePresence>

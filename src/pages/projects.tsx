@@ -1,9 +1,10 @@
+import { GetStaticProps, NextPage } from 'next';
+
 import MotionSection from '@/components/layout/MotionSection';
 import MetaData from '@/components/meta-data/MetaData';
 import Project from '@/components/project/Project';
-import projects from '@/data/projects';
+import projectsData from '@/data/projects';
 import { ProjectData } from '@/types/entities';
-import { GetStaticProps, NextPage } from 'next';
 
 interface Props {
   projects: ProjectData[];
@@ -28,7 +29,7 @@ const Projects: NextPage<Props> = ({ projects }) => (
 export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
-      projects,
+      projects: projectsData,
     },
   };
 };

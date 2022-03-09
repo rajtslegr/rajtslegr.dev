@@ -1,8 +1,10 @@
+import React from 'react';
+
+import { NextPage } from 'next';
+
 import ContactForm from '@/components/form/ContactForm';
 import MotionSection from '@/components/layout/MotionSection';
 import MetaData from '@/components/meta-data/MetaData';
-import { NextPage } from 'next';
-import React from 'react';
 
 const Contact: NextPage = () => (
   <>

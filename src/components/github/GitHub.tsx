@@ -1,7 +1,8 @@
-import { GitHubData } from '@/types/entities';
 import { ReactNode } from 'react';
+
 import MotionSection from '../layout/MotionSection';
 import GitHubCard from './GitHubCard';
+import { GitHubData } from '@/types/entities';
 
 export interface Props {
   data?: GitHubData[];

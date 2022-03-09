@@ -1,7 +1,8 @@
+import { fireEvent, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
 import Footer from '@/components/layout/Footer';
 import { render } from '@/test/test-utils';
-import '@testing-library/jest-dom';
-import { fireEvent, screen } from '@testing-library/react';
 
 const useRouter = jest.spyOn(require('next/router'), 'useRouter');
 

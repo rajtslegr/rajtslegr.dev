@@ -1,9 +1,10 @@
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+
 import MetaData from '@/components/meta-data/MetaData';
 import PostLayout from '@/components/post/PostLayout';
 import useIncrementView from '@/hooks/useIncrementViews';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 import { ContentPostData } from '@/types/entities';
-import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
 interface Props {
   postData: ContentPostData;

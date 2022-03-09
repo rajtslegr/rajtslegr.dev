@@ -1,4 +1,5 @@
 import { DocumentIcon, EyeIcon, StarIcon } from '@heroicons/react/solid';
+
 import MotionSection from '../layout/MotionSection';
 
 interface IGitHubCard {

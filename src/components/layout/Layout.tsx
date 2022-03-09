@@ -1,10 +1,12 @@
-import NavBar from '@/components/navigation/NavBar';
-import { useRouter } from 'next/router';
 import { ReactNode, useEffect, useState } from 'react';
+
+import { useRouter } from 'next/router';
 import { useKonami } from 'react-konami-code';
+
 import MobileNavigation from '../navigation/MobileNavigation';
 import Footer from './Footer';
 import KonamiParticles from './Particles';
+import NavBar from '@/components/navigation/NavBar';
 
 interface Props {
   children: ReactNode;
@@ -23,7 +25,7 @@ const Layout: React.FC<Props> = ({ children }) => {
   }, [router.asPath]);
 
   const mobileNavigationHandler = (): void => {
-    setShowMobileNavigation((showMobileNavigation) => !showMobileNavigation);
+    setShowMobileNavigation((previoustState) => !previoustState);
   };
 
   return (

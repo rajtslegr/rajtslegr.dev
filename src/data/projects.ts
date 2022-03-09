@@ -1,4 +1,4 @@
-const projects = [
+const projectsData = [
   {
     title: 'cov19cz',
     description:
@@ -42,4 +42,4 @@ const projects = [
   },
 ];
 
-export default projects;
+export default projectsData;

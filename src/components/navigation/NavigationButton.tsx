@@ -1,6 +1,7 @@
+import { MouseEventHandler, useMemo } from 'react';
+
 import { MenuIcon, XIcon } from '@heroicons/react/solid';
 import { motion, TargetAndTransition, useReducedMotion } from 'framer-motion';
-import { MouseEventHandler, useMemo } from 'react';
 
 interface Props {
   handleClick: MouseEventHandler<HTMLButtonElement>;

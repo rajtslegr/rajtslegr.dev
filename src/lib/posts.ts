@@ -1,11 +1,13 @@
-import { ContentPostData, PostData, PostId } from '@/types/entities';
 import fs from 'fs';
+import path from 'path';
+
 import matter from 'gray-matter';
 import mdxPrism from 'mdx-prism';
 import { serialize } from 'next-mdx-remote/serialize';
-import path from 'path';
 import readingTime from 'reading-time';
+
 import { getBlogViews } from './blog-views';
+import { ContentPostData, PostData, PostId } from '@/types/entities';
 
 const postsDirectory = path.join(process.cwd(), 'src/data/blog');
 
@@ -13,6 +15,7 @@ export const getSortedPostsData = async (): Promise<PostData[]> => {
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData: PostData[] = [];
 
+  // eslint-disable-next-line no-restricted-syntax
   for await (const fileName of fileNames) {
     const id = fileName.replace(/\.mdx$/, '');
 
@@ -34,9 +37,8 @@ export const getSortedPostsData = async (): Promise<PostData[]> => {
   return allPostsData.sort((a, b) => {
     if (a.date < b.date) {
       return 1;
-    } else {
-      return -1;
     }
+    return -1;
   });
 };
 

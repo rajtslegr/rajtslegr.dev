@@ -1,12 +1,15 @@
+import { useState } from 'react';
+
+import { GetStaticProps, NextPage } from 'next';
+
+import { SearchIcon } from '@heroicons/react/solid';
+
 import Input from '@/components/form/Input';
 import MotionSection from '@/components/layout/MotionSection';
 import MetaData from '@/components/meta-data/MetaData';
 import PostCard from '@/components/post/PostCard';
 import { getSortedPostsData } from '@/lib/posts';
 import { PostData } from '@/types/entities';
-import { SearchIcon } from '@heroicons/react/solid';
-import { GetStaticProps, NextPage } from 'next';
-import { useState } from 'react';
 
 interface Props {
   allPostsData: PostData[];

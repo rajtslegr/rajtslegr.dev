@@ -1,6 +1,7 @@
+import Link from 'next/link';
+
 import { PostData } from '@/types/entities';
 import parseDate from '@/utils/date';
-import Link from 'next/link';
 
 interface Props {
   post: PostData;

@@ -1,4 +1,4 @@
-const timeline = [
+const timelineData = [
   {
     timeRange: '2021 - present',
     job: 'Economia',
@@ -13,4 +13,4 @@ const timeline = [
   },
 ];
 
-export default timeline;
+export default timelineData;

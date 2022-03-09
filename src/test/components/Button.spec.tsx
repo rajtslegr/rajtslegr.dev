@@ -1,7 +1,8 @@
-import Button from '@/components/buttons/Button';
-import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
 import { render } from '../test-utils';
+import Button from '@/components/buttons/Button';
 
 describe('Button', () => {
   it('should contain given children', () => {

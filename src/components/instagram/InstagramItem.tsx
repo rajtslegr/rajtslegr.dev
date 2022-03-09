@@ -1,7 +1,8 @@
-import { InstagramDataEdge } from '@/types/entities';
 import clsx from 'clsx';
 import Image from 'next/image';
+
 import MotionSection from '../layout/MotionSection';
+import { InstagramDataEdge } from '@/types/entities';
 
 export interface Props {
   index: number;

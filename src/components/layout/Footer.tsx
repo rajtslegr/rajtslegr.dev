@@ -1,9 +1,10 @@
-import NavLink from '@/components/navigation/NavLink';
-import useIsMounted from '@/hooks/useIsMounted';
 import { HeartIcon } from '@heroicons/react/solid';
 import { useTheme } from 'next-themes';
+
 import NextJsIcon from '../icons/NextJsIcon';
 import ExternalLink from '../navigation/ExternalLink';
+import NavLink from '@/components/navigation/NavLink';
+import useIsMounted from '@/hooks/useIsMounted';
 
 const Footer: React.FC = () => {
   const isMounted = useIsMounted();

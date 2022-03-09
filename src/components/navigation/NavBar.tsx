@@ -1,10 +1,13 @@
-import NavLink from '@/components/navigation/NavLink';
-import useOnTop from '@/hooks/useOnTop';
+import { MouseEventHandler } from 'react';
+
 import clsx from 'clsx';
 import { useTheme } from 'next-themes';
-import { MouseEventHandler } from 'react';
+
 import ThemeButton from '../buttons/ThemeButton';
 import NavigationButton from './NavigationButton';
+import NavLink from '@/components/navigation/NavLink';
+import useOnTop from '@/hooks/useOnTop';
+
 interface Props {
   handleClick: MouseEventHandler<HTMLButtonElement>;
   showMobileNavigation: boolean;

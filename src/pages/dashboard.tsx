@@ -1,3 +1,5 @@
+import { GetStaticProps, NextPage } from 'next';
+
 import GitHub from '@/components/github/GitHub';
 import Instagram from '@/components/instagram/Instagram';
 import LastFm from '@/components/last-fm/LastFm';
@@ -6,7 +8,7 @@ import MetaData from '@/components/meta-data/MetaData';
 import { getRecentRepos } from '@/lib/github';
 import { getRecentPosts } from '@/lib/instagram';
 import { GitHubData, InstagramData } from '@/types/entities';
-import { GetStaticProps, NextPage } from 'next';
+
 interface Props {
   gitHubData: GitHubData[];
   instagramData: InstagramData;

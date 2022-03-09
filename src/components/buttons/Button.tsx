@@ -1,4 +1,5 @@
 import { ComponentProps, forwardRef } from 'react';
+
 import LoadingIcon from '../icons/LoadingIcon';
 
 interface Props extends ComponentProps<'button'> {

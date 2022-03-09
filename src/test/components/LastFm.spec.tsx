@@ -1,9 +1,10 @@
-import LastFm from '@/components/last-fm/LastFm';
-import { render } from '@/test/test-utils';
-import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
 import fetchMock, { enableFetchMocks } from 'jest-fetch-mock';
 import { SWRConfig } from 'swr';
+import '@testing-library/jest-dom';
+
+import LastFm from '@/components/last-fm/LastFm';
+import { render } from '@/test/test-utils';
 
 jest.mock('next/image', () => ({ src, alt }: { src: string; alt: string }) => (
   // eslint-disable-next-line @next/next/no-img-element

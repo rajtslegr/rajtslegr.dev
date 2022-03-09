@@ -1,5 +1,5 @@
-import { ProjectData } from '@/types/entities';
 import Image from 'next/image';
+
 import cov19cz from '../../../public/static/images/projects/cov19cz.jpg';
 import rajtslegr from '../../../public/static/images/projects/rajtslegr.jpg';
 import typewriter from '../../../public/static/images/projects/typewriter.jpg';
@@ -7,6 +7,7 @@ import vaccbot from '../../../public/static/images/projects/vaccbot.jpg';
 import MotionSection from '../layout/MotionSection';
 import Pill from './Pill';
 import WindowHeader from './WindowHeader';
+import { ProjectData } from '@/types/entities';
 
 const IMAGES: { [key: string]: StaticImageData } = {
   cov19cz,

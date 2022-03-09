@@ -1,14 +1,16 @@
-import useIsMounted from '@/hooks/useIsMounted';
+import { MouseEventHandler, useMemo } from 'react';
+
 import { MoonIcon, SunIcon } from '@heroicons/react/solid';
 import { motion, TargetAndTransition, useReducedMotion } from 'framer-motion';
 import { useTheme } from 'next-themes';
-import { MouseEventHandler, useMemo } from 'react';
+
+import useIsMounted from '@/hooks/useIsMounted';
 
 interface Props {
   handleClick: MouseEventHandler<HTMLButtonElement>;
 }
 
-const ThemeButton: React.FC<Props> = ({ handleClick: handleClick }) => {
+const ThemeButton: React.FC<Props> = ({ handleClick }) => {
   const isMounted = useIsMounted();
   const { resolvedTheme } = useTheme();
   const shouldReduceMotion = useReducedMotion();

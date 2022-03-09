@@ -1,9 +1,10 @@
-import { ContentPostData } from '@/types/entities';
-import parseDate from '@/utils/date';
 import { MDXRemote } from 'next-mdx-remote';
 import Image from 'next/image';
+
 import hero from '../../../public/static/images/hero.jpg';
 import MotionSection from '../layout/MotionSection';
+import { ContentPostData } from '@/types/entities';
+import parseDate from '@/utils/date';
 
 interface Props {
   postData: ContentPostData;

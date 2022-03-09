@@ -1,7 +1,8 @@
+import { screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
 import NavLink from '@/components/navigation/NavLink';
 import { render } from '@/test/test-utils';
-import '@testing-library/jest-dom';
-import { screen } from '@testing-library/react';
 
 const useRouter = jest.spyOn(require('next/router'), 'useRouter');
 

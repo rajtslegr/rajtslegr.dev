@@ -1,7 +1,8 @@
-import Input from '@/components/form/Input';
-import '@testing-library/jest-dom';
 import { screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
 import { render } from '../test-utils';
+import Input from '@/components/form/Input';
 
 describe('Input', () => {
   it('should contain render input', () => {

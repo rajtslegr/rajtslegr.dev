@@ -1,6 +1,7 @@
+import { NextApiRequest, NextApiResponse } from 'next';
+
 import { getRecentSongs } from '@/lib/last-fm';
 import { LastFmData } from '@/types/entities';
-import { NextApiRequest, NextApiResponse } from 'next';
 
 const handler = async (
   _req: NextApiRequest,

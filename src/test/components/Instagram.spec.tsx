@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
+import { screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
 import Instagram, { Props } from '@/components/instagram/Instagram';
 import { render } from '@/test/test-utils';
-import '@testing-library/jest-dom';
-import { screen } from '@testing-library/react';
 
 jest.mock('next/image', () => ({ alt }: { alt: string }) => (
   // eslint-disable-next-line @next/next/no-img-element
@@ -47,7 +48,7 @@ describe('Instagram', () => {
   });
 
   it('should render only 9 image elements', () => {
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < 12; i += 1) {
       expectedProps.data!.data[i] = {
         caption: '#instagram',
         id: (i + 1).toString(),

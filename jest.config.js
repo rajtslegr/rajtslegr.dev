@@ -1,17 +1,15 @@
-module.exports = {
-  roots: ['<rootDir>'],
-  moduleDirectories: ['node_modules', 'src'],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'jsx'],
-  testPathIgnorePatterns: [
-    '<rootDir>[/\\\\](node_modules|.next|.vscode)[/\\\\]',
-  ],
-  transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(ts|tsx)$'],
-  transform: {
-    '^.+\\.(ts|tsx)$': 'babel-jest',
-  },
+const nextJest = require('next/jest');
+
+const createJestConfig = nextJest({
+  dir: './',
+});
+
+const customJestConfig = {
+  testEnvironment: 'jest-environment-jsdom',
+  moduleDirectories: ['node_modules', '<rootDir>/'],
   moduleNameMapper: {
     '^@[/](.+)': '<rootDir>/src/$1',
-    '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$':
-      'identity-obj-proxy',
   },
 };
+
+module.exports = createJestConfig(customJestConfig);

@@ -1,35 +1,5 @@
-// next.config.js
-module.exports = {
-  swcMinify: true,
-  images: {
-    domains: ['lastfm.freetls.fastly.net', 'scontent-lga3-1.cdninstagram.com'],
-  },
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: securityHeaders,
-      },
-    ];
-  },
-  webpack: (config, { dev, isServer }) => {
-    // Replace React with Preact only in client production build
-    if (!dev && !isServer) {
-      Object.assign(config.resolve.alias, {
-        'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
-        react: 'preact/compat',
-        'react-dom/test-utils': 'preact/test-utils',
-        'react-dom': 'preact/compat',
-      });
-    }
-
-    if (isServer) {
-      require('./scripts/generate-sitemap');
-    }
-
-    return config;
-  },
-};
+/* eslint-disable global-require */
+const { withSentryConfig } = require('@sentry/nextjs');
 
 // https://securityheaders.com
 const ContentSecurityPolicy = `
@@ -81,3 +51,41 @@ const securityHeaders = [
     value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
   },
 ];
+
+const moduleExports = {
+  swcMinify: true,
+  images: {
+    domains: ['lastfm.freetls.fastly.net', 'scontent-lga3-1.cdninstagram.com'],
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: securityHeaders,
+      },
+    ];
+  },
+  webpack: (config, { dev, isServer }) => {
+    // Replace React with Preact only in client production build
+    if (!dev && !isServer) {
+      Object.assign(config.resolve.alias, {
+        'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
+        react: 'preact/compat',
+        'react-dom/test-utils': 'preact/test-utils',
+        'react-dom': 'preact/compat',
+      });
+    }
+
+    if (isServer) {
+      require('./scripts/generate-sitemap');
+    }
+
+    return config;
+  },
+};
+
+const sentryWebpackPluginOptions = {
+  silent: true,
+};
+
+module.exports = withSentryConfig(moduleExports, sentryWebpackPluginOptions);

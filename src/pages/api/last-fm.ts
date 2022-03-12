@@ -1,5 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
+import { withSentry } from '@sentry/nextjs';
+
 import { getRecentSongs } from '@/lib/last-fm';
 import { LastFmData } from '@/types/entities';
 
@@ -13,4 +15,4 @@ const handler = async (
   return res.send(recentSongs);
 };
 
-export default handler;
+export default withSentry(handler);

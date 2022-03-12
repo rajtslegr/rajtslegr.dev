@@ -85,7 +85,7 @@ const moduleExports = {
 };
 
 const sentryWebpackPluginOptions = {
-  authToken: process.env.SENTRY_AUTH_TOKEN,
+  token: process.env.SENTRY_AUTH_TOKEN,
   silent: true,
 };
 

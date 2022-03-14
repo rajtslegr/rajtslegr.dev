@@ -14,7 +14,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps, router }) => {
     <ThemeProvider
       defaultTheme="system"
       attribute="class"
-      disableTransitionOnChange
+      disableTransitionOnChange="true"
     >
       <AnimatePresence exitBeforeEnter>
         <Layout>

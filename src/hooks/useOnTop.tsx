@@ -12,9 +12,7 @@ const useOnTop = (): boolean => {
   const handleScroll = (): void => {
     if (window.pageYOffset > 0) {
       if (onTop) setOntTop(false);
-    } else {
-      if (!onTop) setOntTop(true);
-    }
+    } else if (!onTop) setOntTop(true);
   };
 
   return onTop;

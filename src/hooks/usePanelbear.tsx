@@ -1,6 +1,7 @@
+import { useEffect } from 'react';
+
 import * as Panelbear from '@panelbear/panelbear-js';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 
 const usePanelbear = (
   site: string,

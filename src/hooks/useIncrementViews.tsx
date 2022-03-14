@@ -1,5 +1,6 @@
-import isbot from 'isbot';
 import { useEffect } from 'react';
+
+import isbot from 'isbot';
 
 const useIncrementView = async (id: string) => {
   useEffect(() => {

@@ -4,7 +4,7 @@ const { withSentryConfig } = require('@sentry/nextjs');
 // https://securityheaders.com
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.panelbear.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' data: *.panelbear.com;
   child-src 'none';
   style-src 'self' 'unsafe-inline' *.googleapis.com;
   img-src * blob: data:;

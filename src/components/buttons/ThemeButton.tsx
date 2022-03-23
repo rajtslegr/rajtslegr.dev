@@ -33,7 +33,7 @@ const ThemeButton: React.FC<Props> = ({ handleClick }) => {
         whileTap={shouldReduceMotion ? undefined : tapProperties}
         className="p-3"
       >
-        {isMounted && (resolvedTheme === 'light' ? <MoonIcon /> : <SunIcon />)}
+        {isMounted && (resolvedTheme === 'light' ? <SunIcon /> : <MoonIcon />)}
       </motion.div>
     </button>
   );

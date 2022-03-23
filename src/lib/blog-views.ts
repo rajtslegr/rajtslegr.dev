@@ -7,5 +7,5 @@ export const getBlogViews = async (id: string) => {
     },
   });
 
-  return String(newOrUpdatedViews.count);
+  return String(newOrUpdatedViews.count || 0);
 };

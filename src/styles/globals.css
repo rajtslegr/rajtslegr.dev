@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #nprogress .bar {
-  @apply first:bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500;
+  @apply first:bg-gradient-to-r from-ukraine-yellow to-ukraine-blue;
 }
 
 .header {

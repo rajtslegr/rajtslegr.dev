@@ -1,3 +1,5 @@
+/* eslint-disable global-require */
+/* eslint-disable import/no-extraneous-dependencies */
 const { fontFamily, spacing } = require('tailwindcss/defaultTheme');
 
 module.exports = {
@@ -74,6 +76,12 @@ module.exports = {
       backgroundColor: {
         dark: '#000000',
         card: '#171a1e',
+      },
+      colors: {
+        ukraine: {
+          blue: '#0057B8',
+          yellow: '#FFD700',
+        },
       },
       spacing: {
         '1/1': '100%',

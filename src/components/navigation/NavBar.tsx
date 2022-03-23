@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import { useTheme } from 'next-themes';
 
 import ThemeButton from '../buttons/ThemeButton';
+import ExternalLink from './ExternalLink';
 import NavigationButton from './NavigationButton';
 import NavLink from '@/components/navigation/NavLink';
 import useOnTop from '@/hooks/useOnTop';
@@ -48,6 +49,9 @@ const NavBar: React.FC<Props> = ({ showMobileNavigation, handleClick }) => {
             Contact
           </NavLink>
         </div>
+        <ExternalLink href="https://vshymanskyy.github.io/StandWithUkraine">
+          #StandWithUkraine 🇺🇦
+        </ExternalLink>
         <ThemeButton
           handleClick={() =>
             setTheme(resolvedTheme === 'light' ? 'dark' : 'light')

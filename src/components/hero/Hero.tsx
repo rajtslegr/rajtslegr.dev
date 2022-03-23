@@ -12,19 +12,19 @@ const Hero: React.FC = () => (
           Petr Rajtslegr
         </h1>
         <h2 className="mt-2 text-lg text-gray-700 dark:text-gray-300">
-          <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+          <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-ukraine-yellow to-ukraine-blue">
             Software Developer
           </span>{' '}
           at{' '}
           <ExternalLink
             href="https://www.economia.cz"
-            className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500"
+            className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-ukraine-yellow to-ukraine-blue"
           >
             Economia
           </ExternalLink>
         </h2>
       </div>
-      <div className="flex w-32 h-32 p-1 mb-12 overflow-hidden rounded-full shadow sm:mb-0 bg-gradient-to-br from-indigo-500 via-blue-300 to-purple-700">
+      <div className="flex w-32 h-32 p-1 mb-12 overflow-hidden rounded-full shadow sm:mb-0 bg-gradient-to-br from-ukraine-yellow to-ukraine-blue">
         <div className="overflow-hidden rounded-full dark:grayscale">
           <Image src={heroImage} alt="Hero" placeholder="blur" priority></Image>
         </div>

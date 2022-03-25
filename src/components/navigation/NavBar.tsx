@@ -22,7 +22,7 @@ const NavBar: React.FC<Props> = ({ showMobileNavigation, handleClick }) => {
     <nav
       className={clsx(
         !onTop ? 'shadow' : 'border-b border-gray-200',
-        'sticky top-0 z-10 dark:border-b dark:border-gray-200 motion-safe:transition-shadow dark:border-opacity/20 header',
+        'sticky top-0 z-10 dark:border-b dark:border-gray-200/20 motion-safe:transition-shadow header',
       )}
     >
       <div className="container flex justify-between items-center px-4 mx-auto max-w-4xl h-full">

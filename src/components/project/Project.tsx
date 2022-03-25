@@ -37,7 +37,7 @@ const Project: React.FC<Props> = ({
         height={393}
         width={700}
       />
-      <div className="flex flex-col p-4 -mt-1.5 space-y-2 border-t border-gray-200 sm:h-64 lg:h-48 dark:border-opacity/20">
+      <div className="flex flex-col p-4 -mt-1.5 space-y-2 border-t border-gray-200 dark:border-gray-200/20 sm:h-64 lg:h-48">
         <h2 className="text-xl font-semibold dark:text-gray-100">{title}</h2>
         <p className="grow text-gray-700 dark:text-gray-300">{description}</p>
         <div className="flex flex-row flex-wrap gap-2 pt-4">

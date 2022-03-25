@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center p-4 space-y-4 sm:space-y-8 lg:pb-12">
-      <div className="flex flex-col p-4 w-full max-w-4xl border-t border-gray-200 sm:p-6 dark:border-opacity/20">
+      <div className="flex flex-col p-4 w-full max-w-4xl border-t border-gray-200 dark:border-gray-200/20 sm:p-6">
         <div className="flex flex-row justify-between md:justify-evenly">
           <div className="flex flex-col space-y-2">
             <NavLink href="/">Home</NavLink>

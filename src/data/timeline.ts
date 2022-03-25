@@ -9,7 +9,7 @@ const timelineData = [
     timeRange: '2018 - 2021',
     job: 'STEM/MARK',
     description:
-      'I have worked on several market research applications, specifically online, telephone and field interviewing. The front-end application was developed in the Angular framework as a PWA. The back-end was built using Node.js, Express and MySQL.',
+      'I have worked on several market research applications, specifically online, telephone, and field interviewing. The front-end application was developed using the Angular framework as a PWA. The back-end was built using Node.js, Express, and MySQL.',
   },
 ];
 

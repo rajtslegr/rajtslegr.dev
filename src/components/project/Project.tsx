@@ -9,7 +9,7 @@ import Pill from './Pill';
 import WindowHeader from './WindowHeader';
 import { ProjectData } from '@/types/entities';
 
-const IMAGES: Record<string, StaticImageData> = {
+const IMAGES: { [key: string]: StaticImageData } = {
   cov19cz,
   rajtslegr,
   typewriter,

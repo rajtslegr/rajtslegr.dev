@@ -1,22 +1,17 @@
 module.exports = {
-  extends: ['airbnb-base', 'plugin:prettier/recommended'],
+  extends: ['airbnb-base'],
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx'],
-      plugins: ['@typescript-eslint'],
+      plugins: ['@typescript-eslint', 'tailwindcss'],
       extends: [
         'airbnb-typescript',
         'next/core-web-vitals',
         'plugin:prettier/recommended',
+        'plugin:tailwindcss/recommended',
       ],
       parserOptions: {
         project: './tsconfig.json',
-        tsconfigRootDir: __dirname,
-      },
-      settings: {
-        next: {
-          rootDir: '.',
-        },
       },
       rules: {
         'react/display-name': 'off',
@@ -63,6 +58,7 @@ module.exports = {
           },
         ],
         '@typescript-eslint/no-use-before-define': 'off',
+        'tailwindcss/no-custom-classname': 'off',
       },
     },
     {

@@ -14,8 +14,8 @@ const InstagramItem: React.FC<Props> = ({ index, edge }) => (
     key={edge.id}
     delay={index / 10 + 0.1}
     className={clsx(
-      index === 0 ? 'lg:row-span-2 lg:col-span-2' : '',
-      'relative rounded shadow pb-1/1 ',
+      index === 0 ? 'lg:col-span-2 lg:row-span-2' : '',
+      'relative pb-1/1 rounded shadow ',
     )}
   >
     <a href={edge.permalink} rel="noopener noreferrer" target="_blank">

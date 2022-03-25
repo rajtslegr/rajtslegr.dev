@@ -26,7 +26,7 @@ const Project: React.FC<Props> = ({
 }) => (
   <MotionSection
     delay={index / 10 + 0.1}
-    className="flex flex-col bg-white rounded shadow dark:bg-card"
+    className="flex flex-col bg-white dark:bg-card rounded shadow"
   >
     <a href={repo} rel="noopener noreferrer" target="_blank">
       <WindowHeader />
@@ -37,11 +37,9 @@ const Project: React.FC<Props> = ({
         height={393}
         width={700}
       />
-      <div className="flex flex-col p-4 -mt-1.5 space-y-2 border-t border-gray-200 dark:border-opacity-20 sm:h-64 lg:h-48">
+      <div className="flex flex-col p-4 -mt-1.5 space-y-2 border-t border-gray-200 sm:h-64 lg:h-48 dark:border-opacity/20">
         <h2 className="text-xl font-semibold dark:text-gray-100">{title}</h2>
-        <p className="flex-grow text-gray-700 dark:text-gray-300">
-          {description}
-        </p>
+        <p className="grow text-gray-700 dark:text-gray-300">{description}</p>
         <div className="flex flex-row flex-wrap gap-2 pt-4">
           {build.map((tech, i) => (
             <Pill key={i}>{tech}</Pill>

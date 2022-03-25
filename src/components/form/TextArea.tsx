@@ -9,7 +9,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, Props>(
     <label className="w-full">
       <div className="mb-1 font-medium dark:text-gray-100">{label}</div>
       <textarea
-        className="w-full h-48 p-2 text-gray-700 bg-white rounded-md shadow sm:text-sm dark:bg-card dark:text-gray-300"
+        className="p-2 w-full h-48 text-gray-700 dark:text-gray-300 bg-white dark:bg-card rounded-md shadow sm:text-sm"
         ref={ref}
         {...props}
       />

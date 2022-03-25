@@ -14,7 +14,7 @@ const Projects: NextPage<Props> = ({ projects }) => (
   <>
     <MetaData title="Petr Rajtslegr | Projects" />
     <MotionSection>
-      <h1 className="mb-4 text-4xl font-extrabold md:mb-12 dark:text-gray-100">
+      <h1 className="mb-4 text-4xl font-extrabold dark:text-gray-100 md:mb-12">
         Projects
       </h1>
     </MotionSection>

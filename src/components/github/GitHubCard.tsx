@@ -21,7 +21,7 @@ const GitHubCard: React.FC<IGitHubCard> = ({
 }) => (
   <MotionSection
     delay={index / 10 + 0.3}
-    className="flex flex-col p-2 bg-white rounded shadow dark:bg-card "
+    className="flex flex-col p-2 bg-white dark:bg-card rounded shadow "
   >
     <a href={link} rel="noopener noreferrer" target="_blank">
       <div className="flex flex-row h-6 dark:text-gray-100">
@@ -31,7 +31,7 @@ const GitHubCard: React.FC<IGitHubCard> = ({
       <div className="flex flex-row h-6" />
       <div className="flex flex-row h-6 text-gray-500 dark:text-gray-400">
         <p>{language}</p>
-        <div className="flex justify-end flex-grow space-x-2">
+        <div className="flex grow justify-end space-x-2">
           <StarIcon />
           <span>{stars}</span>
           <EyeIcon />

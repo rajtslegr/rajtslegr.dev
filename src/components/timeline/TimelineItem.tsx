@@ -11,10 +11,10 @@ const TimelineItem: React.FC<Props> = ({
 }) => (
   <MotionSection delay={index / 10 + 0.1} className="flex">
     <div className="relative flex-row">
-      <div className="flex items-center justify-center w-3 h-full">
+      <div className="flex justify-center items-center w-3 h-full">
         <div className="w-[1px] h-full bg-black dark:bg-gray-100"></div>
       </div>
-      <div className="absolute w-3 h-3 bg-gray-500 rounded-full shadow top-6 dark:bg-gray-400"></div>
+      <div className="absolute top-6 w-3 h-3 bg-gray-500 dark:bg-gray-400 rounded-full shadow"></div>
     </div>
     <div className="my-4 ml-6 sm:ml-12">
       <h3 className="text-lg font-semibold dark:text-gray-100">{job}</h3>

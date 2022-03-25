@@ -17,7 +17,7 @@ const Instagram: React.FC<Props> = ({ data }) => {
 
   if (data?.data) {
     render = (
-      <div className="grid grid-cols-3 gap-2 lg:gap-4 lg:grid-cols-4 xl:grid-cols-6">
+      <div className="grid grid-cols-3 gap-2 lg:grid-cols-4 lg:gap-4 xl:grid-cols-6">
         {data?.data
           .filter((_edge, index) => index < 9)
           .map((edge, index) => (

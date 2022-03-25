@@ -8,7 +8,7 @@ interface Props {
 }
 
 const LastFmItem: React.FC<Props> = ({ track }) => (
-  <div className="flex flex-col h-full p-2 bg-white rounded shadow min-h-36 dark:bg-card">
+  <div className="flex flex-col p-2 h-full bg-white dark:bg-card rounded shadow min-h-36">
     <a
       href="https://last.fm/user/RajceP"
       rel="noopener noreferrer"
@@ -40,7 +40,7 @@ const LastFmItem: React.FC<Props> = ({ track }) => (
           </p>
         </div>
         {track['@attr']?.nowplaying && (
-          <span className="flex justify-end flex-grow w-12 h-12 text-red-600 items-top motion-safe:animate-pulse">
+          <span className="flex grow justify-end w-12 h-12 text-red-600 motion-safe:animate-pulse items-top">
             <PlayIcon />
           </span>
         )}

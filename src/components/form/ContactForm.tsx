@@ -15,7 +15,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <form
-      className="flex flex-col items-center justify-center w-full space-y-4"
+      className="flex flex-col justify-center items-center space-y-4 w-full"
       onSubmit={handleSubmit}
     >
       <p className="self-start text-xl font-bold dark:text-gray-100">

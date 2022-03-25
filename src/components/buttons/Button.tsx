@@ -10,7 +10,7 @@ interface Props extends ComponentProps<'button'> {
 const Button = forwardRef<HTMLButtonElement, Props>(
   ({ children, submitting, ...props }, ref) => (
     <button
-      className="flex self-end justify-center w-24 p-3 mt-3 text-gray-700 bg-gray-200 rounded-lg shadow mx:auto dark:bg-gray-700 dark:text-gray-300"
+      className="flex justify-center self-end p-3 mt-3 w-24 text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 rounded-lg shadow mx:auto"
       ref={ref}
       disabled={submitting}
       {...props}

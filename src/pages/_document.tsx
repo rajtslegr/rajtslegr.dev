@@ -44,7 +44,7 @@ class MyDocument extends Document {
           />
           <link rel="manifest" href="/static/favicons/site.webmanifest" />
         </Head>
-        <body className="antialiased text-black bg-gray-50 dark:bg-dark dark:text-white">
+        <body className="antialiased text-black dark:text-white bg-gray-50 dark:bg-dark">
           <Main />
           <NextScript />
         </body>

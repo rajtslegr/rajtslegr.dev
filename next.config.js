@@ -1,6 +1,4 @@
 /* eslint-disable global-require */
-const { withSentryConfig } = require('@sentry/nextjs');
-
 // https://securityheaders.com
 const ContentSecurityPolicy = `
   default-src 'self';
@@ -52,7 +50,7 @@ const securityHeaders = [
   },
 ];
 
-const moduleExports = {
+module.exports = {
   swcMinify: true,
   images: {
     domains: ['lastfm.freetls.fastly.net', 'scontent-lga3-1.cdninstagram.com'],
@@ -83,10 +81,3 @@ const moduleExports = {
     return config;
   },
 };
-
-const sentryWebpackPluginOptions = {
-  token: process.env.SENTRY_AUTH_TOKEN,
-  silent: true,
-};
-
-module.exports = withSentryConfig(moduleExports, sentryWebpackPluginOptions);

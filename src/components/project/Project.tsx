@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 import cov19cz from '../../../public/static/images/projects/cov19cz.jpg';
 import rajtslegr from '../../../public/static/images/projects/rajtslegr.jpg';
@@ -9,14 +9,7 @@ import Pill from './Pill';
 import WindowHeader from './WindowHeader';
 import { ProjectData } from '@/types/entities';
 
-declare type StaticImageData = {
-  src: string;
-  height: number;
-  width: number;
-  placeholder?: string;
-};
-
-const IMAGES: { [key: string]: StaticImageData } = {
+const IMAGES: Record<string, StaticImageData> = {
   cov19cz,
   rajtslegr,
   typewriter,

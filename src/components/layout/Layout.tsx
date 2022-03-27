@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import MobileNavigation from '../navigation/MobileNavigation';
 import Footer from './Footer';
 import NavBar from '@/components/navigation/NavBar';
+import { useScrollBlock } from '@/hooks/useScrollBlock';
 
 interface Props {
   children: ReactNode;
@@ -12,15 +13,23 @@ interface Props {
 
 const Layout: React.FC<Props> = ({ children }) => {
   const [showMobileNavigation, setShowMobileNavigation] = useState(false);
-
+  const [blockScroll, allowScroll] = useScrollBlock();
   const router = useRouter();
 
   useEffect(() => {
     setShowMobileNavigation(false);
+    allowScroll();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.asPath]);
 
   const mobileNavigationHandler = (): void => {
-    setShowMobileNavigation((previoustState) => !previoustState);
+    if (showMobileNavigation) {
+      setShowMobileNavigation(false);
+      allowScroll();
+    } else {
+      setShowMobileNavigation(true);
+      blockScroll();
+    }
   };
 
   return (

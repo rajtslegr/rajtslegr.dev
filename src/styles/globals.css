@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.header {
+  @apply bg-white bg-opacity-50 backdrop-blur dark:bg-dark dark:bg-opacity-50;
+}
+
 @supports not (backdrop-filter: none) {
   .header {
     @apply bg-opacity-90 backdrop-blur-none dark:bg-opacity-90;

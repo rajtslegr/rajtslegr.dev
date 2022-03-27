@@ -4,7 +4,6 @@ import cov19cz from '../../../public/static/images/projects/cov19cz.jpg';
 import rajtslegr from '../../../public/static/images/projects/rajtslegr.jpg';
 import typewriter from '../../../public/static/images/projects/typewriter.jpg';
 import vaccbot from '../../../public/static/images/projects/vaccbot.jpg';
-import MotionSection from '../layout/MotionSection';
 import Pill from './Pill';
 import WindowHeader from './WindowHeader';
 import { ProjectData } from '@/types/entities';
@@ -16,18 +15,13 @@ const IMAGES: Record<string, StaticImageData> = {
   vaccbot,
 };
 interface Props {
-  index: number;
   project: ProjectData;
 }
 
 const Project: React.FC<Props> = ({
   project: { title, description, build, image, repo },
-  index,
 }) => (
-  <MotionSection
-    delay={index / 10 + 0.1}
-    className="flex flex-col bg-white dark:bg-card rounded shadow"
-  >
+  <div className="flex flex-col bg-white dark:bg-card rounded shadow">
     <a href={repo} rel="noopener noreferrer" target="_blank">
       <WindowHeader />
       <Image
@@ -47,7 +41,7 @@ const Project: React.FC<Props> = ({
         </div>
       </div>
     </a>
-  </MotionSection>
+  </div>
 );
 
 export default Project;

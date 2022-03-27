@@ -1,10 +1,7 @@
 import { DocumentIcon, EyeIcon, StarIcon } from '@heroicons/react/solid';
 
-import MotionSection from '../layout/MotionSection';
-
 interface IGitHubCard {
   children: string;
-  index: number;
   link: string;
   language: string;
   stars: number;
@@ -13,16 +10,12 @@ interface IGitHubCard {
 
 const GitHubCard: React.FC<IGitHubCard> = ({
   children,
-  index,
   link,
   language,
   stars,
   watches,
 }) => (
-  <MotionSection
-    delay={index / 10 + 0.3}
-    className="flex flex-col p-2 bg-white dark:bg-card rounded shadow "
-  >
+  <div className="flex flex-col p-2 bg-white dark:bg-card rounded shadow ">
     <a href={link} rel="noopener noreferrer" target="_blank">
       <div className="flex flex-row h-6 dark:text-gray-100">
         <DocumentIcon />
@@ -39,7 +32,7 @@ const GitHubCard: React.FC<IGitHubCard> = ({
         </div>
       </div>
     </a>
-  </MotionSection>
+  </div>
 );
 
 export default GitHubCard;

@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 
-import MotionSection from '../layout/MotionSection';
 import GitHubCard from './GitHubCard';
 import { GitHubData } from '@/types/entities';
 
@@ -19,19 +18,15 @@ const GitHub: React.FC<Props> = ({ data }) => {
     render = (
       <div className="grid gap-4 lg:grid-cols-2">
         {data?.map(
-          (
-            {
-              node_id,
-              full_name,
-              html_url,
-              language,
-              stargazers_count,
-              watchers_count,
-            },
-            index,
-          ) => (
+          ({
+            node_id,
+            full_name,
+            html_url,
+            language,
+            stargazers_count,
+            watchers_count,
+          }) => (
             <GitHubCard
-              index={index}
               key={node_id}
               link={html_url}
               language={language}
@@ -48,11 +43,9 @@ const GitHub: React.FC<Props> = ({ data }) => {
 
   return (
     <div>
-      <MotionSection delay={0.3}>
-        <h2 className="mt-12 mb-4 text-3xl font-bold dark:text-gray-100">
-          GitHub
-        </h2>
-      </MotionSection>
+      <h2 className="mt-12 mb-4 text-3xl font-bold dark:text-gray-100">
+        GitHub
+      </h2>
       {render}
     </div>
   );

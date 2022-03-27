@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 
-import MotionSection from '../layout/MotionSection';
 import { InstagramDataEdge } from '@/types/entities';
 
 export interface Props {
@@ -10,9 +9,8 @@ export interface Props {
 }
 
 const InstagramItem: React.FC<Props> = ({ index, edge }) => (
-  <MotionSection
+  <div
     key={edge.id}
-    delay={index / 10 + 0.1}
     className={clsx(
       index === 0 ? 'lg:col-span-2 lg:row-span-2' : '',
       'relative pb-1/1 rounded shadow ',
@@ -29,7 +27,7 @@ const InstagramItem: React.FC<Props> = ({ index, edge }) => (
         objectFit="cover"
       />
     </a>
-  </MotionSection>
+  </div>
 );
 
 export default InstagramItem;

@@ -5,7 +5,6 @@ import { GetStaticProps, NextPage } from 'next';
 import { SearchIcon } from '@heroicons/react/solid';
 
 import Input from '@/components/form/Input';
-import MotionSection from '@/components/layout/MotionSection';
 import MetaData from '@/components/meta-data/MetaData';
 import PostCard from '@/components/post/PostCard';
 import { getSortedPostsData } from '@/lib/posts';
@@ -25,12 +24,10 @@ const Blog: NextPage<Props> = ({ allPostsData }) => {
   return (
     <>
       <MetaData title="Petr Rajtslegr | Blog" />
-      <MotionSection>
-        <h1 className="mb-4 text-4xl font-extrabold dark:text-gray-100 md:mb-12">
-          Blog
-        </h1>
-      </MotionSection>
-      <MotionSection delay={0.1}>
+      <h1 className="mb-4 text-4xl font-extrabold dark:text-gray-100 md:mb-12">
+        Blog
+      </h1>
+      <div>
         <div className="flex relative flex-col mb-4 md:w-1/3">
           <Input
             aria-label="Search"
@@ -41,12 +38,12 @@ const Blog: NextPage<Props> = ({ allPostsData }) => {
             <SearchIcon />
           </span>
         </div>
-      </MotionSection>
+      </div>
       <div className="grid gap-4 sm:grid-cols-2">
-        {filteredPosts.map((post, index) => (
-          <MotionSection key={post.id} delay={index / 10 + 0.2}>
+        {filteredPosts.map((post) => (
+          <div key={post.id}>
             <PostCard post={post} />
-          </MotionSection>
+          </div>
         ))}
       </div>
       {filteredPosts.length === 0 && (

@@ -1,10 +1,7 @@
-import MotionSection from '../layout/MotionSection';
-
 const LastFmSkeleton: React.FC = () => (
   <div className="grid gap-4 md:grid-cols-2">
     {new Array(10).fill(undefined).map((_value, index) => (
-      <MotionSection
-        delay={index / 10 + 0.2}
+      <div
         key={index}
         className="flex flex-col p-2 h-36 bg-white dark:bg-card rounded shadow"
       >
@@ -16,7 +13,7 @@ const LastFmSkeleton: React.FC = () => (
             <div className="w-3/5 h-4 bg-gray-200 dark:bg-gray-700 rounded-sm motion-safe:animate-pulse"></div>
           </div>
         </div>
-      </MotionSection>
+      </div>
     ))}
   </div>
 );

@@ -1,6 +1,5 @@
 import { GetStaticProps, NextPage } from 'next';
 
-import MotionSection from '@/components/layout/MotionSection';
 import MetaData from '@/components/meta-data/MetaData';
 import Project from '@/components/project/Project';
 import projectsData from '@/data/projects';
@@ -13,14 +12,12 @@ interface Props {
 const Projects: NextPage<Props> = ({ projects }) => (
   <>
     <MetaData title="Petr Rajtslegr | Projects" />
-    <MotionSection>
-      <h1 className="mb-4 text-4xl font-extrabold dark:text-gray-100 md:mb-12">
-        Projects
-      </h1>
-    </MotionSection>
+    <h1 className="mb-4 text-4xl font-extrabold dark:text-gray-100 md:mb-12">
+      Projects
+    </h1>
     <div className="grid gap-4 sm:grid-cols-2">
       {projects.map((project, index) => (
-        <Project key={index} project={project} index={index} />
+        <Project key={index} project={project} />
       ))}
     </div>
   </>

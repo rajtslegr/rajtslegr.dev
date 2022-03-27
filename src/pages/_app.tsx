@@ -1,4 +1,3 @@
-import { AnimatePresence } from 'framer-motion';
 import { ThemeProvider } from 'next-themes';
 import { AppProps } from 'next/app';
 import NextNProgress from 'nextjs-progressbar';
@@ -16,12 +15,10 @@ const App: React.FC<AppProps> = ({ Component, pageProps, router }) => {
       attribute="class"
       disableTransitionOnChange="true"
     >
-      <AnimatePresence exitBeforeEnter>
-        <Layout>
-          <NextNProgress options={{ showSpinner: false }} />
-          <Component {...pageProps} key={router.route} />
-        </Layout>
-      </AnimatePresence>
+      <Layout>
+        <NextNProgress options={{ showSpinner: false }} />
+        <Component {...pageProps} key={router.route} />
+      </Layout>
     </ThemeProvider>
   );
 };

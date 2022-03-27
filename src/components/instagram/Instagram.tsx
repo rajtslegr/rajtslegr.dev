@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 
-import MotionSection from '../layout/MotionSection';
 import InstagramItem from './InstagramItem';
 import { InstagramData } from '@/types/entities';
 
@@ -29,11 +28,7 @@ const Instagram: React.FC<Props> = ({ data }) => {
 
   return (
     <div>
-      <MotionSection delay={0.1}>
-        <h2 className="mb-4 text-3xl font-bold dark:text-gray-100">
-          Instagram
-        </h2>
-      </MotionSection>
+      <h2 className="mb-4 text-3xl font-bold dark:text-gray-100">Instagram</h2>
       {render}
     </div>
   );

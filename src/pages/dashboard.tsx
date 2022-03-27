@@ -3,7 +3,6 @@ import { GetStaticProps, NextPage } from 'next';
 import GitHub from '@/components/github/GitHub';
 import Instagram from '@/components/instagram/Instagram';
 import LastFm from '@/components/last-fm/LastFm';
-import MotionSection from '@/components/layout/MotionSection';
 import MetaData from '@/components/meta-data/MetaData';
 import { getRecentRepos } from '@/lib/github';
 import { getRecentPosts } from '@/lib/instagram';
@@ -18,11 +17,9 @@ const Dashboard: NextPage<Props> = ({ gitHubData, instagramData: igData }) => (
   <>
     <MetaData title="Petr Rajtslegr | Dashboard" />
     <div className="">
-      <MotionSection>
-        <h1 className="mb-4 text-4xl font-extrabold dark:text-gray-100 md:mb-12">
-          Dashboard
-        </h1>
-      </MotionSection>
+      <h1 className="mb-4 text-4xl font-extrabold dark:text-gray-100 md:mb-12">
+        Dashboard
+      </h1>
       <Instagram data={igData} />
       <LastFm />
       <GitHub data={gitHubData} />

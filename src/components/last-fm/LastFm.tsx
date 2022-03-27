@@ -2,7 +2,6 @@ import { ReactNode } from 'react';
 
 import useSWR from 'swr';
 
-import MotionSection from '../layout/MotionSection';
 import LastFmItem from './LastFmItem';
 import LastFmSkeleton from './LastFmSkeleton';
 import { LastFmData } from '@/types/entities';
@@ -37,11 +36,9 @@ const LastFm: React.FC = () => {
 
   return (
     <>
-      <MotionSection delay={0.2}>
-        <h2 className="mt-12 mb-4 text-3xl font-bold dark:text-gray-100">
-          Last.fm
-        </h2>
-      </MotionSection>
+      <h2 className="mt-12 mb-4 text-3xl font-bold dark:text-gray-100">
+        Last.fm
+      </h2>
       {render}
     </>
   );

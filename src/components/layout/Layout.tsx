@@ -1,11 +1,9 @@
 import { ReactNode, useEffect, useState } from 'react';
 
 import { useRouter } from 'next/router';
-import { useKonami } from 'react-konami-code';
 
 import MobileNavigation from '../navigation/MobileNavigation';
 import Footer from './Footer';
-import KonamiParticles from './Particles';
 import NavBar from '@/components/navigation/NavBar';
 
 interface Props {
@@ -13,12 +11,9 @@ interface Props {
 }
 
 const Layout: React.FC<Props> = ({ children }) => {
-  const [showConfetti, setshowConfetti] = useState(false);
   const [showMobileNavigation, setShowMobileNavigation] = useState(false);
 
   const router = useRouter();
-
-  useKonami(() => setshowConfetti(true));
 
   useEffect(() => {
     setShowMobileNavigation(false);
@@ -39,7 +34,6 @@ const Layout: React.FC<Props> = ({ children }) => {
         {children}
       </main>
       {!showMobileNavigation && <Footer />}
-      {showConfetti && <KonamiParticles />}
     </>
   );
 };

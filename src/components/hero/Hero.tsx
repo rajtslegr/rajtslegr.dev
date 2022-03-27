@@ -25,14 +25,7 @@ const Hero: React.FC = () => (
       </div>
       <div className="flex overflow-hidden p-1 mb-12 w-32 h-32 bg-gradient-to-br from-ukraine-yellow to-ukraine-blue rounded-full shadow sm:mb-0">
         <div className="overflow-hidden rounded-full dark:grayscale">
-          <Image
-            src={heroImage}
-            width={120}
-            height={120}
-            alt="Hero"
-            placeholder="blur"
-            priority
-          ></Image>
+          <Image src={heroImage} alt="Hero" placeholder="blur" priority></Image>
         </div>
       </div>
     </div>

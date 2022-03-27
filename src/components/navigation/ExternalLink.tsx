@@ -4,9 +4,15 @@ interface Props {
   href: string;
   children: ReactNode;
   className?: string;
+  ariaLabel?: string;
 }
 
-const ExternalLink: React.FC<Props> = ({ href, children, className }) => (
+const ExternalLink: React.FC<Props> = ({
+  href,
+  children,
+  className,
+  ariaLabel,
+}) => (
   <a
     className={
       className ||
@@ -14,6 +20,7 @@ const ExternalLink: React.FC<Props> = ({ href, children, className }) => (
     }
     target="_blank"
     rel="noopener noreferrer"
+    aria-label={ariaLabel}
     href={href}
   >
     {children}

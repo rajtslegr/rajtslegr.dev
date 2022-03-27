@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
           <HeartIcon className="w-5 h-5" />
           &nbsp;and
           {theme && isMounted && (
-            <ExternalLink href="https://nextjs.com">
+            <ExternalLink href="https://nextjs.com" ariaLabel="Next.js">
               {NextJsIcon(theme)}
             </ExternalLink>
           )}

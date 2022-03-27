@@ -1,6 +1,5 @@
 import { ThemeProvider } from 'next-themes';
 import { AppProps } from 'next/app';
-import NextNProgress from 'nextjs-progressbar';
 import '@/styles/globals.css';
 
 import Layout from '@/components/layout/Layout';
@@ -16,7 +15,6 @@ const App: React.FC<AppProps> = ({ Component, pageProps, router }) => {
       disableTransitionOnChange="true"
     >
       <Layout>
-        <NextNProgress options={{ showSpinner: false }} />
         <Component {...pageProps} key={router.route} />
       </Layout>
     </ThemeProvider>

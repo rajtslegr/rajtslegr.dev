@@ -22,7 +22,7 @@ pre[class*='language-'] {
 }
 
 .prose pre {
-  @apply text-gray-700 bg-white shadow dark:bg-card dark:text-blue-300;
+  @apply text-gray-700 bg-white shadow dark:bg-card dark:text-blue-300 rounded-lg;
 }
 
 .prose code {

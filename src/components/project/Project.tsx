@@ -21,7 +21,7 @@ interface Props {
 const Project: React.FC<Props> = ({
   project: { title, description, build, image, repo },
 }) => (
-  <div className="flex flex-col bg-white dark:bg-card rounded shadow">
+  <div className="flex flex-col bg-white dark:bg-card rounded-lg shadow">
     <a href={repo} rel="noopener noreferrer" target="_blank">
       <WindowHeader />
       <Image

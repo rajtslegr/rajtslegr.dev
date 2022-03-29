@@ -13,12 +13,13 @@ const InstagramItem: React.FC<Props> = ({ index, edge }) => (
     key={edge.id}
     className={clsx(
       index === 0 ? 'lg:col-span-2 lg:row-span-2' : '',
-      'relative pb-1/1 rounded shadow ',
+      'relative pb-1/1 rounded-lg shadow',
+      'bg-white dark:bg-card',
     )}
   >
     <a href={edge.permalink} rel="noopener noreferrer" target="_blank">
       <Image
-        className="rounded"
+        className="rounded-lg"
         src={edge.thumbnail_url || edge.media_url}
         alt={edge.caption}
         placeholder="blur"

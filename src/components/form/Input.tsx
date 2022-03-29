@@ -11,7 +11,7 @@ const Input = forwardRef<HTMLInputElement, Props>(
         <div className="mb-1 font-medium dark:text-gray-100">{label}</div>
       )}
       <input
-        className="p-2 w-full text-gray-700 dark:text-gray-300 bg-white dark:bg-card rounded-md shadow sm:text-sm"
+        className="p-2 w-full text-gray-700 dark:text-gray-300 bg-white dark:bg-card rounded-lg shadow sm:text-sm"
         type={type}
         ref={ref}
         {...props}

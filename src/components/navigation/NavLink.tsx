@@ -31,7 +31,7 @@ const NavLink: React.FC<Props> = ({
           isMobileNavigation ? 'text-2xl' : 'text-base',
           !isMobileNavigation &&
             isHeader &&
-            'p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md',
+            'p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg',
         )}
         {...props}
       >

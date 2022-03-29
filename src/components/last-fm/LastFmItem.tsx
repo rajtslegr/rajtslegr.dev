@@ -8,16 +8,16 @@ interface Props {
 }
 
 const LastFmItem: React.FC<Props> = ({ track }) => (
-  <div className="flex flex-col p-2 h-full bg-white dark:bg-card rounded shadow min-h-36">
+  <div className="flex flex-col p-2 h-full bg-white dark:bg-card rounded-lg shadow min-h-36">
     <a
       href="https://last.fm/user/RajceP"
       rel="noopener noreferrer"
       target="_blank"
     >
       <div className="flex flex-row space-x-2">
-        <div className="w-32 h-32 rounded shadow">
+        <div className="w-32 h-32 rounded-lg shadow">
           <Image
-            className="rounded"
+            className="rounded-lg"
             src={track.image[2]['#text']}
             alt="Album art"
             layout="fixed"

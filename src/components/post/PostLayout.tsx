@@ -31,7 +31,7 @@ const PostLayout: React.FC<Props> = ({
         </div>
       </div>
       {image && (
-        <div className="overflow-hidden mt-12 text-[0px] rounded shadow">
+        <div className="overflow-hidden mt-12 text-[0px] rounded-lg shadow">
           <Image
             src={`/static/images/blog/${image}`}
             alt="Blog post header image"

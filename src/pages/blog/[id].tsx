@@ -11,6 +11,9 @@ interface Props {
 }
 
 const Blog: NextPage<Props> = ({ postData }) => {
+  const image = postData.image
+    ? `/static/images/blog/${postData.image}`
+    : undefined;
   useIncrementView(postData.id);
 
   return (
@@ -20,7 +23,7 @@ const Blog: NextPage<Props> = ({ postData }) => {
         description={postData.description}
         type="article"
         date={new Date(postData.date).toISOString()}
-        image={`/static/images/blog/${postData.image}`}
+        image={image}
       />
       <PostLayout postData={postData} />
     </>

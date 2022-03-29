@@ -17,12 +17,15 @@ const NavLink: React.FC<Props> = ({
 }) => {
   const router = useRouter();
 
+  const isRouteActive =
+    router.pathname.split('/')[1] === String(href).split('/')[1];
+
   return (
     <Link href={href}>
       <a
         className={clsx(
           'motion-safe:transition-colors',
-          router.pathname === href
+          isRouteActive
             ? 'font-semibold dark:text-gray-100'
             : 'font-medium text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300',
           isMobileNavigation ? 'text-2xl' : 'text-base',

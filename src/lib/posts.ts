@@ -1,15 +1,15 @@
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
-import matter from 'gray-matter';
-import mdxPrism from 'mdx-prism';
-import { serialize } from 'next-mdx-remote/serialize';
-import readingTime from 'reading-time';
+import matter from "gray-matter";
+import mdxPrism from "mdx-prism";
+import { serialize } from "next-mdx-remote/serialize";
+import readingTime from "reading-time";
 
-import { getBlogViews } from './blog-views';
-import { ContentPostData, PostData, PostId } from '@/types/entities';
+import { getBlogViews } from "@/lib/blog-views";
+import { ContentPostData, PostData, PostId } from "@/types/entities";
 
-const postsDirectory = path.join(process.cwd(), 'src/data/blog');
+const postsDirectory = path.join(process.cwd(), "src/data/blog");
 
 export const getSortedPostsData = async (): Promise<PostData[]> => {
   const fileNames = fs.readdirSync(postsDirectory);
@@ -17,10 +17,10 @@ export const getSortedPostsData = async (): Promise<PostData[]> => {
 
   // eslint-disable-next-line no-restricted-syntax
   for await (const fileName of fileNames) {
-    const id = fileName.replace(/\.mdx$/, '');
+    const id = fileName.replace(/\.mdx$/, "");
 
     const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const fileContents = fs.readFileSync(fullPath, "utf8");
 
     const { content, data } = matter(fileContents);
 
@@ -48,7 +48,7 @@ export const getAllPostIds = (): PostId[] => {
   return fileNames.map((fileName) => {
     return {
       params: {
-        id: fileName.replace(/\.mdx$/, ''),
+        id: fileName.replace(/\.mdx$/, ""),
       },
     };
   });
@@ -56,7 +56,7 @@ export const getAllPostIds = (): PostId[] => {
 
 export const getPostData = async (id: string): Promise<ContentPostData> => {
   const fullPath = path.join(postsDirectory, `${id}.mdx`);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
+  const fileContents = fs.readFileSync(fullPath, "utf8");
 
   const { content, data } = matter(fileContents);
 

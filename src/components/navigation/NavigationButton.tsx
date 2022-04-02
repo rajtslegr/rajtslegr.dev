@@ -1,6 +1,6 @@
-import { MouseEventHandler } from 'react';
+import { MouseEventHandler } from "react";
 
-import { MenuIcon, XIcon } from '@heroicons/react/solid';
+import { MenuIcon, XIcon } from "@heroicons/react/solid";
 
 interface Props {
   handleClick: MouseEventHandler<HTMLButtonElement>;
@@ -14,7 +14,7 @@ const NavigationButton: React.FC<Props> = ({
   <button
     aria-label="Toggle Navigation"
     onClick={handleClick}
-    className="overflow-hidden p-3 my-3 w-12 h-12 dark:text-gray-100 bg-gray-200 dark:bg-gray-700 rounded-lg shadow"
+    className="my-3 h-12 w-12 overflow-hidden rounded-lg bg-gray-200 p-3 shadow dark:bg-gray-700 dark:text-gray-100"
   >
     {showMobileNavigation ? <XIcon /> : <MenuIcon />}
   </button>

@@ -1,11 +1,11 @@
-import { MouseEventHandler } from 'react';
+import { MouseEventHandler } from "react";
 
-import { useTheme } from 'next-themes';
+import { useTheme } from "next-themes";
 
-import ThemeButton from '../buttons/ThemeButton';
-import ExternalLink from './ExternalLink';
-import NavigationButton from './NavigationButton';
-import NavLink from '@/components/navigation/NavLink';
+import ThemeButton from "@/components/buttons/ThemeButton";
+import ExternalLink from "@/components/navigation/ExternalLink";
+import NavigationButton from "@/components/navigation/NavigationButton";
+import NavLink from "@/components/navigation/NavLink";
 
 interface Props {
   handleClick: MouseEventHandler<HTMLButtonElement>;
@@ -16,8 +16,8 @@ const NavBar: React.FC<Props> = ({ showMobileNavigation, handleClick }) => {
   const { resolvedTheme, setTheme } = useTheme();
 
   return (
-    <nav className="top-0 z-10 motion-safe:transition-shadow header">
-      <div className="container flex justify-between items-center px-4 mx-auto max-w-4xl h-full sm:pl-2">
+    <nav className="header top-0 z-10 motion-safe:transition-shadow">
+      <div className="container mx-auto flex h-full max-w-4xl items-center justify-between px-4 sm:pl-2">
         <div className="sm:hidden">
           <NavigationButton
             showMobileNavigation={showMobileNavigation}
@@ -46,7 +46,7 @@ const NavBar: React.FC<Props> = ({ showMobileNavigation, handleClick }) => {
         </ExternalLink>
         <ThemeButton
           handleClick={() =>
-            setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
+            setTheme(resolvedTheme === "light" ? "dark" : "light")
           }
         />
       </div>

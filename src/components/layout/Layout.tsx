@@ -1,11 +1,11 @@
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from "react";
 
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
-import MobileNavigation from '../navigation/MobileNavigation';
-import Footer from './Footer';
-import NavBar from '@/components/navigation/NavBar';
-import { useScrollBlock } from '@/hooks/useScrollBlock';
+import Footer from "@/components/layout/Footer";
+import MobileNavigation from "@/components/navigation/MobileNavigation";
+import NavBar from "@/components/navigation/NavBar";
+import { useScrollBlock } from "@/hooks/useScrollBlock";
 
 interface Props {
   children: ReactNode;
@@ -39,7 +39,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         handleClick={mobileNavigationHandler}
       />
       {showMobileNavigation && <MobileNavigation />}
-      <main className="flex-auto px-4 my-8 mx-auto max-w-4xl min-h-[calc(100vh-8rem)] md:mt-12">
+      <main className="my-8 mx-auto min-h-[calc(100vh-8rem)] max-w-4xl flex-auto px-4 md:mt-12">
         {children}
       </main>
       {!showMobileNavigation && <Footer />}

@@ -1,12 +1,13 @@
-import Image, { StaticImageData } from 'next/image';
+import Image, { StaticImageData } from "next/image";
 
-import cov19cz from '../../../public/static/images/projects/cov19cz.jpg';
-import rajtslegr from '../../../public/static/images/projects/rajtslegr.jpg';
-import typewriter from '../../../public/static/images/projects/typewriter.jpg';
-import vaccbot from '../../../public/static/images/projects/vaccbot.jpg';
-import Pill from './Pill';
-import WindowHeader from './WindowHeader';
-import { ProjectData } from '@/types/entities';
+import Pill from "@/components/project/Pill";
+import WindowHeader from "@/components/project/WindowHeader";
+import { ProjectData } from "@/types/entities";
+
+import cov19cz from "../../../public/static/images/projects/cov19cz.jpg";
+import rajtslegr from "../../../public/static/images/projects/rajtslegr.jpg";
+import typewriter from "../../../public/static/images/projects/typewriter.jpg";
+import vaccbot from "../../../public/static/images/projects/vaccbot.jpg";
 
 const IMAGES: Record<string, StaticImageData> = {
   cov19cz,
@@ -21,7 +22,7 @@ interface Props {
 const Project: React.FC<Props> = ({
   project: { title, description, build, image, repo },
 }) => (
-  <div className="flex flex-col bg-white dark:bg-card rounded-lg shadow">
+  <div className="flex flex-col rounded-lg bg-white shadow dark:bg-card">
     <a href={repo} rel="noopener noreferrer" target="_blank">
       <WindowHeader />
       <Image
@@ -31,7 +32,7 @@ const Project: React.FC<Props> = ({
         height={393}
         width={700}
       />
-      <div className="flex flex-col p-4 -mt-1.5 space-y-2 border-t border-gray-200 dark:border-gray-200/20 sm:h-64 lg:h-48">
+      <div className="-mt-1.5 flex flex-col space-y-2 border-t border-gray-200 p-4 dark:border-gray-200/20 sm:h-64 lg:h-48">
         <h2 className="text-xl font-semibold dark:text-gray-100">{title}</h2>
         <p className="grow text-gray-700 dark:text-gray-300">{description}</p>
         <div className="flex flex-row flex-wrap gap-2 pt-4">

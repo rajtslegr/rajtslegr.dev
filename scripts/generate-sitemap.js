@@ -1,17 +1,18 @@
-const fs = require('fs');
+/* eslint-disable import/no-extraneous-dependencies */
+const fs = require("fs");
 
-const fg = require('fast-glob');
-const prettier = require('prettier');
+const fg = require("fast-glob");
+const prettier = require("prettier");
 
 (async () => {
-  const prettierConfig = await prettier.resolveConfig('./.prettierrc.js');
+  const prettierConfig = await prettier.resolveConfig("./.prettierrc.js");
   const pages = await fg([
-    'src/pages/*.tsx',
-    'src/data/**/*.mdx',
-    '!src/data/*.mdx',
-    '!src/pages/_*.tsx',
-    '!src/pages/api',
-    '!src/pages/404.tsx',
+    "src/pages/*.tsx",
+    "src/data/**/*.mdx",
+    "!src/data/*.mdx",
+    "!src/pages/_*.tsx",
+    "!src/pages/api",
+    "!src/pages/404.tsx",
   ]);
 
   const sitemap = `
@@ -20,26 +21,26 @@ const prettier = require('prettier');
             ${pages
               .map((page) => {
                 const path = page
-                  .replace('pages', '')
-                  .replace('data', '')
-                  .replace('.tsx', '')
-                  .replace('.mdx', '')
-                  .replace('src/', '');
-                const route = path === '/index' ? '' : path;
+                  .replace("pages", "")
+                  .replace("data", "")
+                  .replace(".tsx", "")
+                  .replace(".mdx", "")
+                  .replace("src/", "");
+                const route = path === "/index" ? "" : path;
                 return `
                         <url>
                             <loc>${`https://rajtslegr.com${route}`}</loc>
                         </url>
                     `;
               })
-              .join('')}
+              .join("")}
         </urlset>
     `;
 
   const formatted = prettier.format(sitemap, {
     ...prettierConfig,
-    parser: 'html',
+    parser: "html",
   });
 
-  fs.writeFileSync('public/sitemap.xml', formatted);
+  fs.writeFileSync("public/sitemap.xml", formatted);
 })();

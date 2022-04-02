@@ -1,7 +1,7 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
-import InstagramItem from './InstagramItem';
-import { InstagramData } from '@/types/entities';
+import InstagramItem from "@/components/instagram/InstagramItem";
+import { InstagramData } from "@/types/entities";
 
 export interface Props {
   data?: InstagramData;

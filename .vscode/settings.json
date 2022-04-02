@@ -1,7 +1,0 @@
-{
-  "css.validate": false,
-  "eslint.options": {
-    "extensions": ["md", "mdx"]
-  },
-  "eslint.validate": ["md", "mdx"]
-}

@@ -5,11 +5,11 @@ import Document, {
   Html,
   Main,
   NextScript,
-} from 'next/document';
+} from "next/document";
 
 class MyDocument extends Document {
   static async getInitialProps(
-    ctx: DocumentContext,
+    ctx: DocumentContext
   ): Promise<DocumentInitialProps> {
     const initialProps = await Document.getInitialProps(ctx);
 
@@ -44,7 +44,7 @@ class MyDocument extends Document {
           />
           <link rel="manifest" href="/static/favicons/site.webmanifest" />
         </Head>
-        <body className="antialiased text-black dark:text-white bg-gray-50 dark:bg-dark">
+        <body className="bg-gray-50 text-black antialiased dark:bg-dark dark:text-white">
           <Main />
           <NextScript />
         </body>

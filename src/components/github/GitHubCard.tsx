@@ -1,4 +1,4 @@
-import { DocumentIcon, EyeIcon, StarIcon } from '@heroicons/react/solid';
+import { DocumentIcon, EyeIcon, StarIcon } from "@heroicons/react/solid";
 
 interface IGitHubCard {
   children: string;
@@ -15,14 +15,14 @@ const GitHubCard: React.FC<IGitHubCard> = ({
   stars,
   watches,
 }) => (
-  <div className="flex overflow-hidden flex-col p-2 bg-white dark:bg-card rounded-lg shadow">
+  <div className="flex flex-col overflow-hidden rounded-lg bg-white p-2 shadow dark:bg-card">
     <a href={link} rel="noopener noreferrer" target="_blank">
-      <div className="flex flex-row h-6 dark:text-gray-100">
+      <div className="flex h-6 flex-row dark:text-gray-100">
         <DocumentIcon />
-        <h3 className="text-lg font-semibold truncate">{children}</h3>
+        <h3 className="truncate text-lg font-semibold">{children}</h3>
       </div>
-      <div className="flex flex-row h-6" />
-      <div className="flex flex-row h-6 text-gray-500 dark:text-gray-400">
+      <div className="flex h-6 flex-row" />
+      <div className="flex h-6 flex-row text-gray-500 dark:text-gray-400">
         <p>{language}</p>
         <div className="flex grow justify-end space-x-2">
           <StarIcon />

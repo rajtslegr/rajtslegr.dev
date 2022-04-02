@@ -1,14 +1,14 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
-import useSWR from 'swr';
+import useSWR from "swr";
 
-import LastFmItem from './LastFmItem';
-import LastFmSkeleton from './LastFmSkeleton';
-import { LastFmData } from '@/types/entities';
-import fetcher from '@/utils/fetcher';
+import LastFmItem from "@/components/last-fm/LastFmItem";
+import LastFmSkeleton from "@/components/last-fm/LastFmSkeleton";
+import { LastFmData } from "@/types/entities";
+import fetcher from "@/utils/fetcher";
 
 const LastFm: React.FC = () => {
-  const { data, error } = useSWR<LastFmData>('/api/last-fm', fetcher, {
+  const { data, error } = useSWR<LastFmData>("/api/last-fm", fetcher, {
     refreshInterval: 60000,
   });
 
@@ -24,7 +24,7 @@ const LastFm: React.FC = () => {
 
   if (!error && data?.recenttracks) {
     render = (
-      <div className="grid gap-4 m-0 md:grid-cols-2">
+      <div className="m-0 grid gap-4 md:grid-cols-2">
         {data?.recenttracks?.track
           ?.filter((_track, index) => index < 10)
           .map((track, index) => (

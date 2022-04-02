@@ -1,11 +1,11 @@
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm, ValidationError } from "@formspree/react";
 
-import Button from '../buttons/Button';
-import Input from './Input';
-import TextArea from './TextArea';
+import Button from "@/components/buttons/Button";
+import Input from "@/components/form/Input";
+import TextArea from "@/components/form/TextArea";
 
 const ContactForm: React.FC = () => {
-  const [{ submitting, succeeded, errors }, handleSubmit] = useForm('xyylyppy');
+  const [{ submitting, succeeded, errors }, handleSubmit] = useForm("xyylyppy");
 
   if (succeeded) {
     <p>
@@ -15,7 +15,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <form
-      className="flex flex-col justify-center items-center space-y-4 w-full"
+      className="flex w-full flex-col items-center justify-center space-y-4"
       onSubmit={handleSubmit}
     >
       <p className="self-start text-xl font-bold dark:text-gray-100">

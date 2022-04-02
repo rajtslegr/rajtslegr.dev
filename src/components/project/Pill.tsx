@@ -3,8 +3,8 @@ interface Props {
 }
 
 const Pill: React.FC<Props> = ({ children }) => (
-  <span className="py-1 px-3 bg-gray-200 dark:bg-gray-700 rounded-full shadow">
-    <p className="text-sm font-thin text-center text-gray-700 dark:text-gray-300">
+  <span className="rounded-full bg-gray-200 py-1 px-3 shadow dark:bg-gray-700">
+    <p className="text-center text-sm font-thin text-gray-700 dark:text-gray-300">
       {children}
     </p>
   </span>

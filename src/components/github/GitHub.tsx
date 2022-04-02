@@ -1,7 +1,7 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
-import GitHubCard from './GitHubCard';
-import { GitHubData } from '@/types/entities';
+import GitHubCard from "@/components/github/GitHubCard";
+import { GitHubData } from "@/types/entities";
 
 export interface Props {
   data?: GitHubData[];
@@ -35,7 +35,7 @@ const GitHub: React.FC<Props> = ({ data }) => {
             >
               {full_name}
             </GitHubCard>
-          ),
+          )
         )}
       </div>
     );

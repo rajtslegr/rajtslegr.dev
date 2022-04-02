@@ -1,8 +1,8 @@
-import { ComponentProps, forwardRef } from 'react';
+import { ComponentProps, forwardRef } from "react";
 
-import LoadingIcon from '../icons/LoadingIcon';
+import LoadingIcon from "@/components/icons/LoadingIcon";
 
-interface Props extends ComponentProps<'button'> {
+interface Props extends ComponentProps<"button"> {
   children: React.ReactNode;
   submitting?: boolean;
 }
@@ -10,16 +10,16 @@ interface Props extends ComponentProps<'button'> {
 const Button = forwardRef<HTMLButtonElement, Props>(
   ({ children, submitting, ...props }, ref) => (
     <button
-      className="flex justify-center self-end p-3 mt-3 w-24 text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 rounded-lg shadow mx:auto"
+      className="mx-0 mt-3 flex w-24 justify-center self-end rounded-lg bg-gray-200 p-3 text-gray-700 shadow dark:bg-gray-700 dark:text-gray-300"
       ref={ref}
       disabled={submitting}
       {...props}
     >
       {!submitting ? children : LoadingIcon}
     </button>
-  ),
+  )
 );
 
-Button.displayName = 'Button';
+Button.displayName = "Button";
 
 export default Button;

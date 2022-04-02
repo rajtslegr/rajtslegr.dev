@@ -7,10 +7,10 @@ const TimelineItem: React.FC<Props> = ({
 }) => (
   <div className="flex">
     <div className="relative flex-row">
-      <div className="flex justify-center items-center w-3 h-full">
-        <div className="w-[1px] h-full bg-black dark:bg-gray-100"></div>
+      <div className="flex h-full w-3 items-center justify-center">
+        <div className="h-full w-[1px] bg-black dark:bg-gray-100"></div>
       </div>
-      <div className="absolute top-6 w-3 h-3 bg-gray-500 dark:bg-gray-400 rounded-full shadow"></div>
+      <div className="absolute top-6 h-3 w-3 rounded-full bg-gray-500 shadow dark:bg-gray-400"></div>
     </div>
     <div className="my-4 ml-6 sm:ml-12">
       <h3 className="text-lg font-semibold dark:text-gray-100">{job}</h3>

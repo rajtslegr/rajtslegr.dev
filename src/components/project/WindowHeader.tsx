@@ -1,8 +1,8 @@
 const WindowHeader: React.FC = () => (
-  <div className="flex items-center pl-2 space-x-1 h-6 bg-gray-200 dark:bg-gray-700 rounded-t-lg">
-    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-    <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+  <div className="flex h-6 items-center space-x-1 rounded-t-lg bg-gray-200 pl-2 dark:bg-gray-700">
+    <div className="h-2 w-2 rounded-full bg-red-400"></div>
+    <div className="h-2 w-2 rounded-full bg-yellow-400"></div>
+    <div className="h-2 w-2 rounded-full bg-green-400"></div>
   </div>
 );
 

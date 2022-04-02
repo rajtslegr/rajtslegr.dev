@@ -1,24 +1,24 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import { GetStaticProps, NextPage } from 'next';
+import { GetStaticProps, NextPage } from "next";
 
-import { SearchIcon } from '@heroicons/react/solid';
+import { SearchIcon } from "@heroicons/react/solid";
 
-import Input from '@/components/form/Input';
-import MetaData from '@/components/meta-data/MetaData';
-import PostCard from '@/components/post/PostCard';
-import { getSortedPostsData } from '@/lib/posts';
-import { PostData } from '@/types/entities';
+import Input from "@/components/form/Input";
+import MetaData from "@/components/meta-data/MetaData";
+import PostCard from "@/components/post/PostCard";
+import { getSortedPostsData } from "@/lib/posts";
+import { PostData } from "@/types/entities";
 
 interface Props {
   allPostsData: PostData[];
 }
 
 const Blog: NextPage<Props> = ({ allPostsData }) => {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
 
   const filteredPosts = allPostsData.filter((post) =>
-    post.title.toLowerCase().includes(search.toLowerCase()),
+    post.title.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
@@ -28,13 +28,13 @@ const Blog: NextPage<Props> = ({ allPostsData }) => {
         Blog
       </h1>
       <div>
-        <div className="flex relative flex-col mb-4 md:w-1/3">
+        <div className="relative mb-4 flex flex-col md:w-1/3">
           <Input
             aria-label="Search"
             placeholder="Search..."
             onChange={(e) => setSearch(e.target.value)}
           />
-          <span className="absolute top-[10px] right-3 w-5 h-5 text-gray-500 dark:text-gray-400">
+          <span className="absolute top-[10px] right-3 h-5 w-5 text-gray-500 dark:text-gray-400">
             <SearchIcon />
           </span>
         </div>

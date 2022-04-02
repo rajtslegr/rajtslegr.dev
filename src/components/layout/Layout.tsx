@@ -1,11 +1,11 @@
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from 'react';
 
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 
-import Footer from "@/components/layout/Footer";
-import MobileNavigation from "@/components/navigation/MobileNavigation";
-import NavBar from "@/components/navigation/NavBar";
-import { useScrollBlock } from "@/hooks/useScrollBlock";
+import Footer from '@/components/layout/Footer';
+import MobileNavigation from '@/components/navigation/MobileNavigation';
+import NavBar from '@/components/navigation/NavBar';
+import { useScrollBlock } from '@/hooks/useScrollBlock';
 
 interface Props {
   children: ReactNode;

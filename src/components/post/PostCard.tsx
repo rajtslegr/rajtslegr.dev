@@ -1,7 +1,7 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import { PostData } from "@/types/entities";
-import parseDate from "@/utils/date";
+import { PostData } from '@/types/entities';
+import parseDate from '@/utils/date';
 
 interface Props {
   post: PostData;
@@ -18,9 +18,9 @@ const PostCard: React.FC<Props> = ({
       <div className="flex flex-row text-gray-500 dark:text-gray-400">
         <p>
           {parseDate(date)}
-          {" • "}
+          {' • '}
           {readingTime?.text}
-          {" • "}
+          {' • '}
           {views} views
         </p>
       </div>

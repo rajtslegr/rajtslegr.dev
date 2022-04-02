@@ -1,11 +1,11 @@
-import { MouseEventHandler } from "react";
+import { MouseEventHandler } from 'react';
 
-import { useTheme } from "next-themes";
+import { useTheme } from 'next-themes';
 
-import ThemeButton from "@/components/buttons/ThemeButton";
-import ExternalLink from "@/components/navigation/ExternalLink";
-import NavigationButton from "@/components/navigation/NavigationButton";
-import NavLink from "@/components/navigation/NavLink";
+import ThemeButton from '@/components/buttons/ThemeButton';
+import ExternalLink from '@/components/navigation/ExternalLink';
+import NavigationButton from '@/components/navigation/NavigationButton';
+import NavLink from '@/components/navigation/NavLink';
 
 interface Props {
   handleClick: MouseEventHandler<HTMLButtonElement>;
@@ -46,7 +46,7 @@ const NavBar: React.FC<Props> = ({ showMobileNavigation, handleClick }) => {
         </ExternalLink>
         <ThemeButton
           handleClick={() =>
-            setTheme(resolvedTheme === "light" ? "dark" : "light")
+            setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
           }
         />
       </div>

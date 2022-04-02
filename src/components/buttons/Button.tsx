@@ -1,8 +1,8 @@
-import { ComponentProps, forwardRef } from "react";
+import { ComponentProps, forwardRef } from 'react';
 
-import LoadingIcon from "@/components/icons/LoadingIcon";
+import LoadingIcon from '@/components/icons/LoadingIcon';
 
-interface Props extends ComponentProps<"button"> {
+interface Props extends ComponentProps<'button'> {
   children: React.ReactNode;
   submitting?: boolean;
 }
@@ -20,6 +20,6 @@ const Button = forwardRef<HTMLButtonElement, Props>(
   )
 );
 
-Button.displayName = "Button";
+Button.displayName = 'Button';
 
 export default Button;

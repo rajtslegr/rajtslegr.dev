@@ -1,14 +1,14 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
-import useSWR from "swr";
+import useSWR from 'swr';
 
-import LastFmItem from "@/components/last-fm/LastFmItem";
-import LastFmSkeleton from "@/components/last-fm/LastFmSkeleton";
-import { LastFmData } from "@/types/entities";
-import fetcher from "@/utils/fetcher";
+import LastFmItem from '@/components/last-fm/LastFmItem';
+import LastFmSkeleton from '@/components/last-fm/LastFmSkeleton';
+import { LastFmData } from '@/types/entities';
+import fetcher from '@/utils/fetcher';
 
 const LastFm: React.FC = () => {
-  const { data, error } = useSWR<LastFmData>("/api/last-fm", fetcher, {
+  const { data, error } = useSWR<LastFmData>('/api/last-fm', fetcher, {
     refreshInterval: 60000,
   });
 

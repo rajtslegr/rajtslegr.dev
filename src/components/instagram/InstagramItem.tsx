@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import clsx from "clsx";
-import Image from "next/image";
+import clsx from 'clsx';
+import Image from 'next/image';
 
-import { InstagramDataEdge } from "@/types/entities";
+import { InstagramDataEdge } from '@/types/entities';
 
 export interface Props {
   index: number;
@@ -17,11 +17,11 @@ const InstagramItem: React.FC<Props> = ({ index, edge }) => {
     <div
       key={edge.id}
       className={clsx(
-        index === 0 ? "lg:col-span-2 lg:row-span-2" : "",
+        index === 0 ? 'lg:col-span-2 lg:row-span-2' : '',
         !isLoaded
-          ? "rounded-lg bg-gray-200 shadow motion-safe:animate-pulse dark:bg-gray-700"
-          : "",
-        "relative pb-1/1 "
+          ? 'rounded-lg bg-gray-200 shadow motion-safe:animate-pulse dark:bg-gray-700'
+          : '',
+        'relative pb-1/1 '
       )}
     >
       <a href={edge.permalink} rel="noopener noreferrer" target="_blank">

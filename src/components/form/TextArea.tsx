@@ -1,6 +1,6 @@
-import { ComponentProps, forwardRef } from "react";
+import { ComponentProps, forwardRef } from 'react';
 
-interface Props extends ComponentProps<"textarea"> {
+interface Props extends ComponentProps<'textarea'> {
   label: string;
 }
 
@@ -17,6 +17,6 @@ const TextArea = forwardRef<HTMLTextAreaElement, Props>(
   )
 );
 
-TextArea.displayName = "TextArea";
+TextArea.displayName = 'TextArea';
 
 export default TextArea;

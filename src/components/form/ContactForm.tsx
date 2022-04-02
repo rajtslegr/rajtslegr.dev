@@ -1,11 +1,11 @@
-import { useForm, ValidationError } from "@formspree/react";
+import { useForm, ValidationError } from '@formspree/react';
 
-import Button from "@/components/buttons/Button";
-import Input from "@/components/form/Input";
-import TextArea from "@/components/form/TextArea";
+import Button from '@/components/buttons/Button';
+import Input from '@/components/form/Input';
+import TextArea from '@/components/form/TextArea';
 
 const ContactForm: React.FC = () => {
-  const [{ submitting, succeeded, errors }, handleSubmit] = useForm("xyylyppy");
+  const [{ submitting, succeeded, errors }, handleSubmit] = useForm('xyylyppy');
 
   if (succeeded) {
     <p>

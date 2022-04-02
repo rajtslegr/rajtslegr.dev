@@ -1,4 +1,4 @@
-import NavLink from "./NavLink";
+import NavLink from '@/components/navigation/NavLink';
 
 const MobileNavigation: React.FC = () => (
   <div className="absolute z-10 flex h-full w-full justify-center bg-gray-50 dark:bg-dark">

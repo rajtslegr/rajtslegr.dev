@@ -1,13 +1,13 @@
-import Image, { StaticImageData } from "next/image";
+import Image, { StaticImageData } from 'next/image';
 
-import Pill from "@/components/project/Pill";
-import WindowHeader from "@/components/project/WindowHeader";
-import { ProjectData } from "@/types/entities";
+import Pill from '@/components/project/Pill';
+import WindowHeader from '@/components/project/WindowHeader';
+import { ProjectData } from '@/types/entities';
 
-import cov19cz from "../../../public/static/images/projects/cov19cz.jpg";
-import rajtslegr from "../../../public/static/images/projects/rajtslegr.jpg";
-import typewriter from "../../../public/static/images/projects/typewriter.jpg";
-import vaccbot from "../../../public/static/images/projects/vaccbot.jpg";
+import cov19cz from '../../../public/static/images/projects/cov19cz.jpg';
+import rajtslegr from '../../../public/static/images/projects/rajtslegr.jpg';
+import typewriter from '../../../public/static/images/projects/typewriter.jpg';
+import vaccbot from '../../../public/static/images/projects/vaccbot.jpg';
 
 const IMAGES: Record<string, StaticImageData> = {
   cov19cz,

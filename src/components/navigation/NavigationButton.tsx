@@ -1,6 +1,6 @@
-import { MouseEventHandler } from "react";
+import { MouseEventHandler } from 'react';
 
-import { MenuIcon, XIcon } from "@heroicons/react/solid";
+import { MenuIcon, XIcon } from '@heroicons/react/solid';
 
 interface Props {
   handleClick: MouseEventHandler<HTMLButtonElement>;

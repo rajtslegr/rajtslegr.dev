@@ -1,4 +1,4 @@
-import prisma from './prisma';
+import prisma from '@/lib/prisma';
 
 export const getBlogViews = async (id: string) => {
   const newOrUpdatedViews = await prisma.views.findUnique({

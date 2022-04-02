@@ -1,4 +1,4 @@
-import { DocumentIcon, EyeIcon, StarIcon } from "@heroicons/react/solid";
+import { DocumentIcon, EyeIcon, StarIcon } from '@heroicons/react/solid';
 
 interface IGitHubCard {
   children: string;

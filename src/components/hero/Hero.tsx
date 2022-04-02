@@ -1,8 +1,8 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-import ExternalLink from "@/components/navigation/ExternalLink";
+import ExternalLink from '@/components/navigation/ExternalLink';
 
-import heroImage from "../../../public/static/images/hero.jpg";
+import heroImage from '../../../public/static/images/hero.jpg';
 
 const Hero: React.FC = () => (
   <div className="flex flex-row justify-center">
@@ -14,8 +14,8 @@ const Hero: React.FC = () => (
         <h2 className="mt-2 text-lg text-gray-700 dark:text-gray-300">
           <span className="bg-gradient-to-r from-ukraine-yellow to-ukraine-blue bg-clip-text font-semibold text-transparent">
             Software Developer
-          </span>{" "}
-          at{" "}
+          </span>{' '}
+          at{' '}
           <ExternalLink
             href="https://www.economia.cz"
             className="bg-gradient-to-r from-ukraine-yellow to-ukraine-blue bg-clip-text font-semibold text-transparent"

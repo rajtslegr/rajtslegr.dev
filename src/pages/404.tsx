@@ -1,8 +1,8 @@
-import { NextPage } from "next";
+import { NextPage } from 'next';
 
-import { ExclamationCircleIcon } from "@heroicons/react/solid";
+import { ExclamationCircleIcon } from '@heroicons/react/solid';
 
-import MetaData from "@/components/meta-data/MetaData";
+import MetaData from '@/components/meta-data/MetaData';
 
 const Custom404: NextPage = () => (
   <>

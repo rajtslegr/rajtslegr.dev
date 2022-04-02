@@ -1,11 +1,11 @@
-import { ComponentProps, forwardRef } from "react";
+import { ComponentProps, forwardRef } from 'react';
 
-interface Props extends ComponentProps<"input"> {
+interface Props extends ComponentProps<'input'> {
   label?: string;
 }
 
 const Input = forwardRef<HTMLInputElement, Props>(
-  ({ label, type = "text", ...props }, ref) => (
+  ({ label, type = 'text', ...props }, ref) => (
     <label className="w-full">
       {label && (
         <div className="mb-1 font-medium dark:text-gray-100">{label}</div>
@@ -20,6 +20,6 @@ const Input = forwardRef<HTMLInputElement, Props>(
   )
 );
 
-Input.displayName = "Input";
+Input.displayName = 'Input';
 
 export default Input;

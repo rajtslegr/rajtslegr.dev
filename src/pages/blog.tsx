@@ -1,21 +1,21 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import { GetStaticProps, NextPage } from "next";
+import { GetStaticProps, NextPage } from 'next';
 
-import { SearchIcon } from "@heroicons/react/solid";
+import { SearchIcon } from '@heroicons/react/solid';
 
-import Input from "@/components/form/Input";
-import MetaData from "@/components/meta-data/MetaData";
-import PostCard from "@/components/post/PostCard";
-import { getSortedPostsData } from "@/lib/posts";
-import { PostData } from "@/types/entities";
+import Input from '@/components/form/Input';
+import MetaData from '@/components/meta-data/MetaData';
+import PostCard from '@/components/post/PostCard';
+import { getSortedPostsData } from '@/lib/posts';
+import { PostData } from '@/types/entities';
 
 interface Props {
   allPostsData: PostData[];
 }
 
 const Blog: NextPage<Props> = ({ allPostsData }) => {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState('');
 
   const filteredPosts = allPostsData.filter((post) =>
     post.title.toLowerCase().includes(search.toLowerCase())

@@ -29,6 +29,7 @@ const InstagramItem: React.FC<Props> = ({ index, edge }) => {
           className="rounded-lg"
           src={edge.thumbnail_url || edge.media_url}
           alt={edge.caption}
+          title={edge.caption}
           placeholder="blur"
           blurDataURL={edge.thumbnail_url || edge.media_url}
           layout="fill"

@@ -41,15 +41,24 @@ const LastFmItem: React.FC<Props> = ({ track }) => {
               onLoadingComplete={() => setIsLoaded(true)}
             />
           </div>
-          <div className="flex min-h-full flex-col">
-            <h3 className="text-lg font-semibold dark:text-gray-100">
+          <div className="flex min-h-full flex-col overflow-hidden">
+            <h3
+              className="truncate text-lg font-semibold dark:text-gray-100"
+              title={track.name}
+            >
               {track.name}
             </h3>
             <div className="flex flex-1"></div>
-            <p className="text-gray-500 dark:text-gray-400">
+            <p
+              className="truncate text-gray-500 dark:text-gray-400"
+              title={track.artist['#text']}
+            >
               {track.artist['#text']}
             </p>
-            <p className="text-gray-500 dark:text-gray-400">
+            <p
+              className="truncate text-gray-500 dark:text-gray-400"
+              title={track.album['#text']}
+            >
               {track.album['#text']}
             </p>
           </div>

@@ -19,7 +19,9 @@ const GitHubCard: React.FC<IGitHubCard> = ({
     <a href={link} rel="noopener noreferrer" target="_blank">
       <div className="flex h-6 flex-row dark:text-gray-100">
         <DocumentIcon />
-        <h3 className="truncate text-lg font-semibold">{children}</h3>
+        <h3 className="truncate text-lg font-semibold" title={children}>
+          {children}
+        </h3>
       </div>
       <div className="flex h-6 flex-row" />
       <div className="flex h-6 flex-row text-gray-500 dark:text-gray-400">

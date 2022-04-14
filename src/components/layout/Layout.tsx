@@ -16,12 +16,6 @@ const Layout: React.FC<Props> = ({ children }) => {
   const [blockScroll, allowScroll] = useScrollBlock();
   const router = useRouter();
 
-  useEffect(() => {
-    setShowMobileNavigation(false);
-    allowScroll();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [router.asPath]);
-
   const mobileNavigationHandler = (): void => {
     if (showMobileNavigation) {
       setShowMobileNavigation(false);
@@ -31,6 +25,13 @@ const Layout: React.FC<Props> = ({ children }) => {
       blockScroll();
     }
   };
+
+  useEffect(() => {
+    router.events.on('routeChangeComplete', () => {
+      setShowMobileNavigation(false);
+      allowScroll();
+    });
+  }, [allowScroll, router.events]);
 
   return (
     <>

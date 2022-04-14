@@ -3,7 +3,6 @@ import { ComponentProps, forwardRef } from 'react';
 import LoadingIcon from '@/components/icons/LoadingIcon';
 
 interface Props extends ComponentProps<'button'> {
-  children: React.ReactNode;
   submitting?: boolean;
 }
 
@@ -15,7 +14,7 @@ const Button = forwardRef<HTMLButtonElement, Props>(
       disabled={submitting}
       {...props}
     >
-      {!submitting ? children : LoadingIcon}
+      {!submitting ? children : <LoadingIcon />}
     </button>
   )
 );

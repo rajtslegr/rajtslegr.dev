@@ -14,7 +14,7 @@ const LastFmItem: React.FC<Props> = ({ track }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <div className="flex h-full flex-col rounded-lg bg-white p-2 shadow dark:bg-card">
+    <div className="flex h-full flex-col overflow-hidden rounded-lg bg-white p-2 shadow dark:bg-card">
       <a
         href="https://last.fm/user/RajceP"
         rel="noopener noreferrer"

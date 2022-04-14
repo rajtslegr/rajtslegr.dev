@@ -22,7 +22,7 @@ const MetaData: React.FC<Props> = ({
   return (
     <Head>
       <title>{title}</title>
-      <meta name="description" content={description}></meta>
+      <meta name="description" content={description} />
       <link rel="canonical" href={url} />
       <meta property="og:title" content={title}></meta>
       <meta property="og:description" content={description}></meta>

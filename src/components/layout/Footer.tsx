@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
   return (
     <div className="flex flex-col items-center space-y-4 p-4 sm:space-y-8 lg:pb-12">
       <div className="flex w-full max-w-4xl flex-col border-t border-gray-200 p-4 dark:border-gray-200/20 sm:p-6">
-        <div className="flex flex-row justify-between md:justify-evenly">
+        <div className="flex flex-row justify-between sm:justify-evenly">
           <div className="flex flex-col space-y-2">
             <NavLink href="/">Home</NavLink>
             <NavLink href="/dashboard">Dashboard</NavLink>
@@ -28,23 +28,11 @@ const Footer: React.FC = () => {
             <ExternalLink href="https://www.linkedin.com/in/petr-rajtšlégr-5aa84a16b">
               LinkedIn
             </ExternalLink>
-            <ExternalLink href="https://www.facebook.com/petr.rajtslegr">
-              Facebook
-            </ExternalLink>
             <ExternalLink href="https://twitter.com/RajceP">
               Twitter
             </ExternalLink>
-          </div>
-          <div className="flex flex-col space-y-2">
             <ExternalLink href="https://www.instagram.com/rajce">
               Instagram
-            </ExternalLink>
-            <ExternalLink href="https://t.me/rajcep">Telegram</ExternalLink>
-            <ExternalLink href="https://www.last.fm/user/RajceP">
-              Last.fm
-            </ExternalLink>
-            <ExternalLink href="https://soundcloud.com/rajcep">
-              SoundCloud
             </ExternalLink>
           </div>
         </div>

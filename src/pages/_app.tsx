@@ -12,7 +12,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps, router }) => {
     <ThemeProvider
       defaultTheme="system"
       attribute="class"
-      disableTransitionOnChange="true"
+      disableTransitionOnChange={true}
     >
       <Layout>
         <Component {...pageProps} key={router.route} />

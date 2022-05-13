@@ -35,7 +35,7 @@ const GitHub: React.FC<Props> = ({ data }) => {
             >
               {full_name}
             </GitHubCard>
-          )
+          ),
         )}
       </div>
     );

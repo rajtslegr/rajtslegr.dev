@@ -16,7 +16,7 @@ const Button = forwardRef<HTMLButtonElement, Props>(
     >
       {!submitting ? children : <LoadingIcon />}
     </button>
-  )
+  ),
 );
 
 Button.displayName = 'Button';

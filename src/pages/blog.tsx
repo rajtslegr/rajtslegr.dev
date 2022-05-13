@@ -18,7 +18,7 @@ const Blog: NextPage<Props> = ({ allPostsData }) => {
   const [search, setSearch] = useState('');
 
   const filteredPosts = allPostsData.filter((post) =>
-    post.title.toLowerCase().includes(search.toLowerCase())
+    post.title.toLowerCase().includes(search.toLowerCase()),
   );
 
   return (

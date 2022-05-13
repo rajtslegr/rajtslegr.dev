@@ -48,13 +48,6 @@
         "project": "./tsconfig.json"
       },
       "rules": {
-        "prettier/prettier": [
-          "error",
-          {
-            "singleQuote": true,
-            "endOfLine": "auto"
-          }
-        ],
         "react/destructuring-assignment": "off",
         "jsx-a11y/anchor-is-valid": "off",
         "react/require-default-props": "off",

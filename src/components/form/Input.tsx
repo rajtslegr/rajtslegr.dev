@@ -17,7 +17,7 @@ const Input = forwardRef<HTMLInputElement, Props>(
         {...props}
       />
     </label>
-  )
+  ),
 );
 
 Input.displayName = 'Input';

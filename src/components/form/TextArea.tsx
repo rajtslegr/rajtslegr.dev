@@ -14,7 +14,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, Props>(
         {...props}
       />
     </label>
-  )
+  ),
 );
 
 TextArea.displayName = 'TextArea';

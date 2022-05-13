@@ -26,7 +26,7 @@ const LastFmItem: React.FC<Props> = ({ track }) => {
               !isLoaded
                 ? 'rounded-lg bg-gray-200 shadow motion-safe:animate-pulse dark:bg-gray-700'
                 : '',
-              'h-32 w-32 rounded-lg shadow'
+              'h-32 w-32 rounded-lg shadow',
             )}
           >
             <Image

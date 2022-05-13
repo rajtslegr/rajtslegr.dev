@@ -21,7 +21,7 @@ const InstagramItem: React.FC<Props> = ({ index, edge }) => {
         !isLoaded
           ? 'rounded-lg bg-gray-200 shadow motion-safe:animate-pulse dark:bg-gray-700'
           : '',
-        'relative pb-1/1 '
+        'relative pb-1/1 ',
       )}
     >
       <a href={edge.permalink} rel="noopener noreferrer" target="_blank">

@@ -16,7 +16,7 @@ const NavBar: React.FC<Props> = ({ showMobileNavigation, handleClick }) => {
   const { resolvedTheme, setTheme } = useTheme();
 
   return (
-    <nav className="header top-0 z-10 motion-safe:transition-shadow">
+    <nav className="header sticky top-0 z-10 motion-safe:transition-shadow">
       <div className="container mx-auto flex h-full max-w-4xl items-center justify-between px-4 sm:pl-2">
         <div className="sm:hidden">
           <NavigationButton

@@ -2,12 +2,12 @@ import { MouseEventHandler } from 'react';
 
 import { MenuIcon, XIcon } from '@heroicons/react/solid';
 
-interface Props {
+interface NavigationButtonProps {
   handleClick: MouseEventHandler<HTMLButtonElement>;
   showMobileNavigation: boolean;
 }
 
-const NavigationButton: React.FC<Props> = ({
+const NavigationButton: React.FC<NavigationButtonProps> = ({
   showMobileNavigation,
   handleClick,
 }) => (

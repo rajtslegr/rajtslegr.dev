@@ -3,11 +3,11 @@ import { ReactNode } from 'react';
 import GitHubCard from '@/components/github/GitHubCard';
 import { GitHubData } from '@/types/entities';
 
-export interface Props {
+interface GitHubProps {
   data?: GitHubData[];
 }
 
-const GitHub: React.FC<Props> = ({ data }) => {
+const GitHub: React.FC<GitHubProps> = ({ data }) => {
   let render: ReactNode = (
     <p className="flex justify-center p-6 italic text-gray-500 dark:text-gray-400">
       Error fetching data from GitHub.

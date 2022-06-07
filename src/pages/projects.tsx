@@ -5,11 +5,11 @@ import Project from '@/components/project/Project';
 import projectsData from '@/data/projects';
 import { ProjectData } from '@/types/entities';
 
-interface Props {
+interface ProjectsProps {
   projects: ProjectData[];
 }
 
-const Projects: NextPage<Props> = ({ projects }) => (
+const Projects: NextPage<ProjectsProps> = ({ projects }) => (
   <>
     <MetaData title="Petr Rajtslegr | Projects" />
     <h1 className="mb-4 text-4xl font-extrabold dark:text-gray-100 md:mb-12">

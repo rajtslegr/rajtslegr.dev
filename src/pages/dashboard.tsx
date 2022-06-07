@@ -8,12 +8,15 @@ import { getRecentRepos } from '@/lib/github';
 import { getRecentPosts } from '@/lib/instagram';
 import { GitHubData, InstagramData } from '@/types/entities';
 
-interface Props {
+interface DashboardProps {
   gitHubData: GitHubData[];
   instagramData: InstagramData;
 }
 
-const Dashboard: NextPage<Props> = ({ gitHubData, instagramData: igData }) => (
+const Dashboard: NextPage<DashboardProps> = ({
+  gitHubData,
+  instagramData: igData,
+}) => (
   <>
     <MetaData title="Petr Rajtslegr | Dashboard" />
     <div className="">

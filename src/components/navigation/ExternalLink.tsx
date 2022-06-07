@@ -1,13 +1,13 @@
 import { ReactNode } from 'react';
 
-interface Props {
+interface ExternalLinkProps {
   href: string;
   children: ReactNode;
   className?: string;
   ariaLabel?: string;
 }
 
-const ExternalLink: React.FC<Props> = ({
+const ExternalLink: React.FC<ExternalLinkProps> = ({
   href,
   children,
   className,

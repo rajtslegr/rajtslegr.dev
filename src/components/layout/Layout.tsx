@@ -7,11 +7,11 @@ import MobileNavigation from '@/components/navigation/MobileNavigation';
 import NavBar from '@/components/navigation/NavBar';
 import { useScrollBlock } from '@/hooks/useScrollBlock';
 
-interface Props {
+interface LayoutProps {
   children: ReactNode;
 }
 
-const Layout: React.FC<Props> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [showMobileNavigation, setShowMobileNavigation] = useState(false);
   const [blockScroll, allowScroll] = useScrollBlock();
   const router = useRouter();

@@ -2,13 +2,13 @@ import clsx from 'clsx';
 import Link, { LinkProps } from 'next/link';
 import { useRouter } from 'next/router';
 
-export interface Props extends LinkProps {
+interface NavLinkProps extends LinkProps {
   children: string;
   isHeader?: boolean;
   isMobileNavigation?: boolean;
 }
 
-const NavLink: React.FC<Props> = ({
+const NavLink: React.FC<NavLinkProps> = ({
   children,
   isMobileNavigation,
   isHeader,

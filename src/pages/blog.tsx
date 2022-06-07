@@ -10,11 +10,11 @@ import PostCard from '@/components/post/PostCard';
 import { getSortedPostsData } from '@/lib/posts';
 import { PostData } from '@/types/entities';
 
-interface Props {
+interface BlogProps {
   allPostsData: PostData[];
 }
 
-const Blog: NextPage<Props> = ({ allPostsData }) => {
+const Blog: NextPage<BlogProps> = ({ allPostsData }) => {
   const [search, setSearch] = useState('');
 
   const filteredPosts = allPostsData.filter((post) =>

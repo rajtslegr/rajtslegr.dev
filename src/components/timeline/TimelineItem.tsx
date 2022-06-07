@@ -1,8 +1,8 @@
-interface Props {
+interface TimelineItemProps {
   data: { timeRange: string; job: string; description: string };
 }
 
-const TimelineItem: React.FC<Props> = ({
+const TimelineItem: React.FC<TimelineItemProps> = ({
   data: { timeRange, job, description },
 }) => (
   <div className="flex">

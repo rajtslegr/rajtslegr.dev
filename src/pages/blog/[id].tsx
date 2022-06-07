@@ -6,11 +6,11 @@ import useIncrementView from '@/hooks/useIncrementViews';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 import { ContentPostData } from '@/types/entities';
 
-interface Props {
+interface BlogProps {
   postData: ContentPostData;
 }
 
-const Blog: NextPage<Props> = ({ postData }) => {
+const Blog: NextPage<BlogProps> = ({ postData }) => {
   const image = postData.image
     ? `/static/images/blog/${postData.image}`
     : undefined;

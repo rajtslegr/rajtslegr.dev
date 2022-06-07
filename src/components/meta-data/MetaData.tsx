@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-interface Props {
+interface MetaDataProps {
   title: string;
   description?: string;
   image?: string;
@@ -9,7 +9,7 @@ interface Props {
   date?: string;
 }
 
-const MetaData: React.FC<Props> = ({
+const MetaData: React.FC<MetaDataProps> = ({
   title,
   description = 'Software Developer based in Prague, Czechia.',
   image = '/static/images/meta-image.jpg',

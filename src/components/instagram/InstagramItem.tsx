@@ -5,12 +5,12 @@ import Image from 'next/image';
 
 import { InstagramDataEdge } from '@/types/entities';
 
-export interface Props {
+interface InstagramItemProps {
   index: number;
   edge: InstagramDataEdge;
 }
 
-const InstagramItem: React.FC<Props> = ({ index, edge }) => {
+const InstagramItem: React.FC<InstagramItemProps> = ({ index, edge }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (

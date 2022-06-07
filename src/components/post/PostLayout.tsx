@@ -6,11 +6,11 @@ import parseDate from '@/utils/date';
 
 import hero from '../../../public/static/images/hero.jpg';
 
-interface Props {
+interface PostLayoutProps {
   postData: ContentPostData;
 }
 
-const PostLayout: React.FC<Props> = ({
+const PostLayout: React.FC<PostLayoutProps> = ({
   postData: { title, date, mdxContent, image },
 }) => (
   <div className="mx-auto flex max-w-2xl flex-col items-center">

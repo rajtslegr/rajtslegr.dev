@@ -5,11 +5,11 @@ import { useTheme } from 'next-themes';
 
 import useIsMounted from '@/hooks/useIsMounted';
 
-interface Props {
+interface ThemeButtonProps {
   handleClick: MouseEventHandler<HTMLButtonElement>;
 }
 
-const ThemeButton: React.FC<Props> = ({ handleClick }) => {
+const ThemeButton: React.FC<ThemeButtonProps> = ({ handleClick }) => {
   const isMounted = useIsMounted();
   const { resolvedTheme } = useTheme();
 

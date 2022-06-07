@@ -6,11 +6,11 @@ import Image from 'next/image';
 
 import { LastFmTrack } from '@/types/entities';
 
-interface Props {
+interface LastFmItemProps {
   track: LastFmTrack;
 }
 
-const LastFmItem: React.FC<Props> = ({ track }) => {
+const LastFmItem: React.FC<LastFmItemProps> = ({ track }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (

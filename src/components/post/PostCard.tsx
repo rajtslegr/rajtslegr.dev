@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { PostData } from '@/types/entities';
 import parseDate from '@/utils/date';
 
-interface Props {
+interface PostCardProps {
   post: PostData;
 }
 
-const PostCard: React.FC<Props> = ({
+const PostCard: React.FC<PostCardProps> = ({
   post: { id, date, title, description, readingTime, views },
 }) => (
   <Link href={`/blog/${id}`} passHref>

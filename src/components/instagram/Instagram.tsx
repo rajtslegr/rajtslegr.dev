@@ -3,11 +3,11 @@ import { ReactNode } from 'react';
 import InstagramItem from '@/components/instagram/InstagramItem';
 import { InstagramData } from '@/types/entities';
 
-export interface Props {
+interface InstagramProps {
   data?: InstagramData;
 }
 
-const Instagram: React.FC<Props> = ({ data }) => {
+const Instagram: React.FC<InstagramProps> = ({ data }) => {
   let render: ReactNode = (
     <p className="flex justify-center p-6 italic text-gray-500 dark:text-gray-400">
       Error fetching data from Instagram.

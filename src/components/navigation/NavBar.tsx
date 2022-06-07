@@ -7,12 +7,15 @@ import ExternalLink from '@/components/navigation/ExternalLink';
 import NavigationButton from '@/components/navigation/NavigationButton';
 import NavLink from '@/components/navigation/NavLink';
 
-interface Props {
+interface NavBarProps {
   handleClick: MouseEventHandler<HTMLButtonElement>;
   showMobileNavigation: boolean;
 }
 
-const NavBar: React.FC<Props> = ({ showMobileNavigation, handleClick }) => {
+const NavBar: React.FC<NavBarProps> = ({
+  showMobileNavigation,
+  handleClick,
+}) => {
   const { resolvedTheme, setTheme } = useTheme();
 
   return (

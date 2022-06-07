@@ -15,11 +15,11 @@ const IMAGES: Record<string, StaticImageData> = {
   typewriter,
   vaccbot,
 };
-interface Props {
+interface ProjectProps {
   project: ProjectData;
 }
 
-const Project: React.FC<Props> = ({
+const Project: React.FC<ProjectProps> = ({
   project: { title, description, build, image, repo },
 }) => (
   <div className="flex flex-col rounded-lg bg-white shadow dark:bg-card">

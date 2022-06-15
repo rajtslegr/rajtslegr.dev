@@ -1,7 +1,6 @@
 name: CI
 
-on:
-  pull_request:
+on: push
 
 jobs:
   build:
@@ -14,19 +13,35 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: 'npm'
 
-      - name: Install depenencies
-        run: npm ci
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Install
-        run: npm install
+        run: pnpm install --frozen-lockfile
 
       - name: Type Check
-        run: npm run type-check
+        run: pnpm run type-check
 
       - name: Lint
-        run: npm run lint
+        run: pnpm run lint
 
       - name: Build
         env:
@@ -34,4 +49,4 @@ jobs:
           LASTFM_API_KEY: ${{secrets.LASTFM_API_KEY}}
           INSTAGRAM_TOKEN: ${{secrets.INSTAGRAM_TOKEN}}
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-        run: npm run build
+        run: pnpm run build

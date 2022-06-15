@@ -5,7 +5,7 @@ import useSWR from 'swr';
 import LastFmItem from '@/components/last-fm/LastFmItem';
 import LastFmSkeleton from '@/components/last-fm/LastFmSkeleton';
 import { LastFmData } from '@/types/entities';
-import fetcher from '@/utils/fetcher';
+import { fetcher } from '@/utils/fetcher';
 
 const LastFm: React.FC = () => {
   const { data, error } = useSWR<LastFmData>('/api/last-fm', fetcher, {

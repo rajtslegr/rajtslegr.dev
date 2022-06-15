@@ -2,7 +2,13 @@ import { useEffect } from 'react';
 
 import isbot from 'isbot';
 
-const useIncrementView = async (id: string) => {
+const incrementView = async (id: string) => {
+  await fetch(`/api/views/${id}`, {
+    method: 'POST',
+  });
+};
+
+export const useIncrementView = async (id: string) => {
   useEffect(() => {
     const isBrowser = typeof window !== undefined;
     const isBot = isbot(navigator.userAgent);
@@ -12,11 +18,3 @@ const useIncrementView = async (id: string) => {
     }
   }, [id]);
 };
-
-const incrementView = async (id: string) => {
-  await fetch(`/api/views/${id}`, {
-    method: 'POST',
-  });
-};
-
-export default useIncrementView;

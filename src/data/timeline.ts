@@ -1,4 +1,4 @@
-const timelineData = [
+export const timelineData = [
   {
     timeRange: '2021 - present',
     job: 'Economia',

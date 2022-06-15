@@ -1,4 +1,4 @@
-const projectsData = [
+export const projectsData = [
   {
     title: 'cov19cz',
     description:
@@ -41,5 +41,3 @@ const projectsData = [
     repo: 'https://github.com/rajtslegr/rajtslegr.com',
   },
 ];
-
-export default projectsData;

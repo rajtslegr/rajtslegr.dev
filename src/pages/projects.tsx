@@ -2,7 +2,7 @@ import { GetStaticProps, NextPage } from 'next';
 
 import MetaData from '@/components/meta-data/MetaData';
 import Project from '@/components/project/Project';
-import projectsData from '@/data/projects';
+import { projectsData } from '@/data/projects';
 import { ProjectData } from '@/types/entities';
 
 interface ProjectsProps {

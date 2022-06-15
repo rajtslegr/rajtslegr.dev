@@ -1,5 +1,5 @@
 import { InstagramData } from '@/types/entities';
-import fetcher from '@/utils/fetcher';
+import { fetcher } from '@/utils/fetcher';
 
 export const getRecentPosts = async (): Promise<InstagramData> => {
   const { data } = await fetcher<InstagramData>(

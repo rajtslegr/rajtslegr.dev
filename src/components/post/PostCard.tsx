@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import { PostData } from '@/types/entities';
-import parseDate from '@/utils/date';
+import { parseDate } from '@/utils/date';
 
 interface PostCardProps {
   post: PostData;

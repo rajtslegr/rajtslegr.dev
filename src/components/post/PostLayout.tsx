@@ -2,7 +2,7 @@ import { MDXRemote } from 'next-mdx-remote';
 import Image from 'next/image';
 
 import { ContentPostData } from '@/types/entities';
-import parseDate from '@/utils/date';
+import { parseDate } from '@/utils/date';
 
 import hero from '../../../public/static/images/hero.jpg';
 

@@ -1,9 +1,8 @@
-const fetcher = async <JSON>(
+export const fetcher = async <JSON>(
   input: RequestInfo,
   init?: RequestInit,
 ): Promise<JSON> => {
-  const res = await fetch(input, init);
-  return res.json();
-};
+  const response = await fetch(input, init);
 
-export default fetcher;
+  return response.json();
+};

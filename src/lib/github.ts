@@ -1,5 +1,5 @@
 import { GitHubData } from '@/types/entities';
-import fetcher from '@/utils/fetcher';
+import { fetcher } from '@/utils/fetcher';
 
 export const getRecentRepos = async (): Promise<GitHubData> => {
   return fetcher<GitHubData>(

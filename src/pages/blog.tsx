@@ -32,7 +32,7 @@ const Blog: NextPage<BlogProps> = ({ allPostsData }) => {
           <Input
             aria-label="Search"
             placeholder="Search..."
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(event) => setSearch(event.target.value)}
           />
           <span className="absolute top-[10px] right-3 h-5 w-5 text-gray-500 dark:text-gray-400">
             <SearchIcon />

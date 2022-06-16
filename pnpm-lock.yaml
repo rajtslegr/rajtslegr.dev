@@ -9,7 +9,7 @@ specifiers:
   '@tailwindcss/forms': 0.5.2
   '@tailwindcss/typography': 0.5.2
   '@types/node': 17.0.44
-  '@types/react': 17.0.45
+  '@types/react': 17.0.46
   '@typescript-eslint/eslint-plugin': 5.28.0
   '@typescript-eslint/parser': 5.28.0
   autoprefixer: 10.4.7
@@ -74,7 +74,7 @@ dependencies:
 devDependencies:
   '@babel/core': 7.18.5
   '@types/node': 17.0.44
-  '@types/react': 17.0.45
+  '@types/react': 17.0.46
   '@typescript-eslint/eslint-plugin': 5.28.0_7yumg2qjgbp7maccqlfhx2vudu
   '@typescript-eslint/parser': 5.28.0_ud6rd4xtew5bv4yhvkvu24pzm4
   autoprefixer: 10.4.7_postcss@8.4.14
@@ -414,7 +414,7 @@ packages:
       react: '>=16'
     dependencies:
       '@types/mdx': 2.0.2
-      '@types/react': 17.0.45
+      '@types/react': 17.0.46
       react: 17.0.2
     dev: false
 
@@ -663,8 +663,8 @@ packages:
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
 
-  /@types/react/17.0.45:
-    resolution: {integrity: sha512-YfhQ22Lah2e3CHPsb93tRwIGNiSwkuz1/blk4e6QrWS0jQzCSNbGLtOEYhPg02W0yGTTmpajp7dCTbBAMN3qsg==}
+  /@types/react/17.0.46:
+    resolution: {integrity: sha512-zNAJVEO9dBEQLPa/OuedGfx92/UlD+1rNxSv2qVWUQZ+orEtLUWFgZ08xfyI9TAZLnmWzZDtssAsgtbXT7Ew0g==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2

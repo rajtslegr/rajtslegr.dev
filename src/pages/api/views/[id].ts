@@ -4,7 +4,7 @@ import { prisma } from '@/lib/prisma';
 
 const handler = async (request: NextApiRequest, response: NextApiResponse) => {
   try {
-    const id = request.query.id.toString();
+    const id = request.query.id?.toString();
 
     const newOrUpdatedViews = await prisma.views.upsert({
       where: { id },

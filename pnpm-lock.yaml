@@ -41,8 +41,8 @@ specifiers:
   preact: 10.8.2
   prettier: 2.7.1
   prisma: 3.15.2
-  react: 18.2.0
-  react-dom: 18.2.0
+  react: 17.0.2
+  react-dom: 17.0.2
   reading-time: 1.5.0
   remark-preset-prettier: 1.0.1
   swr: 1.3.0
@@ -50,8 +50,8 @@ specifiers:
   typescript: 4.7.4
 
 dependencies:
-  '@formspree/react': 2.2.5_react@18.2.0
-  '@heroicons/react': 1.0.6_react@18.2.0
+  '@formspree/react': 2.2.5_react@17.0.2
+  '@heroicons/react': 1.0.6_react@17.0.2
   '@panelbear/panelbear-js': 1.3.3
   '@prisma/client': 3.15.2_prisma@3.15.2
   '@tailwindcss/forms': 0.5.2_tailwindcss@3.1.4
@@ -62,14 +62,14 @@ dependencies:
   gray-matter: 4.0.3
   isbot: 3.5.0
   mdx-prism: 0.3.4
-  next: 12.1.6_4cc5zw5azim2bix77d63le72su
-  next-mdx-remote: 4.0.3_biqbaboplfbrettd7655fr4n2y
-  next-themes: 0.2.0_2nrpme5s5xmpdgccbbbdwhosda
+  next: 12.1.6_bw5me6qlxrwkidqrhljke6qy5u
+  next-mdx-remote: 4.0.3_sfoxds7t5ydpegc3knd667wn6m
+  next-themes: 0.2.0_zhtyyhxvjc4vmyivr6fwl32yja
   preact: 10.8.2
-  react: 18.2.0
-  react-dom: 18.2.0_react@18.2.0
+  react: 17.0.2
+  react-dom: 17.0.2_react@17.0.2
   reading-time: 1.5.0
-  swr: 1.3.0_react@18.2.0
+  swr: 1.3.0_react@17.0.2
 
 devDependencies:
   '@babel/core': 7.18.5
@@ -318,23 +318,23 @@ packages:
       - encoding
     dev: false
 
-  /@formspree/react/2.2.5_react@18.2.0:
+  /@formspree/react/2.2.5_react@17.0.2:
     resolution: {integrity: sha512-wEJK6525yaYlQ36EIOfhdTVwmXhUfueEaxaDeHoEMSwac4AUHNfEgVzKNBnizhICyX0Qs5gTiGCvLZRTSGYwQA==}
     peerDependencies:
       react: '>= 17.0.2'
     dependencies:
       '@formspree/core': 2.6.4
-      react: 18.2.0
+      react: 17.0.2
     transitivePeerDependencies:
       - encoding
     dev: false
 
-  /@heroicons/react/1.0.6_react@18.2.0:
+  /@heroicons/react/1.0.6_react@17.0.2:
     resolution: {integrity: sha512-JJCXydOFWMDpCP4q13iEplA503MQO3xLoZiKum+955ZCtHINWnx26CUxVxxFQu/uLb4LW3ge15ZpzIkXKkJ8oQ==}
     peerDependencies:
       react: '>= 16'
     dependencies:
-      react: 18.2.0
+      react: 17.0.2
     dev: false
 
   /@humanwhocodes/config-array/0.9.5:
@@ -408,14 +408,14 @@ packages:
       - supports-color
     dev: false
 
-  /@mdx-js/react/2.1.1_react@18.2.0:
+  /@mdx-js/react/2.1.1_react@17.0.2:
     resolution: {integrity: sha512-7zlZDf5xmWH8I0kFE4DG91COOkxjaW9DX5f1HWztZpFcVua2gJgMYfIkFaDpO/DH/tWi6Mz+OheW4194r15igg==}
     peerDependencies:
       react: '>=16'
     dependencies:
       '@types/mdx': 2.0.2
       '@types/react': 18.0.14
-      react: 18.2.0
+      react: 17.0.2
     dev: false
 
   /@next/env/12.1.6:
@@ -1477,7 +1477,7 @@ packages:
       eslint-plugin-jsx-a11y: 6.6.0_eslint@8.18.0
       eslint-plugin-react: 7.30.1_eslint@8.18.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.18.0
-      next: 12.1.6_4cc5zw5azim2bix77d63le72su
+      next: 12.1.6_bw5me6qlxrwkidqrhljke6qy5u
       typescript: 4.7.4
     transitivePeerDependencies:
       - eslint-import-resolver-webpack
@@ -3119,7 +3119,7 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next-mdx-remote/4.0.3_biqbaboplfbrettd7655fr4n2y:
+  /next-mdx-remote/4.0.3_sfoxds7t5ydpegc3knd667wn6m:
     resolution: {integrity: sha512-jKpZyBN0cOUmfBRId5iGpplWOO79hV2A5qfo17VG4Avn0G5PEs6vR9vf9IngKEw1G4aVqzhCs3j9CEbMFzZoAg==}
     engines: {node: '>=14', npm: '>=7'}
     peerDependencies:
@@ -3127,28 +3127,28 @@ packages:
       react-dom: '>=16.x <=18.x'
     dependencies:
       '@mdx-js/mdx': 2.1.1
-      '@mdx-js/react': 2.1.1_react@18.2.0
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
+      '@mdx-js/react': 2.1.1_react@17.0.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
       vfile: 5.3.4
       vfile-matter: 3.0.1
     transitivePeerDependencies:
       - supports-color
     dev: false
 
-  /next-themes/0.2.0_2nrpme5s5xmpdgccbbbdwhosda:
+  /next-themes/0.2.0_zhtyyhxvjc4vmyivr6fwl32yja:
     resolution: {integrity: sha512-myhpDL4vadBD9YDSHiewqvzorGzB03N84e+3LxCwHRlM/hiBOaW+UsKsQojQAzC7fdcJA0l2ppveXcYaVV+hxQ==}
     peerDependencies:
       next: '*'
       react: '*'
       react-dom: '*'
     dependencies:
-      next: 12.1.6_4cc5zw5azim2bix77d63le72su
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
+      next: 12.1.6_bw5me6qlxrwkidqrhljke6qy5u
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
     dev: false
 
-  /next/12.1.6_4cc5zw5azim2bix77d63le72su:
+  /next/12.1.6_bw5me6qlxrwkidqrhljke6qy5u:
     resolution: {integrity: sha512-cebwKxL3/DhNKfg9tPZDQmbRKjueqykHHbgaoG4VBRH3AHQJ2HO0dbKFiS1hPhe1/qgc2d/hFeadsbPicmLD+A==}
     engines: {node: '>=12.22.0'}
     hasBin: true
@@ -3169,9 +3169,9 @@ packages:
       '@next/env': 12.1.6
       caniuse-lite: 1.0.30001354
       postcss: 8.4.5
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      styled-jsx: 5.0.2_5wvcx74lvxq2lfpc5x4ihgp2jm
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      styled-jsx: 5.0.2_afqnugmud6bgjswh26aoju7tfu
     optionalDependencies:
       '@next/swc-android-arm-eabi': 12.1.6
       '@next/swc-android-arm64': 12.1.6
@@ -3223,7 +3223,6 @@ packages:
   /object-assign/4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
     engines: {node: '>=0.10.0'}
-    dev: true
 
   /object-hash/3.0.0:
     resolution: {integrity: sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==}
@@ -3577,24 +3576,26 @@ packages:
     resolution: {integrity: sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==}
     engines: {node: '>=10'}
 
-  /react-dom/18.2.0_react@18.2.0:
-    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
+  /react-dom/17.0.2_react@17.0.2:
+    resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
     peerDependencies:
-      react: ^18.2.0
+      react: 17.0.2
     dependencies:
       loose-envify: 1.4.0
-      react: 18.2.0
-      scheduler: 0.23.0
+      object-assign: 4.1.1
+      react: 17.0.2
+      scheduler: 0.20.2
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
 
-  /react/18.2.0:
-    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
+  /react/17.0.2:
+    resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
+      object-assign: 4.1.1
 
   /read-cache/1.0.0:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}
@@ -4154,10 +4155,11 @@ packages:
   /safe-buffer/5.1.2:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
 
-  /scheduler/0.23.0:
-    resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
+  /scheduler/0.20.2:
+    resolution: {integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==}
     dependencies:
       loose-envify: 1.4.0
+      object-assign: 4.1.1
 
   /section-matter/1.0.0:
     resolution: {integrity: sha512-vfD3pmTzGpufjScBh50YHKzEu2lxBWhVEHsNGoEXmCmn2hKGfeNLYMzCJpe8cD7gqX7TJluOVpBkAequ6dgMmA==}
@@ -4366,7 +4368,7 @@ packages:
       inline-style-parser: 0.1.1
     dev: false
 
-  /styled-jsx/5.0.2_5wvcx74lvxq2lfpc5x4ihgp2jm:
+  /styled-jsx/5.0.2_afqnugmud6bgjswh26aoju7tfu:
     resolution: {integrity: sha512-LqPQrbBh3egD57NBcHET4qcgshPks+yblyhPlH2GY8oaDgKs8SK4C3dBh3oSJjgzJ3G5t1SYEZGHkP+QEpX9EQ==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
@@ -4380,7 +4382,7 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.18.5
-      react: 18.2.0
+      react: 17.0.2
 
   /supports-color/5.5.0:
     resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==}
@@ -4399,12 +4401,12 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  /swr/1.3.0_react@18.2.0:
+  /swr/1.3.0_react@17.0.2:
     resolution: {integrity: sha512-dkghQrOl2ORX9HYrMDtPa7LTVHJjCTeZoB1dqTbnnEDlSvN8JEKpYIYurDfvbQFUUS8Cg8PceFVZNkW0KNNYPw==}
     peerDependencies:
       react: ^16.11.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      react: 18.2.0
+      react: 17.0.2
     dev: false
 
   /tailwindcss/3.1.4:

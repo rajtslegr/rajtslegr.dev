@@ -1,5 +1,4 @@
 {
-  "commitMessagePrefix": "⬆️ ",
   "extends": ["config:base"],
   "reviewers": ["rajtslegr"]
 }

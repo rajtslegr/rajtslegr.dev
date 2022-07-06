@@ -33,7 +33,6 @@
     "next": "12.2.0",
     "next-mdx-remote": "4.0.3",
     "next-themes": "0.2.0",
-    "preact": "10.9.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "reading-time": "1.5.0",

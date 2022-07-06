@@ -52,8 +52,19 @@ const securityHeaders = [
 
 module.exports = {
   swcMinify: true,
-  images: {
-    domains: ['lastfm.freetls.fastly.net', 'scontent-lga3-1.cdninstagram.com'],
+  experimental: {
+    images: {
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: '*.cdninstagram.com',
+        },
+        {
+          protocol: 'https',
+          hostname: 'lastfm.freetls.fastly.net',
+        },
+      ],
+    },
   },
   async headers() {
     return [

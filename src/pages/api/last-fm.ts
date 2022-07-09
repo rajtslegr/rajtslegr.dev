@@ -7,8 +7,7 @@ const handler = async (
   _request: NextApiRequest,
   response: NextApiResponse<LastFmData>,
 ): Promise<void> => {
-  const recentSongsresponse = await getRecentSongs();
-  const recentSongs: LastFmData = await recentSongsresponse.json();
+  const recentSongs = await getRecentSongs();
 
   return response.send(recentSongs);
 };

@@ -17,11 +17,10 @@ const InstagramItem: React.FC<InstagramItemProps> = ({ index, edge }) => {
     <div
       key={edge.id}
       className={clsx(
-        index === 0 ? 'lg:col-span-2 lg:row-span-2' : '',
-        !isLoaded
-          ? 'rounded-lg bg-gray-200 shadow motion-safe:animate-pulse dark:bg-gray-700'
-          : '',
         'relative pb-1/1 ',
+        index === 0 && 'lg:col-span-2 lg:row-span-2',
+        !isLoaded &&
+          'rounded-lg bg-gray-200 shadow motion-safe:animate-pulse dark:bg-gray-700',
       )}
     >
       <a href={edge.permalink} rel="noopener noreferrer" target="_blank">

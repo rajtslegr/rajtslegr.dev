@@ -38,7 +38,7 @@ const ContactForm: React.FC = () => {
         required
       />
       <ValidationError prefix="Message" field="message" errors={errors} />
-      <Button type="submit" submitting={submitting}>
+      <Button type="submit" isSubmitting={submitting}>
         Submit
       </Button>
     </form>

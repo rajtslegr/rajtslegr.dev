@@ -10,10 +10,9 @@ const incrementView = async (id: string) => {
 
 export const useIncrementView = async (id: string) => {
   useEffect(() => {
-    const isBrowser = typeof window !== undefined;
     const isBot = isbot(navigator.userAgent);
 
-    if (isBrowser && !isBot) {
+    if (!isBot) {
       incrementView(id);
     }
   }, [id]);

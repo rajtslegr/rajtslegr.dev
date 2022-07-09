@@ -15,18 +15,13 @@ const LastFmItem: React.FC<LastFmItemProps> = ({ track }) => {
 
   return (
     <div className="flex h-full flex-col overflow-hidden rounded-lg bg-white p-2 shadow dark:bg-card">
-      <a
-        href="https://last.fm/user/RajceP"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
+      <a href={track.url} rel="noopener noreferrer" target="_blank">
         <div className="flex flex-row space-x-2">
           <div
             className={clsx(
-              !isLoaded
-                ? 'rounded-lg bg-gray-200 shadow motion-safe:animate-pulse dark:bg-gray-700'
-                : '',
               'h-32 w-32 rounded-lg shadow',
+              !isLoaded &&
+                'rounded-lg bg-gray-200 shadow motion-safe:animate-pulse dark:bg-gray-700',
             )}
           >
             <Image

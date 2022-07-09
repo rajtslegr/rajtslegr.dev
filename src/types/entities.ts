@@ -11,6 +11,8 @@ export interface GitHubData {
 
 export interface LastFmTrack {
   '@attr'?: { nowplaying: boolean };
+  mbid: string;
+  url: string;
   name: string;
   date: { uts: string; '#text': string };
   album: { '#text': string };

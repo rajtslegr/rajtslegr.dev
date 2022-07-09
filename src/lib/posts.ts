@@ -15,24 +15,25 @@ export const getSortedPostsData = async (): Promise<PostData[]> => {
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData: PostData[] = [];
 
-  // eslint-disable-next-line no-restricted-syntax
-  for await (const fileName of fileNames) {
-    const id = fileName.replace(/\.mdx$/, '');
+  await Promise.all(
+    fileNames.map(async (fileName: string) => {
+      const id = fileName.replace(/\.mdx$/, '');
 
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
+      const fullPath = path.join(postsDirectory, fileName);
+      const fileContents = fs.readFileSync(fullPath, 'utf8');
 
-    const { content, data } = matter(fileContents);
+      const { content, data } = matter(fileContents);
 
-    const views = await getBlogViews(id);
+      const views = await getBlogViews(id);
 
-    allPostsData.push({
-      id,
-      ...data,
-      readingTime: readingTime(content),
-      views,
-    } as PostData);
-  }
+      allPostsData.push({
+        id,
+        ...data,
+        readingTime: readingTime(content),
+        views,
+      } as PostData);
+    }),
+  );
 
   return allPostsData.sort((a, b) => {
     if (a.date < b.date) {

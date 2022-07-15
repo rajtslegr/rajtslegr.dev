@@ -16,7 +16,7 @@ const ExternalLink: React.FC<ExternalLinkProps> = ({
   <a
     className={
       className ||
-      'font-medium text-gray-500 dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 motion-safe:transition-colors'
+      'font-medium text-gray-500 hover:text-gray-600 motion-safe:transition-colors dark:text-gray-400 dark:hover:text-gray-300'
     }
     target="_blank"
     rel="noopener noreferrer"

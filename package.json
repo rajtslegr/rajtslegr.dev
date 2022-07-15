@@ -12,7 +12,8 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc --noEmit --pretty",
-    "lint": "next lint --fix .",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix .",
     "lint-staged": "lint-staged",
     "postinstall": "husky install",
     "prisma": "node ./scripts/prisma.js"

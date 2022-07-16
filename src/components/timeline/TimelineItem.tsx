@@ -1,5 +1,7 @@
+import { TimelineData } from '@/types/entities';
+
 interface TimelineItemProps {
-  data: { timeRange: string; job: string; description: string };
+  data: TimelineData;
 }
 
 const TimelineItem: React.FC<TimelineItemProps> = ({

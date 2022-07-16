@@ -1,7 +1,5 @@
 import Image from 'next/image';
 
-import ExternalLink from '@/components/navigation/ExternalLink';
-
 import heroImage from '../../../public/static/images/hero.jpg';
 
 const Hero: React.FC = () => (
@@ -14,14 +12,7 @@ const Hero: React.FC = () => (
         <h2 className="mt-2 text-lg text-gray-700 dark:text-gray-300">
           <span className="bg-gradient-to-r from-ukraine-yellow to-ukraine-blue bg-clip-text font-semibold text-transparent">
             Software Developer
-          </span>{' '}
-          at{' '}
-          <ExternalLink
-            href="https://www.economia.cz"
-            className="bg-gradient-to-r from-ukraine-yellow to-ukraine-blue bg-clip-text font-semibold text-transparent"
-          >
-            Economia
-          </ExternalLink>
+          </span>
         </h2>
       </div>
       <div className="mb-12 flex h-32 w-32 overflow-hidden rounded-full bg-gradient-to-br from-ukraine-yellow to-ukraine-blue p-1 shadow sm:mb-0">

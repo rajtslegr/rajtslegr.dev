@@ -71,3 +71,9 @@ export interface ReadTime {
   words: number;
   minutes: number;
 }
+
+export interface TimelineData {
+  timeRange: string;
+  job: string;
+  description?: string;
+}

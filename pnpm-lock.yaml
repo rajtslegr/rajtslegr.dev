@@ -35,7 +35,7 @@ specifiers:
   lint-staged: 13.0.3
   mdx-prism: 0.3.4
   next: 12.2.2
-  next-mdx-remote: 4.0.3
+  next-mdx-remote: 4.1.0
   next-themes: 0.2.0
   postcss: 8.4.14
   prettier: 2.7.1
@@ -62,7 +62,7 @@ dependencies:
   isbot: 3.5.0
   mdx-prism: 0.3.4
   next: 12.2.2_qugu52izettqdqqm5qcjcltcia
-  next-mdx-remote: 4.0.3_biqbaboplfbrettd7655fr4n2y
+  next-mdx-remote: 4.1.0_biqbaboplfbrettd7655fr4n2y
   next-themes: 0.2.0_7gpduzaz4csxytrukenoyuq3te
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -3164,8 +3164,8 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next-mdx-remote/4.0.3_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-jKpZyBN0cOUmfBRId5iGpplWOO79hV2A5qfo17VG4Avn0G5PEs6vR9vf9IngKEw1G4aVqzhCs3j9CEbMFzZoAg==}
+  /next-mdx-remote/4.1.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-ZdL5AFJcEqvInGkYYRKda930D6AJt1GOLX/OXFE/vTwaqV/Mw+l3/njZ4kWqvYSAkl89Z6W7WZrTtN0fd0XwPg==}
     engines: {node: '>=14', npm: '>=7'}
     peerDependencies:
       react: '>=16.x <=18.x'

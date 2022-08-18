@@ -14,7 +14,7 @@ specifiers:
   '@typescript-eslint/parser': 5.33.1
   autoprefixer: 10.4.8
   clsx: 1.2.1
-  date-fns: 2.29.1
+  date-fns: 2.29.2
   dotenv-flow: 3.2.0
   eslint: 8.22.0
   eslint-config-airbnb-base: 15.0.0
@@ -56,7 +56,7 @@ dependencies:
   '@tailwindcss/forms': 0.5.2_tailwindcss@3.1.8
   '@tailwindcss/typography': 0.5.4_tailwindcss@3.1.8
   clsx: 1.2.1
-  date-fns: 2.29.1
+  date-fns: 2.29.2
   fast-glob: 3.2.11
   gray-matter: 4.0.3
   isbot: 3.5.1
@@ -1289,8 +1289,8 @@ packages:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
     dev: true
 
-  /date-fns/2.29.1:
-    resolution: {integrity: sha512-dlLD5rKaKxpFdnjrs+5azHDFOPEu4ANy/LTh04A1DTzMM7qoajmKCBc8pkKRFT41CNzw+4gQh79X5C+Jq27HAw==}
+  /date-fns/2.29.2:
+    resolution: {integrity: sha512-0VNbwmWJDS/G3ySwFSJA3ayhbURMTJLtwM2DTxf9CWondCnh6DTNlO9JgRSq6ibf4eD0lfMJNBxUdEAHHix+bA==}
     engines: {node: '>=0.11'}
     dev: false
 

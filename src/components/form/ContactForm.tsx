@@ -8,9 +8,12 @@ const ContactForm: React.FC = () => {
   const [{ submitting, succeeded, errors }, handleSubmit] = useForm('xyylyppy');
 
   if (succeeded) {
-    <p>
-      Thank you for your message! I&#39;ll get back to you as soon as possible.
-    </p>;
+    return (
+      <p className="mt-24 flex justify-center ">
+        Thank you for your message! I&#39;ll get back to you as soon as
+        possible.
+      </p>
+    );
   }
 
   return (

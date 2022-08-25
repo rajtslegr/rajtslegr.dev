@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { GetStaticProps, NextPage } from 'next';
 
-import { SearchIcon } from '@heroicons/react/solid';
+import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
 
 import Input from '@/components/form/Input';
 import MetaData from '@/components/meta-data/MetaData';
@@ -35,7 +35,7 @@ const Blog: NextPage<BlogProps> = ({ allPostsData }) => {
             onChange={(event) => setSearch(event.target.value)}
           />
           <span className="absolute top-[10px] right-3 h-5 w-5 text-gray-500 dark:text-gray-400">
-            <SearchIcon />
+            <MagnifyingGlassIcon />
           </span>
         </div>
       </div>

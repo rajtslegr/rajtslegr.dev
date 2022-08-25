@@ -1,4 +1,4 @@
-import { HeartIcon } from '@heroicons/react/solid';
+import { HeartIcon } from '@heroicons/react/20/solid';
 import { useTheme } from 'next-themes';
 
 import NextJsIcon from '@/components/icons/NextJsIcon';

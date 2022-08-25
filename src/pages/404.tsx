@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
 
-import { ExclamationCircleIcon } from '@heroicons/react/solid';
+import { ExclamationCircleIcon } from '@heroicons/react/20/solid';
 
 import MetaData from '@/components/meta-data/MetaData';
 

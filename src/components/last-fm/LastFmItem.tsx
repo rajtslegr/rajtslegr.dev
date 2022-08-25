@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { PlayIcon } from '@heroicons/react/solid';
+import { PlayIcon } from '@heroicons/react/20/solid';
 import clsx from 'clsx';
 import Image from 'next/image';
 

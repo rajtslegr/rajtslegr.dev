@@ -1,6 +1,6 @@
 import { MouseEventHandler } from 'react';
 
-import { MenuIcon, XIcon } from '@heroicons/react/solid';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid';
 
 interface NavigationButtonProps {
   handleClick: MouseEventHandler<HTMLButtonElement>;
@@ -16,7 +16,7 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
     onClick={handleClick}
     className="my-3 h-12 w-12 overflow-hidden rounded-lg bg-gray-200 p-3 shadow dark:bg-gray-700 dark:text-gray-100"
   >
-    {showMobileNavigation ? <XIcon /> : <MenuIcon />}
+    {showMobileNavigation ? <XMarkIcon /> : <Bars3Icon />}
   </button>
 );
 

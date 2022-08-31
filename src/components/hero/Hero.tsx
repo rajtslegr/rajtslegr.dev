@@ -10,12 +10,12 @@ const Hero: React.FC = () => (
           Petr Rajtslegr
         </h1>
         <h2 className="mt-2 text-lg text-gray-700 dark:text-gray-300">
-          <span className="bg-gradient-to-r from-ukraine-yellow to-ukraine-blue bg-clip-text font-semibold text-transparent">
+          <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text font-semibold text-transparent">
             Software Developer
           </span>
         </h2>
       </div>
-      <div className="mb-12 flex h-32 w-32 overflow-hidden rounded-full bg-gradient-to-br from-ukraine-yellow to-ukraine-blue p-1 shadow sm:mb-0">
+      <div className="mb-12 flex h-32 w-32 overflow-hidden rounded-full bg-gradient-to-br from-indigo-500 via-blue-300 to-purple-700 p-1 shadow sm:mb-0">
         <div className="overflow-hidden rounded-full">
           <Image src={heroImage} alt="Hero" placeholder="blur" priority></Image>
         </div>

@@ -77,12 +77,6 @@ module.exports = {
         dark: '#000000',
         card: '#171a1e',
       },
-      colors: {
-        ukraine: {
-          blue: '#0057B8',
-          yellow: '#FFD700',
-        },
-      },
       spacing: {
         '1/1': '100%',
       },

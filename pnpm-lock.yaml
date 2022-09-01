@@ -7,7 +7,7 @@ specifiers:
   '@panelbear/panelbear-js': 1.3.3
   '@prisma/client': 4.3.0
   '@tailwindcss/forms': 0.5.2
-  '@tailwindcss/line-clamp': 0.4.0
+  '@tailwindcss/line-clamp': 0.4.1
   '@tailwindcss/typography': 0.5.4
   '@types/node': 18.7.14
   '@types/react': 18.0.18
@@ -72,7 +72,7 @@ dependencies:
 
 devDependencies:
   '@babel/core': 7.18.13
-  '@tailwindcss/line-clamp': 0.4.0_tailwindcss@3.1.8
+  '@tailwindcss/line-clamp': 0.4.1_tailwindcss@3.1.8
   '@types/node': 18.7.14
   '@types/react': 18.0.18
   '@typescript-eslint/eslint-plugin': 5.36.1_lbwfnm54o3pmr3ypeqp3btnera
@@ -643,8 +643,8 @@ packages:
       tailwindcss: 3.1.8_postcss@8.4.16
     dev: false
 
-  /@tailwindcss/line-clamp/0.4.0_tailwindcss@3.1.8:
-    resolution: {integrity: sha512-HQZo6gfx1D0+DU3nWlNLD5iA6Ef4JAXh0LeD8lOGrJwEDBwwJNKQza6WoXhhY1uQrxOuU8ROxV7CqiQV4CoiLw==}
+  /@tailwindcss/line-clamp/0.4.1_tailwindcss@3.1.8:
+    resolution: {integrity: sha512-aeA3Dv4pjxIyIlsxZ9LX7KPI8U7T9oNpV1B2Xax7P57VuJH9Lh+p2H8Ad6+FXP+waR+Gu90Ga3rtkWHKcr3Y/A==}
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:

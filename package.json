@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.18.13",
-    "@tailwindcss/line-clamp": "^0.4.0",
+    "@tailwindcss/line-clamp": "0.4.0",
     "@types/node": "18.7.14",
     "@types/react": "18.0.18",
     "@typescript-eslint/eslint-plugin": "5.36.1",

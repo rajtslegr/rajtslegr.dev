@@ -2,8 +2,8 @@
 // https://securityheaders.com
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' data: *.panelbear.com;
-  child-src 'none';
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.stripe.com data: *.panelbear.com;
+  child-src *.stripe.com;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
   img-src * blob: data:;
   media-src 'none';

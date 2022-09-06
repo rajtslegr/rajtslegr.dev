@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@babel/core': 7.18.13
-  '@formspree/react': 2.3.3
+  '@formspree/react': 2.4.0
   '@heroicons/react': 2.0.10
   '@panelbear/panelbear-js': 1.3.3
   '@prisma/client': 4.3.1
@@ -50,7 +50,7 @@ specifiers:
   typescript: 4.8.2
 
 dependencies:
-  '@formspree/react': 2.3.3_biqbaboplfbrettd7655fr4n2y
+  '@formspree/react': 2.4.0_biqbaboplfbrettd7655fr4n2y
   '@heroicons/react': 2.0.10_react@18.2.0
   '@panelbear/panelbear-js': 1.3.3
   '@prisma/client': 4.3.1_prisma@4.3.1
@@ -261,6 +261,7 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.13.9
+    dev: true
 
   /@babel/template/7.18.10:
     resolution: {integrity: sha512-TI+rCtooWHr3QJ27kJxfjutghu44DLnasDMwpDqCXVTal9RLp3RSYNh4NdBrRP2cQAoG9A8juOQl6P6oZG4JxA==}
@@ -312,29 +313,13 @@ packages:
       - supports-color
     dev: true
 
-  /@formspree/core/2.7.1:
-    resolution: {integrity: sha512-flS/REW5x/0uUAFa+TFhokWn3k0bwr6uM7gx8LWeBDhnrKjl8iKNWHexI6llNAzZUKY5Hlw8ZPMKPR9eLLV4Gw==}
+  /@formspree/react/2.4.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-7zPt9tjX0zEiqJhbz5S35+AFyAz76iIJ5Qu9Mw+25kgO+FfmA1i9APakbJG57UsqEGT/dLX2aQa824A87zUtQw==}
     dependencies:
-      '@stripe/stripe-js': 1.35.0
-      '@types/promise-polyfill': 6.0.4
-      fetch-ponyfill: 6.1.1
-      promise-polyfill: 8.2.3
-    transitivePeerDependencies:
-      - encoding
-    dev: false
-
-  /@formspree/react/2.3.3_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-3LfmFMLWE1Z3SVmfG2IMHN4sR0P5+IQDEAib85GzC5Rx3mmNnWEdXXD8xSyVpTZYNq4SaymP2A6nt+wOF0DqqQ==}
-    peerDependencies:
-      react: '>= 17.0.2'
-    dependencies:
-      '@babel/runtime': 7.18.9
-      '@formspree/core': 2.7.1
       '@stripe/react-stripe-js': 1.10.0_cmmhtrb5rpqnadm4cijrsi2esq
       '@stripe/stripe-js': 1.35.0
-      react: 18.2.0
     transitivePeerDependencies:
-      - encoding
+      - react
       - react-dom
     dev: false
 
@@ -727,10 +712,6 @@ packages:
 
   /@types/parse5/5.0.3:
     resolution: {integrity: sha512-kUNnecmtkunAoQ3CnjmMkzNU/gtxG8guhi+Fk2U/kOpIKjIMKnXGp4IJCgQJrXSgMsWYimYG4TGjz/UzbGEBTw==}
-    dev: false
-
-  /@types/promise-polyfill/6.0.4:
-    resolution: {integrity: sha512-GSCjjH6mDS8jgpT22rEOkZVqZcYj7i9AHJu4ntpvoohEpa0mLAKP/Kz3POMKqABaFsS4TyNHOeoyWpzycddcoQ==}
     dev: false
 
   /@types/prop-types/15.7.5:
@@ -2034,14 +2015,6 @@ packages:
     dependencies:
       reusify: 1.0.4
 
-  /fetch-ponyfill/6.1.1:
-    resolution: {integrity: sha512-rWLgTr5A44/XhvCQPYj0X9Tc+cjUaHofSM4lcwjc9MavD5lkjIhJ+h8JQlavPlTIgDpwhuRozaIykBvX9ItaSA==}
-    dependencies:
-      node-fetch: 2.6.7
-    transitivePeerDependencies:
-      - encoding
-    dev: false
-
   /file-entry-cache/6.0.1:
     resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}
     engines: {node: ^10.12.0 || >=12.0.0}
@@ -3277,18 +3250,6 @@ packages:
       - babel-plugin-macros
     dev: false
 
-  /node-fetch/2.6.7:
-    resolution: {integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==}
-    engines: {node: 4.x || >=6.0.0}
-    peerDependencies:
-      encoding: ^0.1.0
-    peerDependenciesMeta:
-      encoding:
-        optional: true
-    dependencies:
-      whatwg-url: 5.0.0
-    dev: false
-
   /node-releases/2.0.6:
     resolution: {integrity: sha512-PiVXnNuFm5+iYkLBNeq5211hvO38y63T0i2KKh2KnUs3RpzJ+JtODFjkD8yjLwnDkTYF1eKXheUwdssR+NRZdg==}
 
@@ -3617,10 +3578,6 @@ packages:
       clipboard: 2.0.11
     dev: false
 
-  /promise-polyfill/8.2.3:
-    resolution: {integrity: sha512-Og0+jCRQetV84U8wVjMNccfGCnMQ9mGs9Hv78QFe+pSDD3gWTpz0y+1QCuxy5d/vBFuZ3iwP2eycAkvqIMPmWg==}
-    dev: false
-
   /prop-types/15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
     dependencies:
@@ -3695,6 +3652,7 @@ packages:
 
   /regenerator-runtime/0.13.9:
     resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==}
+    dev: true
 
   /regexp.prototype.flags/1.4.3:
     resolution: {integrity: sha512-fjggEOO3slI6Wvgjwflkc4NFRCTZAu5CnNfBd5qOMYhWdn67nJBBu34/TkD++eeFmd8C9r9jfXJ27+nSiRkSUA==}
@@ -4145,10 +4103,6 @@ packages:
     dependencies:
       is-number: 7.0.0
 
-  /tr46/0.0.3:
-    resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
-    dev: false
-
   /trim-lines/3.0.1:
     resolution: {integrity: sha512-kRj8B+YHZCc9kQYdWfJB2/oUl9rA99qbowYYBtr4ui4mZyAQ2JpvVBd/6U2YloATfqBhBTSMhTpgBHtU0Mf3Rg==}
     dev: false
@@ -4414,17 +4368,6 @@ packages:
 
   /web-namespaces/1.1.4:
     resolution: {integrity: sha512-wYxSGajtmoP4WxfejAPIr4l0fVh+jeMXZb08wNc0tMg6xsfZXj3cECqIK0G7ZAqUq0PP8WlMDtaOGVBTAWztNw==}
-    dev: false
-
-  /webidl-conversions/3.0.1:
-    resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
-    dev: false
-
-  /whatwg-url/5.0.0:
-    resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
-    dependencies:
-      tr46: 0.0.3
-      webidl-conversions: 3.0.1
     dev: false
 
   /which-boxed-primitive/1.0.2:

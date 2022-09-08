@@ -37,7 +37,7 @@ specifiers:
   mdx-prism: 0.3.4
   next: 12.2.5
   next-mdx-remote: 4.1.0
-  next-themes: 0.2.0
+  next-themes: 0.2.1
   postcss: 8.4.16
   prettier: 2.7.1
   prisma: 4.3.1
@@ -64,7 +64,7 @@ dependencies:
   mdx-prism: 0.3.4
   next: 12.2.5_vyk55zyolcaieh7zfm7nf7uva4
   next-mdx-remote: 4.1.0_biqbaboplfbrettd7655fr4n2y
-  next-themes: 0.2.0_3xcjr4wz26biff45sz3jtokgje
+  next-themes: 0.2.1_3xcjr4wz26biff45sz3jtokgje
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   reading-time: 1.5.0
@@ -3193,8 +3193,8 @@ packages:
       - supports-color
     dev: false
 
-  /next-themes/0.2.0_3xcjr4wz26biff45sz3jtokgje:
-    resolution: {integrity: sha512-myhpDL4vadBD9YDSHiewqvzorGzB03N84e+3LxCwHRlM/hiBOaW+UsKsQojQAzC7fdcJA0l2ppveXcYaVV+hxQ==}
+  /next-themes/0.2.1_3xcjr4wz26biff45sz3jtokgje:
+    resolution: {integrity: sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==}
     peerDependencies:
       next: '*'
       react: '*'

@@ -27,7 +27,7 @@
     "@tailwindcss/typography": "0.5.7",
     "clsx": "1.2.1",
     "date-fns": "2.29.2",
-    "fast-glob": "3.2.11",
+    "fast-glob": "3.2.12",
     "gray-matter": "4.0.3",
     "isbot": "3.5.3",
     "mdx-prism": "0.3.4",

@@ -32,7 +32,7 @@ specifiers:
   fast-glob: 3.2.12
   gray-matter: 4.0.3
   husky: 8.0.1
-  isbot: 3.6.0
+  isbot: 3.6.1
   lint-staged: 13.0.3
   mdx-prism: 0.3.4
   next: 12.3.1
@@ -60,7 +60,7 @@ dependencies:
   date-fns: 2.29.3
   fast-glob: 3.2.12
   gray-matter: 4.0.3
-  isbot: 3.6.0
+  isbot: 3.6.1
   mdx-prism: 0.3.4
   next: 12.3.1_6tziyx3dehkoeijunclpkpolha
   next-mdx-remote: 4.1.0_biqbaboplfbrettd7655fr4n2y
@@ -2534,8 +2534,8 @@ packages:
       call-bind: 1.0.2
     dev: true
 
-  /isbot/3.6.0:
-    resolution: {integrity: sha512-9t4w/V6Hyzv7CmLXi6fSNuCS8NMMSSx+MHeIWZaMIPeJlcfRgsATouGt0ypkQC+ONjVd0u9Rz1j8HaKVgTqW6w==}
+  /isbot/3.6.1:
+    resolution: {integrity: sha512-e1RmjWns87x60QyiHberWWMJGutL3+Ad0nZ8cz735iDEDDS6ApPfKSFo4EMj0PmMZ0m0ntpWIM0ADdqDFvUJPQ==}
     engines: {node: '>=12'}
     dev: false
 

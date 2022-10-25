@@ -28,7 +28,6 @@ const LastFmItem: React.FC<LastFmItemProps> = ({ track }) => {
               className="rounded-lg"
               src={track.image[2]['#text']}
               alt="Album art"
-              layout="fixed"
               width={128}
               height={128}
               placeholder="blur"

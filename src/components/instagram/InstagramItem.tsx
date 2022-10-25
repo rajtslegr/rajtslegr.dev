@@ -25,14 +25,13 @@ const InstagramItem: React.FC<InstagramItemProps> = ({ index, edge }) => {
     >
       <a href={edge.permalink} rel="noopener noreferrer" target="_blank">
         <Image
-          className="rounded-lg"
+          className="rounded-lg object-cover"
+          fill
           src={edge.thumbnail_url || edge.media_url}
           alt={edge.caption}
           title={edge.caption}
           placeholder="blur"
           blurDataURL={edge.thumbnail_url || edge.media_url}
-          layout="fill"
-          objectFit="cover"
           onLoadingComplete={() => setIsLoaded(true)}
         />
       </a>

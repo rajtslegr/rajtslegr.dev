@@ -51,7 +51,6 @@ const securityHeaders = [
 ];
 
 module.exports = {
-  swcMinify: true,
   images: {
     remotePatterns: [
       {

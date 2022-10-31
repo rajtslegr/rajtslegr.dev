@@ -9,6 +9,7 @@
 /out
 .vercel
 .env.*
+!.env.example
 public/sitemap.xml
 
 # test

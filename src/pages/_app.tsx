@@ -1,3 +1,4 @@
+import { Inter } from '@next/font/google';
 import { ThemeProvider } from 'next-themes';
 import { AppProps } from 'next/app';
 import '@/styles/globals.css';
@@ -5,7 +6,9 @@ import '@/styles/globals.css';
 import Layout from '@/components/layout/Layout';
 import usePanelbear from '@/hooks/usePanelbear';
 
-const App: React.FC<AppProps> = ({ Component, pageProps, router }) => {
+const interVariable = Inter({ subsets: ['latin'] });
+
+const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   usePanelbear('8nvtaxIaLJM');
 
   return (
@@ -15,7 +18,9 @@ const App: React.FC<AppProps> = ({ Component, pageProps, router }) => {
       disableTransitionOnChange={true}
     >
       <Layout>
-        <Component {...pageProps} key={router.route} />
+        <main className={interVariable.className}>
+          <Component {...pageProps} />
+        </main>
       </Layout>
     </ThemeProvider>
   );

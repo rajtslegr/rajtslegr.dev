@@ -17,7 +17,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
     <ThemeProvider defaultTheme="system" attribute="class">
       <Layout>
         <NextNProgress options={{ showSpinner: false }} />
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence mode="wait">
           <main className={interVariable.className}>
             <Component {...pageProps} />
           </main>

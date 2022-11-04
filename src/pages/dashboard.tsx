@@ -4,6 +4,7 @@ import GitHub from '@/components/github/GitHub';
 import Instagram from '@/components/instagram/Instagram';
 import LastFm from '@/components/last-fm/LastFm';
 import MetaData from '@/components/meta-data/MetaData';
+import MotionSection from '@/components/motion/MotionSection';
 import { getRecentRepos } from '@/lib/github';
 import { getRecentPosts } from '@/lib/instagram';
 import { GitHubData, InstagramData } from '@/types/entities';
@@ -19,14 +20,20 @@ const Dashboard: NextPage<DashboardProps> = ({
 }) => (
   <>
     <MetaData title="Petr Rajtslegr | Dashboard" />
-    <div className="">
+    <MotionSection>
       <h1 className="mb-4 text-4xl font-extrabold dark:text-gray-100 md:mb-12">
         Dashboard
       </h1>
+    </MotionSection>
+    <MotionSection delay={0.1}>
       <Instagram data={igData} />
+    </MotionSection>
+    <MotionSection delay={0.2}>
       <LastFm />
+    </MotionSection>
+    <MotionSection delay={0.3}>
       <GitHub data={gitHubData} />
-    </div>
+    </MotionSection>
   </>
 );
 

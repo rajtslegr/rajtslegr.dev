@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+#nprogress .bar {
+  @apply first:bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500;
+}
+
 .header {
   @apply bg-opacity-50 backdrop-blur dark:bg-dark dark:bg-opacity-50;
 }

@@ -17,24 +17,20 @@ const LastFmItem: React.FC<LastFmItemProps> = ({ track }) => {
     <div className="flex h-full flex-col overflow-hidden rounded-lg bg-white p-2 shadow dark:bg-card">
       <a href={track.url} rel="noopener noreferrer" target="_blank">
         <div className="flex flex-row space-x-2">
-          <div
+          <Image
             className={clsx(
-              'h-32 w-32 rounded-lg shadow',
+              'h-24 w-24 rounded-lg shadow sm:h-32 sm:w-32',
               !isLoaded &&
                 'rounded-lg bg-gray-200 shadow motion-safe:animate-pulse dark:bg-gray-700',
             )}
-          >
-            <Image
-              className="rounded-lg"
-              src={track.image[2]['#text']}
-              alt="Album art"
-              width={128}
-              height={128}
-              placeholder="blur"
-              blurDataURL={track.image[0]['#text']}
-              onLoadingComplete={() => setIsLoaded(true)}
-            />
-          </div>
+            src={track.image[2]['#text']}
+            alt="Album art"
+            width={128}
+            height={128}
+            placeholder="blur"
+            blurDataURL={track.image[0]['#text']}
+            onLoadingComplete={() => setIsLoaded(true)}
+          />
           <div className="flex min-h-full flex-col overflow-hidden">
             <h3
               className="text-lg font-semibold line-clamp-3 dark:text-gray-100"

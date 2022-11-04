@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
   return (
     <div className="flex flex-col items-center space-y-4 p-4 sm:space-y-8 lg:pb-12">
       <div className="flex w-full max-w-4xl flex-col border-t border-gray-200 p-4 dark:border-gray-200/20 sm:p-6">
-        <div className="flex flex-row justify-between sm:justify-evenly">
+        <div className="flex flex-row justify-around sm:justify-evenly">
           <div className="flex flex-col space-y-2">
             <NavLink href="/">Home</NavLink>
             <NavLink href="/dashboard">Dashboard</NavLink>
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
           <HeartIcon className="h-5 w-5" />
           &nbsp;and
           {theme && isMounted && (
-            <ExternalLink href="https://nextjs.com" ariaLabel="Next.js">
+            <ExternalLink href="https://nextjs.org" ariaLabel="Next.js">
               <NextJsIcon theme={theme} />
             </ExternalLink>
           )}

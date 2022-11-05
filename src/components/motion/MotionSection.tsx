@@ -19,7 +19,7 @@ const MotionSection: React.FC<MotionSectionProps> = ({
         opacity: shouldReduceMotion ? 1 : 0,
       }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, delay }}
+      transition={{ duration: 0.8, delay }}
     >
       {children}
     </motion.div>

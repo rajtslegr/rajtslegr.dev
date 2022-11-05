@@ -3,14 +3,14 @@ const LastFmSkeleton: React.FC = () => (
     {new Array(10).fill(undefined).map((_value, index) => (
       <div
         key={index}
-        className="flex h-36 flex-col rounded bg-white p-2 shadow dark:bg-card"
+        className="flex flex-col p-2 h-36 bg-white dark:bg-card rounded shadow"
       >
         <div className="flex flex-row space-x-2">
-          <div className="h-32 w-32 rounded bg-gray-200 shadow motion-safe:animate-pulse dark:bg-gray-700"></div>
-          <div className="flex w-3/5 flex-col justify-between">
-            <div className="mb-4 h-6 w-1/3 rounded-sm bg-gray-200 motion-safe:animate-pulse dark:bg-gray-700"></div>
-            <div className="h-4 w-3/5 rounded-sm bg-gray-200 motion-safe:animate-pulse dark:bg-gray-700"></div>
-            <div className="h-4 w-3/5 rounded-sm bg-gray-200 motion-safe:animate-pulse dark:bg-gray-700"></div>
+          <div className="w-32 h-32 bg-gray-200 dark:bg-gray-700 rounded shadow motion-safe:animate-pulse"></div>
+          <div className="flex flex-col justify-between w-3/5">
+            <div className="mb-4 w-1/3 h-6 bg-gray-200 dark:bg-gray-700 rounded-sm motion-safe:animate-pulse"></div>
+            <div className="w-3/5 h-4 bg-gray-200 dark:bg-gray-700 rounded-sm motion-safe:animate-pulse"></div>
+            <div className="w-3/5 h-4 bg-gray-200 dark:bg-gray-700 rounded-sm motion-safe:animate-pulse"></div>
           </div>
         </div>
       </div>

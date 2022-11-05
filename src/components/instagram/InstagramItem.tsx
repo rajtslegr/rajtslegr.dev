@@ -20,12 +20,12 @@ const InstagramItem: React.FC<InstagramItemProps> = ({ index, edge }) => {
         'relative pb-1/1 ',
         index === 0 && 'lg:col-span-2 lg:row-span-2',
         !isLoaded &&
-          'rounded-lg bg-gray-200 shadow motion-safe:animate-pulse dark:bg-gray-700',
+          'bg-gray-200 dark:bg-gray-700 rounded-lg shadow motion-safe:animate-pulse',
       )}
     >
       <a href={edge.permalink} rel="noopener noreferrer" target="_blank">
         <Image
-          className="rounded-lg object-cover"
+          className="object-cover rounded-lg"
           fill
           src={edge.thumbnail_url || edge.media_url}
           alt={edge.caption}

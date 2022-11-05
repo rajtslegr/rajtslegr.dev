@@ -32,13 +32,13 @@ const Blog: NextPage<BlogProps> = ({ allPostsData }) => {
       </MotionSection>
       <MotionSection delay={0.1}>
         <div>
-          <div className="relative mb-4 flex flex-col md:w-1/3">
+          <div className="flex relative flex-col mb-4 md:w-1/3">
             <Input
               aria-label="Search"
               placeholder="Search..."
               onChange={(event) => setSearch(event.target.value)}
             />
-            <span className="absolute top-[10px] right-3 h-5 w-5 text-gray-500 dark:text-gray-400">
+            <span className="absolute top-[10px] right-3 w-5 h-5 text-gray-500 dark:text-gray-400">
               <MagnifyingGlassIcon />
             </span>
           </div>

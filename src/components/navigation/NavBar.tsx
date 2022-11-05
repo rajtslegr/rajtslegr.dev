@@ -28,7 +28,7 @@ const NavBar: React.FC<NavBarProps> = ({
         onTop && 'shadow',
       )}
     >
-      <div className="container mx-auto flex h-full max-w-4xl items-center justify-between px-4 sm:pl-2">
+      <div className="container flex justify-between items-center px-4 mx-auto max-w-4xl h-full sm:pl-2">
         <div className="sm:hidden">
           <NavigationButton
             showMobileNavigation={showMobileNavigation}

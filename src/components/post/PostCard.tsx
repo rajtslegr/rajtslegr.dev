@@ -11,7 +11,7 @@ const PostCard: React.FC<PostCardProps> = ({
   post: { id, date, title, description, readingTime, views },
 }) => (
   <Link href={`/blog/${id}`} passHref>
-    <div className="flex cursor-pointer flex-col space-y-2 rounded-lg bg-white p-4 shadow dark:bg-card sm:h-64 lg:h-48">
+    <div className="flex flex-col p-4 space-y-2 bg-white dark:bg-card rounded-lg shadow cursor-pointer sm:h-64 lg:h-48">
       <h2 className="text-xl font-semibold dark:text-gray-100">{title}</h2>
       <p className="text-gray-700 dark:text-gray-300">{description}</p>
       <div className="flex flex-1"></div>

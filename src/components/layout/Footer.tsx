@@ -31,9 +31,13 @@ const Footer: React.FC = () => {
             <ExternalLink href="https://twitter.com/RajceP">
               Twitter
             </ExternalLink>
+            <ExternalLink href="https://mastodon.social/@rajce">
+              Mastodon
+            </ExternalLink>
             <ExternalLink href="https://www.instagram.com/rajce">
               Instagram
             </ExternalLink>
+            <ExternalLink href="https://www.vero.co/rajce">Vero</ExternalLink>
           </div>
         </div>
       </div>

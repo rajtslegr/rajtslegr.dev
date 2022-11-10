@@ -34,7 +34,7 @@ specifiers:
   framer-motion: 7.6.5
   gray-matter: 4.0.3
   husky: 8.0.2
-  isbot: 3.6.3
+  isbot: 3.6.5
   lint-staged: 13.0.3
   mdx-prism: 0.3.4
   next: 13.0.2
@@ -65,7 +65,7 @@ dependencies:
   fast-glob: 3.2.12
   framer-motion: 7.6.5_biqbaboplfbrettd7655fr4n2y
   gray-matter: 4.0.3
-  isbot: 3.6.3
+  isbot: 3.6.5
   mdx-prism: 0.3.4
   next: 13.0.2_mqvh5p7ejg4taogoj6tpk3gd5a
   next-mdx-remote: 4.2.0_biqbaboplfbrettd7655fr4n2y
@@ -2659,8 +2659,8 @@ packages:
       call-bind: 1.0.2
     dev: true
 
-  /isbot/3.6.3:
-    resolution: {integrity: sha512-B2AssIfWE+nxgt60ruROLWVyeGR1htfO+MU66+Pn0YycAxC+NyWyqcgKaqLF9dGPzklGp4bgvarDqS8vnaaonw==}
+  /isbot/3.6.5:
+    resolution: {integrity: sha512-BchONELXt6yMad++BwGpa0oQxo/uD0keL7N15cYVf0A1oMIoNQ79OqeYdPMFWDrNhCqCbRuw9Y9F3QBjvAxZ5g==}
     engines: {node: '>=12'}
     dev: false
 

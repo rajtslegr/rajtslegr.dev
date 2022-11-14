@@ -26,7 +26,7 @@ const ThemeButton: React.FC<ThemeButtonProps> = ({ handleClick }) => {
     <button
       aria-label="Toggle Dark Mode"
       type="button"
-      className="overflow-hidden my-3 w-12 h-12 dark:text-gray-100 bg-gray-200 dark:bg-gray-700 rounded-lg shadow"
+      className="my-3 h-12 w-12 overflow-hidden rounded-lg bg-gray-200 shadow dark:bg-gray-700 dark:text-gray-100"
       onClick={handleClick}
     >
       <motion.div

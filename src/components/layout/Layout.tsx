@@ -41,7 +41,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         handleClick={mobileNavigationHandler}
       />
       {showMobileNavigation && <MobileNavigation />}
-      <div className="flex-auto px-4 my-8 mx-auto max-w-4xl md:my-12">
+      <div className="my-8 mx-auto max-w-4xl flex-auto px-4 md:my-12">
         {children}
       </div>
       {!showMobileNavigation && <Footer />}

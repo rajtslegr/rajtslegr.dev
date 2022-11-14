@@ -9,7 +9,7 @@ const ContactForm: React.FC = () => {
 
   if (succeeded) {
     return (
-      <p className="flex justify-center mt-24">
+      <p className="mt-24 flex justify-center">
         Thank you for your message! I&#39;ll get back to you as soon as
         possible.
       </p>
@@ -18,7 +18,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <form
-      className="flex flex-col justify-center items-center space-y-4 w-full"
+      className="flex w-full flex-col items-center justify-center space-y-4"
       onSubmit={handleSubmit}
     >
       <p className="self-start text-xl font-bold dark:text-gray-100">

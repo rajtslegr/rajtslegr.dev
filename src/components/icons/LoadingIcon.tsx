@@ -1,6 +1,6 @@
 const LoadingIcon: React.FC = () => (
   <svg
-    className="w-5 h-5 motion-safe:animate-spin"
+    className="h-5 w-5 motion-safe:animate-spin"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"

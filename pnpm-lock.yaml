@@ -31,7 +31,7 @@ specifiers:
   eslint-plugin-tailwindcss: 3.7.0
   eslint-plugin-unused-imports: 2.0.0
   fast-glob: 3.2.12
-  framer-motion: 7.6.10
+  framer-motion: 7.6.12
   gray-matter: 4.0.3
   husky: 8.0.2
   isbot: 3.6.5
@@ -63,7 +63,7 @@ dependencies:
   clsx: 1.2.1
   date-fns: 2.29.3
   fast-glob: 3.2.12
-  framer-motion: 7.6.10_biqbaboplfbrettd7655fr4n2y
+  framer-motion: 7.6.12_biqbaboplfbrettd7655fr4n2y
   gray-matter: 4.0.3
   isbot: 3.6.5
   mdx-prism: 0.3.4
@@ -2215,8 +2215,8 @@ packages:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
     dev: true
 
-  /framer-motion/7.6.10_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-XAzeEIezmK1RZ/YPn4rviOCOLhIUta5+KSsRv4VZ9dDnnzhp8sq676AKKR2K5Kvuj6JU4wL3QEXC20yVX0XjvA==}
+  /framer-motion/7.6.12_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-Xm1jPB91v6vIr9b+V3q6c96sPzU1jWdvN+Mv4CvIAY23ZIezGNIWxWNGIWj1We0CZ8SSOQkttz8921M10TQjXg==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0

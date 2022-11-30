@@ -28,7 +28,7 @@ specifiers:
   eslint-plugin-prettier: 4.2.1
   eslint-plugin-react: 7.31.11
   eslint-plugin-react-hooks: 4.6.0
-  eslint-plugin-tailwindcss: 3.7.0
+  eslint-plugin-tailwindcss: 3.7.1
   eslint-plugin-unused-imports: 2.0.0
   fast-glob: 3.2.12
   framer-motion: 7.6.15
@@ -95,7 +95,7 @@ devDependencies:
   eslint-plugin-prettier: 4.2.1_cwlo2dingkvfydnaculr42urve
   eslint-plugin-react: 7.31.11_eslint@8.28.0
   eslint-plugin-react-hooks: 4.6.0_eslint@8.28.0
-  eslint-plugin-tailwindcss: 3.7.0
+  eslint-plugin-tailwindcss: 3.7.1
   eslint-plugin-unused-imports: 2.0.0_5am2datodjm2qi4eijrjrnoz54
   husky: 8.0.2
   lint-staged: 13.0.4
@@ -1925,8 +1925,8 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: true
 
-  /eslint-plugin-tailwindcss/3.7.0:
-    resolution: {integrity: sha512-e/Pe2jr0vbvNnDXylHoubDGwSh4Z5a4ZhZrkUKHU4MYdSUpjFSofGoMwBSU3d1TybTbo89ENCEWnl1BVAM1iuQ==}
+  /eslint-plugin-tailwindcss/3.7.1:
+    resolution: {integrity: sha512-MCPpVp5VvNYuRz1JYN9sN0r/cgAt3SfIlKbvYjVij+T/8r0z4U8nPY/c07vm+dLYb7mBv9N9LLIR4l9pLHSJaQ==}
     engines: {node: '>=12.13.0'}
     dependencies:
       fast-glob: 3.2.12

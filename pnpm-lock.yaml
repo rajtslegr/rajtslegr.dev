@@ -31,7 +31,7 @@ specifiers:
   eslint-plugin-tailwindcss: 3.7.1
   eslint-plugin-unused-imports: 2.0.0
   fast-glob: 3.2.12
-  framer-motion: 7.6.17
+  framer-motion: 7.6.18
   gray-matter: 4.0.3
   husky: 8.0.2
   isbot: 3.6.5
@@ -63,7 +63,7 @@ dependencies:
   clsx: 1.2.1
   date-fns: 2.29.3
   fast-glob: 3.2.12
-  framer-motion: 7.6.17_biqbaboplfbrettd7655fr4n2y
+  framer-motion: 7.6.18_biqbaboplfbrettd7655fr4n2y
   gray-matter: 4.0.3
   isbot: 3.6.5
   mdx-prism: 0.3.4
@@ -2215,8 +2215,8 @@ packages:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
     dev: true
 
-  /framer-motion/7.6.17_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-NmGBjKMCWlTDT156zR8G+jcpiM8OXbvmlgf1CPsVNk5x2RqJ9tieBKMNr6/OjJhirwyOp9s8bt8TsfrrCBIsEw==}
+  /framer-motion/7.6.18_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-+njLqmMZBqf+GpIMRkuC7s9A9KrvOfMXm+B/yscKG+/SKAA+qdQFl/3ACU2tAhN7UFau1HuB/vBa/jrWBKVvDg==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
@@ -2224,7 +2224,6 @@ packages:
       '@motionone/dom': 10.13.1
       framesync: 6.1.2
       hey-listen: 1.0.8
-      popmotion: 11.0.5
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       style-value-types: 5.1.2
@@ -3765,15 +3764,6 @@ packages:
   /pify/2.3.0:
     resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
     engines: {node: '>=0.10.0'}
-
-  /popmotion/11.0.5:
-    resolution: {integrity: sha512-la8gPM1WYeFznb/JqF4GiTkRRPZsfaj2+kCxqQgr2MJylMmIKUwBfWW8Wa5fml/8gmtlD5yI01MP1QCZPWmppA==}
-    dependencies:
-      framesync: 6.1.2
-      hey-listen: 1.0.8
-      style-value-types: 5.1.2
-      tslib: 2.4.0
-    dev: false
 
   /postcss-import/14.1.0_postcss@8.4.19:
     resolution: {integrity: sha512-flwI+Vgm4SElObFVPpTIT7SU7R3qk2L7PyduMcokiaVKuWv9d/U+Gm/QAd8NDLuykTWTkcrjOeD2Pp1rMeBTGw==}

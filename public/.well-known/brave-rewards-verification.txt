@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: rajtslegr.com
-Token: fa9fbc4630e314f00dee939b3c8c1fb2cf0e2f5ba4f37a7af793ca283e820c31

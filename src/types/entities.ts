@@ -36,15 +36,6 @@ export interface InstagramData {
   data: InstagramDataEdge[];
 }
 
-export interface ProjectData {
-  title: string;
-  description: string;
-  build: string[];
-  image: string;
-  live?: string;
-  repo?: string;
-}
-
 export interface PostData {
   id: string;
   title: string;

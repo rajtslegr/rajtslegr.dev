@@ -17,7 +17,6 @@ const Footer: React.FC = () => {
           <div className="flex flex-col space-y-2">
             <NavLink href="/">Home</NavLink>
             <NavLink href="/dashboard">Dashboard</NavLink>
-            <NavLink href="/projects">Projects</NavLink>
             <NavLink href="/blog">Blog</NavLink>
             <NavLink href="/contact">Contact</NavLink>
           </div>
@@ -31,6 +30,8 @@ const Footer: React.FC = () => {
             <ExternalLink href="https://twitter.com/RajceP">
               Twitter
             </ExternalLink>
+          </div>
+          <div className="flex flex-col space-y-2">
             <ExternalLink href="https://mastodon.social/@rajce">
               Mastodon
             </ExternalLink>

@@ -16,16 +16,11 @@ const MobileNavigation: React.FC = () => (
         </NavLink>
       </MotionSection>
       <MotionSection delay={0.2}>
-        <NavLink href="/projects" isMobileNavigation>
-          Projects
-        </NavLink>
-      </MotionSection>
-      <MotionSection delay={0.3}>
         <NavLink href="/blog" isMobileNavigation>
           Blog
         </NavLink>
       </MotionSection>
-      <MotionSection delay={0.4}>
+      <MotionSection delay={0.3}>
         <NavLink href="/contact" isMobileNavigation>
           Contact
         </NavLink>

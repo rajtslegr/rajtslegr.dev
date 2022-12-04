@@ -35,7 +35,7 @@ specifiers:
   gray-matter: 4.0.3
   husky: 8.0.2
   isbot: 3.6.5
-  lint-staged: 13.0.4
+  lint-staged: 13.1.0
   mdx-prism: 0.3.4
   next: 13.0.6
   next-mdx-remote: 4.2.0
@@ -98,7 +98,7 @@ devDependencies:
   eslint-plugin-tailwindcss: 3.7.1
   eslint-plugin-unused-imports: 2.0.0_sklehmazzizroldsy2klx2uism
   husky: 8.0.2
-  lint-staged: 13.0.4
+  lint-staged: 13.1.0
   postcss: 8.4.19
   prettier: 2.8.0
   prisma: 4.7.1
@@ -2880,8 +2880,8 @@ packages:
     resolution: {integrity: sha512-9JROoBW7pobfsx+Sq2JsASvCo6Pfo6WWoUW79HuB1BCoBXD4PLWJPqDF6fNj67pqBYTbAHkE57M1kS/+L1neOg==}
     engines: {node: '>=10'}
 
-  /lint-staged/13.0.4:
-    resolution: {integrity: sha512-HxlHCXoYRsq9QCby5wFozmZW00hMs/9e3l+/dz6Qr8Kle4UH0kJTdABAbqhzG+3pcG6QjL9kz7NgGBfph+a5dw==}
+  /lint-staged/13.1.0:
+    resolution: {integrity: sha512-pn/sR8IrcF/T0vpWLilih8jmVouMlxqXxKuAojmbiGX5n/gDnz+abdPptlj0vYnbfE0SQNl3CY/HwtM0+yfOVQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:

@@ -31,7 +31,7 @@ specifiers:
   eslint-plugin-tailwindcss: 3.7.1
   eslint-plugin-unused-imports: 2.0.0
   fast-glob: 3.2.12
-  framer-motion: 7.6.19
+  framer-motion: 7.7.2
   gray-matter: 4.0.3
   husky: 8.0.2
   isbot: 3.6.5
@@ -63,7 +63,7 @@ dependencies:
   clsx: 1.2.1
   date-fns: 2.29.3
   fast-glob: 3.2.12
-  framer-motion: 7.6.19_biqbaboplfbrettd7655fr4n2y
+  framer-motion: 7.7.2_biqbaboplfbrettd7655fr4n2y
   gray-matter: 4.0.3
   isbot: 3.6.5
   mdx-prism: 0.3.4
@@ -2219,27 +2219,19 @@ packages:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
     dev: true
 
-  /framer-motion/7.6.19_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-U+ogwGwNw6Y+pdq6GZB5xvnvLDlq3FTmcKaG5MCUjXuqRLrjKbKTqN4iwZISv3ajwUfgNHM6+tu31LRbYfF9YQ==}
+  /framer-motion/7.7.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-SDq4pansh+UxMtHuApQmyXbbb/oQu3LwhPByiGKXLrKRHxmHiq7VML0/mnFQQRIpWiYR/+wM4q8foFzeoaz8eg==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
     dependencies:
       '@motionone/dom': 10.13.1
-      framesync: 6.1.2
       hey-listen: 1.0.8
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      style-value-types: 5.1.2
       tslib: 2.4.0
     optionalDependencies:
       '@emotion/is-prop-valid': 0.8.8
-    dev: false
-
-  /framesync/6.1.2:
-    resolution: {integrity: sha512-jBTqhX6KaQVDyus8muwZbBeGGP0XgujBRbQ7gM7BRdS3CadCZIHiawyzYLnafYcvZIh5j8WE7cxZKFn7dXhu9g==}
-    dependencies:
-      tslib: 2.4.0
     dev: false
 
   /fs.realpath/1.0.0:
@@ -4312,13 +4304,6 @@ packages:
     resolution: {integrity: sha512-CzFnRRXhzWIdItT3OmF8SQfWyahHhjq3HwcMNCNLn+N7klOOqPjMeG/4JSu77D7ypZdGvSzvkrbyeTMizz2VrA==}
     dependencies:
       inline-style-parser: 0.1.1
-    dev: false
-
-  /style-value-types/5.1.2:
-    resolution: {integrity: sha512-Vs9fNreYF9j6W2VvuDTP7kepALi7sk0xtk2Tu8Yxi9UoajJdEVpNpCov0HsLTqXvNGKX+Uv09pkozVITi1jf3Q==}
-    dependencies:
-      hey-listen: 1.0.8
-      tslib: 2.4.0
     dev: false
 
   /styled-jsx/5.1.0_zavbqmrropwrojvx6ojaa4s7im:

@@ -1,8 +1,8 @@
 import { Inter } from '@next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import { AnimatePresence } from 'framer-motion';
-import { ThemeProvider } from 'next-themes';
 import { AppProps } from 'next/app';
+import { ThemeProvider } from 'next-themes';
 import '@/styles/globals.css';
 import NextNProgress from 'nextjs-progressbar';
 

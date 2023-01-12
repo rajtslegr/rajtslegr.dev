@@ -1,5 +1,5 @@
-import { MDXRemote } from 'next-mdx-remote';
 import Image from 'next/image';
+import { MDXRemote } from 'next-mdx-remote';
 
 import { ContentPostData } from '@/types/entities';
 import { parseDate } from '@/utils/date';

@@ -1,8 +1,8 @@
 import { MouseEventHandler } from 'react';
 
 import clsx from 'clsx';
-import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router';
+import { useTheme } from 'next-themes';
 
 import ThemeButton from '@/components/buttons/ThemeButton';
 import ExternalLink from '@/components/navigation/ExternalLink';

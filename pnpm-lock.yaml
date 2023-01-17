@@ -26,7 +26,7 @@ specifiers:
   eslint-plugin-import: 2.27.5
   eslint-plugin-jsx-a11y: 6.7.1
   eslint-plugin-prettier: 4.2.1
-  eslint-plugin-react: 7.32.0
+  eslint-plugin-react: 7.32.1
   eslint-plugin-react-hooks: 4.6.0
   eslint-plugin-tailwindcss: 3.8.0
   eslint-plugin-unused-imports: 2.0.0
@@ -93,7 +93,7 @@ devDependencies:
   eslint-plugin-import: 2.27.5_2l6piu6guil2f63lj3qmhzbnn4
   eslint-plugin-jsx-a11y: 6.7.1_eslint@8.32.0
   eslint-plugin-prettier: 4.2.1_cn4lalcyadplruoxa5mhp7j3dq
-  eslint-plugin-react: 7.32.0_eslint@8.32.0
+  eslint-plugin-react: 7.32.1_eslint@8.32.0
   eslint-plugin-react-hooks: 4.6.0_eslint@8.32.0
   eslint-plugin-tailwindcss: 3.8.0
   eslint-plugin-unused-imports: 2.0.0_virssgr5omih4ylyae2gddvmxu
@@ -1696,7 +1696,7 @@ packages:
       eslint-import-resolver-typescript: 3.5.2_ps7hf4l2dvbuxvtusmrfhmzsba
       eslint-plugin-import: 2.27.5_anoc6aiadrrjoh5wuzips7vvmq
       eslint-plugin-jsx-a11y: 6.7.1_eslint@8.32.0
-      eslint-plugin-react: 7.32.0_eslint@8.32.0
+      eslint-plugin-react: 7.32.1_eslint@8.32.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.32.0
       typescript: 4.9.4
     transitivePeerDependencies:
@@ -1919,8 +1919,8 @@ packages:
       eslint: 8.32.0
     dev: true
 
-  /eslint-plugin-react/7.32.0_eslint@8.32.0:
-    resolution: {integrity: sha512-vSBi1+SrPiLZCGvxpiZIa28fMEUaMjXtCplrvxcIxGzmFiYdsXQDwInEjuv5/i/2CTTxbkS87tE8lsQ0Qxinbw==}
+  /eslint-plugin-react/7.32.1_eslint@8.32.0:
+    resolution: {integrity: sha512-vOjdgyd0ZHBXNsmvU+785xY8Bfe57EFbTYYk8XrROzWpr9QBvpjITvAXt9xqcE6+8cjR/g1+mfumPToxsl1www==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8

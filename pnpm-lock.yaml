@@ -28,7 +28,7 @@ specifiers:
   eslint-plugin-prettier: 4.2.1
   eslint-plugin-react: 7.32.1
   eslint-plugin-react-hooks: 4.6.0
-  eslint-plugin-tailwindcss: 3.8.0
+  eslint-plugin-tailwindcss: 3.8.1
   eslint-plugin-unused-imports: 2.0.0
   fast-glob: 3.2.12
   framer-motion: 8.5.0
@@ -95,7 +95,7 @@ devDependencies:
   eslint-plugin-prettier: 4.2.1_cn4lalcyadplruoxa5mhp7j3dq
   eslint-plugin-react: 7.32.1_eslint@8.32.0
   eslint-plugin-react-hooks: 4.6.0_eslint@8.32.0
-  eslint-plugin-tailwindcss: 3.8.0
+  eslint-plugin-tailwindcss: 3.8.1_2ymqeubn2siglhmhtypttwi5pi
   eslint-plugin-unused-imports: 2.0.0_virssgr5omih4ylyae2gddvmxu
   husky: 8.0.3
   lint-staged: 13.1.0
@@ -1943,15 +1943,18 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: true
 
-  /eslint-plugin-tailwindcss/3.8.0:
-    resolution: {integrity: sha512-Lsyncgp/eXZriAEUK9zfGHOH+9iQplygHiOuGY8SFFHKIeT0BYjyST/ownHF8UPa1TEh+jJPkdE2vlV3778C3w==}
+  /eslint-plugin-tailwindcss/3.8.1_2ymqeubn2siglhmhtypttwi5pi:
+    resolution: {integrity: sha512-b01CBIT6TrK5IhrwmjDkuLzl2di5yXUmL8RyEZV710sGtw2zesr2csyGOc7e/IuV6tb8MfuHeksgMvaBEl9qvA==}
     engines: {node: '>=12.13.0'}
+    peerDependencies:
+      '@angular-eslint/template-parser': ^15.2.0
+      '@typescript-eslint/parser': ^5.48.2
+      tailwindcss: ^3.2.2
     dependencies:
+      '@typescript-eslint/parser': 5.48.2_7uibuqfxkfaozanbtbziikiqje
       fast-glob: 3.2.12
       postcss: 8.4.21
       tailwindcss: 3.2.4_postcss@8.4.21
-    transitivePeerDependencies:
-      - ts-node
     dev: true
 
   /eslint-plugin-unused-imports/2.0.0_virssgr5omih4ylyae2gddvmxu:

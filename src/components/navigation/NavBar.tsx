@@ -34,7 +34,6 @@ const NavBar: React.FC<NavBarProps> = ({
         onTop && 'shadow',
       )}
     >
-      {isBlogPostRoute && <ProgressBar />}
       <div className="container mx-auto flex h-full max-w-4xl items-center justify-between px-4 sm:pl-2">
         <div className="sm:hidden">
           <NavigationButton
@@ -65,6 +64,7 @@ const NavBar: React.FC<NavBarProps> = ({
           }
         />
       </div>
+      {isBlogPostRoute && <ProgressBar />}
     </nav>
   );
 };

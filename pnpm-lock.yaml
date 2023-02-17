@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@babel/core': 7.20.12
   '@formspree/react': 2.4.1
-  '@heroicons/react': 2.0.15
+  '@heroicons/react': 2.0.16
   '@next/font': 13.1.6
   '@prisma/client': 4.10.1
   '@tailwindcss/forms': 0.5.3
@@ -54,7 +54,7 @@ specifiers:
 
 dependencies:
   '@formspree/react': 2.4.1_biqbaboplfbrettd7655fr4n2y
-  '@heroicons/react': 2.0.15_react@18.2.0
+  '@heroicons/react': 2.0.16_react@18.2.0
   '@next/font': 13.1.6
   '@prisma/client': 4.10.1_prisma@4.10.1
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.7
@@ -335,8 +335,8 @@ packages:
       - react-dom
     dev: false
 
-  /@heroicons/react/2.0.15_react@18.2.0:
-    resolution: {integrity: sha512-CZ2dGWgWG3/z5LEoD5D3MEr1syn45JM/OB2aDpw531Ryecgkz2V7TWQ808P0lva7zP003PVW6WlwbofsYyga3A==}
+  /@heroicons/react/2.0.16_react@18.2.0:
+    resolution: {integrity: sha512-x89rFxH3SRdYaA+JCXwfe+RkE1SFTo9GcOkZettHer71Y3T7V+ogKmfw5CjTazgS3d0ClJ7p1NA+SP7VQLQcLw==}
     peerDependencies:
       react: '>= 16'
     dependencies:

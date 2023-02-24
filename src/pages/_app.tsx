@@ -6,6 +6,7 @@ import { ThemeProvider } from 'next-themes';
 import NextNProgress from 'nextjs-progressbar';
 
 import Layout from '@/components/layout/Layout';
+import '@/styles/globals.css';
 
 const interVariable = Inter({ subsets: ['latin'] });
 

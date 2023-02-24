@@ -1,5 +1,7 @@
 /* eslint-disable global-require */
 /* eslint-disable import/no-extraneous-dependencies */
+/** @type {import('tailwindcss').Config} */
+
 const { fontFamily, spacing } = require('tailwindcss/defaultTheme');
 
 module.exports = {

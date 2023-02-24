@@ -1,4 +1,6 @@
 /* eslint-disable global-require */
+/** @type {import('next').NextConfig} */
+
 // https://securityheaders.com
 const ContentSecurityPolicy = `
   default-src 'self';

@@ -8,7 +8,7 @@ specifiers:
   '@tailwindcss/forms': 0.5.3
   '@tailwindcss/line-clamp': 0.4.2
   '@tailwindcss/typography': 0.5.9
-  '@types/node': 18.14.1
+  '@types/node': 18.14.2
   '@types/react': 18.0.28
   '@typescript-eslint/eslint-plugin': 5.53.0
   '@typescript-eslint/parser': 5.53.0
@@ -77,7 +77,7 @@ dependencies:
 devDependencies:
   '@babel/core': 7.21.0
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.7
-  '@types/node': 18.14.1
+  '@types/node': 18.14.2
   '@types/react': 18.0.28
   '@typescript-eslint/eslint-plugin': 5.53.0_cjo54hduev4bqhpjw5znwiokqu
   '@typescript-eslint/parser': 5.53.0_ycpbpc6yetojsgtrx3mwntkhsu
@@ -732,8 +732,8 @@ packages:
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
     dev: false
 
-  /@types/node/18.14.1:
-    resolution: {integrity: sha512-QH+37Qds3E0eDlReeboBxfHbX9omAcBCXEzswCu6jySP642jiM3cYSIkU/REqwhCUqXdonHFuBfJDiAJxMNhaQ==}
+  /@types/node/18.14.2:
+    resolution: {integrity: sha512-1uEQxww3DaghA0RxqHx0O0ppVlo43pJhepY51OxuQIKHpjbnYLA7vcdwioNPzIqmC2u3I/dmylcqjlh0e7AyUA==}
     dev: true
 
   /@types/nprogress/0.2.0:

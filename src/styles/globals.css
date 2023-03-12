@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (min-width: 640px) {
+  .background-gradient::before {
+    background: radial-gradient(
+      30% 30% at 60% 40%,
+      rgba(126, 34, 206, 0.33) 0%,
+      rgba(37, 38, 44, 0) 100%
+    );
+    z-index: -10;
+    content: "";
+    position: absolute;
+    inset: 0px;
+    transform: scale(1);
+    pointer-events: none;
+  }
+}
+
 #nprogress .bar {
   @apply first:bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500;
 }

@@ -42,7 +42,7 @@
     "swr": "2.1.0"
   },
   "devDependencies": {
-    "@babel/core": "7.21.0",
+    "@babel/core": "7.21.3",
     "@tailwindcss/line-clamp": "0.4.2",
     "@types/node": "18.15.3",
     "@types/react": "18.0.28",

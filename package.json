@@ -45,7 +45,7 @@
     "@babel/core": "7.21.3",
     "@tailwindcss/line-clamp": "0.4.2",
     "@types/node": "18.15.7",
-    "@types/react": "18.0.28",
+    "@types/react": "18.0.29",
     "@typescript-eslint/eslint-plugin": "5.56.0",
     "@typescript-eslint/parser": "5.56.0",
     "autoprefixer": "10.4.14",

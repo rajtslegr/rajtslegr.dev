@@ -43,7 +43,7 @@ const GitHub: React.FC<GitHubProps> = ({ data }) => {
 
   return (
     <div>
-      <h2 className="mt-12 mb-4 text-3xl font-bold dark:text-gray-100">
+      <h2 className="mb-4 mt-12 text-3xl font-bold dark:text-gray-100">
         GitHub
       </h2>
       {render}

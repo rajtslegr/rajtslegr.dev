@@ -13,7 +13,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
         <div className="h-full w-1 rounded bg-gradient-to-b from-purple-400 via-pink-500 to-red-500 shadow"></div>
       </div>
       <div className="absolute top-0 mt-5 h-4 w-4 rounded-full bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 shadow">
-        <div className="absolute top-0 mt-1 ml-1 h-2 w-2 rounded-full bg-gray-50 dark:bg-dark"></div>
+        <div className="absolute top-0 ml-1 mt-1 h-2 w-2 rounded-full bg-gray-50 dark:bg-dark"></div>
       </div>
     </div>
     <div className="my-3.5 ml-6 flex flex-col justify-start sm:ml-12">

@@ -36,7 +36,7 @@ const LastFm: React.FC = () => {
 
   return (
     <>
-      <h2 className="mt-12 mb-4 text-3xl font-bold dark:text-gray-100">
+      <h2 className="mb-4 mt-12 text-3xl font-bold dark:text-gray-100">
         Last.fm
       </h2>
       {render}

@@ -41,7 +41,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         handleClick={mobileNavigationHandler}
       />
       {showMobileNavigation && <MobileNavigation />}
-      <div className="background-gradient my-8 mx-auto max-w-4xl flex-auto px-4 md:my-12">
+      <div className="background-gradient mx-auto my-8 max-w-4xl flex-auto px-4 md:my-12">
         {children}
       </div>
       {!showMobileNavigation && <Footer />}

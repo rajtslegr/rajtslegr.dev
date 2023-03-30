@@ -5,8 +5,8 @@ dependencies:
     specifier: 2.4.1
     version: 2.4.1(react-dom@18.2.0)(react@18.2.0)
   '@heroicons/react':
-    specifier: 2.0.16
-    version: 2.0.16(react@18.2.0)
+    specifier: 2.0.17
+    version: 2.0.17(react@18.2.0)
   '@prisma/client':
     specifier: 4.12.0
     version: 4.12.0(prisma@4.12.0)
@@ -398,8 +398,8 @@ packages:
       - react-dom
     dev: false
 
-  /@heroicons/react@2.0.16(react@18.2.0):
-    resolution: {integrity: sha512-x89rFxH3SRdYaA+JCXwfe+RkE1SFTo9GcOkZettHer71Y3T7V+ogKmfw5CjTazgS3d0ClJ7p1NA+SP7VQLQcLw==}
+  /@heroicons/react@2.0.17(react@18.2.0):
+    resolution: {integrity: sha512-90GMZktkA53YbNzHp6asVEDevUQCMtxWH+2UK2S8OpnLEu7qckTJPhNxNQG52xIR1WFTwFqtH6bt7a60ZNcLLA==}
     peerDependencies:
       react: '>= 16'
     dependencies:

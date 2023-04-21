@@ -15,7 +15,7 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix .",
     "lint-staged": "lint-staged",
-    "postinstall": "husky install",
+    "postinstall": "husky install && prisma generate",
     "prisma": "node ./scripts/prisma.js"
   },
   "dependencies": {

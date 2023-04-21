@@ -37,9 +37,6 @@ jobs:
       - name: Install
         run: pnpm install
       
-      - name: Generate
-        run: pnpm run prisma dev generate
-        
       - name: Type Check
         run: pnpm run type-check
 

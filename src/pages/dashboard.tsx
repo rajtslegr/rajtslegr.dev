@@ -14,10 +14,7 @@ interface DashboardProps {
   instagramData: InstagramData;
 }
 
-const Dashboard: NextPage<DashboardProps> = ({
-  gitHubData,
-  instagramData: igData,
-}) => (
+const Dashboard: NextPage<DashboardProps> = ({ gitHubData, instagramData }) => (
   <>
     <MetaData title="Petr Rajtslegr | Dashboard" />
     <MotionSection>
@@ -26,7 +23,7 @@ const Dashboard: NextPage<DashboardProps> = ({
       </h1>
     </MotionSection>
     <MotionSection delay={0.1}>
-      <Instagram data={igData} />
+      <Instagram data={instagramData} />
     </MotionSection>
     <MotionSection delay={0.2}>
       <LastFm />

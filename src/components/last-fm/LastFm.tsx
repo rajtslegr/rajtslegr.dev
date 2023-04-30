@@ -28,7 +28,7 @@ const LastFm: React.FC = () => {
         {data?.recenttracks?.track
           ?.filter((_track, index) => index < 10)
           .map((track) => (
-            <LastFmItem key={track.mbid + track.name} track={track} />
+            <LastFmItem key={track?.date?.uts || 0} track={track} />
           ))}
       </div>
     );

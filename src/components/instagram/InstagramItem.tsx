@@ -14,7 +14,10 @@ const InstagramItem: React.FC<InstagramItemProps> = ({ index, edge }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <div
+    <a
+      href={edge.permalink}
+      rel="noopener noreferrer"
+      target="_blank"
       key={edge.id}
       className={clsx(
         'relative pb-1/1 ',
@@ -23,19 +26,18 @@ const InstagramItem: React.FC<InstagramItemProps> = ({ index, edge }) => {
           'rounded-lg bg-gray-200 shadow motion-safe:animate-pulse dark:bg-gray-700',
       )}
     >
-      <a href={edge.permalink} rel="noopener noreferrer" target="_blank">
-        <Image
-          className="rounded-lg object-cover"
-          fill
-          src={edge.thumbnail_url || edge.media_url}
-          alt={edge.caption}
-          title={edge.caption}
-          placeholder="blur"
-          blurDataURL={edge.thumbnail_url || edge.media_url}
-          onLoadingComplete={() => setIsLoaded(true)}
-        />
-      </a>
-    </div>
+      <Image
+        className="rounded-lg object-cover"
+        fill={true}
+        src={edge.media_url}
+        alt={edge.caption}
+        title={edge.caption}
+        sizes="(max-width: 1024px) 33vw, (max-width: 1280px) 50vw, 33vw"
+        placeholder="blur"
+        blurDataURL={edge.media_url}
+        onLoadingComplete={() => setIsLoaded(true)}
+      />
+    </a>
   );
 };
 

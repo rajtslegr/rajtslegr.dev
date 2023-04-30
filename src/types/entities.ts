@@ -29,7 +29,6 @@ export interface InstagramDataEdge {
   id: string;
   permalink: string;
   media_url: string;
-  thumbnail_url: string;
   caption: string;
 }
 export interface InstagramData {

@@ -26,7 +26,7 @@
     "@tailwindcss/typography": "0.5.9",
     "@vercel/analytics": "^1.0.0",
     "clsx": "1.2.1",
-    "date-fns": "2.29.3",
+    "date-fns": "2.30.0",
     "fast-glob": "3.2.12",
     "framer-motion": "10.12.4",
     "gray-matter": "4.0.3",

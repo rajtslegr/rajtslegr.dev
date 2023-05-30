@@ -18,7 +18,7 @@ jobs:
         name: Install pnpm
         id: pnpm-install
         with:
-          version: 7
+          version: 8
           run_install: false
 
       - name: Get pnpm store directory
@@ -48,5 +48,4 @@ jobs:
           DATABASE_URL: ${{secrets.DATABASE_URL}}
           LASTFM_API_KEY: ${{secrets.LASTFM_API_KEY}}
           INSTAGRAM_TOKEN: ${{secrets.INSTAGRAM_TOKEN}}
-          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
         run: pnpm run build

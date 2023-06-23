@@ -33,8 +33,8 @@ dependencies:
     specifier: 3.2.12
     version: 3.2.12
   framer-motion:
-    specifier: 10.12.16
-    version: 10.12.16(react-dom@18.2.0)(react@18.2.0)
+    specifier: 10.12.17
+    version: 10.12.17(react-dom@18.2.0)(react@18.2.0)
   gray-matter:
     specifier: 4.0.3
     version: 4.0.3
@@ -2170,8 +2170,8 @@ packages:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
     dev: true
 
-  /framer-motion@10.12.16(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-w/SfWEIWJkYSgRHYBmln7EhcNo31ao8Xexol8lGXf1pR/tlnBtf1HcxoUmEiEh6pacB4/geku5ami53AAQWHMQ==}
+  /framer-motion@10.12.17(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-IR+aAYntsyu6ofyxqQV4QYotmOqzcuKxhqNpfc3DXJjNWOPpOeSyH0A+In3IEBu49Yx/+PNht+YMeZSdCNaYbw==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0

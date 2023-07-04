@@ -17,6 +17,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col space-y-2">
             <NavLink href="/">Home</NavLink>
             <NavLink href="/dashboard">Dashboard</NavLink>
+            <NavLink href="/work">Work</NavLink>
             <NavLink href="/blog">Blog</NavLink>
             <NavLink href="/contact">Contact</NavLink>
           </div>

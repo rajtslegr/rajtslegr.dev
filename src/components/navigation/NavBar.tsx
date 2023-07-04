@@ -48,6 +48,9 @@ const NavBar: React.FC<NavBarProps> = ({
           <NavLink href="/dashboard" isHeader={true}>
             Dashboard
           </NavLink>
+          <NavLink href="/work" isHeader={true}>
+            Work
+          </NavLink>
           <NavLink href="/blog" isHeader={true}>
             Blog
           </NavLink>

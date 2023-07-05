@@ -17,7 +17,7 @@ const MetaData: React.FC<MetaDataProps> = ({
   date,
 }) => {
   const router = useRouter();
-  const url = `https://rajtslegr.com${router.asPath}`;
+  const url = `https://rajtslegr.dev${router.asPath}`;
 
   return (
     <Head>
@@ -26,13 +26,13 @@ const MetaData: React.FC<MetaDataProps> = ({
       <link rel="canonical" href={url} />
       <meta property="og:title" content={title}></meta>
       <meta property="og:description" content={description}></meta>
-      <meta property="og:image" content={`https://rajtslegr.com${image}`} />
+      <meta property="og:image" content={`https://rajtslegr.dev${image}`} />
       <meta property="og:type" content={type}></meta>
       <meta property="og:url" content={url} />
       <meta property="og:site_name" content="Petr Rajtslegr" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`https://rajtslegr.com${image}`} />
+      <meta name="twitter:image" content={`https://rajtslegr.dev${image}`} />
       <meta name="twitter:card" content="summary_large_image" />
       {date && <meta property="article:published_time" content={date} />}
     </Head>

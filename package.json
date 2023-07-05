@@ -1,11 +1,11 @@
 {
-  "name": "rajtslegr.com",
+  "name": "rajtslegr.dev",
   "version": "v1.0.0",
   "license": "MIT",
   "author": {
     "name": "Petr Rajtslegr",
     "email": "petr.rajtslegr@gmail.com",
-    "url": "https://rajtslegr.com"
+    "url": "https://rajtslegr.dev"
   },
   "scripts": {
     "dev": "next dev",

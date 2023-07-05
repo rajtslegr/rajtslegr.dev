@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://rajtslegr.com/sitemap.xml
+Sitemap: https://rajtslegr.dev/sitemap.xml

@@ -4,12 +4,16 @@ import Pill from '@/components/Work/Pill';
 import WindowHeader from '@/components/Work/WindowHeader';
 import { ProjectData } from '@/types/entities';
 
+import elections from '../../../public/static/images/work/elections.jpg';
 import pujdu from '../../../public/static/images/work/pujdu.jpg';
 import vyber from '../../../public/static/images/work/vyber.jpg';
+import xquest from '../../../public/static/images/work/xquest.jpg';
 
 const IMAGES: Record<string, StaticImageData> = {
-  vyber,
+  elections,
   pujdu,
+  vyber,
+  xquest,
 };
 interface ProjectProps {
   project: ProjectData;

@@ -8,7 +8,7 @@
 /build
 /out
 .vercel
-.env.*
+.env*
 !.env.example
 public/sitemap.xml
 

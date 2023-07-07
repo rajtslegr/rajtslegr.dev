@@ -31,13 +31,16 @@ const Footer: React.FC = () => {
             <ExternalLink href="https://twitter.com/RajceP">
               Twitter
             </ExternalLink>
-          </div>
-          <div className="flex flex-col space-y-2">
             <ExternalLink href="https://mastodon.social/@rajce">
               Mastodon
             </ExternalLink>
+          </div>
+          <div className="flex flex-col space-y-2">
             <ExternalLink href="https://www.instagram.com/rajce">
               Instagram
+            </ExternalLink>
+            <ExternalLink href="https://www.threads.net/@rajce">
+              Threads
             </ExternalLink>
             <ExternalLink href="https://www.vero.co/rajce">Vero</ExternalLink>
           </div>

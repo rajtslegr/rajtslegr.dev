@@ -35,8 +35,10 @@ const Dashboard: NextPage<DashboardProps> = ({ gitHubData, instagramData }) => (
 );
 
 export const getStaticProps: GetStaticProps = async () => {
-  const gitHubData = await getRecentRepos();
-  const instagramData = await getRecentPosts();
+  const [gitHubData, instagramData] = await Promise.all([
+    getRecentRepos(),
+    getRecentPosts(),
+  ]);
 
   return {
     props: {

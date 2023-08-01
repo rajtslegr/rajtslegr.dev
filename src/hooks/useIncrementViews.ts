@@ -8,7 +8,7 @@ const incrementView = async (id: string) => {
   });
 };
 
-export const useIncrementView = async (id: string) => {
+export const useIncrementView = (id: string) => {
   useEffect(() => {
     const isBot = isbot(navigator.userAgent);
 

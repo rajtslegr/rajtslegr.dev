@@ -16,10 +16,10 @@ dependencies:
     version: 4.16.2(prisma@4.16.2)
   '@tailwindcss/forms':
     specifier: 0.5.3
-    version: 0.5.3(tailwindcss@3.3.2)
+    version: 0.5.3(tailwindcss@3.3.3)
   '@tailwindcss/typography':
     specifier: 0.5.9
-    version: 0.5.9(tailwindcss@3.3.2)
+    version: 0.5.9(tailwindcss@3.3.3)
   '@vercel/analytics':
     specifier: ^1.0.0
     version: 1.0.0(react@18.2.0)
@@ -126,7 +126,7 @@ devDependencies:
     version: 4.6.0(eslint@8.44.0)
   eslint-plugin-tailwindcss:
     specifier: 3.13.0
-    version: 3.13.0(tailwindcss@3.3.2)
+    version: 3.13.0(tailwindcss@3.3.3)
   eslint-plugin-unused-imports:
     specifier: 2.0.0
     version: 2.0.0(@typescript-eslint/eslint-plugin@5.61.0)(eslint@8.44.0)
@@ -149,8 +149,8 @@ devDependencies:
     specifier: 2.0.1
     version: 2.0.1(prettier@2.8.8)
   tailwindcss:
-    specifier: 3.3.2
-    version: 3.3.2
+    specifier: 3.3.3
+    version: 3.3.3
   typescript:
     specifier: 5.1.6
     version: 5.1.6
@@ -387,6 +387,7 @@ packages:
 
   /@emotion/memoize@0.7.4:
     resolution: {integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==}
+    requiresBuild: true
     dev: false
     optional: true
 
@@ -714,16 +715,16 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /@tailwindcss/forms@0.5.3(tailwindcss@3.3.2):
+  /@tailwindcss/forms@0.5.3(tailwindcss@3.3.3):
     resolution: {integrity: sha512-y5mb86JUoiUgBjY/o6FJSFZSEttfb3Q5gllE4xoKjAAD+vBrnIhE4dViwUuow3va8mpH4s9jyUbUbrRGoRdc2Q==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 3.3.2
+      tailwindcss: 3.3.3
     dev: false
 
-  /@tailwindcss/typography@0.5.9(tailwindcss@3.3.2):
+  /@tailwindcss/typography@0.5.9(tailwindcss@3.3.3):
     resolution: {integrity: sha512-t8Sg3DyynFysV9f4JDOVISGsjazNb48AeIYQwcL+Bsq5uf4RYL75C1giZ43KISjeDGBaTN3Kxh7Xj/vRSMJUUg==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
@@ -732,7 +733,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.3.2
+      tailwindcss: 3.3.3
     dev: false
 
   /@types/acorn@4.0.6:
@@ -1511,6 +1512,7 @@ packages:
 
   /delegate@3.2.0:
     resolution: {integrity: sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==}
+    requiresBuild: true
     dev: false
     optional: true
 
@@ -1922,7 +1924,7 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: true
 
-  /eslint-plugin-tailwindcss@3.13.0(tailwindcss@3.3.2):
+  /eslint-plugin-tailwindcss@3.13.0(tailwindcss@3.3.3):
     resolution: {integrity: sha512-Fcep4KDRLWaK3KmkQbdyKHG0P4GdXFmXdDaweTIPcgOP60OOuWFbh1++dufRT28Q4zpKTKaHwTsXPJ4O/EjU2Q==}
     engines: {node: '>=12.13.0'}
     peerDependencies:
@@ -1930,7 +1932,7 @@ packages:
     dependencies:
       fast-glob: 3.3.0
       postcss: 8.4.24
-      tailwindcss: 3.3.2
+      tailwindcss: 3.3.3
     dev: true
 
   /eslint-plugin-unused-imports@2.0.0(@typescript-eslint/eslint-plugin@5.61.0)(eslint@8.44.0):
@@ -2369,6 +2371,7 @@ packages:
 
   /good-listener@1.2.2:
     resolution: {integrity: sha512-goW1b+d9q/HIwbVYZzZ6SsTr4IgE+WA44A0GmPIQstuOrgsFcT7VEJ48nmr9GaRtNu0XTKacFLGnBPAM6Afouw==}
+    requiresBuild: true
     dependencies:
       delegate: 3.2.0
     dev: false
@@ -4333,6 +4336,7 @@ packages:
 
   /select@1.1.2:
     resolution: {integrity: sha512-OwpTSOfy6xSs1+pwcNrv0RBMOzI39Lp3qQKUTPVVPRjCdNa5JH/oPRiqsesIskK8TVgmRiHwO4KXlV2Li9dANA==}
+    requiresBuild: true
     dev: false
     optional: true
 
@@ -4616,8 +4620,8 @@ packages:
       tslib: 2.4.1
     dev: true
 
-  /tailwindcss@3.3.2:
-    resolution: {integrity: sha512-9jPkMiIBXvPc2KywkraqsUfbfj+dHDb+JPWtSJa9MLFdrPyazI7q6WX2sUrm7R9eVR7qqv3Pas7EvQFzxKnI6w==}
+  /tailwindcss@3.3.3:
+    resolution: {integrity: sha512-A0KgSkef7eE4Mf+nKJ83i75TMyq8HqY3qmFIJSWy8bNt0v1lG7jUcpGpoTFxAwYcWOphcTBLPPJg+bDfhDf52w==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -4641,7 +4645,6 @@ packages:
       postcss-load-config: 4.0.1(postcss@8.4.24)
       postcss-nested: 6.0.1(postcss@8.4.24)
       postcss-selector-parser: 6.0.11
-      postcss-value-parser: 4.2.0
       resolve: 1.22.2
       sucrase: 3.32.0
     transitivePeerDependencies:
@@ -4686,6 +4689,7 @@ packages:
 
   /tiny-emitter@2.1.0:
     resolution: {integrity: sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==}
+    requiresBuild: true
     dev: false
     optional: true
 

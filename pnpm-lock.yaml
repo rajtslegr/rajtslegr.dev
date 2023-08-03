@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@formspree/react':
-    specifier: 2.4.4
-    version: 2.4.4(react-dom@18.2.0)(react@18.2.0)
+    specifier: 2.5.0
+    version: 2.5.0(react-dom@18.2.0)(react@18.2.0)
   '@heroicons/react':
     specifier: 2.0.18
     version: 2.0.18(react@18.2.0)
@@ -430,19 +430,19 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@formspree/core@2.8.3:
-    resolution: {integrity: sha512-fyBWtzl3rD+SL8b7fHFDK0jUpYK5b20Pt8jIn2QRcJ8wZacEnINFFY+BaSrnHfMxHmCTLmjfJNktL1fBxmfhMg==}
+  /@formspree/core@3.0.0:
+    resolution: {integrity: sha512-bDvM8c+AtIZOmgZq+Buk3DEmspEJU7kdpUrQTWZdyEjM4KRgNPYTd+LWVMchNX4q73F+DaY1mBG0hO0ioB6MjQ==}
     dependencies:
       '@stripe/stripe-js': 1.35.0
     dev: false
 
-  /@formspree/react@2.4.4(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-jHvrEGQyt+jTPWCBl/alhI9MkzOqazMLLF3IoXN33D4WHiii4PJUoH0d68LsS1oSaVJNTMKebthhrL3MseLYAQ==}
+  /@formspree/react@2.5.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-R2UyaKXAEaaV5lRnE7fUw1xr+Cp+TEzfIyT1r2iH4/hUdcg2od35kU33LOOZo4CPEk2KEuF2RPblnJWSPOvBCw==}
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
     dependencies:
-      '@formspree/core': 2.8.3
+      '@formspree/core': 3.0.0
       '@stripe/react-stripe-js': 1.10.0(@stripe/stripe-js@1.35.0)(react-dom@18.2.0)(react@18.2.0)
       '@stripe/stripe-js': 1.35.0
       react: 18.2.0

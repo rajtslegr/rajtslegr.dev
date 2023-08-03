@@ -4,7 +4,7 @@
   "reviewers": ["rajtslegr"],
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "matchUpdateTypes": ["minor", "major"],
       "automerge": true
     }
   ]

@@ -4,5 +4,9 @@ export const fetcher = async <JSON>(
 ): Promise<JSON> => {
   const response = await fetch(input, init);
 
+  if (!response.ok) {
+    throw new Error(response.statusText);
+  }
+
   return response.json();
 };

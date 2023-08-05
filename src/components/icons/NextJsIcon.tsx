@@ -4,6 +4,7 @@ interface NextJsIconProps {
 
 const NextJsIcon: React.FC<NextJsIconProps> = ({ theme }) => {
   const fill = theme === 'light' ? '#6b7280' : '#9ca3af';
+
   return (
     <svg
       fill="none"

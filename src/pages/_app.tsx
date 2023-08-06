@@ -11,7 +11,11 @@ import '@/styles/globals.css';
 const interVariable = Inter({ subsets: ['latin'] });
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => (
-  <ThemeProvider defaultTheme="system" attribute="class">
+  <ThemeProvider
+    defaultTheme="system"
+    attribute="class"
+    disableTransitionOnChange={true}
+  >
     <Layout>
       <NextNProgress options={{ showSpinner: false }} />
       <AnimatePresence mode="wait">

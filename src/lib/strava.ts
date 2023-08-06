@@ -31,12 +31,15 @@ const getAccessToken = async () => {
 export const getActivities = async () => {
   const { access_token: accessToken } = await getAccessToken();
   const data: Activity[] = await fetcher(
-    `${ATHLETES_ENDPOINT}/activities?access_token=${accessToken}&per_page=6`,
+    `${ATHLETES_ENDPOINT}/activities?access_token=${accessToken}`,
   );
 
-  const publicActivities = data.filter(
-    (activity: Activity) => activity.private === false,
-  );
+  const publicActivities = data
+    .filter(
+      (activity: Activity) =>
+        activity.private === false && ['Run', 'Ride'].includes(activity.type),
+    )
+    .slice(0, 6);
 
   return publicActivities;
 };

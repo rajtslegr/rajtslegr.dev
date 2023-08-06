@@ -43,6 +43,9 @@ const Footer: React.FC = () => {
               Threads
             </ExternalLink>
             <ExternalLink href="https://www.vero.co/rajce">Vero</ExternalLink>
+            <ExternalLink href="https://www.strava.cgstom/athletes/120067793">
+              Strava
+            </ExternalLink>
           </div>
         </div>
       </div>

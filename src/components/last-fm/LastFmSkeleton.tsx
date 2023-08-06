@@ -1,6 +1,6 @@
 const LastFmSkeleton: React.FC = () => (
   <div className="grid gap-4 md:grid-cols-2">
-    {new Array(10).fill(undefined).map((_value, index) => (
+    {new Array(6).fill(undefined).map((_value, index) => (
       <div
         key={index}
         className="flex h-36 flex-col rounded bg-white p-2 shadow dark:bg-card"

@@ -37,7 +37,8 @@ export const getActivities = async () => {
   const publicActivities = data
     .filter(
       (activity: Activity) =>
-        activity.private === false && ['Run', 'Ride'].includes(activity.type),
+        activity.private === false &&
+        ['Run', 'Ride', 'Gravel Ride'].includes(activity.type),
     )
     .slice(0, 6);
 

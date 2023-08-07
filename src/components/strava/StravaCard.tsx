@@ -60,7 +60,7 @@ const StravaCard: React.FC<IGitHubCard> = ({
       )}
       <p>
         <span className="text-gray-500 dark:text-gray-400">
-          Average hear rate:{' '}
+          Average heart rate:{' '}
         </span>
         {Math.floor(averageHeartrate)} bpm
       </p>

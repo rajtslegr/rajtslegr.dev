@@ -26,7 +26,7 @@ const LastFm: React.FC = () => {
     render = (
       <div className="m-0 grid gap-4 md:grid-cols-2">
         {data?.recenttracks?.track
-          ?.filter((_track, index) => index < 10)
+          ?.filter((_track, index) => index < 6)
           .map((track) => (
             <LastFmItem key={track?.date?.uts || 0} track={track} />
           ))}

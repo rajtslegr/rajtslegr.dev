@@ -63,7 +63,7 @@
     "eslint-plugin-tailwindcss": "3.13.0",
     "eslint-plugin-unused-imports": "3.0.0",
     "husky": "8.0.3",
-    "lint-staged": "13.2.3",
+    "lint-staged": "13.3.0",
     "postcss": "8.4.27",
     "prettier": "3.0.1",
     "prisma": "5.1.1",

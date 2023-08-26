@@ -92,8 +92,8 @@ devDependencies:
     specifier: 10.4.15
     version: 10.4.15(postcss@8.4.28)
   dotenv-flow:
-    specifier: 3.2.0
-    version: 3.2.0
+    specifier: 3.3.0
+    version: 3.3.0
   eslint:
     specifier: 8.48.0
     version: 8.48.0
@@ -1540,8 +1540,8 @@ packages:
       esutils: 2.0.3
     dev: true
 
-  /dotenv-flow@3.2.0:
-    resolution: {integrity: sha512-GEB6RrR4AbqDJvNSFrYHqZ33IKKbzkvLYiD5eo4+9aFXr4Y4G+QaFrB/fNp0y6McWBmvaPn3ZNjIufnj8irCtg==}
+  /dotenv-flow@3.3.0:
+    resolution: {integrity: sha512-GLSvRqDZ1TGhloS6ZCZ5chdqqv/3XMqZxAnX9rliJiHn6uyJLguKeu+3M2kcagBkoVCnLWYfbR4rfFe1xSU39A==}
     engines: {node: '>= 8.0.0'}
     dependencies:
       dotenv: 8.6.0

@@ -47,7 +47,7 @@
     "@types/node": "20.5.7",
     "@types/react": "18.2.21",
     "@typescript-eslint/eslint-plugin": "6.4.1",
-    "@typescript-eslint/parser": "6.4.1",
+    "@typescript-eslint/parser": "6.5.0",
     "autoprefixer": "10.4.15",
     "dotenv-flow": "3.3.0",
     "eslint": "8.48.0",

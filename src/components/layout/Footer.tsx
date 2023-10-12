@@ -28,9 +28,7 @@ const Footer: React.FC = () => {
             <ExternalLink href="https://www.linkedin.com/in/petr-rajtšlégr-5aa84a16b">
               LinkedIn
             </ExternalLink>
-            <ExternalLink href="https://twitter.com/RajceP">
-              Twitter
-            </ExternalLink>
+            <ExternalLink href="https://twitter.com/RajceP">𝕏</ExternalLink>
             <ExternalLink href="https://mastodon.social/@rajce">
               Mastodon
             </ExternalLink>

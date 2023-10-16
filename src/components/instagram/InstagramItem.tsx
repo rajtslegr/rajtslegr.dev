@@ -20,7 +20,7 @@ const InstagramItem: React.FC<InstagramItemProps> = ({ index, edge }) => {
       target="_blank"
       key={edge.id}
       className={clsx(
-        'relative pb-1/1 ',
+        'relative pb-1/1 motion-safe:transition-all motion-safe:hover:scale-105',
         index === 0 && 'lg:col-span-2 lg:row-span-2',
         !isLoaded &&
           'rounded-lg bg-gray-200 shadow motion-safe:animate-pulse dark:bg-gray-700',

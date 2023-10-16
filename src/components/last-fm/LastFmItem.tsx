@@ -14,7 +14,7 @@ const LastFmItem: React.FC<LastFmItemProps> = ({ track }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <div className="flex h-full flex-col overflow-hidden rounded-lg bg-white p-2 shadow dark:bg-card">
+    <div className="flex h-full flex-col overflow-hidden rounded-lg bg-white p-2 shadow motion-safe:transition-all motion-safe:hover:scale-105 dark:bg-card">
       <a href={track.url} rel="noopener noreferrer" target="_blank">
         <div className="flex flex-row space-x-2">
           <Image

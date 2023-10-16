@@ -22,7 +22,7 @@ interface ProjectProps {
 const Project: React.FC<ProjectProps> = ({
   project: { title, description, build, image, live },
 }) => (
-  <div className="flex flex-col rounded-lg bg-white shadow dark:bg-card">
+  <div className="flex flex-col rounded-lg bg-white shadow motion-safe:transition-all motion-safe:hover:scale-105 dark:bg-card">
     <a href={live} rel="noopener noreferrer" target="_blank">
       <WindowHeader />
       <Image

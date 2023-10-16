@@ -15,7 +15,7 @@ const GitHubCard: React.FC<IGitHubCard> = ({
   stars,
   watches,
 }) => (
-  <div className="flex flex-col overflow-hidden rounded-lg bg-white p-2 shadow dark:bg-card">
+  <div className="flex flex-col overflow-hidden rounded-lg bg-white p-2 shadow motion-safe:transition-all motion-safe:hover:scale-105 dark:bg-card">
     <a href={link} rel="noopener noreferrer" target="_blank">
       <div className="flex h-6 flex-row dark:text-gray-100">
         <DocumentIcon />

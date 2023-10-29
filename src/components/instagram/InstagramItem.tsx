@@ -35,7 +35,7 @@ const InstagramItem: React.FC<InstagramItemProps> = ({ index, edge }) => {
         sizes="(max-width: 1024px) 33vw, (max-width: 1280px) 50vw, 33vw"
         placeholder="blur"
         blurDataURL={edge.media_url}
-        onLoadingComplete={() => setIsLoaded(true)}
+        onLoad={() => setIsLoaded(true)}
       />
     </a>
   );

@@ -29,7 +29,7 @@ const LastFmItem: React.FC<LastFmItemProps> = ({ track }) => {
             height={128}
             placeholder="blur"
             blurDataURL={`/_next/image?url=${track.image[0]['#text']}&w=16&q=1`}
-            onLoadingComplete={() => setIsLoaded(true)}
+            onLoad={() => setIsLoaded(true)}
           />
           <div className="flex min-h-full flex-col overflow-hidden">
             <h3

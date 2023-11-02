@@ -1,6 +1,7 @@
 import { formatSeconds } from '@/utils/date';
 
 import BikeIcon from '../icons/BikeIcon';
+import DumbellIcon from '../icons/DumbellIcon';
 import ShoeIcon from '../icons/ShoeIcon';
 
 interface IGitHubCard {
@@ -20,27 +21,36 @@ const StravaCard: React.FC<IGitHubCard> = ({
   movingTime,
   elevation,
   averageSpeed,
-  averageHeartrate,
 }) => (
   <div className="flex flex-col gap-4 overflow-hidden rounded-lg bg-white p-2 shadow dark:bg-card">
     <div className="flex flex-row dark:text-gray-100">
-      <h3 className="truncate text-lg font-semibold" title={name}>
-        {type === 'Run' ? <ShoeIcon /> : <BikeIcon />}
+      <h3
+        className="flex flex-row items-center space-x-2 truncate text-lg font-semibold"
+        title={name}
+      >
+        {type === 'Run' && <ShoeIcon />}
+        {type === 'WeightTraining' && <DumbellIcon />}
+        {['Ride', 'Gravel Ride'].includes(type) && <BikeIcon />}
+        <p>{name}</p>
       </h3>
     </div>
     <div className="flex flex-col dark:text-gray-100">
-      <p>
-        <span className="text-gray-500 dark:text-gray-400">Distance: </span>
-        {Math.floor((distance / 1000) * 100) / 100} km
-      </p>
+      {['Ride', 'Gravel Ride', 'Run'].includes(type) && (
+        <p>
+          <span className="text-gray-500 dark:text-gray-400">Distance: </span>
+          {Math.floor((distance / 1000) * 100) / 100} km
+        </p>
+      )}
       <p>
         <span className="text-gray-500 dark:text-gray-400">Time: </span>
         {formatSeconds(movingTime)}
       </p>
-      <p>
-        <span className="text-gray-500 dark:text-gray-400">Elevation: </span>
-        {elevation} m
-      </p>
+      {['Ride', 'Gravel Ride', 'Run'].includes(type) && (
+        <p>
+          <span className="text-gray-500 dark:text-gray-400">Elevation: </span>
+          {elevation} m
+        </p>
+      )}
       {type === 'Run' && (
         <p>
           <span className="text-gray-500 dark:text-gray-400">Pace: </span>
@@ -50,7 +60,7 @@ const StravaCard: React.FC<IGitHubCard> = ({
           /km
         </p>
       )}
-      {type === 'Ride' && (
+      {['Ride', 'Gravel Ride'].includes(type) && (
         <p>
           <span className="text-gray-500 dark:text-gray-400">
             Average speed:{' '}
@@ -58,12 +68,6 @@ const StravaCard: React.FC<IGitHubCard> = ({
           {Math.floor(averageSpeed * 3.6 * 100) / 100} km/h
         </p>
       )}
-      <p>
-        <span className="text-gray-500 dark:text-gray-400">
-          Average heart rate:{' '}
-        </span>
-        {Math.floor(averageHeartrate)} bpm
-      </p>
     </div>
   </div>
 );

@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center space-y-4 p-4 sm:space-y-8 lg:pb-12">
-      <div className="flex w-full max-w-4xl flex-col border-t border-gray-200 p-4 dark:border-gray-200/20 sm:p-6">
+      <div className="flex w-full max-w-4xl flex-col border-t border-gray-200 p-4 sm:p-6 dark:border-gray-200/20">
         <div className="flex flex-row justify-around sm:justify-evenly">
           <div className="flex flex-col space-y-2">
             <NavLink href="/">Home</NavLink>
@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-full flex-col items-center justify-center text-gray-500 dark:text-gray-400 sm:flex-row">
+      <div className="flex w-full flex-col items-center justify-center text-gray-500 sm:flex-row dark:text-gray-400">
         <p className="flex flex-row items-center">Made by Petr Rajtslegr</p>
         <p className="flex flex-row items-center">
           &nbsp;with&nbsp;

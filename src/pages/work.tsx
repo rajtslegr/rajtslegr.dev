@@ -14,7 +14,7 @@ const Work: NextPage<WorkProps> = ({ work }) => (
   <>
     <MetaData title="Petr Rajtslegr | Work" />
     <MotionSection>
-      <h1 className="mb-4 text-4xl font-extrabold dark:text-gray-100 md:mb-12">
+      <h1 className="mb-4 text-4xl font-extrabold md:mb-12 dark:text-gray-100">
         Work
       </h1>
     </MotionSection>

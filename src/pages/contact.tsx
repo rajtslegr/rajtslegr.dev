@@ -10,7 +10,7 @@ const Contact: NextPage = () => (
   <>
     <MetaData title="Petr Rajtslegr | Contact" />
     <MotionSection>
-      <h1 className="mb-4 text-4xl font-extrabold dark:text-gray-100 md:mb-12">
+      <h1 className="mb-4 text-4xl font-extrabold md:mb-12 dark:text-gray-100">
         Contact
       </h1>
     </MotionSection>

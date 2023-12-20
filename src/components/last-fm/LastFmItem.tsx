@@ -33,7 +33,7 @@ const LastFmItem: React.FC<LastFmItemProps> = ({ track }) => {
           />
           <div className="flex min-h-full flex-col overflow-hidden">
             <h3
-              className="line-clamp-1 text-lg font-semibold dark:text-gray-100 sm:line-clamp-3"
+              className="line-clamp-1 text-lg font-semibold sm:line-clamp-3 dark:text-gray-100"
               title={track.name}
             >
               {track.name}

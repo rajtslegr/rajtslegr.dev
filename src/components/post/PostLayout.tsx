@@ -17,7 +17,7 @@ const PostLayout: React.FC<PostLayoutProps> = ({
   <div className="mx-auto flex max-w-2xl flex-col items-center">
     <article className="w-full max-w-none text-black dark:text-white">
       <MotionSection>
-        <h1 className="text-4xl font-bold tracking-tight text-black dark:text-gray-100 md:text-5xl">
+        <h1 className="text-4xl font-bold tracking-tight text-black md:text-5xl dark:text-gray-100">
           {title}
         </h1>
       </MotionSection>

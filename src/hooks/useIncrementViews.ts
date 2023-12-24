@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import isbot from 'isbot';
+import { isbot } from 'isbot';
 
 const incrementView = async (id: string) => {
   await fetch(`/api/views/${id}`, {

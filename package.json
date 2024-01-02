@@ -28,7 +28,7 @@
     "clsx": "2.1.0",
     "date-fns": "3.0.6",
     "fast-glob": "3.3.2",
-    "framer-motion": "10.16.16",
+    "framer-motion": "10.17.0",
     "gray-matter": "4.0.3",
     "isbot": "4.1.0",
     "mdx-prism": "0.3.4",

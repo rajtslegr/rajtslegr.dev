@@ -25,7 +25,7 @@ const Dashboard: NextPage<DashboardProps> = ({
   <>
     <MetaData title="Petr Rajtslegr | Dashboard" />
     <MotionSection>
-      <h1 className="mb-4 text-4xl font-extrabold md:mb-12 dark:text-gray-100">
+      <h1 className="mb-4 text-4xl font-extrabold dark:text-gray-100 md:mb-12">
         Dashboard
       </h1>
     </MotionSection>

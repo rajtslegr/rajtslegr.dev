@@ -131,8 +131,8 @@ devDependencies:
     specifier: 3.0.0
     version: 3.0.0(@typescript-eslint/eslint-plugin@6.19.1)(eslint@8.56.0)
   husky:
-    specifier: 9.0.2
-    version: 9.0.2
+    specifier: 9.0.3
+    version: 9.0.3
   lint-staged:
     specifier: 15.2.0
     version: 15.2.0
@@ -2731,8 +2731,8 @@ packages:
     engines: {node: '>=16.17.0'}
     dev: true
 
-  /husky@9.0.2:
-    resolution: {integrity: sha512-0yR5R3OPjl8bYApi6T4QMOAwhtLhBjdYIVg5S6zSzIO8DIvQMh/b7Q8jW3WLbHLHtzpwiyMLBNB4R0Eb6x5+AA==}
+  /husky@9.0.3:
+    resolution: {integrity: sha512-MNRluWx5bvZ2Ft2Z9ni5KZAgNFrQSM4LKvEtTJVKTjGRqliI1CeWv8HWnPXfM+4snOaU04bb7IU2u6TPDb8ROw==}
     engines: {node: '>=18'}
     hasBin: true
     dev: true

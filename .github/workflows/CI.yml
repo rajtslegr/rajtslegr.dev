@@ -3,7 +3,7 @@ name: CI
 on: push
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}-build
+  group: ${{ github.workflow }}-${{ github.ref }}-ci
   cancel-in-progress: true
 
 jobs:

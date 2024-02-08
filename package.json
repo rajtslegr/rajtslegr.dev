@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.23.9",
-    "@types/node": "20.11.16",
+    "@types/node": "20.11.17",
     "@types/react": "18.2.55",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",

@@ -30,7 +30,7 @@
     "fast-glob": "3.3.2",
     "framer-motion": "11.0.6",
     "gray-matter": "4.0.3",
-    "isbot": "5.1.0",
+    "isbot": "5.1.1",
     "mdx-prism": "0.3.4",
     "next": "14.1.0",
     "next-mdx-remote": "4.4.1",

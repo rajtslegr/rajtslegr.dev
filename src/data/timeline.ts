@@ -2,10 +2,6 @@ import { TimelineData } from '@/types/entities';
 
 export const timelineData: TimelineData[] = [
   {
-    timeRange: '2022 - present',
-    job: 'Freelancer',
-  },
-  {
     timeRange: '2021 - present',
     job: 'Economia',
     description:

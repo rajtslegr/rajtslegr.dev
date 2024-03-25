@@ -19,7 +19,7 @@ const LastFmItem: React.FC<LastFmItemProps> = ({ track }) => {
         <div className="flex flex-row space-x-2">
           <Image
             className={clsx(
-              'h-24 w-24 rounded-lg shadow sm:h-32 sm:w-32',
+              'size-24 rounded-lg shadow sm:size-32',
               !isLoaded &&
                 'rounded-lg bg-gray-200 shadow motion-safe:animate-pulse dark:bg-gray-700',
             )}
@@ -53,7 +53,7 @@ const LastFmItem: React.FC<LastFmItemProps> = ({ track }) => {
             </p>
           </div>
           {track['@attr']?.nowplaying && (
-            <span className="flex h-12 w-12 grow justify-end text-red-600 motion-safe:animate-pulse">
+            <span className="flex size-12 grow justify-end text-red-600 motion-safe:animate-pulse">
               <PlayIcon />
             </span>
           )}

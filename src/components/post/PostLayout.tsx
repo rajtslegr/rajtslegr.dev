@@ -25,7 +25,7 @@ const PostLayout: React.FC<PostLayoutProps> = ({
         <div className="mt-4 flex flex-row items-center space-x-2 text-gray-500 dark:text-gray-400">
           <div className="flex flex-col">
             <Image
-              className="h-10 w-10 overflow-hidden rounded-full shadow"
+              className="size-10 overflow-hidden rounded-full shadow"
               src={hero}
               alt="Hero"
               placeholder="blur"

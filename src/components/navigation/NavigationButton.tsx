@@ -25,7 +25,7 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
     <button
       aria-label="Toggle Navigation"
       onClick={handleClick}
-      className="my-3 h-12 w-12 overflow-hidden rounded-lg bg-gray-200 shadow dark:bg-gray-700 dark:text-gray-100"
+      className="my-3 size-12 overflow-hidden rounded-lg bg-gray-200 shadow dark:bg-gray-700 dark:text-gray-100"
     >
       <motion.div
         whileTap={shouldReduceMotion ? undefined : tapProperties}

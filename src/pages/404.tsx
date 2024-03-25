@@ -8,7 +8,7 @@ const Custom404: NextPage = () => (
   <>
     <MetaData title="404 - Nothing to see here!" />
     <div className="flex flex-col items-center justify-center gap-4 text-gray-700 dark:text-gray-300">
-      <ExclamationCircleIcon className="h-24 w-24" />
+      <ExclamationCircleIcon className="size-24" />
       <p className="text-2xl">Nothing to see here...</p>
     </div>
   </>

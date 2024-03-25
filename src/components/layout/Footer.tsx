@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
         <p className="flex flex-row items-center">Made by Petr Rajtslegr</p>
         <p className="flex flex-row items-center">
           &nbsp;with&nbsp;
-          <HeartIcon className="h-5 w-5" />
+          <HeartIcon className="size-5" />
           &nbsp;and
           {theme && isMounted && (
             <ExternalLink href="https://nextjs.org" ariaLabel="Next.js">

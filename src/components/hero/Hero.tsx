@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
               </span>
             </h2>
           </div>
-          <div className="z-0 mb-12 flex h-32 w-32 overflow-hidden rounded-full bg-gradient-to-br from-indigo-500 via-blue-300 to-purple-700 p-1 shadow sm:mb-0">
+          <div className="z-0 mb-12 flex size-32 overflow-hidden rounded-full bg-gradient-to-br from-indigo-500 via-blue-300 to-purple-700 p-1 shadow sm:mb-0">
             <Image
               onClick={() => setIsExploding(true)}
               className="overflow-hidden rounded-full"

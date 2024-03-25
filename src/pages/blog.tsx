@@ -38,7 +38,7 @@ const Blog: NextPage<BlogProps> = ({ allPostsData }) => {
               placeholder="Search..."
               onChange={(event) => setSearch(event.target.value)}
             />
-            <span className="absolute right-3 top-[10px] h-5 w-5 text-gray-500 dark:text-gray-400">
+            <span className="absolute right-3 top-[10px] size-5 text-gray-500 dark:text-gray-400">
               <MagnifyingGlassIcon />
             </span>
           </div>

@@ -5,7 +5,7 @@ export const timelineData: TimelineData[] = [
     timeRange: '2021 - present',
     job: 'Economia',
     description:
-      'Economia (Aktualne.cz, HN.cz, Hospodarske noviny, Ekonom, Respekt) is one of the largest Czech media houses. I am mainly involved in creating JavaScript applications using React and Next.js. I also develop technologies such as AWS Lambda Functions and Cloudflare Workers.',
+      'Economia (Aktualne.cz, HN.cz, Hospodarske noviny, Ekonom) is one of the largest Czech media houses. I am mainly involved in creating JavaScript applications using React and Next.js. I also develop technologies such as AWS infrastructure and Cloudflare Workers.',
   },
   {
     timeRange: '2018 - 2021',

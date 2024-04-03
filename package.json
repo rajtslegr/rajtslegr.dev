@@ -43,7 +43,7 @@
     "swr": "2.2.5"
   },
   "devDependencies": {
-    "@babel/core": "7.24.3",
+    "@babel/core": "7.24.4",
     "@types/node": "20.12.3",
     "@types/react": "18.2.74",
     "@typescript-eslint/eslint-plugin": "7.5.0",

@@ -27,8 +27,8 @@ importers:
         specifier: 1.2.2
         version: 1.2.2(next@14.2.2(@babel/core@7.24.4)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)
       clsx:
-        specifier: 2.1.0
-        version: 2.1.0
+        specifier: 2.1.1
+        version: 2.1.1
       date-fns:
         specifier: 3.6.0
         version: 3.6.0
@@ -890,8 +890,8 @@ packages:
   clipboard@2.0.11:
     resolution: {integrity: sha512-C+0bbOqkezLIsmWSvlsXS0Q0bmkugu7jcfMIACB+RDEntIzQIkdr148we28AfSloQLRdZlYL/QYyrq05j/3Faw==}
 
-  clsx@2.1.0:
-    resolution: {integrity: sha512-m3iNNWpd9rl3jvvcBnu70ylMdrXt8Vlq4HYadnU5fwcOtvkSQWPmj7amUcDT2qYI7risszBjI5AUIUox9D16pg==}
+  clsx@2.1.1:
+    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
     engines: {node: '>=6'}
 
   color-convert@1.9.3:
@@ -3835,7 +3835,7 @@ snapshots:
       tiny-emitter: 2.1.0
     optional: true
 
-  clsx@2.1.0: {}
+  clsx@2.1.1: {}
 
   color-convert@1.9.3:
     dependencies:

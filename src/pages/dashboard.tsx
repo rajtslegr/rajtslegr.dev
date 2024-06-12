@@ -1,13 +1,11 @@
 import { GetStaticProps, NextPage } from 'next';
 
 import GitHub from '@/components/github/GitHub';
-import Instagram from '@/components/instagram/Instagram';
 import LastFm from '@/components/last-fm/LastFm';
 import MetaData from '@/components/meta-data/MetaData';
 import MotionSection from '@/components/motion/MotionSection';
 import Strava from '@/components/strava/Strava';
 import { getRecentRepos } from '@/lib/github';
-import { getRecentPosts } from '@/lib/instagram';
 import { getActivities } from '@/lib/strava';
 import { Activity, GitHubData, InstagramData } from '@/types/entities';
 
@@ -17,11 +15,7 @@ interface DashboardProps {
   stravaData: Activity[];
 }
 
-const Dashboard: NextPage<DashboardProps> = ({
-  gitHubData,
-  instagramData,
-  stravaData,
-}) => (
+const Dashboard: NextPage<DashboardProps> = ({ gitHubData, stravaData }) => (
   <>
     <MetaData title="Petr Rajtslegr | Dashboard" />
     <MotionSection>
@@ -29,32 +23,30 @@ const Dashboard: NextPage<DashboardProps> = ({
         Dashboard
       </h1>
     </MotionSection>
-    <MotionSection delay={0.1}>
+    {/* <MotionSection delay={0.1}>
       <Instagram data={instagramData} />
-    </MotionSection>
-    <MotionSection delay={0.2}>
+    </MotionSection> */}
+    <MotionSection delay={0.1}>
       <LastFm />
     </MotionSection>
-    <MotionSection delay={0.3}>
+    <MotionSection delay={0.2}>
       <Strava data={stravaData} />
     </MotionSection>
-    <MotionSection delay={0.4}>
+    <MotionSection delay={0.3}>
       <GitHub data={gitHubData} />
     </MotionSection>
   </>
 );
 
 export const getStaticProps: GetStaticProps = async () => {
-  const [gitHubData, instagramData, stravaData] = await Promise.all([
+  const [gitHubData, stravaData] = await Promise.all([
     getRecentRepos(),
-    getRecentPosts(),
     getActivities(),
   ]);
 
   return {
     props: {
       gitHubData,
-      instagramData,
       stravaData,
     },
     revalidate: 10800,

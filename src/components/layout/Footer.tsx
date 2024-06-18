@@ -34,9 +34,9 @@ const Footer: React.FC = () => {
             </ExternalLink>
           </div>
           <div className="flex flex-col space-y-2">
-            {/* <ExternalLink href="https://www.instagram.com/rajce">
+            <ExternalLink href="https://www.instagram.com/rajce">
               Instagram
-            </ExternalLink> */}
+            </ExternalLink>
             <ExternalLink href="https://www.threads.net/@rajce">
               Threads
             </ExternalLink>

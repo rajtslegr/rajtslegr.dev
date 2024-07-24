@@ -64,7 +64,7 @@
     "eslint-plugin-unused-imports": "4.0.1",
     "husky": "9.1.1",
     "lint-staged": "15.2.7",
-    "postcss": "8.4.39",
+    "postcss": "8.4.40",
     "prettier": "3.3.3",
     "prisma": "5.17.0",
     "remark-preset-prettier": "2.0.1",

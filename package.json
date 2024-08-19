@@ -70,5 +70,6 @@
     "remark-preset-prettier": "2.0.1",
     "tailwindcss": "3.4.10",
     "typescript": "5.5.4"
-  }
+  },
+  "packageManager": "pnpm@7.18.1+sha1.08baaae841f182ccd9f541b821bf8611c474f685"
 }

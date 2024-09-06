@@ -54,6 +54,14 @@ const NavBar: React.FC<NavBarProps> = ({
           <NavLink href="/blog" isHeader={true}>
             Blog
           </NavLink>
+          <NavLink
+            href="https://photos.rajtslegr.dev/"
+            isHeader={true}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Photos
+          </NavLink>
           <NavLink href="/contact" isHeader={true}>
             Contact
           </NavLink>

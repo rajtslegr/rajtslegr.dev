@@ -4,12 +4,16 @@ import { useRouter } from 'next/router';
 
 interface NavLinkProps extends LinkProps {
   children: string;
+  target?: string;
+  rel?: string;
   isHeader?: boolean;
   isMobileNavigation?: boolean;
 }
 
 const NavLink: React.FC<NavLinkProps> = ({
   children,
+  target,
+  rel,
   isMobileNavigation,
   isHeader,
   href,
@@ -18,11 +22,15 @@ const NavLink: React.FC<NavLinkProps> = ({
   const router = useRouter();
 
   const isRouteActive =
-    router.pathname.split('/')[1] === String(href).split('/')[1];
+    !target && !rel
+      ? router.pathname.split('/')[1] === String(href).split('/')[1]
+      : false;
 
   return (
     <Link
       href={href}
+      target={target}
+      rel={rel}
       className={clsx(
         'motion-safe:transition-colors',
         isRouteActive

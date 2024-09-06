@@ -26,6 +26,17 @@ const MobileNavigation: React.FC = () => (
         </NavLink>
       </MotionSection>
       <MotionSection delay={0.4}>
+        <NavLink
+          href="https://photos.rajtslegr.dev/"
+          isHeader={true}
+          target="_blank"
+          rel="noopener noreferrer"
+          isMobileNavigation
+        >
+          Photos
+        </NavLink>
+      </MotionSection>
+      <MotionSection delay={0.5}>
         <NavLink href="/contact" isMobileNavigation>
           Contact
         </NavLink>

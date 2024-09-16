@@ -31,6 +31,7 @@ const Strava = ({ data }: StravaProps) => {
           }) => (
             <StravaCard
               key={id}
+              id={id}
               type={type}
               name={name}
               distance={distance}

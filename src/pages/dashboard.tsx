@@ -1,25 +1,25 @@
 import { GetStaticProps, NextPage } from 'next';
 
 import GitHub from '@/components/github/GitHub';
-import Instagram from '@/components/instagram/Instagram';
 import LastFm from '@/components/last-fm/LastFm';
 import MetaData from '@/components/meta-data/MetaData';
 import MotionSection from '@/components/motion/MotionSection';
+import Photos from '@/components/photos/Photos';
 import Strava from '@/components/strava/Strava';
 import { getRecentRepos } from '@/lib/github';
-import { getRecentPosts } from '@/lib/instagram';
+import { getRecentPhotos } from '@/lib/photos';
 import { getActivities } from '@/lib/strava';
-import { Activity, GitHubData, InstagramData } from '@/types/entities';
+import { Activity, GitHubData, PhotosData } from '@/types/entities';
 
 interface DashboardProps {
   gitHubData: GitHubData[];
-  instagramData: InstagramData;
+  photosData: PhotosData;
   stravaData: Activity[];
 }
 
 const Dashboard: NextPage<DashboardProps> = ({
   gitHubData,
-  instagramData,
+  photosData,
   stravaData,
 }) => (
   <>
@@ -30,7 +30,7 @@ const Dashboard: NextPage<DashboardProps> = ({
       </h1>
     </MotionSection>
     <MotionSection delay={0.1}>
-      <Instagram data={instagramData} />
+      <Photos data={photosData} />
     </MotionSection>
     <MotionSection delay={0.2}>
       <LastFm />
@@ -45,16 +45,16 @@ const Dashboard: NextPage<DashboardProps> = ({
 );
 
 export const getStaticProps: GetStaticProps = async () => {
-  const [gitHubData, instagramData, stravaData] = await Promise.all([
+  const [gitHubData, photosData, stravaData] = await Promise.all([
     getRecentRepos(),
-    getRecentPosts(),
+    getRecentPhotos(),
     getActivities(),
   ]);
 
   return {
     props: {
       gitHubData,
-      instagramData,
+      photosData,
       stravaData,
     },
     revalidate: 10800,

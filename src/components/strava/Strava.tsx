@@ -11,7 +11,7 @@ interface StravaProps {
 const Strava = ({ data }: StravaProps) => {
   let render: ReactNode = (
     <p className="flex justify-center p-6 italic text-gray-500 dark:text-gray-400">
-      Error fetching data from Strava.
+      Strava data hit a bump in the road. It&apos;ll be back on track soon!
     </p>
   );
 

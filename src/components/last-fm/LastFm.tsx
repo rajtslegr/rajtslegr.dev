@@ -14,7 +14,8 @@ const LastFm: React.FC = () => {
 
   let render: ReactNode = (
     <p className="flex justify-center p-6 italic text-gray-500 dark:text-gray-400">
-      Error fetching data from Last.fm.
+      Hmm, the music data isn&apos;t playing nice. Give it another spin in a
+      bit!
     </p>
   );
 

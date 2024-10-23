@@ -57,7 +57,7 @@ module.exports = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '*.cdninstagram.com',
+        hostname: 'photos.rajtslegr.dev',
       },
       {
         protocol: 'https',

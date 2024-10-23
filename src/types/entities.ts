@@ -1,5 +1,28 @@
 import { MDXRemoteSerializeResult } from 'next-mdx-remote/dist/types';
 
+export interface Photo {
+  id: string;
+  title: string;
+  url: string;
+  make: string;
+  model: string;
+  tags?: string[];
+  takenAtNaive: string;
+  src: {
+    small: string;
+    medium: string;
+    large: string;
+  };
+}
+
+export interface PhotosData {
+  meta: {
+    title: string;
+    url: string;
+  };
+  photos: Photo[];
+}
+
 export interface GitHubData {
   node_id: string;
   full_name: string;
@@ -23,16 +46,6 @@ export interface LastFmData {
   recenttracks: {
     track: LastFmTrack[];
   };
-}
-
-export interface InstagramDataEdge {
-  id: string;
-  permalink: string;
-  media_url: string;
-  caption: string;
-}
-export interface InstagramData {
-  data: InstagramDataEdge[];
 }
 
 export interface ProjectData {

@@ -10,7 +10,7 @@ interface GitHubProps {
 const GitHub: React.FC<GitHubProps> = ({ data }) => {
   let render: ReactNode = (
     <p className="flex justify-center p-6 italic text-gray-500 dark:text-gray-400">
-      Error fetching data from GitHub.
+      Looks like GitHub is playing hide and seek. I&apos; ll find it soon!
     </p>
   );
 

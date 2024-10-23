@@ -50,7 +50,6 @@ jobs:
         env:
           DATABASE_URL: ${{secrets.DATABASE_URL}}
           LASTFM_API_KEY: ${{secrets.LASTFM_API_KEY}}
-          INSTAGRAM_TOKEN: ${{secrets.INSTAGRAM_TOKEN}}
           STRAVA_CLIENT_ID: ${{secrets.STRAVA_CLIENT_ID}}
           STRAVA_CLIENT_SECRET: ${{secrets.STRAVA_CLIENT_SECRET}}
           STRAVA_REFRESH_TOKEN: ${{secrets.STRAVA_REFRESH_TOKEN}}

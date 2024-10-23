@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { AnimatePresence } from 'framer-motion';
 import { AppProps } from 'next/app';
 import { Inter } from 'next/font/google';
@@ -22,6 +23,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => (
         <main className={interVariable.className}>
           <Component {...pageProps} />
           <Analytics />
+          <SpeedInsights />
         </main>
       </AnimatePresence>
     </Layout>

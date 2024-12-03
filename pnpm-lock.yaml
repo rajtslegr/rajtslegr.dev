@@ -39,8 +39,8 @@ importers:
         specifier: 3.3.2
         version: 3.3.2
       framer-motion:
-        specifier: 11.12.0
-        version: 11.12.0(@emotion/is-prop-valid@0.7.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 11.13.0
+        version: 11.13.0(@emotion/is-prop-valid@0.7.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       gray-matter:
         specifier: 4.0.3
         version: 4.0.3
@@ -1501,8 +1501,8 @@ packages:
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
 
-  framer-motion@11.12.0:
-    resolution: {integrity: sha512-gZaZeqFM6pX9kMVti60hYAa75jGpSsGYWAHbBfIkuHN7DkVHVkxSxeNYnrGmHuM0zPkWTzQx10ZT+fDjn7N4SA==}
+  framer-motion@11.13.0:
+    resolution: {integrity: sha512-Z+hSzTWX5IwhFnopIPi9rse08gYjfjoR2U9AOaCzpKv269M/8jYFF2ITmfi3saHqsox2tbsnsc7PuRqkTllGJw==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0
@@ -2253,6 +2253,12 @@ packages:
   minipass@7.1.2:
     resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==}
     engines: {node: '>=16 || 14 >=14.17'}
+
+  motion-dom@11.13.0:
+    resolution: {integrity: sha512-Oc1MLGJQ6nrvXccXA89lXtOqFyBmvHtaDcTRGT66o8Czl7nuA8BeHAd9MQV1pQKX0d2RHFBFaw5g3k23hQJt0w==}
+
+  motion-utils@11.13.0:
+    resolution: {integrity: sha512-lq6TzXkH5c/ysJQBxgLXgM01qwBH1b4goTPh57VvZWJbVJZF/0SB31UWEn4EIqbVPf3au88n2rvK17SpDTja1A==}
 
   ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
@@ -4701,8 +4707,10 @@ snapshots:
 
   fraction.js@4.3.7: {}
 
-  framer-motion@11.12.0(@emotion/is-prop-valid@0.7.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  framer-motion@11.13.0(@emotion/is-prop-valid@0.7.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
+      motion-dom: 11.13.0
+      motion-utils: 11.13.0
       tslib: 2.6.2
     optionalDependencies:
       '@emotion/is-prop-valid': 0.7.3
@@ -5706,6 +5714,10 @@ snapshots:
   minimist@1.2.7: {}
 
   minipass@7.1.2: {}
+
+  motion-dom@11.13.0: {}
+
+  motion-utils@11.13.0: {}
 
   ms@2.1.2: {}
 

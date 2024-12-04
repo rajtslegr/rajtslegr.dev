@@ -49,8 +49,7 @@ const StravaCard: React.FC<IGitHubCard> = ({
       {['Ride', 'Gravel Ride', 'VirtualRide', 'Run'].includes(type) && (
         <p>
           <span className="text-gray-500 dark:text-gray-400">Distance: </span>
-          {Math.floor((distance / 1000) * 100) /
-            100} km
+          {Math.floor((distance / 1000) * 100) / 100} km
         </p>
       )}
       <p>

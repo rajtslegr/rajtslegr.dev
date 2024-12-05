@@ -44,6 +44,7 @@ export const getActivities = async () => {
           'Gravel Ride',
           'WeightTraining',
           'VirtualRide',
+          'Soccer',
         ].includes(activity.type),
     )
     .slice(0, 6);

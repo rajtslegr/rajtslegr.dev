@@ -1,10 +1,12 @@
 import { formatSeconds } from '@/utils/date';
 
+import { isRideActivity, isDistanceActivity } from './utils';
 import BikeIcon from '../icons/BikeIcon';
 import DumbellIcon from '../icons/DumbellIcon';
 import ShoeIcon from '../icons/ShoeIcon';
+import SoccerBallIcon from '../icons/SoccerBallIcon';
 
-interface IGitHubCard {
+interface StravaCardProps {
   id: number;
   type: string;
   name: string;
@@ -15,7 +17,20 @@ interface IGitHubCard {
   averageHeartrate: number;
 }
 
-const StravaCard: React.FC<IGitHubCard> = ({
+const ActivityIcon = ({ type }: { type: string }) => {
+  switch (type) {
+    case 'Run':
+      return <ShoeIcon />;
+    case 'WeightTraining':
+      return <DumbellIcon />;
+    case 'Soccer':
+      return <SoccerBallIcon />;
+    default:
+      return isRideActivity(type) ? <BikeIcon /> : null;
+  }
+};
+
+const StravaCard = ({
   id,
   type,
   name,
@@ -23,7 +38,7 @@ const StravaCard: React.FC<IGitHubCard> = ({
   movingTime,
   elevation,
   averageSpeed,
-}) => (
+}: StravaCardProps) => (
   <a
     href={`https://www.strava.com/activities/${id}`}
     rel="noopener noreferrer"
@@ -36,17 +51,13 @@ const StravaCard: React.FC<IGitHubCard> = ({
         title={name}
       >
         <span>
-          {type === 'Run' && <ShoeIcon />}
-          {type === 'WeightTraining' && <DumbellIcon />}
-          {['Ride', 'Gravel Ride', 'VirtualRide'].includes(type) && (
-            <BikeIcon />
-          )}
+          <ActivityIcon type={type} />
         </span>
         <span className="line-clamp-1">{name}</span>
       </h3>
     </div>
     <div className="flex flex-col dark:text-gray-100">
-      {['Ride', 'Gravel Ride', 'VirtualRide', 'Run'].includes(type) && (
+      {isDistanceActivity(type) && (
         <p>
           <span className="text-gray-500 dark:text-gray-400">Distance: </span>
           {Math.floor((distance / 1000) * 100) / 100} km
@@ -56,7 +67,7 @@ const StravaCard: React.FC<IGitHubCard> = ({
         <span className="text-gray-500 dark:text-gray-400">Time: </span>
         {formatSeconds(movingTime)}
       </p>
-      {['Ride', 'Gravel Ride', 'VirtualRide', 'Run'].includes(type) && (
+      {isDistanceActivity(type) && (
         <p>
           <span className="text-gray-500 dark:text-gray-400">Elevation: </span>
           {elevation} m
@@ -71,7 +82,7 @@ const StravaCard: React.FC<IGitHubCard> = ({
           /km
         </p>
       )}
-      {['Ride', 'Gravel Ride', 'VirtualRide'].includes(type) && (
+      {isRideActivity(type) && (
         <p>
           <span className="text-gray-500 dark:text-gray-400">
             Average speed:{' '}

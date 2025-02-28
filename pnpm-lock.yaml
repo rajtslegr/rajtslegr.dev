@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@formspree/react':
-        specifier: 2.5.3
-        version: 2.5.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: 2.5.4
+        version: 2.5.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@heroicons/react':
         specifier: 2.2.0
         version: 2.2.0(react@19.0.0)
@@ -426,11 +426,11 @@ packages:
     resolution: {integrity: sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@formspree/core@3.0.3':
-    resolution: {integrity: sha512-6dc5q4noM+f4U1aZ4CInry+vThd8uptg9BRf/JlnL0MHKSZdKxzabsjZquxvNYSlSzTC7boYyTxqKgEi1Cmcog==}
+  '@formspree/core@3.0.4':
+    resolution: {integrity: sha512-VpdvQfSbcD4smrk1Gb5RJPBYBWmiNVWkiZs6ddu7afnu/OjKGlIPVo42LNNS5ht2joabcTCiyOZgATjqOdqs+g==}
 
-  '@formspree/react@2.5.3':
-    resolution: {integrity: sha512-9PPwp0Tpt2RWEWvcmIFE4oV3mzUmasSXwAqUpKoll2YlKbMEPbRu1DRHBlvv4fsvC5xrbMvh1g3gmF1K//Y11Q==}
+  '@formspree/react@2.5.4':
+    resolution: {integrity: sha512-dwgsU8uot3ZWizunEk2rO0195yk/tmg/pexcTQXSTQfo1IePswYz9Ior5/dtEk4v7yjBHcY1Ho++LdX/cApymw==}
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
@@ -3766,13 +3766,13 @@ snapshots:
 
   '@eslint/js@8.57.1': {}
 
-  '@formspree/core@3.0.3':
+  '@formspree/core@3.0.4':
     dependencies:
       '@stripe/stripe-js': 1.35.0
 
-  '@formspree/react@2.5.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@formspree/react@2.5.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
-      '@formspree/core': 3.0.3
+      '@formspree/core': 3.0.4
       '@stripe/react-stripe-js': 1.10.0(@stripe/stripe-js@1.35.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@stripe/stripe-js': 1.35.0
       react: 19.0.0

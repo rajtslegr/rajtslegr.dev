@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@formspree/react':
-        specifier: 2.5.4
-        version: 2.5.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: 2.5.5
+        version: 2.5.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@heroicons/react':
         specifier: 2.2.0
         version: 2.2.0(react@19.0.0)
@@ -429,8 +429,8 @@ packages:
   '@formspree/core@3.0.4':
     resolution: {integrity: sha512-VpdvQfSbcD4smrk1Gb5RJPBYBWmiNVWkiZs6ddu7afnu/OjKGlIPVo42LNNS5ht2joabcTCiyOZgATjqOdqs+g==}
 
-  '@formspree/react@2.5.4':
-    resolution: {integrity: sha512-dwgsU8uot3ZWizunEk2rO0195yk/tmg/pexcTQXSTQfo1IePswYz9Ior5/dtEk4v7yjBHcY1Ho++LdX/cApymw==}
+  '@formspree/react@2.5.5':
+    resolution: {integrity: sha512-VmfFW2f/aSMu023Wt84xGlDquRjbbJbJWtTFie9RI70k/EuVJ41Noj1kGHtYVajry9B1pEMyAh4PovdcdCYAHQ==}
     peerDependencies:
       react: ^16.8 || ^17.0 || ^18.0
       react-dom: ^16.8 || ^17.0 || ^18.0
@@ -3759,7 +3759,7 @@ snapshots:
     dependencies:
       '@stripe/stripe-js': 1.35.0
 
-  '@formspree/react@2.5.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@formspree/react@2.5.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@formspree/core': 3.0.4
       '@stripe/react-stripe-js': 1.10.0(@stripe/stripe-js@1.35.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)

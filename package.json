@@ -19,7 +19,7 @@
     "prisma": "node ./scripts/prisma.js"
   },
   "dependencies": {
-    "@formspree/react": "2.5.4",
+    "@formspree/react": "2.5.5",
     "@heroicons/react": "2.2.0",
     "@prisma/client": "6.5.0",
     "@tailwindcss/forms": "0.5.10",

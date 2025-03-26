@@ -6,10 +6,7 @@ interface MotionSectionProps extends PropsWithChildren {
   delay?: number;
 }
 
-const MotionSection: React.FC<MotionSectionProps> = ({
-  children,
-  delay = 0,
-}) => {
+const MotionSection = ({ children, delay = 0 }: MotionSectionProps) => {
   const shouldReduceMotion = useReducedMotion();
 
   return (

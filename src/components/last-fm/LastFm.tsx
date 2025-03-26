@@ -7,26 +7,28 @@ import LastFmSkeleton from '@/components/last-fm/LastFmSkeleton';
 import { LastFmData } from '@/types/entities';
 import { fetcher } from '@/utils/fetcher';
 
-const LastFm: React.FC = () => {
+const LastFm = () => {
   const { data, error } = useSWR<LastFmData>('/api/last-fm', fetcher, {
     refreshInterval: 60000,
+    suspense: false,
+    revalidateOnFocus: false,
   });
 
-  let render: ReactNode = (
-    <p className="flex justify-center p-6 italic text-gray-500 dark:text-gray-400">
-      Hmm, the music data isn&apos;t playing nice. Give it another spin in a
-      bit!
-    </p>
-  );
+  let render: ReactNode = <LastFmSkeleton />;
 
-  if (!error) {
-    render = <LastFmSkeleton />;
+  if (error) {
+    render = (
+      <p className="flex justify-center p-6 italic text-gray-500 dark:text-gray-400">
+        Hmm, the music data isn&apos;t playing nice. Give it another spin in a
+        bit!
+      </p>
+    );
   }
 
-  if (!error && data?.recenttracks) {
+  if (data?.recenttracks) {
     render = (
-      <div className="m-0 grid gap-4 md:grid-cols-2">
-        {data?.recenttracks?.track
+      <div className="grid gap-4 md:grid-cols-2">
+        {data.recenttracks.track
           ?.filter((_track, index) => index < 6)
           .map((track) => (
             <LastFmItem key={track?.date?.uts || 0} track={track} />
@@ -36,12 +38,12 @@ const LastFm: React.FC = () => {
   }
 
   return (
-    <>
-      <h2 className="mb-4 mt-12 text-3xl font-bold dark:text-gray-100">
+    <div>
+      <h2 className="mb-6 mt-12 text-sm font-medium uppercase tracking-widest text-gray-500">
         Last.fm
       </h2>
       {render}
-    </>
+    </div>
   );
 };
 

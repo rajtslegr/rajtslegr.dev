@@ -1,4 +1,4 @@
-const LoadingIcon: React.FC = () => (
+const LoadingIcon = () => (
   <svg
     className="size-5 motion-safe:animate-spin"
     xmlns="http://www.w3.org/2000/svg"

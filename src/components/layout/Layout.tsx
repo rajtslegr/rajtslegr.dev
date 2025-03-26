@@ -11,7 +11,7 @@ interface LayoutProps {
   children: ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout = ({ children }: LayoutProps) => {
   const [showMobileNavigation, setShowMobileNavigation] = useState(false);
   const [blockScroll, allowScroll] = useScrollBlock();
   const router = useRouter();
@@ -35,17 +35,19 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }, [allowScroll, router.events]);
 
   return (
-    <>
+    <div className="flex min-h-screen flex-col bg-white text-gray-700 dark:bg-black dark:text-gray-200">
       <NavBar
         showMobileNavigation={showMobileNavigation}
         handleClick={mobileNavigationHandler}
       />
-      {showMobileNavigation && <MobileNavigation />}
-      <div className="background-gradient mx-auto my-8 max-w-4xl flex-auto px-4 md:my-12">
+      {showMobileNavigation && (
+        <MobileNavigation handleClick={mobileNavigationHandler} />
+      )}
+      <div className="background-gradient mx-auto w-full max-w-[60ch] flex-auto px-4 py-8 md:py-10">
         {children}
       </div>
       {!showMobileNavigation && <Footer />}
-    </>
+    </div>
   );
 };
 

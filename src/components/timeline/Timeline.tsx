@@ -1,14 +1,18 @@
 import TimelineItem from '@/components/timeline/TimelineItem';
 import { timelineData } from '@/data/timeline';
 
-const Timeline: React.FC = () => (
-  <div className="mt-14 flex flex-row justify-center md:ml-20 md:mt-28 md:w-4/5">
-    <div className="flex flex-col">
+const Timeline = () => (
+  <section className="pb-8 pt-2 md:pb-12 md:pt-4">
+    <div className="flex flex-col space-y-2">
       {timelineData.map((item, index) => (
-        <TimelineItem key={index} data={item} />
+        <TimelineItem
+          key={index}
+          data={item}
+          isLast={index === timelineData.length - 1}
+        />
       ))}
     </div>
-  </div>
+  </section>
 );
 
 export default Timeline;

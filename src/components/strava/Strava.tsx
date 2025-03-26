@@ -17,7 +17,7 @@ const Strava = ({ data }: StravaProps) => {
 
   if (Array.isArray(data)) {
     render = (
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid gap-4 md:grid-cols-2">
         {data?.map(
           ({
             id,
@@ -48,7 +48,7 @@ const Strava = ({ data }: StravaProps) => {
 
   return (
     <div>
-      <h2 className="mb-4 mt-12 text-3xl font-bold dark:text-gray-100">
+      <h2 className="mb-6 mt-12 text-sm font-medium uppercase tracking-widest text-gray-500">
         Strava
       </h2>
       {render}

@@ -7,7 +7,7 @@ interface GitHubProps {
   data?: GitHubData[];
 }
 
-const GitHub: React.FC<GitHubProps> = ({ data }) => {
+const GitHub = ({ data }: GitHubProps) => {
   let render: ReactNode = (
     <p className="flex justify-center p-6 italic text-gray-500 dark:text-gray-400">
       Looks like GitHub is playing hide and seek. I&apos; ll find it soon!
@@ -16,7 +16,7 @@ const GitHub: React.FC<GitHubProps> = ({ data }) => {
 
   if (Array.isArray(data)) {
     render = (
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid gap-4 md:grid-cols-2">
         {data?.map(
           ({
             node_id,
@@ -43,7 +43,7 @@ const GitHub: React.FC<GitHubProps> = ({ data }) => {
 
   return (
     <div>
-      <h2 className="mb-4 mt-12 text-3xl font-bold dark:text-gray-100">
+      <h2 className="mb-6 mt-12 text-sm font-medium uppercase tracking-widest text-gray-500">
         GitHub
       </h2>
       {render}

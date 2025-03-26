@@ -2,7 +2,7 @@ export const projectData = [
   {
     title: 'Pujdu.cz',
     description:
-      'An online tool to easily schedule meetings and coordinate time between people.',
+      'A scheduling tool for coordinating meetings and managing availability between people.',
     build: ['Next.js', 'Prisma', 'React Query', 'zustand', 'Tailwind'],
     image: 'pujdu',
     live: 'https://pujdu.cz/',
@@ -10,7 +10,7 @@ export const projectData = [
   {
     title: 'Centrum Vyber',
     description:
-      'News aggregator of content products of the media house Economia for registered users.',
+      'News aggregator that collects content from Economia media house publications for registered users.',
     build: ['Next.js', 'Strapi', 'Tailwind'],
     image: 'vyber',
     live: 'https://vyber.centrum.cz/',
@@ -18,7 +18,7 @@ export const projectData = [
   {
     title: 'Elections Infographics',
     description:
-      'Engaging and informative representations of election data to help users easily understand and analyze electoral trends.',
+      'Visual representations of election data to present electoral information and results.',
     build: ['React', 'Vite', 'React Query', 'Serverless'],
     image: 'elections',
     live: 'https://zpravy.aktualne.cz/domaci/parlamentni-volby-2021-vysledky/r~fe2b3768280211eca7d3ac1f6b220ee8/',
@@ -26,7 +26,7 @@ export const projectData = [
   {
     title: 'xQuest Online',
     description:
-      'Application for telephone and field survey interviewing used in market research.',
+      'Application for conducting telephone and field surveys for market research purposes.',
     build: ['Angular', 'Express', 'MySQL', 'Angular Material'],
     image: 'xquest',
   },

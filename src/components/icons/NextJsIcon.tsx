@@ -2,7 +2,7 @@ interface NextJsIconProps {
   theme: string;
 }
 
-const NextJsIcon: React.FC<NextJsIconProps> = ({ theme }) => {
+const NextJsIcon = ({ theme }: NextJsIconProps) => {
   const fill = theme === 'light' ? '#6b7280' : '#9ca3af';
 
   return (

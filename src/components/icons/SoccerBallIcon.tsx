@@ -1,8 +1,15 @@
 import { useTheme } from 'next-themes';
 
+import useIsMounted from '@/hooks/useIsMounted';
+
 const SoccerBallIcon = () => {
-  const { theme } = useTheme();
-  const fill = theme === 'light' ? '#000000' : '#ffff';
+  const isMounted = useIsMounted();
+  const { resolvedTheme } = useTheme();
+
+  let fill = 'currentColor';
+  if (isMounted) {
+    fill = resolvedTheme === 'light' ? '#000000' : '#ffffff';
+  }
 
   return (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="24" width="24">

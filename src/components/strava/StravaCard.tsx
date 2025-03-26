@@ -43,53 +43,70 @@ const StravaCard = ({
     href={`https://www.strava.com/activities/${id}`}
     rel="noopener noreferrer"
     target="_blank"
-    className="flex flex-col gap-4 overflow-hidden rounded-lg bg-white p-2 shadow motion-safe:transition-all motion-safe:hover:scale-105 dark:bg-card"
+    className="card-hover group block rounded-md border border-gray-200/30 bg-card-light p-4 dark:border-gray-800/30 dark:bg-card"
   >
-    <div className="flex flex-row dark:text-gray-100">
-      <h3
-        className="flex flex-row items-center space-x-2 text-lg font-semibold"
-        title={name}
-      >
-        <span>
+    <div className="flex flex-col space-y-3">
+      <div className="flex items-center space-x-2">
+        <span className="shrink-0 text-gray-500 dark:text-gray-400">
           <ActivityIcon type={type} />
         </span>
-        <span className="line-clamp-1">{name}</span>
-      </h3>
-    </div>
-    <div className="flex flex-col dark:text-gray-100">
-      {isDistanceActivity(type) && (
-        <p>
-          <span className="text-gray-500 dark:text-gray-400">Distance: </span>
-          {Math.floor((distance / 1000) * 100) / 100} km
-        </p>
-      )}
-      <p>
-        <span className="text-gray-500 dark:text-gray-400">Time: </span>
-        {formatSeconds(movingTime)}
-      </p>
-      {isDistanceActivity(type) && (
-        <p>
-          <span className="text-gray-500 dark:text-gray-400">Elevation: </span>
-          {elevation} m
-        </p>
-      )}
-      {type === 'Run' && (
-        <p>
-          <span className="text-gray-500 dark:text-gray-400">Pace: </span>
-          {String(
-            Math.floor((movingTime / 60 / (distance / 1000)) * 100) / 100,
-          ).replace('.', ':')}{' '}
-          /km
-        </p>
-      )}
-      {isRideActivity(type) && (
-        <p>
-          <span className="text-gray-500 dark:text-gray-400">
-            Average speed:{' '}
-          </span>
-          {Math.floor(averageSpeed * 3.6 * 100) / 100} km/h
-        </p>
-      )}
+        <h3
+          className="line-clamp-1 text-base font-medium text-black group-hover:text-gray-700 dark:text-white dark:group-hover:text-gray-200"
+          title={name}
+        >
+          {name}
+        </h3>
+      </div>
+
+      <div className="grid grid-cols-2 gap-2 text-sm">
+        {isDistanceActivity(type) && (
+          <div>
+            <p className="text-xs text-gray-500 dark:text-gray-500">Distance</p>
+            <p className="text-gray-700 dark:text-gray-300">
+              {Math.floor((distance / 1000) * 100) / 100} km
+            </p>
+          </div>
+        )}
+
+        <div>
+          <p className="text-xs text-gray-500 dark:text-gray-500">Time</p>
+          <p className="text-gray-700 dark:text-gray-300">
+            {formatSeconds(movingTime)}
+          </p>
+        </div>
+
+        {isDistanceActivity(type) && (
+          <div>
+            <p className="text-xs text-gray-500 dark:text-gray-500">
+              Elevation
+            </p>
+            <p className="text-gray-700 dark:text-gray-300">{elevation} m</p>
+          </div>
+        )}
+
+        {type === 'Run' && (
+          <div>
+            <p className="text-xs text-gray-500 dark:text-gray-500">Pace</p>
+            <p className="text-gray-700 dark:text-gray-300">
+              {String(
+                Math.floor((movingTime / 60 / (distance / 1000)) * 100) / 100,
+              ).replace('.', ':')}{' '}
+              /km
+            </p>
+          </div>
+        )}
+
+        {isRideActivity(type) && (
+          <div>
+            <p className="text-xs text-gray-500 dark:text-gray-500">
+              Avg Speed
+            </p>
+            <p className="text-gray-700 dark:text-gray-300">
+              {Math.floor(averageSpeed * 3.6 * 100) / 100} km/h
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   </a>
 );

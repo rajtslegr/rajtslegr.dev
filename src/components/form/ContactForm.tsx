@@ -4,7 +4,7 @@ import Button from '@/components/buttons/Button';
 import Input from '@/components/form/Input';
 import TextArea from '@/components/form/TextArea';
 
-const ContactForm: React.FC = () => {
+const ContactForm = () => {
   const [{ submitting, succeeded, errors }, handleSubmit] = useForm('xyylyppy');
 
   if (succeeded) {

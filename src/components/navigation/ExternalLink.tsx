@@ -7,16 +7,16 @@ interface ExternalLinkProps {
   ariaLabel?: string;
 }
 
-const ExternalLink: React.FC<ExternalLinkProps> = ({
+const ExternalLink = ({
   href,
   children,
   className,
   ariaLabel,
-}) => (
+}: ExternalLinkProps) => (
   <a
     className={
       className ||
-      'font-medium text-gray-500 hover:text-gray-600 motion-safe:transition-colors dark:text-gray-400 dark:hover:text-gray-300'
+      'font-normal text-gray-600 duration-200 hover:text-black motion-safe:transition-all dark:text-gray-400 dark:hover:text-gray-200'
     }
     target="_blank"
     rel="noopener noreferrer"

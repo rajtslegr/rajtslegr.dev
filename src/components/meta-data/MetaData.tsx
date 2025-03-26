@@ -9,13 +9,13 @@ interface MetaDataProps {
   date?: string;
 }
 
-const MetaData: React.FC<MetaDataProps> = ({
+const MetaData = ({
   title,
   description = 'Software Developer based in Prague, Czechia.',
   image = '/static/images/meta-image.jpg',
   type = 'website',
   date,
-}) => {
+}: MetaDataProps) => {
   const router = useRouter();
   const url = `https://rajtslegr.dev${router.asPath}`;
 

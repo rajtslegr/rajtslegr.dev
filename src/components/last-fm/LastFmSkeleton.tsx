@@ -1,16 +1,16 @@
-const LastFmSkeleton: React.FC = () => (
+const LastFmSkeleton = () => (
   <div className="grid gap-4 md:grid-cols-2">
     {new Array(6).fill(undefined).map((_value, index) => (
       <div
         key={index}
-        className="flex h-36 flex-col rounded bg-white p-2 shadow dark:bg-card"
+        className="card-hover rounded-md border border-gray-200/30 bg-white p-4 dark:border-gray-800/30 dark:bg-card"
       >
-        <div className="flex flex-row space-x-2">
-          <div className="size-32 rounded bg-gray-200 shadow motion-safe:animate-pulse dark:bg-gray-700"></div>
-          <div className="flex w-3/5 flex-col justify-between">
-            <div className="mb-4 h-6 w-1/3 rounded-sm bg-gray-200 motion-safe:animate-pulse dark:bg-gray-700"></div>
-            <div className="h-4 w-3/5 rounded-sm bg-gray-200 motion-safe:animate-pulse dark:bg-gray-700"></div>
-            <div className="h-4 w-3/5 rounded-sm bg-gray-200 motion-safe:animate-pulse dark:bg-gray-700"></div>
+        <div className="flex space-x-3">
+          <div className="size-16 shrink-0 rounded-md bg-gray-100 motion-safe:animate-pulse dark:bg-gray-800 sm:size-20"></div>
+          <div className="flex flex-1 flex-col">
+            <div className="mb-3 h-5 w-3/5 rounded-sm bg-gray-100 motion-safe:animate-pulse dark:bg-gray-800"></div>
+            <div className="mb-2 h-4 w-2/5 rounded-sm bg-gray-100 motion-safe:animate-pulse dark:bg-gray-800"></div>
+            <div className="h-4 w-2/5 rounded-sm bg-gray-100 motion-safe:animate-pulse dark:bg-gray-800"></div>
           </div>
         </div>
       </div>

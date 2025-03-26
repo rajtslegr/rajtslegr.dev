@@ -3,15 +3,15 @@ import { TimelineData } from '@/types/entities';
 export const timelineData: TimelineData[] = [
   {
     timeRange: '2021 - present',
-    job: 'Economia',
+    job: 'Full Stack Developer at Economia',
     description:
-      'Economia (Aktualne.cz, HN.cz, Hospodarske noviny, Ekonom) is one of the largest Czech media houses. I am mainly involved in creating JavaScript applications using React and Next.js. I also develop technologies such as AWS infrastructure and Cloudflare Workers.',
+      'Developing JavaScript applications with React and Next.js at a major Czech media company (Aktualne.cz, HN.cz, Hospodarske noviny, Ekonom). Implementing cloud infrastructure with AWS and Cloudflare Workers to support digital content delivery.',
   },
   {
     timeRange: '2018 - 2021',
-    job: 'STEM/MARK',
+    job: 'Full Stack Developer at STEM/MARK',
     description:
-      'I have worked on several market research applications, specifically online, telephone, and field interviewing. The front-end application was developed using the Angular framework as a PWA. The back-end was built using Node.js, Express, and MySQL.',
+      'Created market research applications for online, telephone, and field interviewing. Developed PWAs using Angular for the frontend alongside Node.js, Express, and MySQL for backend services, improving data collection workflows.',
   },
 ];
 

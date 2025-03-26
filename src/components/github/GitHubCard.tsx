@@ -8,29 +8,47 @@ interface IGitHubCard {
   watches: number;
 }
 
-const GitHubCard: React.FC<IGitHubCard> = ({
+const GitHubCard = ({
   children,
   link,
   language,
   stars,
   watches,
-}) => (
-  <div className="flex flex-col overflow-hidden rounded-lg bg-white p-2 shadow motion-safe:transition-all motion-safe:hover:scale-105 dark:bg-card">
-    <a href={link} rel="noopener noreferrer" target="_blank">
-      <div className="flex h-6 flex-row dark:text-gray-100">
-        <DocumentIcon />
-        <h3 className="truncate text-lg font-semibold" title={children}>
-          {children}
-        </h3>
-      </div>
-      <div className="flex h-6 flex-row" />
-      <div className="flex h-6 flex-row text-gray-500 dark:text-gray-400">
-        <p>{language}</p>
-        <div className="flex grow justify-end space-x-2">
-          <StarIcon />
-          <span>{stars}</span>
-          <EyeIcon />
-          <span>{watches}</span>
+}: IGitHubCard) => (
+  <div className="card-hover group rounded-md border border-gray-200/30 bg-card-light p-4 dark:border-gray-800/30 dark:bg-card">
+    <a href={link} rel="noopener noreferrer" target="_blank" className="block">
+      <div className="flex flex-col space-y-4">
+        <div className="flex items-center">
+          <DocumentIcon className="mr-2 size-5 shrink-0 text-gray-500 dark:text-gray-400" />
+          <h3
+            className="truncate text-base font-medium text-black group-hover:text-gray-700 dark:text-white dark:group-hover:text-gray-200"
+            title={children}
+          >
+            {children}
+          </h3>
+        </div>
+
+        <div className="flex items-center justify-between text-sm">
+          {language ? (
+            <span className="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-700 dark:bg-gray-800 dark:text-gray-300">
+              {language}
+            </span>
+          ) : (
+            <span></span>
+          )}
+
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center">
+              <StarIcon className="mr-1 size-4 text-gray-500 dark:text-gray-400" />
+              <span className="text-gray-600 dark:text-gray-400">{stars}</span>
+            </div>
+            <div className="flex items-center">
+              <EyeIcon className="mr-1 size-4 text-gray-500 dark:text-gray-400" />
+              <span className="text-gray-600 dark:text-gray-400">
+                {watches}
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </a>

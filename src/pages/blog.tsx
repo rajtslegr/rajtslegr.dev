@@ -26,8 +26,10 @@ const Blog: NextPage<BlogProps> = ({ allPostsData }) => {
     <>
       <MetaData title="Petr Rajtslegr | Blog" />
       <MotionSection>
-        <h1 className="mb-4 text-4xl font-extrabold dark:text-gray-100 md:mb-12">
-          Blog
+        <h1 className="mb-8 inline-block font-normal tracking-tight text-black dark:text-white md:mb-12">
+          <span className="text-sm font-medium uppercase tracking-widest text-gray-500">
+            Blog
+          </span>
         </h1>
       </MotionSection>
       <MotionSection delay={0.1}>

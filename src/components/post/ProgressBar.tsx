@@ -1,6 +1,6 @@
 import { motion, useScroll } from 'framer-motion';
 
-const ProgressBar: React.FC = () => {
+const ProgressBar = () => {
   const { scrollYProgress } = useScroll();
 
   return (

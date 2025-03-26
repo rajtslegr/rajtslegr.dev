@@ -1,4 +1,4 @@
-import { MouseEventHandler, useMemo } from 'react';
+import { MouseEventHandler } from 'react';
 
 import { MoonIcon, SunIcon } from '@heroicons/react/20/solid';
 import { motion, TargetAndTransition, useReducedMotion } from 'framer-motion';
@@ -10,30 +10,33 @@ interface ThemeButtonProps {
   handleClick: MouseEventHandler<HTMLButtonElement>;
 }
 
-const ThemeButton: React.FC<ThemeButtonProps> = ({ handleClick }) => {
+const ThemeButton = ({ handleClick }: ThemeButtonProps) => {
   const isMounted = useIsMounted();
   const { resolvedTheme } = useTheme();
   const shouldReduceMotion = useReducedMotion();
 
-  const tapProperties: TargetAndTransition = useMemo(() => {
-    return {
-      translateX: '-90px',
-      rotate: -90,
-    };
-  }, []);
+  const tapProperties: TargetAndTransition = {
+    scale: 0.9,
+    backgroundColor: 'rgba(100, 100, 120, 0.1)',
+  };
 
   return (
     <button
       aria-label="Toggle Dark Mode"
       type="button"
-      className="my-3 size-12 overflow-hidden rounded-lg bg-gray-200 shadow motion-safe:transition-all motion-safe:hover:scale-105 dark:bg-gray-700 dark:text-gray-100"
+      className="flex size-8 items-center justify-center rounded-md border border-gray-200/30 bg-card-light text-gray-600 transition-all duration-200 hover:border-gray-200/50 hover:text-black dark:border-gray-800/30 dark:bg-card dark:text-gray-400 dark:hover:border-gray-800/50 dark:hover:text-gray-200"
       onClick={handleClick}
     >
       <motion.div
         whileTap={shouldReduceMotion ? undefined : tapProperties}
-        className="p-3"
+        className="flex size-full items-center justify-center"
       >
-        {isMounted && (resolvedTheme === 'light' ? <MoonIcon /> : <SunIcon />)}
+        {isMounted &&
+          (resolvedTheme === 'light' ? (
+            <MoonIcon className="size-4" />
+          ) : (
+            <SunIcon className="size-4" />
+          ))}
       </motion.div>
     </button>
   );

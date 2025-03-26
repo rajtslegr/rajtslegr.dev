@@ -7,22 +7,27 @@ interface PostCardProps {
   post: PostData;
 }
 
-const PostCard: React.FC<PostCardProps> = ({
+const PostCard = ({
   post: { id, date, title, description, readingTime, views },
-}) => (
-  <Link href={`/blog/${id}`} passHref>
-    <div className="flex cursor-pointer flex-col space-y-2 rounded-lg bg-white p-4 shadow motion-safe:transition-all motion-safe:hover:scale-105 dark:bg-card sm:h-64 lg:h-48">
-      <h2 className="text-xl font-semibold dark:text-gray-100">{title}</h2>
-      <p className="text-gray-700 dark:text-gray-300">{description}</p>
-      <div className="flex flex-1"></div>
-      <div className="flex flex-row text-gray-500 dark:text-gray-400">
-        <p>
-          {parseDate(date)}
-          {' • '}
-          {readingTime?.text}
-          {' • '}
-          {views} views
+}: PostCardProps) => (
+  <Link href={`/blog/${id}`} passHref className="group">
+    <div className="card-hover h-full rounded-md border border-gray-200/30 bg-card-light p-5 transition-all duration-200 dark:border-gray-800/30 dark:bg-card">
+      <div className="flex h-full flex-col">
+        <h2 className="mb-2 text-lg font-medium text-black group-hover:text-gray-700 dark:text-white dark:group-hover:text-gray-200">
+          {title}
+        </h2>
+        <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">
+          {description}
         </p>
+        <div className="mt-auto flex flex-wrap items-center text-xs text-gray-500 dark:text-gray-500">
+          <time dateTime={date} className="inline-block">
+            {parseDate(date)}
+          </time>
+          <span className="mx-1">•</span>
+          <span className="inline-block">{readingTime?.text}</span>
+          <span className="mx-1">•</span>
+          <span className="inline-block">{views} views</span>
+        </div>
       </div>
     </div>
   </Link>

@@ -8,17 +8,19 @@ interface NavLinkProps extends LinkProps {
   rel?: string;
   isHeader?: boolean;
   isMobileNavigation?: boolean;
+  className?: string;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({
+const NavLink = ({
   children,
   target,
   rel,
   isMobileNavigation,
   isHeader,
+  className,
   href,
   ...props
-}) => {
+}: NavLinkProps) => {
   const router = useRouter();
 
   const isRouteActive =
@@ -26,24 +28,35 @@ const NavLink: React.FC<NavLinkProps> = ({
       ? router.pathname.split('/')[1] === String(href).split('/')[1]
       : false;
 
+  const isHomeLink = href === '/' && className?.includes('!pl-0');
+
   return (
     <Link
       href={href}
       target={target}
       rel={rel}
       className={clsx(
-        'motion-safe:transition-colors',
+        'relative duration-200 motion-safe:transition-all',
         isRouteActive
-          ? 'font-semibold dark:text-gray-100'
-          : 'font-medium text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300',
-        isMobileNavigation ? 'text-2xl' : 'text-base',
-        !isMobileNavigation &&
-          isHeader &&
-          'rounded-lg p-2 hover:bg-gray-200 dark:hover:bg-gray-700',
+          ? 'font-medium text-black dark:text-white'
+          : 'font-normal text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-gray-200',
+        isMobileNavigation ? 'mb-2 text-xl' : 'text-sm',
+        !isMobileNavigation && isHeader && 'inline-block px-3 py-1.5',
+        className,
       )}
       {...props}
     >
       {children}
+      {isRouteActive && !isMobileNavigation && isHeader && (
+        <span
+          className={clsx(
+            'absolute -bottom-1 h-px w-1/2 bg-black dark:bg-white',
+            isHomeLink
+              ? 'left-1/4 -translate-x-1/4'
+              : 'left-1/2 -translate-x-1/2',
+          )}
+        />
+      )}
     </Link>
   );
 };

@@ -6,8 +6,8 @@
   .background-gradient::before {
     background: radial-gradient(
       30% 30% at 60% 40%,
-      rgba(126, 34, 206, 0.33) 0%,
-      rgba(37, 38, 44, 0) 100%
+      rgba(51, 51, 51, 0.33) 0%,
+      rgba(0, 0, 0, 0) 100%
     );
     z-index: -10;
     content: "";
@@ -19,16 +19,16 @@
 }
 
 #nprogress .bar {
-  @apply first:bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500;
+  @apply first:bg-accent;
 }
 
 .header {
-  @apply bg-opacity-50 backdrop-blur dark:bg-dark dark:bg-opacity-50;
+  @apply bg-opacity-70 backdrop-blur bg-white dark:bg-black dark:bg-opacity-70 border-b border-gray-200/20 dark:border-gray-800/20;
 }
 
 @supports not (backdrop-filter: none) {
   .header {
-    @apply bg-opacity-90 backdrop-blur-none dark:bg-opacity-90;
+    @apply bg-opacity-90 backdrop-blur-none dark:bg-opacity-95;
   }
 }
 
@@ -36,28 +36,32 @@ input:-webkit-autofill {
   -webkit-text-fill-color: theme('colors.gray.700') !important;
 }
 
+.dark input:-webkit-autofill {
+  -webkit-text-fill-color: theme('colors.gray.300') !important;
+}
+
 code[class*='language-'],
 pre[class*='language-'] {
-  @apply text-gray-700 dark:text-blue-300;
+  @apply text-gray-700 dark:text-gray-300;
 }
 
 .prose pre {
-  @apply text-gray-700 bg-white shadow dark:bg-card dark:text-blue-300 rounded-lg;
+  @apply text-gray-700 bg-white shadow dark:bg-card dark:text-gray-300 rounded-md border border-gray-200/30 dark:border-gray-800/30;
 }
 
 .prose code {
-  @apply px-1 py-0.5 text-gray-700 bg-white dark:bg-card dark:text-blue-300;
+  @apply px-1 py-0.5 text-gray-700 bg-white dark:bg-card dark:text-gray-300;
 }
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  @apply text-gray-700 dark:text-gray-300;
+  @apply text-gray-400 italic;
 }
 
 .token.punctuation {
-  @apply text-gray-700 dark:text-gray-300;
+  @apply text-gray-500 dark:text-gray-400;
 }
 
 .token.parameter,
@@ -68,7 +72,7 @@ pre[class*='language-'] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  @apply text-green-700 dark:text-green-300;
+  @apply text-emerald-600 dark:text-emerald-400;
 }
 
 .token.selector,
@@ -77,7 +81,7 @@ pre[class*='language-'] {
 .token.char,
 .token.builtin,
 .token.inserted {
-  @apply text-pink-700 dark:text-pink-300;
+  @apply text-rose-600 dark:text-rose-400;
 }
 
 .token.operator,
@@ -85,24 +89,24 @@ pre[class*='language-'] {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  @apply text-yellow-700 dark:text-yellow-300;
+  @apply text-amber-600 dark:text-amber-400;
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-  @apply text-purple-700 dark:text-purple-300;
+  @apply text-violet-600 dark:text-violet-400;
 }
 
 .token.function,
 .token.class-name {
-  @apply text-indigo-700 dark:text-indigo-300;
+  @apply text-blue-600 dark:text-blue-400;
 }
 
 .token.regex,
 .token.important,
 .token.variable {
-  @apply text-yellow-700 dark:text-yellow-300;
+  @apply text-orange-600 dark:text-orange-400;
 }
 
 html {
@@ -116,4 +120,60 @@ pre::-webkit-scrollbar {
 pre {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  overflow-x: auto;
+  position: relative;
+}
+
+.card-hover {
+  @apply transition-all duration-200 hover:bg-gray-200 dark:hover:bg-subtle border border-gray-200/20 hover:border-gray-200/40 dark:border-gray-800/20 dark:hover:border-gray-800/40;
+}
+
+.section-heading {
+  @apply font-semibold text-sm text-gray-500 tracking-wider uppercase mb-4;
+}
+
+/* Line highlighting and numbering */
+pre > code {
+  display: grid;
+  min-width: 100%;
+}
+
+.code-highlight {
+  float: left;
+  min-width: 100%;
+}
+
+.code-line {
+  display: block;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: -16px;
+  margin-right: -16px;
+  border-left: 4px solid transparent;
+}
+
+.code-line.inserted {
+  background-color: rgba(16, 185, 129, 0.2);
+  @apply dark:bg-opacity-10;
+}
+
+.code-line.deleted {
+  background-color: rgba(239, 68, 68, 0.2);
+  @apply dark:bg-opacity-10;
+}
+
+.highlight-line {
+  border-left-color: rgb(59, 130, 246);
+  background-color: rgba(59, 130, 246, 0.1);
+  @apply dark:bg-opacity-30;
+}
+
+.line-number::before {
+  content: attr(line);
+  display: inline-block;
+  width: 1rem;
+  margin-right: 16px;
+  text-align: right;
+  color: rgba(156, 163, 175, 0.6);
+  @apply dark:text-gray-500;
 }

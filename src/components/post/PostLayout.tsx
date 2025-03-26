@@ -11,9 +11,9 @@ interface PostLayoutProps {
   postData: ContentPostData;
 }
 
-const PostLayout: React.FC<PostLayoutProps> = ({
+const PostLayout = ({
   postData: { title, date, mdxContent, image },
-}) => (
+}: PostLayoutProps) => (
   <div className="mx-auto flex max-w-2xl flex-col items-center">
     <article className="w-full max-w-none text-black dark:text-white">
       <MotionSection>

@@ -11,9 +11,9 @@ import '@/styles/globals.css';
 
 const interVariable = Inter({ subsets: ['latin'] });
 
-const App: React.FC<AppProps> = ({ Component, pageProps }) => (
+const App = ({ Component, pageProps }: AppProps) => (
   <ThemeProvider
-    defaultTheme="system"
+    defaultTheme="dark"
     attribute="class"
     disableTransitionOnChange={true}
   >

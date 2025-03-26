@@ -5,7 +5,6 @@ import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
 
 import ThemeButton from '@/components/buttons/ThemeButton';
-import ExternalLink from '@/components/navigation/ExternalLink';
 import NavigationButton from '@/components/navigation/NavigationButton';
 import NavLink from '@/components/navigation/NavLink';
 import useOnTop from '@/hooks/useOnTop';
@@ -17,10 +16,7 @@ interface NavBarProps {
   showMobileNavigation: boolean;
 }
 
-const NavBar: React.FC<NavBarProps> = ({
-  showMobileNavigation,
-  handleClick,
-}) => {
+const NavBar = ({ showMobileNavigation, handleClick }: NavBarProps) => {
   const router = useRouter();
   const { resolvedTheme, setTheme } = useTheme();
   const onTop = useOnTop();
@@ -30,19 +26,19 @@ const NavBar: React.FC<NavBarProps> = ({
   return (
     <nav
       className={clsx(
-        'header sticky top-0 z-10 motion-safe:transition-shadow',
-        onTop && 'shadow',
+        'header sticky top-0 z-10 h-16 motion-safe:transition-shadow',
+        !onTop && 'shadow-sm',
       )}
     >
-      <div className="container mx-auto flex h-full max-w-4xl items-center justify-between px-4 sm:pl-2">
+      <div className="container mx-auto flex h-full max-w-[60ch] items-center justify-between px-4">
         <div className="sm:hidden">
           <NavigationButton
             showMobileNavigation={showMobileNavigation}
             handleClick={handleClick}
           />
         </div>
-        <div className="hidden h-full sm:block">
-          <NavLink href="/" isHeader={true}>
+        <div className="hidden h-full sm:flex sm:items-center sm:space-x-6">
+          <NavLink href="/" isHeader={true} className="!pl-0">
             Home
           </NavLink>
           <NavLink href="/dashboard" isHeader={true}>
@@ -66,14 +62,13 @@ const NavBar: React.FC<NavBarProps> = ({
             Contact
           </NavLink>
         </div>
-        <ExternalLink href="https://vshymanskyy.github.io/StandWithUkraine">
-          #StandWithUkraine 🇺🇦
-        </ExternalLink>
-        <ThemeButton
-          handleClick={() =>
-            setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
-          }
-        />
+        <div className="flex items-center">
+          <ThemeButton
+            handleClick={() =>
+              setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
+            }
+          />
+        </div>
       </div>
       {isBlogPostRoute && <ProgressBar />}
     </nav>

@@ -30,7 +30,7 @@ const NavBar = ({ showMobileNavigation, handleClick }: NavBarProps) => {
         !onTop && 'shadow-sm',
       )}
     >
-      <div className="container mx-auto flex h-full max-w-[60ch] items-center justify-between px-4">
+      <div className="container mx-auto flex h-full max-w-[75ch] items-center justify-between px-4">
         <div className="sm:hidden">
           <NavigationButton
             showMobileNavigation={showMobileNavigation}

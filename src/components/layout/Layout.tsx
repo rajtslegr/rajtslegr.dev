@@ -43,7 +43,7 @@ const Layout = ({ children }: LayoutProps) => {
       {showMobileNavigation && (
         <MobileNavigation handleClick={mobileNavigationHandler} />
       )}
-      <div className="background-gradient mx-auto w-full max-w-[60ch] flex-auto px-4 py-8 md:py-10">
+      <div className="background-gradient mx-auto w-full max-w-[75ch] flex-auto px-4 py-8 md:py-10">
         {children}
       </div>
       {!showMobileNavigation && <Footer />}

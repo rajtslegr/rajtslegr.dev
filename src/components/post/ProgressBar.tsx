@@ -5,7 +5,7 @@ const ProgressBar = () => {
 
   return (
     <motion.div
-      className="bar top-0 h-1 origin-left bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
+      className="bar top-0 h-1 origin-left bg-gradient-to-r from-gray-800 via-gray-900 to-black"
       style={{ scaleX: scrollYProgress }}
     />
   );

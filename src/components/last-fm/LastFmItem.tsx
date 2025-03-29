@@ -38,7 +38,7 @@ const LastFmItem = ({ track }: LastFmItemProps) => {
             />
             {track['@attr']?.nowplaying && (
               <span className="absolute -right-1 -top-1 flex size-5 items-center justify-center rounded-full bg-black text-white dark:bg-white dark:text-black">
-                <PlayIcon className="size-3" />
+                <PlayIcon className="ml-0.5 size-3" />
               </span>
             )}
           </div>

@@ -2,17 +2,15 @@ import { TimelineData } from '@/types/entities';
 
 export const timelineData: TimelineData[] = [
   {
-    timeRange: '2021 - present',
+    timeRange: '2021 - 2025',
     job: 'Full Stack Developer at Economia',
     description:
-      'Developing JavaScript applications with React and Next.js at a major Czech media company (Aktualne.cz, HN.cz, Hospodarske noviny, Ekonom). Implementing cloud infrastructure with AWS and Cloudflare Workers to support digital content delivery.',
+      'Contributed to enhancing digital content delivery for a leading Czech media company by developing user-friendly JavaScript applications. Supported the implementation of cloud infrastructure, which improved performance and scalability.',
   },
   {
     timeRange: '2018 - 2021',
     job: 'Full Stack Developer at STEM/MARK',
     description:
-      'Created market research applications for online, telephone, and field interviewing. Developed PWAs using Angular for the frontend alongside Node.js, Express, and MySQL for backend services, improving data collection workflows.',
+      'Assisted in the development of market research applications, focusing on streamlining data collection processes and enhancing user experience. Integrated modern web technologies to create efficient and responsive applications, aiding in improved data accuracy and client satisfaction.',
   },
 ];
-
-export default timelineData;

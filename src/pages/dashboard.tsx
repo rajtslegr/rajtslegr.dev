@@ -66,7 +66,7 @@ const Dashboard: NextPage<DashboardProps> = ({
       <MotionSection delay={0.3} id="strava">
         <Strava data={stravaData} />
       </MotionSection>
-      <MotionSection delay={0.4} id="racing">
+      <MotionSection delay={0.4} id="iracing">
         <IRacing
           accountsData={iRacingAccounts}
           statsData={iRacingStats}

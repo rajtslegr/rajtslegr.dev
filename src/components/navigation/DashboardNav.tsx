@@ -10,7 +10,7 @@ const sections = [
   { id: 'photos', label: 'Photos' },
   { id: 'music', label: 'Music' },
   { id: 'strava', label: 'Strava' },
-  { id: 'racing', label: 'iRacing' },
+  { id: 'iracing', label: 'iRacing' },
   { id: 'github', label: 'GitHub' },
 ] as const;
 

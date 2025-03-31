@@ -39,6 +39,23 @@ const DashboardNav = ({ className }: DashboardNavProps) => {
     return () => observer.disconnect();
   }, []);
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+
+    if (element) {
+      const offsetTop = element.offsetTop - 76;
+
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth',
+      });
+
+      window.history.pushState(null, '', `#${id}`);
+      setActiveSection(id);
+    }
+  };
+
   return (
     <nav
       className={clsx(
@@ -47,17 +64,18 @@ const DashboardNav = ({ className }: DashboardNavProps) => {
       )}
     >
       <div className="container flex h-full max-w-[75ch] items-center">
-        <div className="flex h-full items-center space-x-6">
+        <div className="flex size-full items-center justify-between md:justify-start md:space-x-6">
           {sections.map(({ id, label }, index) => (
             <a
               key={id}
               href={`#${id}`}
+              onClick={(e) => handleClick(e, id)}
               className={clsx(
-                'relative inline-block px-3 py-1.5 text-sm duration-200 motion-safe:transition-all',
+                'relative inline-block whitespace-nowrap py-1.5 text-xs duration-200 motion-safe:transition-all md:text-sm',
                 activeSection === id
                   ? 'font-medium text-black dark:text-white'
                   : 'font-normal text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-gray-200',
-                index === 0 && '!pl-0',
+                index === 0 ? '!pl-0' : 'px-1 md:px-3',
               )}
             >
               {label}

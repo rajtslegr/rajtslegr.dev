@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import Image, { StaticImageData } from 'next/image';
 
-import Pill from '@/components/Work/Pill';
-import WindowHeader from '@/components/Work/WindowHeader';
+import Pill from '@/components/work/Pill';
+import WindowHeader from '@/components/work/WindowHeader';
 import { ProjectData } from '@/types/entities';
 
 import elections from '../../../public/static/images/work/elections.jpg';

@@ -145,3 +145,60 @@ export interface Map {
   polyline: any;
   resource_state: number;
 }
+
+export interface IRacingRating {
+  category: string;
+  type: string;
+  rating: number;
+  ratingDisplayAs: string;
+  history?: IRacingRatingHistory[];
+}
+
+export interface IRacingRatingHistory {
+  date: string;
+  rating: number;
+  ratingDisplayAs: string;
+}
+
+export interface IRacingAccount {
+  platform: string;
+  id: string;
+  name: string;
+  ratings: IRacingRating[] | null;
+}
+
+export interface IRacingAccountsResponse {
+  items: IRacingAccount[];
+  total: number;
+}
+
+export interface IRacingDrivingStatistic {
+  day: string;
+  user: string;
+  car: number;
+  track: number;
+  sessionType: number;
+  events: number;
+  timeOnTrack: number;
+  lapsDriven: number;
+  cleanLapsDriven: number;
+}
+
+export interface IRacingCar {
+  id: number;
+  name: string;
+  platform: string;
+  platform_id: string | null;
+}
+
+export interface IRacingTrack {
+  id: number;
+  name: string;
+  variant: string;
+  platform: string;
+  platform_id: string | null;
+}
+
+export interface IRacingDrivingStatisticsResponse {
+  drivingStatistics: IRacingDrivingStatistic[];
+}

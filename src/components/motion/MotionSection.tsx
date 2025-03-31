@@ -4,13 +4,16 @@ import { motion, useReducedMotion } from 'framer-motion';
 
 interface MotionSectionProps extends PropsWithChildren {
   delay?: number;
+  id?: string;
 }
 
-const MotionSection = ({ children, delay = 0 }: MotionSectionProps) => {
+const MotionSection = ({ children, delay = 0, id }: MotionSectionProps) => {
   const shouldReduceMotion = useReducedMotion();
 
   return (
     <motion.div
+      id={id}
+      className="scroll-mt-24"
       initial={{
         y: shouldReduceMotion ? 0 : 10,
         opacity: shouldReduceMotion ? 1 : 0,

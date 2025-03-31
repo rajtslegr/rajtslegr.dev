@@ -2,7 +2,7 @@ import { GetStaticProps, NextPage } from 'next';
 
 import MetaData from '@/components/meta-data/MetaData';
 import MotionSection from '@/components/motion/MotionSection';
-import Project from '@/components/Work/Project';
+import Project from '@/components/work/Project';
 import { projectData } from '@/data/work';
 import { ProjectData } from '@/types/entities';
 

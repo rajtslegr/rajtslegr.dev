@@ -1,4 +1,4 @@
-import { MDXRemoteSerializeResult } from 'next-mdx-remote/dist/types';
+import { ReactElement, JSXElementConstructor } from 'react';
 
 export interface Photo {
   id: string;
@@ -74,7 +74,7 @@ export interface PostId {
 }
 
 export interface ContentPostData extends PostData {
-  mdxContent: MDXRemoteSerializeResult<Record<string, unknown>>;
+  mdxContent: ReactElement<unknown, string | JSXElementConstructor<any>>;
 }
 
 export interface ReadTime {

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+'use client';
 
 import clsx from 'clsx';
 import Image from 'next/image';
@@ -10,39 +10,27 @@ interface PhotoItemProps {
   index: number;
 }
 
-const PhotoItem = ({ photo, index }: PhotoItemProps) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  return (
-    <a
-      href={photo.url}
-      rel="noopener noreferrer"
-      target="_blank"
-      className="group overflow-hidden rounded-md transition-all duration-200"
-    >
-      <div
+const PhotoItem = ({ photo, index }: PhotoItemProps) => (
+  <a
+    href={photo.url}
+    rel="noopener noreferrer"
+    target="_blank"
+    className="group overflow-hidden rounded-md transition-all duration-200"
+  >
+    <div className="relative aspect-square overflow-hidden">
+      <Image
         className={clsx(
-          'relative aspect-square overflow-hidden',
-          !isLoaded && 'bg-gray-100 dark:bg-gray-800',
+          'object-cover transition-transform duration-500 group-hover:scale-105',
+          index === 0 && 'md:size-full',
         )}
-      >
-        <Image
-          className={clsx(
-            'object-cover transition-transform duration-500 group-hover:scale-105',
-            index === 0 && 'md:size-full',
-          )}
-          src={photo.src.medium}
-          alt={photo.title}
-          title={photo.title}
-          fill={true}
-          sizes="(max-width: 768px) 33vw, 250px"
-          placeholder="blur"
-          blurDataURL={photo.src.small}
-          onLoad={() => setIsLoaded(true)}
-        />
-      </div>
-    </a>
-  );
-};
+        src={photo.src.medium}
+        alt={photo.title}
+        title={photo.title}
+        fill={true}
+        sizes="(max-width: 768px) 33vw, 250px"
+      />
+    </div>
+  </a>
+);
 
 export default PhotoItem;

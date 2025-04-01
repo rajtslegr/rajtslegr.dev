@@ -41,7 +41,6 @@ const Project = ({
           <Image
             src={IMAGES[image]}
             alt={`${title} mockup`}
-            placeholder="blur"
             height={393}
             width={700}
             className="w-full transition-transform duration-500 group-hover:scale-105"

@@ -1,21 +1,19 @@
-import { useState } from 'react';
+'use client';
 
-import { GetStaticProps, NextPage } from 'next';
+import { useState } from 'react';
 
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
 
 import Input from '@/components/form/Input';
-import MetaData from '@/components/meta-data/MetaData';
 import MotionSection from '@/components/motion/MotionSection';
 import PostCard from '@/components/post/PostCard';
-import { getSortedPostsData } from '@/lib/posts';
 import { PostData } from '@/types/entities';
 
-interface BlogProps {
+export default function BlogContent({
+  allPostsData,
+}: {
   allPostsData: PostData[];
-}
-
-const Blog: NextPage<BlogProps> = ({ allPostsData }) => {
+}) {
   const [search, setSearch] = useState('');
 
   const filteredPosts = allPostsData.filter((post) =>
@@ -24,7 +22,6 @@ const Blog: NextPage<BlogProps> = ({ allPostsData }) => {
 
   return (
     <>
-      <MetaData title="Petr Rajtslegr | Blog" />
       <MotionSection>
         <h1 className="mb-8 inline-block font-normal tracking-tight text-black dark:text-white md:mb-12">
           <span className="text-sm font-medium uppercase tracking-widest text-gray-500">
@@ -60,17 +57,4 @@ const Blog: NextPage<BlogProps> = ({ allPostsData }) => {
       )}
     </>
   );
-};
-
-export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = await getSortedPostsData();
-
-  return {
-    props: {
-      allPostsData,
-    },
-    revalidate: 10800,
-  };
-};
-
-export default Blog;
+}

@@ -1,3 +1,5 @@
+'use client';
+
 import { formatSeconds } from '@/utils/date';
 
 import { isRideActivity, isDistanceActivity } from './utils';

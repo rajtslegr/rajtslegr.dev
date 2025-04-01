@@ -9,12 +9,12 @@ const TimelineItem = ({
   data: { timeRange, job, description },
   isLast = false,
 }: TimelineItemProps) => (
-  <div className="card-hover group relative flex rounded-lg p-4">
+  <div className="relative flex rounded-lg p-4">
     <div className="relative mr-4 shrink-0 pt-1">
       <div className="flex h-full w-0.5 bg-gray-200 dark:bg-gray-800">
         {!isLast && <div className="size-full" />}
       </div>
-      <div className="absolute left-1/2 top-1 size-4 -translate-x-1/2 rounded-full bg-gray-200 ring-4 ring-white transition-colors duration-200 group-hover:bg-black dark:bg-gray-700 dark:ring-black dark:group-hover:bg-white" />
+      <div className="absolute left-1/2 top-1 size-4 -translate-x-1/2 rounded-full bg-gray-200 ring-4 ring-white transition-colors duration-200 dark:bg-gray-700 dark:ring-black" />
     </div>
     <div className="flex flex-col">
       <div className="mb-1 flex flex-col sm:flex-row sm:items-center sm:justify-between">

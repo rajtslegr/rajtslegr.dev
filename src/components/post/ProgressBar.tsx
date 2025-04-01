@@ -1,3 +1,5 @@
+'use client';
+
 import { motion, useScroll } from 'framer-motion';
 
 const ProgressBar = () => {
@@ -5,7 +7,7 @@ const ProgressBar = () => {
 
   return (
     <motion.div
-      className="bar top-0 h-1 origin-left bg-gradient-to-r from-gray-800 via-gray-900 to-black"
+      className="top-0 h-1 origin-left bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600 dark:from-gray-700 dark:via-gray-600 dark:to-gray-500"
       style={{ scaleX: scrollYProgress }}
     />
   );

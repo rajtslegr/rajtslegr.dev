@@ -1,6 +1,8 @@
-import { ReactNode, useEffect, useState } from 'react';
+'use client';
 
-import { useRouter } from 'next/router';
+import { ReactNode, useState, useEffect, MouseEvent } from 'react';
+
+import { usePathname } from 'next/navigation';
 
 import Footer from '@/components/layout/Footer';
 import DashboardNav from '@/components/navigation/DashboardNav';
@@ -14,14 +16,21 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   const [showMobileNavigation, setShowMobileNavigation] = useState(false);
+  const [isNavigationTransitioning, setIsNavigationTransitioning] =
+    useState(false);
   const [blockScroll, allowScroll] = useScrollBlock();
-  const router = useRouter();
-  const isDashboard = router.pathname === '/dashboard';
+  const pathname = usePathname();
+  const isDashboard = pathname === '/dashboard';
 
-  const mobileNavigationHandler = (): void => {
+  const navButtonClickHandler = (
+    _event: MouseEvent<HTMLButtonElement>,
+  ): void => {
     if (showMobileNavigation) {
-      setShowMobileNavigation(false);
-      allowScroll();
+      setIsNavigationTransitioning(true);
+      setTimeout(() => {
+        setShowMobileNavigation(false);
+        allowScroll();
+      }, 0);
     } else {
       window.scrollTo({ top: 0 });
       setShowMobileNavigation(true);
@@ -29,21 +38,37 @@ const Layout = ({ children }: LayoutProps) => {
     }
   };
 
+  function linkClickHandler(_event: MouseEvent<HTMLButtonElement>): void {
+    setIsNavigationTransitioning(true);
+  }
+
   useEffect(() => {
-    router.events.on('routeChangeComplete', () => {
-      setShowMobileNavigation(false);
-      allowScroll();
-    });
-  }, [allowScroll, router.events]);
+    if (isNavigationTransitioning) {
+      const timer = setTimeout(() => {
+        setShowMobileNavigation(false);
+        setIsNavigationTransitioning(false);
+        allowScroll();
+      }, 300);
+
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+
+    return () => {};
+  }, [isNavigationTransitioning, allowScroll]);
 
   return (
     <div className="flex min-h-screen flex-col bg-white text-gray-700 dark:bg-black dark:text-gray-200">
       <NavBar
         showMobileNavigation={showMobileNavigation}
-        handleClick={mobileNavigationHandler}
+        handleClick={navButtonClickHandler}
       />
-      {showMobileNavigation && (
-        <MobileNavigation handleClick={mobileNavigationHandler} />
+      {(showMobileNavigation || isNavigationTransitioning) && (
+        <MobileNavigation
+          handleClick={linkClickHandler}
+          isTransitioning={isNavigationTransitioning}
+        />
       )}
       {isDashboard && <DashboardNav />}
       <div className="background-gradient mx-auto w-full max-w-[75ch] flex-auto px-4 py-8 md:py-10">

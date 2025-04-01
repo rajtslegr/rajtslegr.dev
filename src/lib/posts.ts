@@ -2,9 +2,9 @@ import fs from 'fs';
 import path from 'path';
 
 import matter from 'gray-matter';
-import { serialize } from 'next-mdx-remote/serialize';
+import { compileMDX } from 'next-mdx-remote/rsc';
 import readingTime from 'reading-time';
-import rehypePrism from 'rehype-prism-plus';
+import rehypePrettyCode from 'rehype-pretty-code';
 
 import { getBlogViews } from '@/lib/blog-views';
 import { ContentPostData, PostData, PostId } from '@/types/entities';
@@ -61,9 +61,31 @@ export const getPostData = async (id: string): Promise<ContentPostData> => {
 
   const { content, data } = matter(fileContents);
 
-  const mdxContent = await serialize(content, {
-    mdxOptions: {
-      rehypePlugins: [[rehypePrism, { ignoreMissing: true }]],
+  const rehypePrettyCodeOptions = {
+    keepBackground: false,
+    theme: {
+      dark: 'one-dark-pro',
+      light: 'github-light',
+    },
+    defaultLang: {
+      block: 'typescript',
+    },
+    transformers: [
+      {
+        name: 'theme',
+        className: (theme: string) => `${theme}`,
+      },
+    ],
+    filterMetaString: (meta: string) => meta.replace(/^wrap$/, 'line-numbers'),
+    grid: false,
+  };
+
+  const { content: mdxContent } = await compileMDX({
+    source: content,
+    options: {
+      mdxOptions: {
+        rehypePlugins: [[rehypePrettyCode, rehypePrettyCodeOptions]],
+      },
     },
   });
 

@@ -2,178 +2,231 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (min-width: 640px) {
-  .background-gradient::before {
-    background: radial-gradient(
-      30% 30% at 60% 40%,
-      rgba(51, 51, 51, 0.33) 0%,
-      rgba(0, 0, 0, 0) 100%
-    );
-    z-index: -10;
-    content: "";
-    position: absolute;
-    inset: 0px;
-    transform: scale(1);
-    pointer-events: none;
-  }
+.card-hover {
+  @apply transition-all duration-200 hover:bg-gray-200 dark:hover:bg-dark border border-gray-200/20 hover:border-gray-200/40 dark:border-gray-800/20 dark:hover:border-gray-800/40;
 }
 
-#nprogress .bar {
-  @apply first:bg-accent;
+.prose pre,
+[data-rehype-pretty-code-fragment] pre {
+  @apply my-6 overflow-x-auto rounded-lg border border-gray-200/50 dark:border-gray-800/50;
+  background-color: transparent !important;
+  padding: 1.25rem !important;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.header {
-  @apply bg-opacity-70 backdrop-blur bg-white dark:bg-black dark:bg-opacity-70 border-b border-gray-200/20 dark:border-gray-800/20;
+.dark .prose pre,
+.dark [data-rehype-pretty-code-fragment] pre {
+  padding: 1.25rem !important;
 }
 
-@supports not (backdrop-filter: none) {
-  .header {
-    @apply bg-opacity-90 backdrop-blur-none dark:bg-opacity-95;
-  }
+.prose pre code,
+[data-rehype-pretty-code-fragment] pre code {
+  @apply grid w-full break-words border-0 bg-transparent text-gray-800 dark:text-gray-200;
+  counter-reset: line;
+  box-decoration-break: clone;
+  font-size: 0.9rem;
+  line-height: 1.75;
 }
 
-input:-webkit-autofill {
-  -webkit-text-fill-color: theme('colors.gray.700') !important;
+.prose pre code span {
+  color: var(--shiki-light);
+  font-size: 0.9rem;
 }
 
-.dark input:-webkit-autofill {
-  -webkit-text-fill-color: theme('colors.gray.300') !important;
-}
-
-code[class*='language-'],
-pre[class*='language-'] {
-  @apply text-gray-700 dark:text-gray-300;
-}
-
-.prose pre {
-  @apply text-gray-700 bg-white shadow dark:bg-card dark:text-gray-300 rounded-md border border-gray-200/30 dark:border-gray-800/30;
+.dark .prose pre code span {
+  color: var(--shiki-dark);
+  font-size: 0.9rem;
 }
 
 .prose code {
-  @apply px-1 py-0.5 text-gray-700 bg-white dark:bg-card dark:text-gray-300;
+  @apply rounded-md bg-gray-100 px-1.5 py-0.5 text-gray-700 dark:bg-gray-800 dark:text-gray-200;
+  font-size: 0.9rem;
 }
 
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  @apply text-gray-400 italic;
+.prose pre code .line,
+[data-rehype-pretty-code-fragment] pre code .line,
+span[data-line] {
+  @apply block;
+  padding: 0.2rem 0;
+  line-height: 1.75;
+  min-height: 1.6rem;
 }
 
-.token.punctuation {
-  @apply text-gray-500 dark:text-gray-400;
+.dark .prose pre code .line,
+.dark [data-rehype-pretty-code-fragment] pre code .line,
+.dark span[data-line] {
+  padding: 0.2rem 0;
 }
 
-.token.parameter,
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol,
-.token.deleted {
-  @apply text-emerald-600 dark:text-emerald-400;
+.prose pre code .highlighted,
+.prose pre code .line .highlighted,
+[data-rehype-pretty-code-fragment] pre code .highlighted,
+[data-highlighted-line] {
+  @apply -mx-4 block bg-gray-200/50 dark:bg-gray-800/50 px-4;
 }
 
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-  @apply text-rose-600 dark:text-rose-400;
+.prose pre .code-title {
+  @apply -mb-5 rounded-t-lg border border-gray-200/50 border-b-0 bg-gray-100 px-4 py-2 font-mono text-xs font-semibold text-gray-700 dark:border-gray-800/50 dark:bg-gray-800 dark:text-gray-200;
 }
 
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-  @apply text-amber-600 dark:text-amber-400;
+.prose pre:has(.code-title) {
+  @apply mt-0 rounded-t-none pt-4;
 }
 
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-  @apply text-violet-600 dark:text-violet-400;
+.prose pre code .line-number {
+  @apply mr-4 inline-block w-4 text-right text-gray-400;
+  user-select: none;
 }
 
-.token.function,
-.token.class-name {
-  @apply text-blue-600 dark:text-blue-400;
+.prose pre code .word {
+  @apply rounded px-1 py-0.5;
 }
 
-.token.regex,
-.token.important,
-.token.variable {
-  @apply text-orange-600 dark:text-orange-400;
+.prose .rehype-code-title {
+  @apply -mb-4 rounded-t-md border border-gray-200 border-b-0 bg-gray-100 px-4 py-2 font-mono text-sm font-semibold text-gray-700 dark:border-gray-800 dark:bg-gray-800 dark:text-gray-200;
 }
 
-html {
-  overflow-y: overlay;
+[data-rehype-pretty-code-fragment] {
+  @apply overflow-hidden rounded-lg;
 }
 
-pre::-webkit-scrollbar {
-  display: none;
+[data-rehype-pretty-code-title] {
+  @apply rounded-t-lg border border-gray-200 border-b-0 bg-gray-100 px-4 py-2 font-mono text-sm font-semibold text-gray-800 dark:border-gray-800 dark:bg-card dark:text-gray-200;
 }
 
-pre {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  overflow-x: auto;
-  position: relative;
+[data-highlighted-line] {
+  @apply -mx-4 bg-yellow-50/30 px-4 border-l-4 border-yellow-500 dark:bg-yellow-900/30;
 }
 
-.card-hover {
-  @apply transition-all duration-200 hover:bg-gray-200 dark:hover:bg-subtle border border-gray-200/20 hover:border-gray-200/40 dark:border-gray-800/20 dark:hover:border-gray-800/40;
+[data-line-numbers] > [data-line]::before {
+  @apply inline-block w-4 mr-4 text-right text-gray-400;
+  content: attr(data-line);
+  user-select: none;
 }
 
-.section-heading {
-  @apply font-semibold text-sm text-gray-500 tracking-wider uppercase mb-4;
+.dark pre span[data-line] {
+  display: block !important;
+  padding: 0.2rem 0 !important;
+  font-size: 0.9rem !important;
 }
 
-/* Line highlighting and numbering */
+.dark pre span[style*="--shiki-dark"] {
+  color: var(--shiki-dark) !important;
+  font-size: 0.9rem !important;
+}
+
+.light pre span[style*="--shiki-light"],
+:root:not(.dark) pre span[style*="--shiki-light"] {
+  color: var(--shiki-light) !important;
+  font-size: 0.9rem !important;
+}
+
+:root {
+  --card-bg-light: #F5F5F5;
+  --card-bg-dark: #101010;
+}
+
+.dark pre {
+  background-color: var(--card-bg-dark) !important;
+  padding: 1.25rem !important;
+  margin: 1.5rem 0 !important;
+}
+
+:root:not(.dark) pre {
+  background-color: var(--card-bg-light) !important;
+  padding: 1.25rem !important;
+}
+
+.prose pre,
+[data-rehype-pretty-code-fragment] pre,
+[data-rehype-pretty-code-fragment] {
+  @apply my-6 overflow-x-auto rounded-lg border border-gray-200/50 dark:border-gray-800/50;
+  background-color: transparent !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+[data-rehype-pretty-code-fragment] > div {
+  background-color: transparent !important;
+}
+
+pre span[style*="--shiki"] {
+  font-size: 0.9rem !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
 pre > code {
-  display: grid;
-  min-width: 100%;
+  display: grid !important; 
+  padding: 0 !important;
+  width: 100% !important;
 }
 
-.code-highlight {
-  float: left;
-  min-width: 100%;
+pre, 
+code[class*="language-"],
+pre[class*="language-"],
+.prose pre,
+[data-rehype-pretty-code-fragment] pre {
+  background-color: var(--card-bg-light) !important;
 }
 
-.code-line {
-  display: block;
-  padding-left: 16px;
-  padding-right: 16px;
-  margin-left: -16px;
-  margin-right: -16px;
-  border-left: 4px solid transparent;
+.dark pre,
+.dark code[class*="language-"],
+.dark pre[class*="language-"],
+.dark .prose pre,
+.dark [data-rehype-pretty-code-fragment] pre {
+  background-color: var(--card-bg-dark) !important;
 }
 
-.code-line.inserted {
-  background-color: rgba(16, 185, 129, 0.2);
-  @apply dark:bg-opacity-10;
+div[data-rehype-pretty-code-fragment] > pre,
+div[data-rehype-pretty-code-fragment] > div,
+div[data-rehype-pretty-code-fragment] > div > pre {
+  background-color: var(--card-bg-light) !important;
 }
 
-.code-line.deleted {
-  background-color: rgba(239, 68, 68, 0.2);
-  @apply dark:bg-opacity-10;
+.dark div[data-rehype-pretty-code-fragment] > pre,
+.dark div[data-rehype-pretty-code-fragment] > div,
+.dark div[data-rehype-pretty-code-fragment] > div > pre {
+  background-color: var(--card-bg-dark) !important;
 }
 
-.highlight-line {
-  border-left-color: rgb(59, 130, 246);
-  background-color: rgba(59, 130, 246, 0.1);
-  @apply dark:bg-opacity-30;
+pre, 
+pre code,
+pre div,
+pre > *,
+code[class*="language-"],
+pre[class*="language-"],
+div[style*="background"],
+[data-rehype-pretty-code-fragment],
+[data-rehype-pretty-code-fragment] > *,
+[data-rehype-pretty-code-fragment] code,
+[data-rehype-pretty-code-fragment] div {
+  background: var(--card-bg-light) !important;
 }
 
-.line-number::before {
-  content: attr(line);
-  display: inline-block;
-  width: 1rem;
-  margin-right: 16px;
-  text-align: right;
-  color: rgba(156, 163, 175, 0.6);
-  @apply dark:text-gray-500;
+.dark pre, 
+.dark pre code,
+.dark pre div,
+.dark pre > *,
+.dark code[class*="language-"],
+.dark pre[class*="language-"],
+.dark div[style*="background"],
+.dark [data-rehype-pretty-code-fragment],
+.dark [data-rehype-pretty-code-fragment] > *,
+.dark [data-rehype-pretty-code-fragment] code,
+.dark [data-rehype-pretty-code-fragment] div {
+  background: var(--card-bg-dark) !important;
 }
+
+.dark pre span[style*="--shiki-dark"],
+[data-rehype-pretty-code-fragment] pre code span,
+.dark [data-rehype-pretty-code-fragment] pre code span {
+  font-size: 0.9rem !important;
+}
+
+.prose :not(pre) > code {
+  font-size: 0.9rem;
+  padding: 0.2rem 0.4rem;
+}
+

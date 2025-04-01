@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 
 import clsx from 'clsx';
@@ -59,7 +61,7 @@ const DashboardNav = ({ className }: DashboardNavProps) => {
   return (
     <nav
       className={clsx(
-        'header sticky top-16 z-[9] mb-8 w-full motion-safe:transition-all',
+        'sticky top-16 z-[9] mb-8 w-full border-b border-gray-200/20 bg-white/70 backdrop-blur motion-safe:transition-shadow dark:border-gray-800/20 dark:bg-black/70',
         className,
       )}
     >

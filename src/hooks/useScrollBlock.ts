@@ -1,3 +1,5 @@
+'use client';
+
 import { useRef } from 'react';
 
 const useScrollBlock = () => {
@@ -18,10 +20,10 @@ const useScrollBlock = () => {
         10,
       ) || 0;
 
-    html.style.position = 'relative'; /* [1] */
-    body.style.position = 'relative'; /* [1] */
-    html.style.overflow = 'hidden'; /* [2] */
-    body.style.overflow = 'hidden'; /* [2] */
+    html.style.position = 'relative';
+    body.style.position = 'relative';
+    html.style.overflow = 'hidden';
+    body.style.overflow = 'hidden';
     body.style.paddingRight = `${bodyPaddingRight + scrollBarWidth}px`;
 
     scroll.current = true;

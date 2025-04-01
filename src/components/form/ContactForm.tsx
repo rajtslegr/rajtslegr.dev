@@ -1,3 +1,5 @@
+'use client';
+
 import { useForm, ValidationError } from '@formspree/react';
 
 import Button from '@/components/buttons/Button';

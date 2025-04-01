@@ -1,6 +1,8 @@
+'use client';
+
 import clsx from 'clsx';
 import Link, { LinkProps } from 'next/link';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 
 interface NavLinkProps extends LinkProps {
   children: string;
@@ -9,6 +11,7 @@ interface NavLinkProps extends LinkProps {
   isHeader?: boolean;
   isMobileNavigation?: boolean;
   className?: string;
+  onClick?: () => void;
 }
 
 const NavLink = ({
@@ -19,22 +22,30 @@ const NavLink = ({
   isHeader,
   className,
   href,
+  onClick,
   ...props
 }: NavLinkProps) => {
-  const router = useRouter();
+  const pathname = usePathname();
 
   const isRouteActive =
     !target && !rel
-      ? router.pathname.split('/')[1] === String(href).split('/')[1]
+      ? pathname?.split('/')[1] === String(href).split('/')[1]
       : false;
 
   const isHomeLink = href === '/' && className?.includes('!pl-0');
+
+  const handleClick = () => {
+    if (onClick) {
+      onClick();
+    }
+  };
 
   return (
     <Link
       href={href}
       target={target}
       rel={rel}
+      onClick={handleClick}
       className={clsx(
         'relative duration-200 motion-safe:transition-all',
         isRouteActive

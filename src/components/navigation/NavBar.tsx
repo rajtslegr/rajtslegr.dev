@@ -1,7 +1,9 @@
+'use client';
+
 import { MouseEventHandler } from 'react';
 
 import clsx from 'clsx';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 import { useTheme } from 'next-themes';
 
 import ThemeButton from '@/components/buttons/ThemeButton';
@@ -17,16 +19,17 @@ interface NavBarProps {
 }
 
 const NavBar = ({ showMobileNavigation, handleClick }: NavBarProps) => {
-  const router = useRouter();
+  const pathname = usePathname();
   const { resolvedTheme, setTheme } = useTheme();
   const onTop = useOnTop();
 
-  const isBlogPostRoute = router.pathname.includes('/blog/');
+  const isBlogPostRoute =
+    pathname?.startsWith('/blog/') && pathname !== '/blog';
 
   return (
     <nav
       className={clsx(
-        'header sticky top-0 z-10 h-16 motion-safe:transition-shadow',
+        'sticky top-0 z-10 h-16 border-b border-gray-200/20 bg-white/70 backdrop-blur motion-safe:transition-shadow dark:border-gray-800/20 dark:bg-black/70',
         !onTop && 'shadow-sm',
       )}
     >

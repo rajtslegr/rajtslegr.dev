@@ -6,7 +6,7 @@ const { fontFamily, spacing } = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx}',
+    './src/app/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
   darkMode: 'class',
@@ -30,6 +30,11 @@ module.exports = {
               'scroll-margin-top': spacing[32],
             },
             code: { color: theme('colors.gray.500') },
+            pre: {
+              padding: 0,
+              backgroundColor: 'transparent',
+              overflowX: 'auto',
+            },
             'blockquote p:first-of-type::before': false,
             'blockquote p:last-of-type::after': false,
           },
@@ -51,6 +56,10 @@ module.exports = {
             'h2,h3,h4': {
               color: theme('colors.gray.100'),
               'scroll-margin-top': spacing[32],
+            },
+            pre: {
+              padding: 0,
+              backgroundColor: 'transparent',
             },
             hr: { borderColor: theme('colors.gray.800') },
             ol: {
@@ -78,7 +87,6 @@ module.exports = {
       backgroundColor: {
         dark: '#000000',
         card: '#101010',
-        subtle: '#111111',
         'card-light': '#F5F5F5',
       },
       colors: {

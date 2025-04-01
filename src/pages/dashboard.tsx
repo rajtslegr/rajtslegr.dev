@@ -7,7 +7,6 @@ import IRacing from '@/components/iracing/IRacing';
 import LastFm from '@/components/last-fm/LastFm';
 import MetaData from '@/components/meta-data/MetaData';
 import MotionSection from '@/components/motion/MotionSection';
-import DashboardNav from '@/components/navigation/DashboardNav';
 import Photos from '@/components/photos/Photos';
 import Strava from '@/components/strava/Strava';
 import { getRecentRepos } from '@/lib/github';
@@ -56,7 +55,6 @@ const Dashboard: NextPage<DashboardProps> = ({
           Dashboard
         </span>
       </h1>
-      <DashboardNav />
       <MotionSection delay={0.1} id="photos">
         <Photos data={photosData} />
       </MotionSection>

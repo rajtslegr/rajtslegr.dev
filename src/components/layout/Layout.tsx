@@ -3,6 +3,7 @@ import { ReactNode, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
 import Footer from '@/components/layout/Footer';
+import DashboardNav from '@/components/navigation/DashboardNav';
 import MobileNavigation from '@/components/navigation/MobileNavigation';
 import NavBar from '@/components/navigation/NavBar';
 import { useScrollBlock } from '@/hooks/useScrollBlock';
@@ -15,6 +16,7 @@ const Layout = ({ children }: LayoutProps) => {
   const [showMobileNavigation, setShowMobileNavigation] = useState(false);
   const [blockScroll, allowScroll] = useScrollBlock();
   const router = useRouter();
+  const isDashboard = router.pathname === '/dashboard';
 
   const mobileNavigationHandler = (): void => {
     if (showMobileNavigation) {
@@ -43,6 +45,7 @@ const Layout = ({ children }: LayoutProps) => {
       {showMobileNavigation && (
         <MobileNavigation handleClick={mobileNavigationHandler} />
       )}
+      {isDashboard && <DashboardNav />}
       <div className="background-gradient mx-auto w-full max-w-[75ch] flex-auto px-4 py-8 md:py-10">
         {children}
       </div>

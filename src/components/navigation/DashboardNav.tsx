@@ -59,12 +59,12 @@ const DashboardNav = ({ className }: DashboardNavProps) => {
   return (
     <nav
       className={clsx(
-        'header sticky top-16 z-[9] mb-8 motion-safe:transition-all',
+        'header sticky top-16 z-[9] mb-8 w-full motion-safe:transition-all',
         className,
       )}
     >
-      <div className="container flex h-full max-w-[75ch] items-center">
-        <div className="flex size-full items-center justify-between md:justify-start md:space-x-6">
+      <div className="flex size-full items-center justify-center">
+        <div className="mx-auto flex size-full max-w-[75ch] items-center justify-between px-4 md:justify-start md:space-x-6">
           {sections.map(({ id, label }, index) => (
             <a
               key={id}

@@ -80,4 +80,7 @@ module.exports = {
 
     return config;
   },
+  experimental: {
+    turbo: {},
+  },
 };

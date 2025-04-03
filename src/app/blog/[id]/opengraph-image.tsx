@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-import { getPostData } from '@/lib/posts';
+import { getPostMetadata } from '@/lib/meta-posts';
 
 export const size = {
   width: 1200,
@@ -10,7 +10,7 @@ export const size = {
 export const contentType = 'image/png';
 
 export default async function Image({ params }: { params: { id: string } }) {
-  const postData = await getPostData(params.id);
+  const postData = await getPostMetadata(params.id);
 
   if (!postData) {
     return new ImageResponse(

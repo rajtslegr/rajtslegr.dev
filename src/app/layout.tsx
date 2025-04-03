@@ -10,8 +10,31 @@ export const metadata = {
     template: '%s | Petr Rajtslegr',
     default: 'Petr Rajtslegr',
   },
-  description: 'Petr Rajtslegr - Frontend Developer',
+  description:
+    'I build modern web applications and experiences with a focus on performance, accessibility, and user experience.',
   metadataBase: new URL('https://rajtslegr.dev'),
+  openGraph: {
+    title: 'Petr Rajtslegr',
+    description:
+      'I build modern web applications and experiences with a focus on performance, accessibility, and user experience.',
+    url: 'https://rajtslegr.dev',
+    siteName: 'Petr Rajtslegr',
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Petr Rajtslegr',
+    description:
+      'I build modern web applications and experiences with a focus on performance, accessibility, and user experience.',
+  },
+  alternates: {
+    canonical: 'https://rajtslegr.dev',
+  },
 };
 
 export default function RootLayout({

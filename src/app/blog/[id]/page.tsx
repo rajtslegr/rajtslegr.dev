@@ -18,10 +18,6 @@ export async function generateMetadata({
     };
   }
 
-  const image = postData.image
-    ? `/static/images/blog/${postData.image}`
-    : undefined;
-
   return {
     title: postData.title,
     description: postData.description,
@@ -30,7 +26,6 @@ export async function generateMetadata({
       description: postData.description,
       type: 'article',
       publishedTime: new Date(postData.date).toISOString(),
-      images: image ? [{ url: image }] : [],
     },
   };
 }

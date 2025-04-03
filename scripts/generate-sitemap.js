@@ -7,12 +7,11 @@ const prettier = require('prettier');
 (async () => {
   const prettierConfig = await prettier.resolveConfig('./.prettierrc.js');
   const pages = await fg([
-    'src/pages/*.tsx',
-    'src/data/**/*.mdx',
-    '!src/data/*.mdx',
-    '!src/pages/_*.tsx',
-    '!src/pages/api',
-    '!src/pages/404.tsx',
+    'src/app/**/page.tsx',
+    'src/data/blog/*.mdx',
+    '!src/app/api/**',
+    '!src/app/not-found.tsx',
+    '!src/app/error.tsx',
   ]);
 
   const sitemap = `
@@ -20,13 +19,23 @@ const prettier = require('prettier');
         <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
             ${pages
               .map((page) => {
+                // Handle blog post routes
+                if (page.includes('src/data/blog/')) {
+                  const fileName = page.split('/').pop().replace('.mdx', '');
+                  return `
+                        <url>
+                            <loc>${`https://rajtslegr.dev/blog/${fileName}`}</loc>
+                        </url>
+                    `;
+                }
+
+                // Handle app directory routes
                 const path = page
-                  .replace('pages', '')
-                  .replace('data', '')
-                  .replace('.tsx', '')
-                  .replace('.mdx', '')
-                  .replace('src/', '');
-                const route = path === '/index' ? '' : path;
+                  .replace('src/app', '')
+                  .replace('/page.tsx', '')
+                  .replace(/\/\[(.+)\]/, ''); // Remove dynamic route parameters
+
+                const route = path === '' ? '' : path;
                 return `
                         <url>
                             <loc>${`https://rajtslegr.dev${route}`}</loc>

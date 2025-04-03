@@ -17,7 +17,7 @@ const PostLayout = ({
     <div className="mx-auto flex flex-col items-center">
       <article className="w-full max-w-none text-black dark:text-white">
         <MotionSection>
-          <h1 className="text-4xl font-bold tracking-tight text-black dark:text-gray-100 md:text-5xl">
+          <h1 className="text-4xl font-bold leading-[2.8rem] tracking-tight text-black dark:text-gray-100 md:text-5xl md:leading-[3.5rem]">
             {title}
           </h1>
         </MotionSection>

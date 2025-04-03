@@ -8,13 +8,13 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <>
+    <div className="min-h-[calc(100vh-186px)]">
       <MotionSection>
         <Hero />
       </MotionSection>
       <MotionSection delay={0.1}>
         <Timeline />
       </MotionSection>
-    </>
+    </div>
   );
 }

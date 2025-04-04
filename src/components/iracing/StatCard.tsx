@@ -19,7 +19,7 @@ const StatCard = ({
 }: StatCardProps) => (
   <div
     className={clsx(
-      'rounded-md border border-gray-200/30 bg-card-light p-3 dark:border-gray-800/30 dark:bg-card',
+      'bg-card-light dark:bg-card rounded-md border border-gray-200/30 p-3 dark:border-gray-800/30',
       className,
     )}
   >

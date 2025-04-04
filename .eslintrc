@@ -23,7 +23,9 @@
         "tabWidth": 2,
         "trailingComma": "all",
         "useTabs": false,
-        "endOfLine": "auto"
+        "endOfLine": "auto",
+        "plugins": ["prettier-plugin-tailwindcss"],
+        "tailwindConfig": "./tailwind.config.js"
       }
     ]
   },
@@ -35,11 +37,9 @@
       ],
       "plugins": [
         "@typescript-eslint",
-        "unused-imports",
-        "tailwindcss"
+        "unused-imports"
       ],
       "extends": [
-        "plugin:tailwindcss/recommended",
         "airbnb-typescript",
         "next/core-web-vitals",
         "plugin:prettier/recommended"
@@ -86,8 +86,6 @@
         "@typescript-eslint/comma-dangle": "off",
         "import/prefer-default-export": "off",
         "class-methods-use-this": "off",
-        "tailwindcss/classnames-order": "error",
-        "tailwindcss/no-custom-classname": "off",
         "@typescript-eslint/no-unused-vars": "off",
         "@typescript-eslint/no-throw-literal": "off",
         "unused-imports/no-unused-imports": "error",

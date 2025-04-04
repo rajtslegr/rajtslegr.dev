@@ -48,22 +48,26 @@ Personal portfolio website & blog built with modern web technologies.
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/rajtslegr/rajtslegr.dev.git
    cd rajtslegr.dev
    ```
 
 2. Install dependencies:
+
    ```bash
    pnpm install
    ```
 
 3. Create a `.env` file from the example:
+
    ```bash
    cp .env.example .env
    ```
 
 4. Start the development server:
+
    ```bash
    pnpm dev
    ```

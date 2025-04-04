@@ -15,7 +15,7 @@ const GitHubCard = ({
   stars,
   watches,
 }: IGitHubCard) => (
-  <div className="card-hover group rounded-md border border-gray-200/30 bg-card-light p-4 dark:border-gray-800/30 dark:bg-card">
+  <div className="card-hover group bg-card-light dark:bg-card rounded-md border border-gray-200/30 p-4 dark:border-gray-800/30">
     <a href={link} rel="noopener noreferrer" target="_blank" className="block">
       <div className="flex flex-col space-y-4">
         <div className="flex items-center">

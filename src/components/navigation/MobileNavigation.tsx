@@ -31,7 +31,7 @@ const MobileNavigation = ({
         isTransitioning ? 'opacity-0' : 'opacity-100',
       )}
     >
-      <div className="absolute left-4 top-4">
+      <div className="absolute top-4 left-4">
         <NavigationButton
           showMobileNavigation={true}
           handleClick={handleClick}

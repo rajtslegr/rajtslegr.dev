@@ -64,7 +64,7 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/static/favicons/site.webmanifest" />
       </head>
-      <body className="bg-gray-50 text-black antialiased motion-safe:transition-all dark:bg-dark dark:text-white">
+      <body className="dark:bg-dark bg-gray-50 text-black antialiased motion-safe:transition-all dark:text-white">
         <ClientLayout className={interVariable.className}>
           {children}
         </ClientLayout>

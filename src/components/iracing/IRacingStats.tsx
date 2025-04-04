@@ -23,7 +23,7 @@ interface StatCardProps {
 }
 
 const StatCard = ({ icon, title, value, suffix = '' }: StatCardProps) => (
-  <div className="card-hover rounded-md border border-gray-200/30 bg-card-light p-4 dark:border-gray-800/30 dark:bg-card">
+  <div className="card-hover bg-card-light dark:bg-card rounded-md border border-gray-200/30 p-4 dark:border-gray-800/30">
     <div className="flex items-center gap-3">
       <div className="rounded-full bg-gray-100 p-2 dark:bg-gray-800">
         {icon}
@@ -53,10 +53,10 @@ const IRacingStats = ({ data }: IRacingStatsProps) => {
   if (!data || !data.drivingStatistics || data.drivingStatistics.length === 0) {
     return (
       <div>
-        <h2 className="mb-6 mt-12 text-sm font-medium uppercase tracking-widest text-gray-500">
+        <h2 className="mt-12 mb-6 text-sm font-medium tracking-widest text-gray-500 uppercase">
           iRacing Stats
         </h2>
-        <p className="flex justify-center p-6 italic text-gray-500 dark:text-gray-400">
+        <p className="flex justify-center p-6 text-gray-500 italic dark:text-gray-400">
           No recent driving statistics available.
         </p>
       </div>
@@ -96,7 +96,7 @@ const IRacingStats = ({ data }: IRacingStatsProps) => {
 
   return (
     <div>
-      <h2 className="mb-6 mt-12 text-sm font-medium uppercase tracking-widest text-gray-500">
+      <h2 className="mt-12 mb-6 text-sm font-medium tracking-widest text-gray-500 uppercase">
         iRacing Stats
       </h2>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">

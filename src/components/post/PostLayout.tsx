@@ -17,7 +17,7 @@ const PostLayout = ({
     <div className="mx-auto flex flex-col items-center">
       <article className="w-full max-w-none text-black dark:text-white">
         <MotionSection>
-          <h1 className="text-4xl font-bold leading-[2.8rem] tracking-tight text-black dark:text-gray-100 md:text-5xl md:leading-[3.5rem]">
+          <h1 className="text-4xl leading-[2.8rem] font-bold tracking-tight text-black md:text-5xl md:leading-[3.5rem] dark:text-gray-100">
             {title}
           </h1>
         </MotionSection>
@@ -25,7 +25,7 @@ const PostLayout = ({
           <div className="mt-4 flex flex-row items-center space-x-2 text-gray-500 dark:text-gray-400">
             <div className="flex flex-col">
               <Image
-                className="size-10 overflow-hidden rounded-full shadow"
+                className="size-10 overflow-hidden rounded-full shadow-sm"
                 src={hero}
                 alt="Hero"
               />
@@ -38,7 +38,7 @@ const PostLayout = ({
             </div>
           </div>
           {image && (
-            <div className="mt-12 overflow-hidden rounded-lg text-[0px] shadow">
+            <div className="mt-12 overflow-hidden rounded-lg text-[0px] shadow-sm">
               <Image
                 src={`/static/images/blog/${image}`}
                 alt="Blog post header image"
@@ -49,7 +49,7 @@ const PostLayout = ({
           )}
         </MotionSection>
         <MotionSection delay={0.2}>
-          <div className="prose mt-12 max-w-none dark:prose-dark">
+          <div className="prose dark:prose-dark mt-12 max-w-none">
             {mdxContent}
           </div>
         </MotionSection>

@@ -25,7 +25,7 @@ const Project = ({
 }: ProjectProps) => (
   <div
     className={clsx(
-      'card-hover group size-full overflow-hidden rounded-md border border-gray-200/30 bg-card-light dark:border-gray-800/30 dark:bg-card',
+      'card-hover group bg-card-light dark:bg-card size-full overflow-hidden rounded-md border border-gray-200/30 dark:border-gray-800/30',
       live && 'transition-all duration-300',
     )}
   >

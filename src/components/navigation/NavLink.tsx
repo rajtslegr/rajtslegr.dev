@@ -32,7 +32,7 @@ const NavLink = ({
       ? pathname?.split('/')[1] === String(href).split('/')[1]
       : false;
 
-  const isHomeLink = href === '/' && className?.includes('!pl-0');
+  const isHomeLink = href === '/' && className?.includes('pl-0!');
 
   const handleClick = () => {
     if (onClick) {

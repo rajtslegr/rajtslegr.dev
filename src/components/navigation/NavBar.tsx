@@ -29,8 +29,8 @@ const NavBar = ({ showMobileNavigation, handleClick }: NavBarProps) => {
   return (
     <nav
       className={clsx(
-        'sticky top-0 z-10 h-16 border-b border-gray-200/20 bg-white/70 backdrop-blur motion-safe:transition-shadow dark:border-gray-800/20 dark:bg-black/70',
-        !onTop && 'shadow-sm',
+        'sticky top-0 z-10 h-16 border-b border-gray-200/20 bg-white/70 backdrop-blur-sm motion-safe:transition-shadow dark:border-gray-800/20 dark:bg-black/70',
+        !onTop && 'shadow-xs',
       )}
     >
       <div className="container mx-auto flex h-full max-w-[75ch] items-center justify-between px-4">
@@ -41,7 +41,7 @@ const NavBar = ({ showMobileNavigation, handleClick }: NavBarProps) => {
           />
         </div>
         <div className="hidden h-full sm:flex sm:items-center sm:space-x-6">
-          <NavLink href="/" isHeader={true} className="!pl-0">
+          <NavLink href="/" isHeader={true} className="pl-0!">
             Home
           </NavLink>
           <NavLink href="/dashboard" isHeader={true}>

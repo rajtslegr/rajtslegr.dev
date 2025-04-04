@@ -57,7 +57,7 @@ const IRacing = ({
     );
   }
 
-  const hasRecentRacesData = Boolean(statsData && carsData && tracksData);
+  const hasRecentRacesData = statsData && carsData && tracksData;
 
   return (
     <div>
@@ -74,9 +74,9 @@ const IRacing = ({
           <div>
             <SectionHeading title="Recent Races" />
             <RecentRaces
-              statsData={statsData!}
-              carsData={carsData!}
-              tracksData={tracksData!}
+              statsData={statsData}
+              carsData={carsData}
+              tracksData={tracksData}
             />
           </div>
         )}

@@ -7,6 +7,7 @@ import { ProjectData } from '@/types/entities';
 
 import elections from '../../../public/static/images/work/elections.jpg';
 import pujdu from '../../../public/static/images/work/pujdu.jpg';
+import smfairplay from '../../../public/static/images/work/smfairplay.jpg';
 import vyber from '../../../public/static/images/work/vyber.jpg';
 import xquest from '../../../public/static/images/work/xquest.jpg';
 
@@ -15,6 +16,7 @@ const IMAGES: Record<string, StaticImageData> = {
   pujdu,
   vyber,
   xquest,
+  smfairplay,
 };
 interface ProjectProps {
   project: ProjectData;

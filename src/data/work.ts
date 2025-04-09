@@ -1,5 +1,13 @@
 export const projectData = [
   {
+    title: 'SM Fairplay',
+    description:
+      'Balanced football team generator for fair weekly matches based on player performance data, featuring AI-powered team selection.',
+    build: ['React', 'TypeScript', 'Vite', 'zustand', 'OpenAI', 'Tailwind'],
+    image: 'smfairplay',
+    live: 'https://github.com/rajtslegr/sm-fairplay',
+  },
+  {
     title: 'Pujdu.cz',
     description:
       'A scheduling tool for coordinating meetings and managing availability between people.',

@@ -77,7 +77,8 @@
       "@prisma/client",
       "@prisma/engines",
       "@vercel/speed-insights",
-      "prisma"
+      "prisma",
+      "sharp"
     ]
   }
 }

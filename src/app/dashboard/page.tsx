@@ -20,6 +20,8 @@ export const metadata = {
   title: 'Dashboard',
 };
 
+export const revalidate = 10800;
+
 const calculateStartDate = (): string => {
   const thirtyDaysAgo = subDays(new Date(), 30);
   return format(thirtyDaysAgo, 'yyyy-MM-dd');

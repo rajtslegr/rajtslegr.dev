@@ -2,6 +2,12 @@ import { TimelineData } from '@/types/entities';
 
 export const timelineData: TimelineData[] = [
   {
+    timeRange: '2025 - Present',
+    job: 'Full Stack Developer at Prusa Research',
+    description:
+      'Working in the Prusa Connect team, developing and maintaining cloud-based solutions for 3D printing management. Contributing to the development of scalable and reliable services that enable users to monitor and control their 3D printers remotely.',
+  },
+  {
     timeRange: '2021 - 2025',
     job: 'Full Stack Developer at Economia',
     description:

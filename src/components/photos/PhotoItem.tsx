@@ -23,7 +23,7 @@ const PhotoItem = ({ photo, index }: PhotoItemProps) => (
           'object-cover transition-transform duration-500 group-hover:scale-105',
           index === 0 && 'md:size-full',
         )}
-        src={photo.src.medium}
+        src={photo.src.medium.url}
         alt={photo.title}
         title={photo.title}
         fill={true}

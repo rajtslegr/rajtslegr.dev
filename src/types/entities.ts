@@ -3,15 +3,28 @@ import { ReactElement, JSXElementConstructor } from 'react';
 export interface Photo {
   id: string;
   title: string;
+  description: string;
   url: string;
   make: string;
   model: string;
   tags?: string[];
   takenAtNaive: string;
   src: {
-    small: string;
-    medium: string;
-    large: string;
+    small: {
+      url: string;
+      width: number;
+      height: number;
+    };
+    medium: {
+      url: string;
+      width: number;
+      height: number;
+    };
+    large: {
+      url: string;
+      width: number;
+      height: number;
+    };
   };
 }
 
@@ -19,6 +32,7 @@ export interface PhotosData {
   meta: {
     title: string;
     url: string;
+    description: string;
   };
   photos: Photo[];
 }

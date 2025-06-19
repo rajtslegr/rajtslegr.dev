@@ -65,7 +65,7 @@
     "husky": "9.1.7",
     "lint-staged": "16.1.2",
     "prettier": "3.5.3",
-    "prettier-plugin-tailwindcss": "0.6.12",
+    "prettier-plugin-tailwindcss": "0.6.13",
     "prisma": "6.10.1",
     "remark-preset-prettier": "2.0.2",
     "tailwindcss": "4.1.10",

@@ -19,7 +19,7 @@ export default function ClientLayout({
 }: ClientLayoutProps) {
   return (
     <ThemeProvider
-      defaultTheme="dark"
+      defaultTheme="system"
       attribute="class"
       disableTransitionOnChange={true}
     >

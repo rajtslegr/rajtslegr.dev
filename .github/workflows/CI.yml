@@ -11,47 +11,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v5
+      - name: Checkout repository
+        uses: actions/checkout@v5
 
-      - name: Checkout Repo
-        uses: actions/setup-node@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v5
         with:
           node-version-file: '.nvmrc'
+          cache: "pnpm"
 
-      - uses: pnpm/action-setup@v4.1.0
-        name: Install pnpm
-        id: pnpm-install
-        with:
-          run_install: false
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
-
-      - uses: actions/cache@v4
-        name: Setup pnpm cache
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: Install
-        run: pnpm install
-      
-      - name: Type Check
+      - name: Type check
         run: pnpm run type-check
 
-      - name: Lint
+      - name: Lint code
         run: pnpm run lint
 
-      - name: Build
+      - name: Build application
         env:
-          DATABASE_URL: ${{secrets.DATABASE_URL}}
-          LASTFM_API_KEY: ${{secrets.LASTFM_API_KEY}}
-          STRAVA_CLIENT_ID: ${{secrets.STRAVA_CLIENT_ID}}
-          STRAVA_CLIENT_SECRET: ${{secrets.STRAVA_CLIENT_SECRET}}
-          STRAVA_REFRESH_TOKEN: ${{secrets.STRAVA_REFRESH_TOKEN}}
-          GARAGE61_API_KEY: ${{secrets.IRACING_API_KEY}}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+          GARAGE61_API_KEY: ${{ secrets.IRACING_API_KEY }}
         run: pnpm run build

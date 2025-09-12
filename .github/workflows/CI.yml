@@ -11,30 +11,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repo
+      - name: Checkout repository
         uses: actions/checkout@v5
 
-      - name: Setup Node.js
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Use Node.js
         uses: actions/setup-node@v5
         with:
           node-version-file: '.nvmrc'
-          cache: 'pnpm'
+          cache: "pnpm"
 
-      - name: Install
-        run: pnpm install
-      
-      - name: Type Check
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Type check
         run: pnpm run type-check
 
-      - name: Lint
+      - name: Lint code
         run: pnpm run lint
 
-      - name: Build
+      - name: Build application
         env:
-          DATABASE_URL: ${{secrets.DATABASE_URL}}
-          LASTFM_API_KEY: ${{secrets.LASTFM_API_KEY}}
-          STRAVA_CLIENT_ID: ${{secrets.STRAVA_CLIENT_ID}}
-          STRAVA_CLIENT_SECRET: ${{secrets.STRAVA_CLIENT_SECRET}}
-          STRAVA_REFRESH_TOKEN: ${{secrets.STRAVA_REFRESH_TOKEN}}
-          GARAGE61_API_KEY: ${{secrets.IRACING_API_KEY}}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+          GARAGE61_API_KEY: ${{ secrets.IRACING_API_KEY }}
         run: pnpm run build

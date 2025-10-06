@@ -46,7 +46,7 @@ importers:
         version: 15.5.4(@babel/core@7.28.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       next-mdx-remote:
         specifier: 5.0.0
-        version: 5.0.0(@types/react@19.2.0)(react@19.2.0)
+        version: 5.0.0(@types/react@19.2.1)(react@19.2.0)
       next-themes:
         specifier: 0.4.6
         version: 0.4.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -85,8 +85,8 @@ importers:
         specifier: 22.18.8
         version: 22.18.8
       '@types/react':
-        specifier: 19.2.0
-        version: 19.2.0
+        specifier: 19.2.1
+        version: 19.2.1
       '@typescript-eslint/eslint-plugin':
         specifier: 7.18.0
         version: 7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
@@ -723,8 +723,8 @@ packages:
   '@types/node@22.18.8':
     resolution: {integrity: sha512-pAZSHMiagDR7cARo/cch1f3rXy0AEXwsVsVH09FcyeJVAzCnGgmYis7P3JidtTUjyadhTeSo8TgRPswstghDaw==}
 
-  '@types/react@19.2.0':
-    resolution: {integrity: sha512-1LOH8xovvsKsCBq1wnT4ntDUdCJKmnEakhsuoUSy6ExlHCkGP2hqnatagYTgFk6oeL0VU31u7SNjunPN+GchtA==}
+  '@types/react@19.2.1':
+    resolution: {integrity: sha512-1U5NQWh/GylZQ50ZMnnPjkYHEaGhg6t5i/KI0LDDh3t4E3h3T3vzm+GLY2BRzMfIjSBwzm6tginoZl5z0O/qsA==}
 
   '@types/unist@2.0.6':
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
@@ -3679,10 +3679,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@mdx-js/react@3.0.1(@types/react@19.2.0)(react@19.2.0)':
+  '@mdx-js/react@3.0.1(@types/react@19.2.1)(react@19.2.0)':
     dependencies:
       '@types/mdx': 2.0.2
-      '@types/react': 19.2.0
+      '@types/react': 19.2.1
       react: 19.2.0
 
   '@next/env@15.5.4': {}
@@ -3939,7 +3939,7 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
-  '@types/react@19.2.0':
+  '@types/react@19.2.1':
     dependencies:
       csstype: 3.1.0
 
@@ -6199,11 +6199,11 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  next-mdx-remote@5.0.0(@types/react@19.2.0)(react@19.2.0):
+  next-mdx-remote@5.0.0(@types/react@19.2.1)(react@19.2.0):
     dependencies:
       '@babel/code-frame': 7.24.2
       '@mdx-js/mdx': 3.0.1
-      '@mdx-js/react': 3.0.1(@types/react@19.2.0)(react@19.2.0)
+      '@mdx-js/react': 3.0.1(@types/react@19.2.1)(react@19.2.0)
       react: 19.2.0
       unist-util-remove: 3.1.1
       vfile: 6.0.1

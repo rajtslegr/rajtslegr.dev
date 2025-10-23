@@ -44,7 +44,7 @@
   "devDependencies": {
     "@babel/core": "7.28.4",
     "@tailwindcss/forms": "0.5.10",
-    "@tailwindcss/postcss": "4.1.15",
+    "@tailwindcss/postcss": "4.1.16",
     "@tailwindcss/typography": "0.5.19",
     "@types/node": "22.18.12",
     "@types/react": "19.2.2",
@@ -68,7 +68,7 @@
     "prettier-plugin-tailwindcss": "0.6.14",
     "prisma": "6.18.0",
     "remark-preset-prettier": "2.0.2",
-    "tailwindcss": "4.1.15",
+    "tailwindcss": "4.1.16",
     "typescript": "5.9.3"
   },
   "packageManager": "pnpm@10.19.0",

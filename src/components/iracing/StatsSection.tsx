@@ -64,7 +64,7 @@ const StatsSection = ({ statsData }: StatsSectionProps) => {
 
   return (
     <div>
-      <p className="mb-3 text-xs text-gray-500 italic">
+      <p className="mb-3 text-xs italic text-gray-500">
         Data from the last 31 days
       </p>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">

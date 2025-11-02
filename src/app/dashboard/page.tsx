@@ -59,8 +59,8 @@ export default async function DashboardPage() {
   return (
     <>
       <div className="mx-auto max-w-4xl">
-        <h1 className="mb-8 inline-block font-normal tracking-tight text-black md:mb-12 dark:text-white">
-          <span className="text-sm font-medium tracking-widest text-gray-500 uppercase">
+        <h1 className="mb-8 inline-block font-normal tracking-tight text-black dark:text-white md:mb-12">
+          <span className="text-sm font-medium uppercase tracking-widest text-gray-500">
             Dashboard
           </span>
         </h1>

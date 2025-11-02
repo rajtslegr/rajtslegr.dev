@@ -74,7 +74,7 @@ const Footer = () => {
             </ExternalLink>
           </div>
         </div>
-        <div className="mt-12 flex flex-col items-center space-y-2 text-xs text-gray-500 sm:flex-row sm:space-y-0 sm:space-x-2">
+        <div className="mt-12 flex flex-col items-center space-y-2 text-xs text-gray-500 sm:flex-row sm:space-x-2 sm:space-y-0">
           <span>© {new Date().getFullYear()} Petr Rajtslegr</span>
           <span className="hidden sm:inline">•</span>
           <span className="flex items-center">

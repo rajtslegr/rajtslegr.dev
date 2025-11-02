@@ -9,7 +9,7 @@ interface GitHubProps {
 
 const GitHub = ({ data }: GitHubProps) => {
   let render: ReactNode = (
-    <p className="flex justify-center p-6 text-gray-500 italic dark:text-gray-400">
+    <p className="flex justify-center p-6 italic text-gray-500 dark:text-gray-400">
       Looks like GitHub is playing hide and seek. I&apos; ll find it soon!
     </p>
   );
@@ -43,7 +43,7 @@ const GitHub = ({ data }: GitHubProps) => {
 
   return (
     <div>
-      <h2 className="mt-12 mb-6 text-sm font-medium tracking-widest text-gray-500 uppercase">
+      <h2 className="mb-6 mt-12 text-sm font-medium uppercase tracking-widest text-gray-500">
         GitHub
       </h2>
       {render}

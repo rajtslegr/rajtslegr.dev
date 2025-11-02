@@ -61,7 +61,7 @@ const DashboardNav = ({ className }: DashboardNavProps) => {
   return (
     <nav
       className={clsx(
-        'sticky top-16 z-9 mb-8 w-full border-b border-gray-200/20 bg-white/70 backdrop-blur-sm motion-safe:transition-shadow dark:border-gray-800/20 dark:bg-black/70',
+        'z-9 sticky top-16 mb-8 w-full border-b border-gray-200/20 bg-white/70 backdrop-blur-sm motion-safe:transition-shadow dark:border-gray-800/20 dark:bg-black/70',
         className,
       )}
     >
@@ -73,7 +73,7 @@ const DashboardNav = ({ className }: DashboardNavProps) => {
               href={`#${id}`}
               onClick={(e) => handleClick(e, id)}
               className={clsx(
-                'relative inline-block py-1.5 text-xs whitespace-nowrap duration-200 motion-safe:transition-all md:text-sm',
+                'relative inline-block whitespace-nowrap py-1.5 text-xs duration-200 motion-safe:transition-all md:text-sm',
                 activeSection === id
                   ? 'font-medium text-black dark:text-white'
                   : 'font-normal text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-gray-200',

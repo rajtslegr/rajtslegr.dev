@@ -45,7 +45,7 @@ const StravaCard = ({
     href={`https://www.strava.com/activities/${id}`}
     rel="noopener noreferrer"
     target="_blank"
-    className="card-hover group bg-card-light dark:bg-card block rounded-md border border-gray-200/30 p-4 dark:border-gray-800/30"
+    className="card-hover group block rounded-md border border-gray-200/30 bg-card-light p-4 dark:border-gray-800/30 dark:bg-card"
   >
     <div className="flex flex-col space-y-3">
       <div className="flex items-center space-x-2">

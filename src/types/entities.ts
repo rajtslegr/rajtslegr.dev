@@ -88,7 +88,7 @@ export interface PostId {
 }
 
 export interface ContentPostData extends PostData {
-  mdxContent: ReactElement<unknown, string | JSXElementConstructor<any>>;
+  mdxContent: ReactElement<unknown, string | JSXElementConstructor<unknown>>;
 }
 
 export interface ReadTime {
@@ -107,8 +107,8 @@ export interface TimelineData {
 export interface Activity {
   id: number;
   resource_state: number;
-  external_id: any;
-  upload_id: any;
+  external_id: string | null;
+  upload_id: number | null;
   athlete: Athlete;
   name: string;
   distance: number;
@@ -133,7 +133,7 @@ export interface Activity {
   private: boolean;
   flagged: boolean;
   gear_id: string;
-  from_accepted_tag: any;
+  from_accepted_tag: boolean | null;
   average_speed: number;
   average_heartrate: number;
   average_watts: number;
@@ -143,10 +143,10 @@ export interface Activity {
   pr_count: number;
   total_photo_count: number;
   has_kudoed: boolean;
-  workout_type: any;
-  description: any;
+  workout_type: number | null;
+  description: string | null;
   calories: number;
-  segment_efforts: any[];
+  segment_efforts: unknown[];
 }
 
 export interface Athlete {
@@ -156,7 +156,7 @@ export interface Athlete {
 
 export interface Map {
   id: string;
-  polyline: any;
+  polyline: string;
   resource_state: number;
 }
 

@@ -1,13 +1,12 @@
+import AccountSection from './AccountSection';
+import RecentRaces from './RecentRaces';
+import StatsSection from './StatsSection';
 import {
   IRacingAccountsResponse,
   IRacingCar,
   IRacingDrivingStatisticsResponse,
   IRacingTrack,
 } from '@/types/entities';
-
-import AccountSection from './AccountSection';
-import RecentRaces from './RecentRaces';
-import StatsSection from './StatsSection';
 
 interface IRacingProps {
   accountsData?: IRacingAccountsResponse;

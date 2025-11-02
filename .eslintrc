@@ -1,7 +1,6 @@
 {
+  "ignorePatterns": ["next-env.d.ts"],
   "extends": [
-    "airbnb-base",
-    "next/core-web-vitals",
     "plugin:prettier/recommended"
   ],
   "rules": {
@@ -32,16 +31,44 @@
   "overrides": [
     {
       "files": [
+        "**/*.js",
+        "**/*.jsx"
+      ],
+      "extends": [
+        "airbnb-base",
+        "plugin:prettier/recommended"
+      ],
+      "settings": {
+        "import/resolver": {
+          "node": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          }
+        }
+      }
+    },
+    {
+      "files": [
+        "tailwind.config.js",
+        "postcss.config.js",
+        "next.config.js"
+      ],
+      "rules": {
+        "import/no-unresolved": "off",
+        "import/no-extraneous-dependencies": "off"
+      }
+    },
+    {
+      "files": [
         "**/*.ts",
         "**/*.tsx"
       ],
+      "parser": "@typescript-eslint/parser",
       "plugins": [
         "@typescript-eslint",
         "unused-imports"
       ],
       "extends": [
-        "airbnb-typescript",
-        "next/core-web-vitals",
+        "plugin:@typescript-eslint/recommended",
         "plugin:prettier/recommended"
       ],
       "parserOptions": {
@@ -88,6 +115,8 @@
         "class-methods-use-this": "off",
         "@typescript-eslint/no-unused-vars": "off",
         "@typescript-eslint/no-throw-literal": "off",
+        "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/triple-slash-reference": "off",
         "unused-imports/no-unused-imports": "error",
         "unused-imports/no-unused-vars": [
           "error",

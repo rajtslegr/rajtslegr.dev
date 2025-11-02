@@ -1,6 +1,5 @@
-import { PostData } from '@/types/entities';
-
 import { getSortedPostsData } from './posts';
+import { PostData } from '@/types/entities';
 
 export const getPostMetadata = async (id: string): Promise<PostData | null> => {
   try {

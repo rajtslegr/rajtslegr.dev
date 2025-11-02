@@ -4,10 +4,9 @@ import { MouseEventHandler } from 'react';
 
 import clsx from 'clsx';
 
+import MotionSection from '../motion/MotionSection';
 import NavigationButton from '@/components/navigation/NavigationButton';
 import NavLink from '@/components/navigation/NavLink';
-
-import MotionSection from '../motion/MotionSection';
 
 interface MobileNavigationProps {
   handleClick: MouseEventHandler<HTMLButtonElement>;

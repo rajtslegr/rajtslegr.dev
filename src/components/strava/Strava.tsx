@@ -2,9 +2,8 @@
 
 import { ReactNode } from 'react';
 
-import { Activity } from '@/types/entities';
-
 import StravaCard from './StravaCard';
+import { Activity } from '@/types/entities';
 
 interface StravaProps {
   data?: Activity[];

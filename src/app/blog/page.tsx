@@ -1,6 +1,5 @@
-import { getSortedPostsData } from '@/lib/posts';
-
 import BlogContent from '../../components/blog/BlogContent';
+import { getSortedPostsData } from '@/lib/posts';
 
 export const metadata = {
   title: 'Blog',

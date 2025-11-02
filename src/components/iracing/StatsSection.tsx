@@ -9,10 +9,9 @@ import {
   ChartBarIcon,
 } from '@heroicons/react/24/outline';
 
+import StatCard from './StatCard';
 import { IRacingDrivingStatisticsResponse } from '@/types/entities';
 import { formatSeconds } from '@/utils/date';
-
-import StatCard from './StatCard';
 
 interface StatsSectionProps {
   statsData?: IRacingDrivingStatisticsResponse;

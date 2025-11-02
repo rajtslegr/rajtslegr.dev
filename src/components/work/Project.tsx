@@ -1,15 +1,14 @@
 import clsx from 'clsx';
 import Image, { StaticImageData } from 'next/image';
 
-import Pill from '@/components/work/Pill';
-import WindowHeader from '@/components/work/WindowHeader';
-import { ProjectData } from '@/types/entities';
-
 import elections from '../../../public/static/images/work/elections.jpg';
 import pujdu from '../../../public/static/images/work/pujdu.jpg';
 import smfairplay from '../../../public/static/images/work/smfairplay.jpg';
 import vyber from '../../../public/static/images/work/vyber.jpg';
 import xquest from '../../../public/static/images/work/xquest.jpg';
+import Pill from '@/components/work/Pill';
+import WindowHeader from '@/components/work/WindowHeader';
+import { ProjectData } from '@/types/entities';
 
 const IMAGES: Record<string, StaticImageData> = {
   elections,

@@ -6,12 +6,11 @@ import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 import { useTheme } from 'next-themes';
 
+import ProgressBar from '../post/ProgressBar';
 import ThemeButton from '@/components/buttons/ThemeButton';
 import NavigationButton from '@/components/navigation/NavigationButton';
 import NavLink from '@/components/navigation/NavLink';
 import useOnTop from '@/hooks/useOnTop';
-
-import ProgressBar from '../post/ProgressBar';
 
 interface NavBarProps {
   handleClick: MouseEventHandler<HTMLButtonElement>;

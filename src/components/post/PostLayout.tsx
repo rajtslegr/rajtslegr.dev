@@ -1,10 +1,9 @@
 import Image from 'next/image';
 
-import { ContentPostData } from '@/types/entities';
-import { parseDate } from '@/utils/date';
-
 import hero from '../../../public/static/images/hero.jpg';
 import MotionSection from '../motion/MotionSection';
+import { ContentPostData } from '@/types/entities';
+import { parseDate } from '@/utils/date';
 
 interface PostLayoutProps {
   postData: ContentPostData;

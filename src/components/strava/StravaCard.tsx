@@ -1,12 +1,11 @@
 'use client';
 
-import { formatSeconds } from '@/utils/date';
-
 import { isRideActivity, isDistanceActivity } from './utils';
 import BikeIcon from '../icons/BikeIcon';
 import DumbellIcon from '../icons/DumbellIcon';
 import ShoeIcon from '../icons/ShoeIcon';
 import SoccerBallIcon from '../icons/SoccerBallIcon';
+import { formatSeconds } from '@/utils/date';
 
 interface StravaCardProps {
   id: number;

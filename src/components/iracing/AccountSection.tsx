@@ -79,7 +79,7 @@ const AccountSection = ({ accountsData }: AccountSectionProps) => {
         return (
           <div
             key={category}
-            className="bg-card-light dark:bg-card rounded-md border border-gray-200/30 p-4 dark:border-gray-800/30"
+            className="rounded-md border border-gray-200/30 bg-card-light p-4 dark:border-gray-800/30 dark:bg-card"
           >
             <h3
               className={`mb-2 text-sm font-medium text-gray-600 dark:text-gray-400`}

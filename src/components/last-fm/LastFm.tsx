@@ -20,7 +20,7 @@ const LastFm = () => {
 
   if (error) {
     render = (
-      <p className="flex justify-center p-6 text-gray-500 italic dark:text-gray-400">
+      <p className="flex justify-center p-6 italic text-gray-500 dark:text-gray-400">
         Hmm, the music data isn&apos;t playing nice. Give it another spin in a
         bit!
       </p>
@@ -41,7 +41,7 @@ const LastFm = () => {
 
   return (
     <div>
-      <h2 className="mt-12 mb-6 text-sm font-medium tracking-widest text-gray-500 uppercase">
+      <h2 className="mb-6 mt-12 text-sm font-medium uppercase tracking-widest text-gray-500">
         Last.fm
       </h2>
       {render}

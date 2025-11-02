@@ -16,7 +16,7 @@ const NavigationButton = ({
 }: NavigationButtonProps) => (
   <button
     onClick={handleClick}
-    className="dark:bg-card flex size-8 items-center justify-center rounded-md border border-gray-200/30 bg-white text-gray-600 transition-all duration-200 hover:border-gray-200/50 hover:text-black dark:border-gray-800/30 dark:text-gray-400 dark:hover:border-gray-800/50 dark:hover:text-gray-200"
+    className="flex size-8 items-center justify-center rounded-md border border-gray-200/30 bg-white text-gray-600 transition-all duration-200 hover:border-gray-200/50 hover:text-black dark:border-gray-800/30 dark:bg-card dark:text-gray-400 dark:hover:border-gray-800/50 dark:hover:text-gray-200"
   >
     <motion.div className="flex size-full items-center justify-center">
       {showMobileNavigation ? (

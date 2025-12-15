@@ -39,7 +39,7 @@
     "reading-time": "1.5.0",
     "rehype-pretty-code": "0.14.1",
     "shiki": "3.20.0",
-    "swr": "2.3.7"
+    "swr": "2.3.8"
   },
   "devDependencies": {
     "@babel/core": "7.28.5",

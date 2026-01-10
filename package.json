@@ -47,7 +47,7 @@
     "@tailwindcss/postcss": "4.1.18",
     "@tailwindcss/typography": "0.5.19",
     "@types/node": "24.10.6",
-    "@types/react": "19.2.7",
+    "@types/react": "19.2.8",
     "@typescript-eslint/eslint-plugin": "7.18.0",
     "@typescript-eslint/parser": "7.18.0",
     "dotenv-flow": "4.1.0",

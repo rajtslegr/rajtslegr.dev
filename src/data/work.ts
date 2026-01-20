@@ -13,7 +13,6 @@ export const projectData = [
       'A scheduling tool for coordinating meetings and managing availability between people.',
     build: ['Next.js', 'Prisma', 'React Query', 'zustand', 'Tailwind'],
     image: 'pujdu',
-    live: 'https://pujdu.cz/',
   },
   {
     title: 'Centrum Vyber',
@@ -21,7 +20,6 @@ export const projectData = [
       'News aggregator that collects content from Economia media house publications for registered users.',
     build: ['Next.js', 'Strapi', 'Tailwind'],
     image: 'vyber',
-    live: 'https://vyber.centrum.cz/',
   },
   {
     title: 'Elections Infographics',

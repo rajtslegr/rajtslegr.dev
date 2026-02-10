@@ -82,8 +82,8 @@ importers:
         specifier: 0.5.19
         version: 0.5.19(tailwindcss@4.1.18)
       '@types/node':
-        specifier: 24.10.12
-        version: 24.10.12
+        specifier: 24.10.13
+        version: 24.10.13
       '@types/react':
         specifier: 19.2.13
         version: 19.2.13
@@ -751,8 +751,8 @@ packages:
   '@types/ms@0.7.31':
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
 
-  '@types/node@24.10.12':
-    resolution: {integrity: sha512-68e+T28EbdmLSTkPgs3+UacC6rzmqrcWFPQs1C8mwJhI/r5Uxr0yEuQotczNRROd1gq30NGxee+fo0rSIxpyAw==}
+  '@types/node@24.10.13':
+    resolution: {integrity: sha512-oH72nZRfDv9lADUBSo104Aq7gPHpQZc4BTx38r9xf9pg5LfP6EzSyH2n7qFmmxRQXh7YlUXODcYsg6PuTDSxGg==}
 
   '@types/react@19.2.13':
     resolution: {integrity: sha512-KkiJeU6VbYbUOp5ITMIc7kBfqlYkKA5KhEHVrGMmUUMt7NeaZg65ojdPk+FtNrBAOXNVM5QM72jnADjM+XVRAQ==}
@@ -4090,7 +4090,7 @@ snapshots:
 
   '@types/ms@0.7.31': {}
 
-  '@types/node@24.10.12':
+  '@types/node@24.10.13':
     dependencies:
       undici-types: 7.16.0
 

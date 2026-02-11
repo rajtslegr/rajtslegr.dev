@@ -1,34 +1,45 @@
-'use client';
-
-import { ReactNode } from 'react';
-
-import useSWR from 'swr';
-
 import LastFmItem from '@/components/last-fm/LastFmItem';
 import LastFmSkeleton from '@/components/last-fm/LastFmSkeleton';
-import { LastFmData } from '@/types/entities';
-import { fetcher } from '@/utils/fetcher';
+import usePollingFetch from '@/hooks/usePollingFetch';
+import type { LastFmData } from '@/types/entities';
+
+const LASTFM_URL = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=rajcep&api_key=${import.meta.env.PUBLIC_LASTFM_API_KEY}&format=json&limit=6`;
 
 const LastFm = () => {
-  const { data, error } = useSWR<LastFmData>('/api/last-fm', fetcher, {
-    refreshInterval: 60000,
-    suspense: false,
-    revalidateOnFocus: false,
+  const { data, error, isLoading } = usePollingFetch<LastFmData>(LASTFM_URL, {
+    intervalMs: 60_000,
   });
 
-  let render: ReactNode = <LastFmSkeleton />;
-
-  if (error) {
-    render = (
-      <p className="flex justify-center p-6 italic text-gray-500 dark:text-gray-400">
-        Hmm, the music data isn&apos;t playing nice. Give it another spin in a
-        bit!
-      </p>
+  if (isLoading) {
+    return (
+      <div>
+        <h2 className="mt-12 mb-6 text-sm font-medium tracking-widest text-gray-500 uppercase">
+          Last.fm
+        </h2>
+        <LastFmSkeleton />
+      </div>
     );
   }
 
-  if (data?.recenttracks) {
-    render = (
+  if (error || !data?.recenttracks) {
+    return (
+      <div>
+        <h2 className="mt-12 mb-6 text-sm font-medium tracking-widest text-gray-500 uppercase">
+          Last.fm
+        </h2>
+        <p className="flex justify-center p-6 text-gray-500 italic dark:text-gray-400">
+          Hmm, the music data isn&apos;t playing nice. Give it another spin in a
+          bit!
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <h2 className="mt-12 mb-6 text-sm font-medium tracking-widest text-gray-500 uppercase">
+        Last.fm
+      </h2>
       <div className="grid gap-4 md:grid-cols-2">
         {data.recenttracks.track
           ?.filter((_track, index) => index < 6)
@@ -36,15 +47,6 @@ const LastFm = () => {
             <LastFmItem key={track?.date?.uts || 0} track={track} />
           ))}
       </div>
-    );
-  }
-
-  return (
-    <div>
-      <h2 className="mb-6 mt-12 text-sm font-medium uppercase tracking-widest text-gray-500">
-        Last.fm
-      </h2>
-      {render}
     </div>
   );
 };

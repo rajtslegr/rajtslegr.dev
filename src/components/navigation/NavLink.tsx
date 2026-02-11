@@ -1,17 +1,15 @@
-'use client';
-
 import clsx from 'clsx';
-import Link, { LinkProps } from 'next/link';
-import { usePathname } from 'next/navigation';
 
-interface NavLinkProps extends LinkProps {
+interface NavLinkProps {
   children: string;
+  href: string;
   target?: string;
   rel?: string;
   isHeader?: boolean;
   isMobileNavigation?: boolean;
   className?: string;
   onClick?: () => void;
+  pathname?: string;
 }
 
 const NavLink = ({
@@ -23,16 +21,14 @@ const NavLink = ({
   className,
   href,
   onClick,
-  ...props
+  pathname = '',
 }: NavLinkProps) => {
-  const pathname = usePathname();
-
   const isRouteActive =
     !target && !rel
       ? pathname?.split('/')[1] === String(href).split('/')[1]
       : false;
 
-  const isHomeLink = href === '/' && className?.includes('pl-0!');
+  const isHomeLink = href === '/' && className?.includes('!pl-0');
 
   const handleClick = () => {
     if (onClick) {
@@ -41,7 +37,7 @@ const NavLink = ({
   };
 
   return (
-    <Link
+    <a
       href={href}
       target={target}
       rel={rel}
@@ -55,7 +51,6 @@ const NavLink = ({
         !isMobileNavigation && isHeader && 'inline-block px-3 py-1.5',
         className,
       )}
-      {...props}
     >
       {children}
       {isRouteActive && !isMobileNavigation && isHeader && (
@@ -68,7 +63,7 @@ const NavLink = ({
           )}
         />
       )}
-    </Link>
+    </a>
   );
 };
 

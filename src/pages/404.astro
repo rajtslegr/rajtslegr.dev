@@ -1,0 +1,30 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import ClientLayout from '@/components/layout/ClientLayout';
+import MotionSection from '@/components/motion/MotionSection';
+---
+
+<Layout title="404 - Page Not Found | Petr Rajtslegr">
+  <ClientLayout pathname="" client:load>
+    <div
+      class="flex min-h-[50vh] flex-col items-center justify-center text-center"
+    >
+      <MotionSection client:load>
+        <h1 class="text-6xl font-bold text-black dark:text-white">404</h1>
+      </MotionSection>
+      <MotionSection delay={0.1} client:load>
+        <p class="mt-4 text-xl text-gray-600 dark:text-gray-400">
+          Page not found
+        </p>
+      </MotionSection>
+      <MotionSection delay={0.2} client:load>
+        <a
+          href="/"
+          class="mt-8 inline-block rounded-md bg-black px-6 py-3 text-white transition-colors hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+        >
+          Go Home
+        </a>
+      </MotionSection>
+    </div>
+  </ClientLayout>
+</Layout>

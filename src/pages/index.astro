@@ -1,0 +1,20 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import ClientLayout from '@/components/layout/ClientLayout';
+import Hero from '@/components/hero/Hero';
+import MotionSection from '@/components/motion/MotionSection';
+import Timeline from '@/components/timeline/Timeline';
+---
+
+<Layout title="Petr Rajtslegr">
+  <ClientLayout pathname="/" client:load>
+    <div class="min-h-[calc(100vh-144px)]">
+      <MotionSection client:load>
+        <Hero />
+      </MotionSection>
+      <MotionSection delay={0.1} client:load>
+        <Timeline />
+      </MotionSection>
+    </div>
+  </ClientLayout>
+</Layout>

@@ -1,6 +1,4 @@
-import Link from 'next/link';
-
-import { PostData } from '@/types/entities';
+import type { PostData } from '@/types/entities';
 import { parseDate } from '@/utils/date';
 
 interface PostCardProps {
@@ -8,10 +6,10 @@ interface PostCardProps {
 }
 
 const PostCard = ({
-  post: { id, date, title, description, readingTime, views },
+  post: { id, date, title, description, readingTime },
 }: PostCardProps) => (
-  <Link href={`/blog/${id}`} passHref className="group">
-    <div className="card-hover h-full rounded-md border border-gray-200/30 bg-card-light p-5 transition-all duration-200 dark:border-gray-800/30 dark:bg-card">
+  <a href={`/blog/${id}`} className="group">
+    <div className="card-hover bg-card-light dark:bg-card h-full rounded-md border border-gray-200/30 p-5 transition-all duration-200 dark:border-gray-800/30">
       <div className="flex h-full flex-col">
         <h2 className="mb-2 text-lg font-medium text-black group-hover:text-gray-700 dark:text-white dark:group-hover:text-gray-200">
           {title}
@@ -25,12 +23,10 @@ const PostCard = ({
           </time>
           <span className="mx-1">•</span>
           <span className="inline-block">{readingTime?.text}</span>
-          <span className="mx-1">•</span>
-          <span className="inline-block">{views} views</span>
         </div>
       </div>
     </div>
-  </Link>
+  </a>
 );
 
 export default PostCard;

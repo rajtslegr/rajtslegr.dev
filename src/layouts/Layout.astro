@@ -1,0 +1,117 @@
+---
+import { ClientRouter } from 'astro:transitions';
+
+import '@/styles/globals.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  article?: boolean;
+  publishedTime?: string;
+}
+
+const {
+  title = 'Petr Rajtslegr',
+  description = 'I build modern web applications and experiences with a focus on performance, accessibility, and user experience.',
+  image = '/opengraph-image.png',
+  article = false,
+  publishedTime,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/static/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/static/favicons/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/static/favicons/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/static/favicons/site.webmanifest" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="Petr Rajtslegr" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    {
+      article && (
+        <>
+          <meta property="og:type" content="article" />
+          {publishedTime && (
+            <meta property="article:published_time" content={publishedTime} />
+          )}
+        </>
+      )
+    }
+    {!article && <meta property="og:type" content="website" />}
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(image, Astro.site)} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <ClientRouter />
+
+    <!-- Theme -->
+    <script is:inline>
+      function applyTheme() {
+        let theme = 'light';
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          theme = localStorage.getItem('theme');
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        }
+
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      }
+
+      applyTheme();
+      document.addEventListener('astro:after-swap', applyTheme);
+    </script>
+  </head>
+  <body
+    class="bg-gray-50 text-black antialiased motion-safe:transition-all dark:bg-[#0a0a0a] dark:text-white"
+  >
+    <slot />
+  </body>
+</html>

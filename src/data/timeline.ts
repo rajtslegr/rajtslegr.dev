@@ -1,4 +1,4 @@
-import { TimelineData } from '@/types/entities';
+import type { TimelineData } from '@/types/entities';
 
 export const timelineData: TimelineData[] = [
   {

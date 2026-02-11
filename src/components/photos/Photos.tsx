@@ -1,7 +1,7 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
 import PhotoItem from '@/components/photos/PhotoItem';
-import { PhotosData } from '@/types/entities';
+import type { PhotosData } from '@/types/entities';
 
 interface PhotosProps {
   data?: PhotosData;
@@ -9,7 +9,7 @@ interface PhotosProps {
 
 const Photos = ({ data }: PhotosProps) => {
   let render: ReactNode = (
-    <p className="flex justify-center p-6 italic text-gray-500 dark:text-gray-400">
+    <p className="flex justify-center p-6 text-gray-500 italic dark:text-gray-400">
       Oops! The photos are camera shy right now. Let&apos;s try again later!
     </p>
   );
@@ -26,7 +26,7 @@ const Photos = ({ data }: PhotosProps) => {
 
   return (
     <div>
-      <h2 className="mb-6 text-sm font-medium uppercase tracking-widest text-gray-500">
+      <h2 className="mb-6 text-sm font-medium tracking-widest text-gray-500 uppercase">
         Photos
       </h2>
       {render}

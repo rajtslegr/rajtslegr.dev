@@ -1,8 +1,5 @@
-'use client';
-
-import { useTheme } from 'next-themes';
-
 import useIsMounted from '@/hooks/useIsMounted';
+import useTheme from '@/hooks/useTheme';
 
 const ShoeIcon = () => {
   const isMounted = useIsMounted();

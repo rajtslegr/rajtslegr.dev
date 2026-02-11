@@ -1,9 +1,7 @@
-'use client';
-
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
 import StravaCard from './StravaCard';
-import { Activity } from '@/types/entities';
+import type { Activity } from '@/types/entities';
 
 interface StravaProps {
   data?: Activity[];
@@ -11,7 +9,7 @@ interface StravaProps {
 
 const Strava = ({ data }: StravaProps) => {
   let render: ReactNode = (
-    <p className="flex justify-center p-6 italic text-gray-500 dark:text-gray-400">
+    <p className="flex justify-center p-6 text-gray-500 italic dark:text-gray-400">
       Strava data hit a bump in the road. It&apos;ll be back on track soon!
     </p>
   );
@@ -49,7 +47,7 @@ const Strava = ({ data }: StravaProps) => {
 
   return (
     <div>
-      <h2 className="mb-6 mt-12 text-sm font-medium uppercase tracking-widest text-gray-500">
+      <h2 className="mt-12 mb-6 text-sm font-medium tracking-widest text-gray-500 uppercase">
         Strava
       </h2>
       {render}

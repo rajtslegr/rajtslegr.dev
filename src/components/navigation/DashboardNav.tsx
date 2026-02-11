@@ -1,5 +1,3 @@
-'use client';
-
 import { useEffect, useState } from 'react';
 
 import clsx from 'clsx';
@@ -61,7 +59,7 @@ const DashboardNav = ({ className }: DashboardNavProps) => {
   return (
     <nav
       className={clsx(
-        'z-9 sticky top-16 mb-8 w-full border-b border-gray-200/20 bg-white/70 backdrop-blur-sm motion-safe:transition-shadow dark:border-gray-800/20 dark:bg-black/70',
+        'sticky top-16 z-[9] mb-8 w-full border-b border-gray-200/20 bg-white/70 pb-1 backdrop-blur-sm motion-safe:transition-shadow dark:border-gray-800/20 dark:bg-black/70',
         className,
       )}
     >
@@ -73,18 +71,18 @@ const DashboardNav = ({ className }: DashboardNavProps) => {
               href={`#${id}`}
               onClick={(e) => handleClick(e, id)}
               className={clsx(
-                'relative inline-block whitespace-nowrap py-1.5 text-xs duration-200 motion-safe:transition-all md:text-sm',
+                'relative inline-block py-1.5 text-xs whitespace-nowrap duration-200 motion-safe:transition-all md:text-sm',
                 activeSection === id
                   ? 'font-medium text-black dark:text-white'
                   : 'font-normal text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-gray-200',
-                index === 0 ? 'pl-0!' : 'px-1 md:px-3',
+                index === 0 ? '!pl-0' : 'px-1 md:px-3',
               )}
             >
               {label}
               {activeSection === id && (
                 <span
                   className={clsx(
-                    'absolute -bottom-1 h-px w-1/2 bg-black dark:bg-white',
+                    'absolute bottom-0 h-px w-1/2 bg-black dark:bg-white',
                     index === 0
                       ? 'left-1/4 -translate-x-1/4'
                       : 'left-1/2 -translate-x-1/2',

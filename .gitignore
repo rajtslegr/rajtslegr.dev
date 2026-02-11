@@ -3,9 +3,9 @@
 .idea
 **/.history
 
-# Next.js
-/.next
-/build
+# Astro
+/.astro
+/dist
 /out
 .vercel
 .env*

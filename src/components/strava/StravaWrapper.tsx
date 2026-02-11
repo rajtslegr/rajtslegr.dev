@@ -1,7 +1,5 @@
-'use client';
-
 import Strava from '@/components/strava/Strava';
-import { Activity } from '@/types/entities';
+import type { Activity } from '@/types/entities';
 
 interface StravaWrapperProps {
   data?: Activity[];

@@ -1,0 +1,32 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import ClientLayout from '@/components/layout/ClientLayout';
+import MotionSection from '@/components/motion/MotionSection';
+import Project from '@/components/work/Project';
+import { projectData } from '@/data/work';
+---
+
+<Layout title="Work | Petr Rajtslegr">
+  <ClientLayout pathname="/work" client:load>
+    <MotionSection client:load>
+      <h1
+        class="mb-8 inline-block font-normal tracking-tight text-black dark:text-white md:mb-12"
+      >
+        <span
+          class="text-sm font-medium uppercase tracking-widest text-gray-500"
+        >
+          Work
+        </span>
+      </h1>
+    </MotionSection>
+    <div class="grid w-full gap-6 sm:grid-cols-2">
+      {
+        projectData.map((project, index) => (
+          <MotionSection delay={0.1 + index / 10} client:load>
+            <Project project={project} />
+          </MotionSection>
+        ))
+      }
+    </div>
+  </ClientLayout>
+</Layout>

@@ -1,15 +1,9 @@
 import { HeartIcon } from '@heroicons/react/20/solid';
-import { useTheme } from 'next-themes';
 
-import NextJsIcon from '@/components/icons/NextJsIcon';
 import ExternalLink from '@/components/navigation/ExternalLink';
 import NavLink from '@/components/navigation/NavLink';
-import useIsMounted from '@/hooks/useIsMounted';
 
 const Footer = () => {
-  const isMounted = useIsMounted();
-  const { theme } = useTheme();
-
   return (
     <footer className="mx-auto w-full max-w-3xl border-t border-gray-200/30 px-6 py-12 text-sm dark:border-gray-800/30">
       <div className="flex flex-col items-center">
@@ -67,27 +61,18 @@ const Footer = () => {
               Vero
             </ExternalLink>
             <ExternalLink
-              href="https://www.strava.cgstom/athletes/120067793"
+              href="https://www.strava.com/athletes/120067793"
               className="text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-gray-200"
             >
               Strava
             </ExternalLink>
           </div>
         </div>
-        <div className="mt-12 flex flex-col items-center space-y-2 text-xs text-gray-500 sm:flex-row sm:space-x-2 sm:space-y-0">
+        <div className="mt-12 flex flex-col items-center space-y-2 text-xs text-gray-500 sm:flex-row sm:space-y-0 sm:space-x-2">
           <span>© {new Date().getFullYear()} Petr Rajtslegr</span>
           <span className="hidden sm:inline">•</span>
           <span className="flex items-center">
-            Made with <HeartIcon className="mx-1 size-3" /> and
-            {theme && isMounted && (
-              <ExternalLink
-                href="https://nextjs.org"
-                ariaLabel="Next.js"
-                className="ml-1"
-              >
-                <NextJsIcon theme={theme} />
-              </ExternalLink>
-            )}
+            Made with <HeartIcon className="mx-1 size-3" />
           </span>
         </div>
       </div>

@@ -1,5 +1,3 @@
-import { ReactElement, JSXElementConstructor } from 'react';
-
 export interface Photo {
   id: string;
   title: string;
@@ -85,10 +83,6 @@ export interface PostId {
   params: {
     id: PostData['id'];
   };
-}
-
-export interface ContentPostData extends PostData {
-  mdxContent: ReactElement<unknown, string | JSXElementConstructor<unknown>>;
 }
 
 export interface ReadTime {

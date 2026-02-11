@@ -1,35 +1,21 @@
-'use client';
-
-import { ReactNode } from 'react';
-
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { ThemeProvider } from 'next-themes';
+import type { ReactNode } from 'react';
 
 import Layout from '@/components/layout/Layout';
 
-interface ClientLayoutProps {
+export interface ClientLayoutProps {
   children: ReactNode;
   className?: string;
+  pathname?: string;
 }
 
 export default function ClientLayout({
   children,
   className,
+  pathname = '/',
 }: ClientLayoutProps) {
   return (
-    <ThemeProvider
-      defaultTheme="system"
-      attribute="class"
-      disableTransitionOnChange={true}
-    >
-      <Layout>
-        <main className={className}>
-          {children}
-          <Analytics />
-          <SpeedInsights />
-        </main>
-      </Layout>
-    </ThemeProvider>
+    <Layout pathname={pathname}>
+      <main className={className}>{children}</main>
+    </Layout>
   );
 }

@@ -1,6 +1,4 @@
-'use client';
-
-import { MouseEventHandler } from 'react';
+import type { MouseEventHandler } from 'react';
 
 import clsx from 'clsx';
 
@@ -11,11 +9,13 @@ import NavLink from '@/components/navigation/NavLink';
 interface MobileNavigationProps {
   handleClick: MouseEventHandler<HTMLButtonElement>;
   isTransitioning?: boolean;
+  pathname: string;
 }
 
 const MobileNavigation = ({
   handleClick,
   isTransitioning = false,
+  pathname,
 }: MobileNavigationProps) => {
   const handleLinkClick = () => {
     if (handleClick) {
@@ -30,7 +30,7 @@ const MobileNavigation = ({
         isTransitioning ? 'opacity-0' : 'opacity-100',
       )}
     >
-      <div className="absolute left-4 top-4">
+      <div className="absolute top-4 left-4">
         <NavigationButton
           showMobileNavigation={true}
           handleClick={handleClick}
@@ -38,7 +38,12 @@ const MobileNavigation = ({
       </div>
       <div className="mt-24 flex flex-col space-y-8 text-center">
         <MotionSection>
-          <NavLink href="/" isMobileNavigation onClick={handleLinkClick}>
+          <NavLink
+            href="/"
+            isMobileNavigation
+            onClick={handleLinkClick}
+            pathname={pathname}
+          >
             Home
           </NavLink>
         </MotionSection>
@@ -47,17 +52,28 @@ const MobileNavigation = ({
             href="/dashboard"
             isMobileNavigation
             onClick={handleLinkClick}
+            pathname={pathname}
           >
             Dashboard
           </NavLink>
         </MotionSection>
         <MotionSection delay={0.2}>
-          <NavLink href="/work" isMobileNavigation onClick={handleLinkClick}>
+          <NavLink
+            href="/work"
+            isMobileNavigation
+            onClick={handleLinkClick}
+            pathname={pathname}
+          >
             Work
           </NavLink>
         </MotionSection>
         <MotionSection delay={0.3}>
-          <NavLink href="/blog" isMobileNavigation onClick={handleLinkClick}>
+          <NavLink
+            href="/blog"
+            isMobileNavigation
+            onClick={handleLinkClick}
+            pathname={pathname}
+          >
             Blog
           </NavLink>
         </MotionSection>
@@ -68,12 +84,18 @@ const MobileNavigation = ({
             rel="noopener noreferrer"
             isMobileNavigation
             onClick={handleLinkClick}
+            pathname={pathname}
           >
             Photos
           </NavLink>
         </MotionSection>
         <MotionSection delay={0.5}>
-          <NavLink href="/contact" isMobileNavigation onClick={handleLinkClick}>
+          <NavLink
+            href="/contact"
+            isMobileNavigation
+            onClick={handleLinkClick}
+            pathname={pathname}
+          >
             Contact
           </NavLink>
         </MotionSection>

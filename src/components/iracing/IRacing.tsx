@@ -1,7 +1,7 @@
 import AccountSection from './AccountSection';
 import RecentRaces from './RecentRaces';
 import StatsSection from './StatsSection';
-import {
+import type {
   IRacingAccountsResponse,
   IRacingCar,
   IRacingDrivingStatisticsResponse,
@@ -16,13 +16,13 @@ interface IRacingProps {
 }
 
 const IRacingHeader = () => (
-  <h2 className="mb-6 mt-12 text-sm font-medium uppercase tracking-widest text-gray-500">
+  <h2 className="mt-12 mb-6 text-sm font-medium tracking-widest text-gray-500 uppercase">
     iRacing
   </h2>
 );
 
 const EmptyDataMessage = () => (
-  <p className="flex justify-center p-6 italic text-gray-500 dark:text-gray-400">
+  <p className="flex justify-center p-6 text-gray-500 italic dark:text-gray-400">
     No iRacing data available.
   </p>
 );

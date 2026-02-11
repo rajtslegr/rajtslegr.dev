@@ -1,0 +1,31 @@
+---
+import { getPostData, getAllPostIds } from '@/lib/posts';
+import Layout from '@/layouts/Layout.astro';
+import ClientLayout from '@/components/layout/ClientLayout';
+import PostLayout from '@/components/post/PostLayout';
+
+export async function getStaticPaths() {
+  const paths = getAllPostIds();
+  return paths.map((path) => ({
+    params: { id: path.params.id },
+  }));
+}
+
+const { id } = Astro.params;
+const postData = await getPostData(id as string);
+---
+
+<Layout
+  title={`${postData.title} | Petr Rajtslegr`}
+  description={postData.description}
+  article={true}
+  publishedTime={new Date(postData.date).toISOString()}
+>
+  <ClientLayout pathname={`/blog/${id}`} client:load>
+    <PostLayout postData={postData} client:load>
+      <article class="prose dark:prose-invert max-w-none">
+        <div set:html={postData.content} />
+      </article>
+    </PostLayout>
+  </ClientLayout>
+</Layout>

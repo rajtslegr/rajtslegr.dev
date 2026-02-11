@@ -1,0 +1,76 @@
+---
+import { format, subDays } from 'date-fns';
+
+import Layout from '@/layouts/Layout.astro';
+import DashboardContent from '@/components/layout/DashboardContent';
+import { getRecentRepos } from '@/lib/github';
+import { getRecentPhotos } from '@/lib/photos';
+import { getActivities } from '@/lib/strava';
+import {
+  getCars,
+  getDrivingStatistics,
+  getLinkedAccounts,
+  getTracks,
+} from '@/lib/iracing';
+import type {
+  Activity,
+  GitHubData,
+  IRacingAccountsResponse,
+  IRacingCar,
+  IRacingDrivingStatisticsResponse,
+  IRacingTrack,
+  PhotosData,
+} from '@/types/entities';
+
+const startDate = format(subDays(new Date(), 30), 'yyyy-MM-dd');
+
+Astro.response.headers.set(
+  'Cache-Control',
+  's-maxage=3600, stale-while-revalidate=86400',
+);
+
+const settle = (p: Promise<unknown>) =>
+  p.catch((error: unknown) => {
+    console.warn('Dashboard data fetch failed:', error);
+    return undefined;
+  }); 
+
+const [
+  gitHubData,
+  photosData,
+  stravaData,
+  iRacingAccounts,
+  iRacingStats,
+  iRacingCars,
+  iRacingTracks,
+] = (await Promise.all([
+  settle(getRecentRepos()),
+  settle(getRecentPhotos()),
+  settle(getActivities()),
+  settle(getLinkedAccounts(true)),
+  settle(getDrivingStatistics(startDate)),
+  settle(getCars()),
+  settle(getTracks()),
+])) as [
+  GitHubData[] | undefined,
+  PhotosData | undefined,
+  Activity[] | undefined,
+  IRacingAccountsResponse | undefined,
+  IRacingDrivingStatisticsResponse | undefined,
+  IRacingCar[] | undefined,
+  IRacingTrack[] | undefined,
+];
+---
+
+<Layout title="Dashboard | Petr Rajtslegr">
+  <DashboardContent
+    photosData={photosData}
+    stravaData={stravaData}
+    gitHubData={gitHubData}
+    iRacingAccounts={iRacingAccounts}
+    iRacingStats={iRacingStats}
+    iRacingCars={iRacingCars}
+    iRacingTracks={iRacingTracks}
+    client:load
+  />
+</Layout>

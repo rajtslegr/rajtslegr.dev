@@ -10,7 +10,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 import StatCard from './StatCard';
-import { IRacingDrivingStatisticsResponse } from '@/types/entities';
+import type { IRacingDrivingStatisticsResponse } from '@/types/entities';
 import { formatSeconds } from '@/utils/date';
 
 interface StatsSectionProps {
@@ -63,7 +63,7 @@ const StatsSection = ({ statsData }: StatsSectionProps) => {
 
   return (
     <div>
-      <p className="mb-3 text-xs italic text-gray-500">
+      <p className="mb-3 text-xs text-gray-500 italic">
         Data from the last 31 days
       </p>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">

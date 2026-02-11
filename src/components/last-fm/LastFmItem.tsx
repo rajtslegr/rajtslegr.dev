@@ -1,16 +1,13 @@
-'use client';
-
 import { PlayIcon } from '@heroicons/react/20/solid';
-import Image from 'next/image';
 
-import { LastFmTrack } from '@/types/entities';
+import type { LastFmTrack } from '@/types/entities';
 
 interface LastFmItemProps {
   track: LastFmTrack;
 }
 
 const LastFmItem = ({ track }: LastFmItemProps) => (
-  <div className="card-hover group rounded-md border border-gray-200/30 bg-card-light dark:border-gray-800/30 dark:bg-card">
+  <div className="card-hover group bg-card-light dark:bg-card rounded-md border border-gray-200/30 dark:border-gray-800/30">
     <a
       href={track.url}
       rel="noopener noreferrer"
@@ -19,7 +16,7 @@ const LastFmItem = ({ track }: LastFmItemProps) => (
     >
       <div className="flex space-x-3">
         <div className="relative shrink-0">
-          <Image
+          <img
             className="size-16 rounded-md object-cover sm:size-20"
             src={track.image[2]['#text']}
             alt="Album art"
@@ -27,7 +24,7 @@ const LastFmItem = ({ track }: LastFmItemProps) => (
             height={80}
           />
           {track['@attr']?.nowplaying && (
-            <span className="absolute -right-1 -top-1 flex size-5 items-center justify-center rounded-full bg-black text-white dark:bg-white dark:text-black">
+            <span className="absolute -top-1 -right-1 flex size-5 items-center justify-center rounded-full bg-black text-white dark:bg-white dark:text-black">
               <PlayIcon className="ml-0.5 size-3" />
             </span>
           )}

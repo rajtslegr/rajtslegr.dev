@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import Image, { StaticImageData } from 'next/image';
 
 import elections from '../../../public/static/images/work/elections.jpg';
 import pujdu from '../../../public/static/images/work/pujdu.jpg';
@@ -8,15 +7,16 @@ import vyber from '../../../public/static/images/work/vyber.jpg';
 import xquest from '../../../public/static/images/work/xquest.jpg';
 import Pill from '@/components/work/Pill';
 import WindowHeader from '@/components/work/WindowHeader';
-import { ProjectData } from '@/types/entities';
+import type { ProjectData } from '@/types/entities';
 
-const IMAGES: Record<string, StaticImageData> = {
+const IMAGES: Record<string, { src: string }> = {
   elections,
   pujdu,
   vyber,
   xquest,
   smfairplay,
 };
+
 interface ProjectProps {
   project: ProjectData;
 }
@@ -26,7 +26,7 @@ const Project = ({
 }: ProjectProps) => (
   <div
     className={clsx(
-      'card-hover group size-full overflow-hidden rounded-md border border-gray-200/30 bg-card-light dark:border-gray-800/30 dark:bg-card',
+      'card-hover group bg-card-light dark:bg-card size-full overflow-hidden rounded-md border border-gray-200/30 dark:border-gray-800/30',
       live && 'transition-all duration-300',
     )}
   >
@@ -39,11 +39,9 @@ const Project = ({
       <div className="relative overflow-hidden">
         <WindowHeader />
         <div className="overflow-hidden">
-          <Image
-            src={IMAGES[image]}
+          <img
+            src={IMAGES[image]?.src}
             alt={`${title} mockup`}
-            height={393}
-            width={700}
             className="w-full transition-transform duration-500 group-hover:scale-105"
           />
         </div>

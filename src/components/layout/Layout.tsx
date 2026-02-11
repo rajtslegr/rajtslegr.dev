@@ -1,8 +1,5 @@
-'use client';
-
-import { ReactNode, useState, useEffect, MouseEvent } from 'react';
-
-import { usePathname } from 'next/navigation';
+import type { ReactNode, MouseEvent } from 'react';
+import { useState, useEffect } from 'react';
 
 import Footer from '@/components/layout/Footer';
 import DashboardNav from '@/components/navigation/DashboardNav';
@@ -12,14 +9,14 @@ import { useScrollBlock } from '@/hooks/useScrollBlock';
 
 interface LayoutProps {
   children: ReactNode;
+  pathname: string;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children, pathname }: LayoutProps) => {
   const [showMobileNavigation, setShowMobileNavigation] = useState(false);
   const [isNavigationTransitioning, setIsNavigationTransitioning] =
     useState(false);
   const [blockScroll, allowScroll] = useScrollBlock();
-  const pathname = usePathname();
   const isDashboard = pathname === '/dashboard';
 
   const navButtonClickHandler = (
@@ -63,11 +60,13 @@ const Layout = ({ children }: LayoutProps) => {
       <NavBar
         showMobileNavigation={showMobileNavigation}
         handleClick={navButtonClickHandler}
+        pathname={pathname}
       />
       {(showMobileNavigation || isNavigationTransitioning) && (
         <MobileNavigation
           handleClick={linkClickHandler}
           isTransitioning={isNavigationTransitioning}
+          pathname={pathname}
         />
       )}
       {isDashboard && <DashboardNav />}

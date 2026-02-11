@@ -1,4 +1,4 @@
-import {
+import type {
   IRacingCar,
   IRacingDrivingStatisticsResponse,
   IRacingTrack,
@@ -50,7 +50,7 @@ const RecentRaces = ({ statsData, carsData, tracksData }: RecentRacesProps) => {
           return (
             <div
               key={`${race.day}-${race.car}-${race.track}`}
-              className="rounded-md border border-gray-200/30 bg-card-light p-4 dark:border-gray-800/30 dark:bg-card"
+              className="bg-card-light dark:bg-card rounded-md border border-gray-200/30 p-4 dark:border-gray-800/30"
             >
               <div className="flex flex-col sm:flex-row sm:justify-between">
                 <div className="mb-1 sm:mb-0">

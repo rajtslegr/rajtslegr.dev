@@ -1,126 +1,22 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-@config '../../tailwind.config.js';
+@plugin '@tailwindcss/typography';
 
-.card-hover {
-  @apply dark:hover:bg-dark border border-gray-200/20 transition-all duration-200 hover:border-gray-200/40 hover:bg-gray-200 dark:border-gray-800/20 dark:hover:border-gray-800/40;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
-.prose pre,
-[data-rehype-pretty-code-fragment] pre {
-  @apply my-6 overflow-x-auto rounded-lg border border-gray-200/50 dark:border-gray-800/50;
-  background-color: transparent !important;
-  padding: 1.25rem !important;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
 
-.dark .prose pre,
-.dark [data-rehype-pretty-code-fragment] pre {
-  padding: 1.25rem !important;
-}
+  --color-accent-light: #666666;
+  --color-accent: #444444;
+  --color-accent-dark: #333333;
 
-.prose pre code,
-[data-rehype-pretty-code-fragment] pre code {
-  @apply grid w-full border-0 bg-transparent break-words text-gray-800 dark:text-gray-200;
-  counter-reset: line;
-  box-decoration-break: clone;
-  font-size: 0.9rem;
-  line-height: 1.75;
-}
-
-.prose pre code span {
-  color: var(--shiki-light);
-  font-size: 0.9rem;
-}
-
-.dark .prose pre code span {
-  color: var(--shiki-dark);
-  font-size: 0.9rem;
-}
-
-.prose code {
-  @apply rounded-md bg-gray-100 px-1.5 py-0.5 text-gray-700 dark:bg-gray-800 dark:text-gray-200;
-  font-size: 0.9rem;
-}
-
-.prose pre code .line,
-[data-rehype-pretty-code-fragment] pre code .line,
-span[data-line] {
-  @apply block;
-  padding: 0.2rem 0;
-  line-height: 1.75;
-  min-height: 1.6rem;
-}
-
-.dark .prose pre code .line,
-.dark [data-rehype-pretty-code-fragment] pre code .line,
-.dark span[data-line] {
-  padding: 0.2rem 0;
-}
-
-.prose pre code .highlighted,
-.prose pre code .line .highlighted,
-[data-rehype-pretty-code-fragment] pre code .highlighted,
-[data-highlighted-line] {
-  @apply -mx-4 block bg-gray-200/50 px-4 dark:bg-gray-800/50;
-}
-
-.prose pre .code-title {
-  @apply -mb-5 rounded-t-lg border border-b-0 border-gray-200/50 bg-gray-100 px-4 py-2 font-mono text-xs font-semibold text-gray-700 dark:border-gray-800/50 dark:bg-gray-800 dark:text-gray-200;
-}
-
-.prose pre:has(.code-title) {
-  @apply mt-0 rounded-t-none pt-4;
-}
-
-.prose pre code .line-number {
-  @apply mr-4 inline-block w-4 text-right text-gray-400;
-  user-select: none;
-}
-
-.prose pre code .word {
-  @apply rounded-sm px-1 py-0.5;
-}
-
-.prose .rehype-code-title {
-  @apply -mb-4 rounded-t-md border border-b-0 border-gray-200 bg-gray-100 px-4 py-2 font-mono text-sm font-semibold text-gray-700 dark:border-gray-800 dark:bg-gray-800 dark:text-gray-200;
-}
-
-[data-rehype-pretty-code-fragment] {
-  @apply overflow-hidden rounded-lg;
-}
-
-[data-rehype-pretty-code-title] {
-  @apply dark:bg-card rounded-t-lg border border-b-0 border-gray-200 bg-gray-100 px-4 py-2 font-mono text-sm font-semibold text-gray-800 dark:border-gray-800 dark:text-gray-200;
-}
-
-[data-highlighted-line] {
-  @apply -mx-4 border-l-4 border-yellow-500 bg-yellow-50/30 px-4 dark:bg-yellow-900/30;
-}
-
-[data-line-numbers] > [data-line]::before {
-  @apply mr-4 inline-block w-4 text-right text-gray-400;
-  content: attr(data-line);
-  user-select: none;
-}
-
-.dark pre span[data-line] {
-  display: block !important;
-  padding: 0.2rem 0 !important;
-  font-size: 0.9rem !important;
-}
-
-.dark pre span[style*="--shiki-dark"] {
-  color: var(--shiki-dark) !important;
-  font-size: 0.9rem !important;
-}
-
-.light pre span[style*="--shiki-light"],
-:root:not(.dark) pre span[style*="--shiki-light"] {
-  color: var(--shiki-light) !important;
-  font-size: 0.9rem !important;
+  --color-dark: #000000;
+  --color-card: #101010;
+  --color-card-light: #f5f5f5;
 }
 
 :root {
@@ -128,76 +24,27 @@ span[data-line] {
   --card-bg-dark: #101010;
 }
 
-.dark pre {
-  background-color: var(--card-bg-dark) !important;
-  padding: 1.25rem !important;
-  margin: 1.5rem 0 !important;
+@utility card-hover {
+  @apply border border-gray-200/20 transition-all duration-200 hover:border-gray-200/40 hover:bg-gray-200 dark:border-gray-800/20 dark:hover:border-gray-800/40 dark:hover:bg-dark;
 }
 
-:root:not(.dark) pre {
+/* Code block container */
+pre,
+[data-rehype-pretty-code-fragment] pre {
+  @apply my-6 overflow-x-auto rounded-lg border border-gray-200/50 dark:border-gray-800/50;
   background-color: var(--card-bg-light) !important;
   padding: 1.25rem !important;
-}
-
-.prose pre,
-[data-rehype-pretty-code-fragment] pre,
-[data-rehype-pretty-code-fragment] {
-  @apply my-6 overflow-x-auto rounded-lg border border-gray-200/50 dark:border-gray-800/50;
-  background-color: transparent !important;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-[data-rehype-pretty-code-fragment] > div {
-  background-color: transparent !important;
-}
-
-pre span[style*="--shiki"] {
-  font-size: 0.9rem !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
-}
-
-pre > code {
-  display: grid !important;
-  padding: 0 !important;
-  width: 100% !important;
-}
-
-pre,
-code[class*="language-"],
-pre[class*="language-"],
-.prose pre,
-[data-rehype-pretty-code-fragment] pre {
-  background-color: var(--card-bg-light) !important;
-}
-
 .dark pre,
-.dark code[class*="language-"],
-.dark pre[class*="language-"],
-.dark .prose pre,
 .dark [data-rehype-pretty-code-fragment] pre {
   background-color: var(--card-bg-dark) !important;
 }
 
-div[data-rehype-pretty-code-fragment] > pre,
-div[data-rehype-pretty-code-fragment] > div,
-div[data-rehype-pretty-code-fragment] > div > pre {
-  background-color: var(--card-bg-light) !important;
-}
-
-.dark div[data-rehype-pretty-code-fragment] > pre,
-.dark div[data-rehype-pretty-code-fragment] > div,
-.dark div[data-rehype-pretty-code-fragment] > div > pre {
-  background-color: var(--card-bg-dark) !important;
-}
-
+/* Override any inline background styles from rehype-pretty-code */
 pre,
-pre code,
-pre div,
 pre > *,
-code[class*="language-"],
-pre[class*="language-"],
-div[style*="background"],
 [data-rehype-pretty-code-fragment],
 [data-rehype-pretty-code-fragment] > *,
 [data-rehype-pretty-code-fragment] code,
@@ -206,12 +53,7 @@ div[style*="background"],
 }
 
 .dark pre,
-.dark pre code,
-.dark pre div,
 .dark pre > *,
-.dark code[class*="language-"],
-.dark pre[class*="language-"],
-.dark div[style*="background"],
 .dark [data-rehype-pretty-code-fragment],
 .dark [data-rehype-pretty-code-fragment] > *,
 .dark [data-rehype-pretty-code-fragment] code,
@@ -219,17 +61,71 @@ div[style*="background"],
   background: var(--card-bg-dark) !important;
 }
 
-.dark pre span[style*="--shiki-dark"],
-[data-rehype-pretty-code-fragment] pre code span,
-.dark [data-rehype-pretty-code-fragment] pre code span {
+/* Code element inside pre */
+pre > code {
+  @apply grid w-full break-words border-0 bg-transparent;
+  counter-reset: line;
+  box-decoration-break: clone;
+  font-size: 0.9rem;
+  line-height: 1.75;
+  display: grid !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+/* Dual-theme syntax coloring via shiki CSS variables */
+pre code span {
+  color: var(--shiki-light);
   font-size: 0.9rem !important;
 }
 
-.prose :not(pre) > code {
-  font-size: 0.9rem;
-  padding: 0.2rem 0.4rem;
+.dark pre code span {
+  color: var(--shiki-dark) !important;
+  font-size: 0.9rem !important;
 }
 
+/* Line styling */
+span[data-line] {
+  @apply block;
+  padding: 0.2rem 0;
+  line-height: 1.75;
+  min-height: 1.6rem;
+}
+
+/* Highlighted lines */
+[data-highlighted-line] {
+  @apply -mx-4 border-l-4 border-yellow-500 bg-yellow-50/30 px-4 dark:bg-yellow-900/30;
+}
+
+/* Line numbers */
+[data-line-numbers] > [data-line]::before {
+  @apply mr-4 inline-block w-4 text-right text-gray-400;
+  content: attr(data-line);
+  user-select: none;
+}
+
+/* Code title */
+[data-rehype-pretty-code-title] {
+  @apply rounded-t-lg border border-b-0 border-gray-200 bg-gray-100 px-4 py-2 font-mono text-sm font-semibold text-gray-800 dark:border-gray-800 dark:bg-card dark:text-gray-200;
+}
+
+/* Fragment container */
+[data-rehype-pretty-code-fragment] {
+  @apply overflow-hidden rounded-lg;
+}
+
+/* Inline code (not inside pre) */
+.prose :not(pre) > code {
+  @apply rounded-md bg-gray-100 px-1.5 py-0.5 text-gray-700 dark:bg-gray-800 dark:text-gray-200;
+  font-size: 0.9rem;
+}
+
+/* Highlighted words */
+.prose pre code .word {
+  @apply rounded-sm px-1 py-0.5;
+}
+
+/* Blockquote cleanup */
 .prose blockquote p:first-of-type::before {
   content: none;
 }

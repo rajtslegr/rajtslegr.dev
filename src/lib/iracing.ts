@@ -1,4 +1,4 @@
-import {
+import type {
   IRacingAccountsResponse,
   IRacingCar,
   IRacingDrivingStatisticsResponse,
@@ -12,7 +12,7 @@ const ENDPOINTS = {
   cars: `${API_BASE_URL}/cars`,
   tracks: `${API_BASE_URL}/tracks`,
 };
-const API_KEY = process.env.GARAGE61_API_KEY;
+const API_KEY = import.meta.env.GARAGE61_API_KEY;
 
 const createAuthorizationHeader = () => ({
   Authorization: `Bearer ${API_KEY}`,

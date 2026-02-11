@@ -1,9 +1,6 @@
-'use client';
-
 import clsx from 'clsx';
-import Image from 'next/image';
 
-import { Photo } from '@/types/entities';
+import type { Photo } from '@/types/entities';
 
 interface PhotoItemProps {
   photo: Photo;
@@ -18,16 +15,15 @@ const PhotoItem = ({ photo, index }: PhotoItemProps) => (
     className="group overflow-hidden rounded-md transition-all duration-200"
   >
     <div className="relative aspect-square overflow-hidden">
-      <Image
+      <img
         className={clsx(
-          'object-cover transition-transform duration-500 group-hover:scale-105',
+          'h-full w-full object-cover transition-transform duration-500 group-hover:scale-105',
           index === 0 && 'md:size-full',
         )}
         src={photo.src.medium.url}
         alt={photo.title}
         title={photo.title}
-        fill={true}
-        sizes="(max-width: 768px) 33vw, 250px"
+        loading="lazy"
       />
     </div>
   </a>

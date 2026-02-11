@@ -1,0 +1,27 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import ClientLayout from '@/components/layout/ClientLayout';
+import ContactForm from '@/components/form/ContactForm';
+import MotionSection from '@/components/motion/MotionSection';
+---
+
+<Layout title="Contact | Petr Rajtslegr">
+  <ClientLayout pathname="/contact" client:load>
+    <MotionSection client:load>
+      <h1
+        class="mb-8 inline-block font-normal tracking-tight text-black dark:text-white md:mb-12"
+      >
+        <span
+          class="text-sm font-medium uppercase tracking-widest text-gray-500"
+        >
+          Contact
+        </span>
+      </h1>
+    </MotionSection>
+    <MotionSection delay={0.1} client:load>
+      <div class="flex flex-col">
+        <ContactForm client:load />
+      </div>
+    </MotionSection>
+  </ClientLayout>
+</Layout>

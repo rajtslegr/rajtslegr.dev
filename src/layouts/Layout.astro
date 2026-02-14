@@ -23,7 +23,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-y-scroll">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -91,11 +91,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <!-- Theme -->
     <script is:inline>
       function applyTheme() {
+        const preference = (typeof localStorage !== 'undefined' && localStorage.getItem('theme-preference')) || 'system';
         let theme = 'light';
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-          theme = localStorage.getItem('theme');
-        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          theme = 'dark';
+        
+        if (preference === 'system') {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        } else {
+          theme = preference;
         }
 
         if (theme === 'dark') {
@@ -110,7 +112,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     </script>
   </head>
   <body
-    class="bg-gray-50 text-black antialiased motion-safe:transition-all dark:bg-[#0a0a0a] dark:text-white"
+    class="bg-gray-50 text-black antialiased dark:bg-[#0a0a0a] dark:text-white"
   >
     <slot />
   </body>

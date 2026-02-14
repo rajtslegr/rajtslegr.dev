@@ -65,29 +65,21 @@ const DashboardNav = ({ className }: DashboardNavProps) => {
     >
       <div className="flex size-full items-center justify-center">
         <div className="mx-auto flex size-full max-w-[75ch] items-center justify-between px-4 md:justify-start md:space-x-6">
-          {sections.map(({ id, label }, index) => (
+          {sections.map(({ id, label }) => (
             <a
               key={id}
               href={`#${id}`}
               onClick={(e) => handleClick(e, id)}
               className={clsx(
-                'relative inline-block py-1.5 text-xs whitespace-nowrap duration-200 motion-safe:transition-all md:text-sm',
+                'relative inline-block px-1 py-1.5 text-xs whitespace-nowrap duration-200 motion-safe:transition-all md:px-3 md:text-sm',
                 activeSection === id
                   ? 'font-medium text-black dark:text-white'
                   : 'font-normal text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-gray-200',
-                index === 0 ? '!pl-0' : 'px-1 md:px-3',
               )}
             >
               {label}
               {activeSection === id && (
-                <span
-                  className={clsx(
-                    'absolute bottom-0 h-px w-1/2 bg-black dark:bg-white',
-                    index === 0
-                      ? 'left-1/4 -translate-x-1/4'
-                      : 'left-1/2 -translate-x-1/2',
-                  )}
-                />
+                <span className="absolute bottom-0 left-1/2 h-px w-1/2 -translate-x-1/2 bg-black dark:bg-white" />
               )}
             </a>
           ))}

@@ -20,7 +20,7 @@ const NavBar = ({
   handleClick,
   pathname,
 }: NavBarProps) => {
-  const { resolvedTheme, setTheme } = useTheme();
+  const { themePreference, setTheme } = useTheme();
   const onTop = useOnTop();
 
   const isBlogPostRoute =
@@ -41,12 +41,7 @@ const NavBar = ({
           />
         </div>
         <div className="hidden h-full sm:flex sm:items-center sm:space-x-6">
-          <NavLink
-            href="/"
-            isHeader={true}
-            className="!pl-0"
-            pathname={pathname}
-          >
+          <NavLink href="/" isHeader={true} pathname={pathname}>
             Home
           </NavLink>
           <NavLink href="/dashboard" isHeader={true} pathname={pathname}>
@@ -73,9 +68,15 @@ const NavBar = ({
         </div>
         <div className="flex items-center">
           <ThemeButton
-            handleClick={() =>
-              setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
-            }
+            handleClick={() => {
+              const nextPreference =
+                themePreference === 'light'
+                  ? 'dark'
+                  : themePreference === 'dark'
+                    ? 'system'
+                    : 'light';
+              setTheme(nextPreference);
+            }}
           />
         </div>
       </div>

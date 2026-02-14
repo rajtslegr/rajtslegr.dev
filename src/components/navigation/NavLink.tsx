@@ -28,8 +28,6 @@ const NavLink = ({
       ? pathname?.split('/')[1] === String(href).split('/')[1]
       : false;
 
-  const isHomeLink = href === '/' && className?.includes('!pl-0');
-
   const handleClick = () => {
     if (onClick) {
       onClick();
@@ -54,14 +52,7 @@ const NavLink = ({
     >
       {children}
       {isRouteActive && !isMobileNavigation && isHeader && (
-        <span
-          className={clsx(
-            'absolute -bottom-1 h-px w-1/2 bg-black dark:bg-white',
-            isHomeLink
-              ? 'left-1/4 -translate-x-1/4'
-              : 'left-1/2 -translate-x-1/2',
-          )}
-        />
+        <span className="absolute -bottom-1 left-1/2 h-px w-1/2 -translate-x-1/2 bg-black dark:bg-white" />
       )}
     </a>
   );

@@ -20,7 +20,7 @@ const NavBar = ({
   handleClick,
   pathname,
 }: NavBarProps) => {
-  const { themePreference, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const onTop = useOnTop();
 
   const isBlogPostRoute =
@@ -68,15 +68,10 @@ const NavBar = ({
         </div>
         <div className="flex items-center">
           <ThemeButton
-            handleClick={() => {
-              const nextPreference =
-                themePreference === 'light'
-                  ? 'dark'
-                  : themePreference === 'dark'
-                    ? 'system'
-                    : 'light';
-              setTheme(nextPreference);
-            }}
+            resolvedTheme={resolvedTheme}
+            handleClick={() =>
+              setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
+            }
           />
         </div>
       </div>

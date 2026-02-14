@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 type Theme = 'light' | 'dark';
-type ThemePreference = 'light' | 'dark' | 'system';
 
 function getSystemTheme(): Theme {
   return window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -17,52 +16,47 @@ function applyTheme(theme: Theme) {
   }
 }
 
+function hasUserPreference(): boolean {
+  return localStorage.getItem('theme') !== null;
+}
+
 export function useTheme() {
   const [resolvedTheme, setResolvedTheme] = useState<Theme>('light');
-  const [themePreference, setThemePreference] =
-    useState<ThemePreference>('system');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    const savedPreference =
-      (localStorage.getItem('theme-preference') as ThemePreference) || 'system';
-    setThemePreference(savedPreference);
-
-    const currentTheme =
-      savedPreference === 'system' ? getSystemTheme() : savedPreference;
-    setResolvedTheme(currentTheme);
-    applyTheme(currentTheme);
+    const saved = localStorage.getItem('theme') as Theme | null;
+    const theme = saved ?? getSystemTheme();
+    setResolvedTheme(theme);
+    applyTheme(theme);
   }, []);
 
+  // Follow system changes only when user has no explicit preference
   useEffect(() => {
-    if (!mounted || themePreference !== 'system') return;
+    if (!mounted) return;
 
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-    const handleSystemThemeChange = (e: MediaQueryListEvent) => {
-      const newTheme = e.matches ? 'dark' : 'light';
-      setResolvedTheme(newTheme);
-      applyTheme(newTheme);
+    const handleChange = (e: MediaQueryListEvent) => {
+      if (hasUserPreference()) return;
+      const theme = e.matches ? 'dark' : 'light';
+      setResolvedTheme(theme);
+      applyTheme(theme);
     };
 
-    mediaQuery.addEventListener('change', handleSystemThemeChange);
-    return () =>
-      mediaQuery.removeEventListener('change', handleSystemThemeChange);
-  }, [mounted, themePreference]);
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, [mounted]);
 
-  const setTheme = (preference: ThemePreference) => {
-    setThemePreference(preference);
-    localStorage.setItem('theme-preference', preference);
-
-    const newTheme = preference === 'system' ? getSystemTheme() : preference;
-    setResolvedTheme(newTheme);
-    applyTheme(newTheme);
-  };
+  const setTheme = useCallback((theme: Theme) => {
+    setResolvedTheme(theme);
+    localStorage.setItem('theme', theme);
+    applyTheme(theme);
+  }, []);
 
   return {
     resolvedTheme: mounted ? resolvedTheme : 'light',
-    themePreference: mounted ? themePreference : 'system',
     setTheme,
   };
 }

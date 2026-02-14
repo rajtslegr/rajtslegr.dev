@@ -91,13 +91,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <!-- Theme -->
     <script is:inline>
       function applyTheme() {
-        const preference = (typeof localStorage !== 'undefined' && localStorage.getItem('theme-preference')) || 'system';
         let theme = 'light';
-        
-        if (preference === 'system') {
-          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        } else {
-          theme = preference;
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          theme = localStorage.getItem('theme');
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
         }
 
         if (theme === 'dark') {

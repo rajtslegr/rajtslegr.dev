@@ -41,6 +41,18 @@ const hasValidData = (
   );
 };
 
+const hasAccountData = (accountsData?: IRacingAccountsResponse): boolean => {
+  return Boolean(accountsData?.items?.length);
+};
+
+const hasRaceStats = (
+  statsData?: IRacingDrivingStatisticsResponse,
+): boolean => {
+  return Boolean(
+    statsData?.drivingStatistics?.some((stat) => stat.sessionType === 3),
+  );
+};
+
 const IRacing = ({
   accountsData,
   statsData,
@@ -56,26 +68,32 @@ const IRacing = ({
     );
   }
 
-  const hasRecentRacesData = statsData && carsData && tracksData;
+  const showAccounts = hasAccountData(accountsData);
+  const showStats = hasRaceStats(statsData);
+  const showRecentRaces = showStats && Boolean(carsData) && Boolean(tracksData);
 
   return (
     <div>
       <IRacingHeader />
       <div className="grid gap-6">
-        <div>
-          <AccountSection accountsData={accountsData} />
-        </div>
-        <div>
-          <SectionHeading title="Statistics" />
-          <StatsSection statsData={statsData} />
-        </div>
-        {hasRecentRacesData && (
+        {showAccounts && (
+          <div>
+            <AccountSection accountsData={accountsData} />
+          </div>
+        )}
+        {showStats && (
+          <div>
+            <SectionHeading title="Statistics" />
+            <StatsSection statsData={statsData} />
+          </div>
+        )}
+        {showRecentRaces && (
           <div>
             <SectionHeading title="Recent Races" />
             <RecentRaces
-              statsData={statsData}
-              carsData={carsData}
-              tracksData={tracksData}
+              statsData={statsData!}
+              carsData={carsData!}
+              tracksData={tracksData!}
             />
           </div>
         )}

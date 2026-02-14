@@ -11,7 +11,7 @@ export const projectData = [
     title: 'Pujdu.cz',
     description:
       'A scheduling tool for coordinating meetings and managing availability between people.',
-    build: ['Next.js', 'Prisma', 'React Query', 'zustand', 'Tailwind'],
+    build: ['Astro', 'Tailwind'],
     image: 'pujdu',
   },
   {

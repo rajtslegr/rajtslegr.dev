@@ -10,7 +10,7 @@ import tseslint from 'typescript-eslint';
 
 export default defineConfig(
   {
-    ignores: ['.astro/', 'dist/', '.vercel/', 'node_modules/', 'prisma/'],
+    ignores: ['.astro/', 'dist/', '.vercel/', 'node_modules/'],
   },
 
   js.configs.recommended,

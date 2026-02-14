@@ -11,7 +11,7 @@ const allPostsData = getSortedPostsData();
   title="Blog | Petr Rajtslegr"
   description="Thoughts on software development, design, and more."
 >
-  <ClientLayout pathname="/blog" client:load>
+  <ClientLayout pathname="/blog" client:load transition:persist>
     <BlogContent allPostsData={allPostsData} client:load />
   </ClientLayout>
 </Layout>

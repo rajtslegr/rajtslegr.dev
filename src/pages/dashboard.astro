@@ -26,7 +26,7 @@ const startDate = format(subDays(new Date(), 30), 'yyyy-MM-dd');
 
 Astro.response.headers.set(
   'Cache-Control',
-  's-maxage=3600, stale-while-revalidate=86400',
+  's-maxage=10800, stale-while-revalidate=86400',
 );
 
 const settle = (p: Promise<unknown>) =>
@@ -72,5 +72,6 @@ const [
     iRacingCars={iRacingCars}
     iRacingTracks={iRacingTracks}
     client:load
+    transition:persist
   />
 </Layout>

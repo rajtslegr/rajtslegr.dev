@@ -21,7 +21,7 @@ const postData = await getPostData(id as string);
   article={true}
   publishedTime={new Date(postData.date).toISOString()}
 >
-  <ClientLayout pathname={`/blog/${id}`} client:load>
+  <ClientLayout pathname={`/blog/${id}`} client:load transition:persist>
     <PostLayout postData={postData} client:load>
       <article class="prose dark:prose-invert max-w-none">
         <div set:html={postData.content} />

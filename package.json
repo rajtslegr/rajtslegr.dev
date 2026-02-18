@@ -47,7 +47,7 @@
     "@babel/core": "7.29.0",
     "@eslint/js": "10.0.1",
     "@tailwindcss/typography": "0.5.19",
-    "@tailwindcss/vite": "4.1.18",
+    "@tailwindcss/vite": "4.2.0",
     "@types/node": "25.2.3",
     "@types/react": "19.2.14",
     "dotenv-flow": "4.1.0",
@@ -64,7 +64,7 @@
     "prettier": "3.8.1",
     "prettier-plugin-astro": "0.14.1",
     "prettier-plugin-tailwindcss": "0.7.2",
-    "tailwindcss": "4.1.18",
+    "tailwindcss": "4.2.0",
     "typescript": "5.9.3",
     "typescript-eslint": "8.56.0"
   },

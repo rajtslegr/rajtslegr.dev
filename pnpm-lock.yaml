@@ -42,8 +42,8 @@ importers:
         specifier: 3.3.3
         version: 3.3.3
       framer-motion:
-        specifier: 12.34.1
-        version: 12.34.1(@emotion/is-prop-valid@0.7.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        specifier: 12.34.2
+        version: 12.34.2(@emotion/is-prop-valid@0.7.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       gray-matter:
         specifier: 4.0.3
         version: 4.0.3
@@ -2179,8 +2179,8 @@ packages:
     resolution: {integrity: sha512-gIXjKqtFuWEgzFRJA9WCQeSJLZDjgJUOMCMzxtvFq/37KojM1BFGufqsCy0r4qSQmYLsZYMeyRqzIWOMup03sw==}
     engines: {node: '>=14'}
 
-  framer-motion@12.34.1:
-    resolution: {integrity: sha512-kcZyNaYQfvE2LlH6+AyOaJAQV4rGp5XbzfhsZpiSZcwDMfZUHhuxLWeyRzf5I7jip3qKRpuimPA9pXXfr111kQ==}
+  framer-motion@12.34.2:
+    resolution: {integrity: sha512-CcnYTzbRybm1/OE8QLXfXI8gR1cx5T4dF3D2kn5IyqsGNeLAKl2iFHb2BzFyXBGqESntDt6rPYl4Jhrb7tdB8g==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0 || ^19.0.0
@@ -2936,8 +2936,8 @@ packages:
     resolution: {integrity: sha512-KZxYo1BUkWD2TVFLr0MQoM8vUUigWD3LlD83a/75BqC+4qE0Hb1Vo5v1FgcfaNXvfXzr+5EhQ6ing/CaBijTlw==}
     engines: {node: '>= 18'}
 
-  motion-dom@12.34.1:
-    resolution: {integrity: sha512-SC7ZC5dRcGwku2g7EsPvI4q/EzHumUbqsDNumBmZTLFg+goBO5LTJvDu9MAxx+0mtX4IA78B2be/A3aRjY0jnw==}
+  motion-dom@12.34.2:
+    resolution: {integrity: sha512-n7gknp7gHcW7DUcmet0JVPLVHmE3j9uWwDp5VbE3IkCNnW5qdu0mOhjNYzXMkrQjrgr+h6Db3EDM2QBhW2qNxQ==}
 
   motion-utils@12.29.2:
     resolution: {integrity: sha512-G3kc34H2cX2gI63RqU+cZq+zWRRPSsNIOjpdl9TN4AQwC4sgwYPl/Q/Obf/d53nOm569T0fYK+tcoSV50BWx8A==}
@@ -6334,9 +6334,9 @@ snapshots:
       cross-spawn: 7.0.6
       signal-exit: 4.1.0
 
-  framer-motion@12.34.1(@emotion/is-prop-valid@0.7.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
+  framer-motion@12.34.2(@emotion/is-prop-valid@0.7.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
     dependencies:
-      motion-dom: 12.34.1
+      motion-dom: 12.34.2
       motion-utils: 12.29.2
       tslib: 2.8.1
     optionalDependencies:
@@ -7419,7 +7419,7 @@ snapshots:
     dependencies:
       minipass: 7.1.2
 
-  motion-dom@12.34.1:
+  motion-dom@12.34.2:
     dependencies:
       motion-utils: 12.29.2
 

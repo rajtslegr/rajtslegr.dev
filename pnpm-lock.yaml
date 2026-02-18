@@ -13,7 +13,7 @@ importers:
         version: 0.9.6(prettier-plugin-astro@0.14.1)(prettier@3.8.1)(typescript@5.9.3)
       '@astrojs/mdx':
         specifier: 4.3.13
-        version: 4.3.13(astro@5.17.2(@types/node@25.2.3)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.1))
+        version: 4.3.13(astro@5.17.3(@types/node@25.2.3)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.1))
       '@astrojs/react':
         specifier: 4.4.2
         version: 4.4.2(@types/node@25.2.3)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(jiti@2.6.1)(lightningcss@1.31.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(yaml@2.8.1)
@@ -22,7 +22,7 @@ importers:
         version: 3.7.0
       '@astrojs/vercel':
         specifier: 9.0.4
-        version: 9.0.4(astro@5.17.2(@types/node@25.2.3)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.1))(react@19.2.4)(rollup@4.57.1)
+        version: 9.0.4(astro@5.17.3(@types/node@25.2.3)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.1))(react@19.2.4)(rollup@4.57.1)
       '@formspree/react':
         specifier: 3.0.0
         version: 3.0.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -30,8 +30,8 @@ importers:
         specifier: 2.2.0
         version: 2.2.0(react@19.2.4)
       astro:
-        specifier: 5.17.2
-        version: 5.17.2(@types/node@25.2.3)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.1)
+        specifier: 5.17.3
+        version: 5.17.3(@types/node@25.2.3)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.1)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -1537,8 +1537,8 @@ packages:
     resolution: {integrity: sha512-aOLc/aDR7lTWAHlytEefwn4Y6qs6uMr69DZvUx2A1AOAZsWhGB/paiRWPtVchh9wzMvLeqr+DkbENhVreVr9AQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro@5.17.2:
-    resolution: {integrity: sha512-7jnMqGo53hOQNwo1N/wqeOvUp8wwW/p+DeerSjSkHNx8L/1mhy6P7rVo7EhdmF8DpKqw0tl/B5Fx1WcIzg1ysA==}
+  astro@5.17.3:
+    resolution: {integrity: sha512-69dcfPe8LsHzklwj+hl+vunWUbpMB6pmg35mACjetxbJeUNNys90JaBM8ZiwsPK689SAj/4Zqb1ayaANls9/MA==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -4174,12 +4174,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.13(astro@5.17.2(@types/node@25.2.3)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.1))':
+  '@astrojs/mdx@4.3.13(astro@5.17.3(@types/node@25.2.3)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.1))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.10
       '@mdx-js/mdx': 3.1.1
       acorn: 8.15.0
-      astro: 5.17.2(@types/node@25.2.3)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.1)
+      astro: 5.17.3(@types/node@25.2.3)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.1)
       es-module-lexer: 1.7.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -4238,14 +4238,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/vercel@9.0.4(astro@5.17.2(@types/node@25.2.3)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.1))(react@19.2.4)(rollup@4.57.1)':
+  '@astrojs/vercel@9.0.4(astro@5.17.3(@types/node@25.2.3)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.1))(react@19.2.4)(rollup@4.57.1)':
     dependencies:
       '@astrojs/internal-helpers': 0.7.5
       '@vercel/analytics': 1.6.1(react@19.2.4)
       '@vercel/functions': 2.2.13
       '@vercel/nft': 0.30.4(rollup@4.57.1)
       '@vercel/routing-utils': 5.3.2
-      astro: 5.17.2(@types/node@25.2.3)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.1)
+      astro: 5.17.3(@types/node@25.2.3)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.1)
       esbuild: 0.25.12
       tinyglobby: 0.2.15
     transitivePeerDependencies:
@@ -5451,7 +5451,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro@5.17.2(@types/node@25.2.3)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.1):
+  astro@5.17.3(@types/node@25.2.3)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.57.1)(typescript@5.9.3)(yaml@2.8.1):
     dependencies:
       '@astrojs/compiler': 2.13.1
       '@astrojs/internal-helpers': 0.7.5

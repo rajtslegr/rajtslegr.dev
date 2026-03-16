@@ -19,14 +19,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "0.9.7",
+    "@astrojs/check": "0.9.8",
     "@astrojs/mdx": "5.0.1",
     "@astrojs/react": "5.0.0",
     "@astrojs/sitemap": "3.7.1",
-    "@astrojs/vercel": "10.0.0",
+    "@astrojs/vercel": "10.0.1",
     "@formspree/react": "3.0.0",
     "@heroicons/react": "2.2.0",
-    "astro": "6.0.4",
+    "astro": "6.0.5",
     "clsx": "2.1.1",
     "date-fns": "4.1.0",
     "fast-glob": "3.3.3",

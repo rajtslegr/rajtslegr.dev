@@ -28,7 +28,7 @@
     "@heroicons/react": "2.2.0",
     "astro": "6.4.2",
     "clsx": "2.1.1",
-    "date-fns": "4.3.0",
+    "date-fns": "4.4.0",
     "fast-glob": "3.3.3",
     "framer-motion": "12.40.0",
     "gray-matter": "4.0.3",

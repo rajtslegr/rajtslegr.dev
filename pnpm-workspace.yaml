@@ -1,0 +1,22 @@
+allowBuilds:
+  '@tailwindcss/oxide': true
+  esbuild: true
+  sharp: true
+
+autoInstallPeers: true
+
+minimumReleaseAgeExclude:
+  - '@babel/code-frame@8.0.0'
+  - '@babel/compat-data@8.0.0'
+  - '@babel/core@8.0.0'
+  - '@babel/generator@8.0.0'
+  - '@babel/helper-compilation-targets@8.0.0'
+  - '@babel/helper-globals@8.0.0'
+  - '@babel/helper-string-parser@8.0.0'
+  - '@babel/helper-validator-identifier@8.0.0'
+  - '@babel/helper-validator-option@8.0.0'
+  - '@babel/helpers@8.0.0'
+  - '@babel/parser@8.0.0'
+  - '@babel/template@8.0.0'
+  - '@babel/traverse@8.0.0'
+  - '@babel/types@8.0.0'

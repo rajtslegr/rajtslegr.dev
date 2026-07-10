@@ -1,6 +1,7 @@
 {
   "commitMessagePrefix": "⬆️ ",
   "extends": ["config:base"],
+  "minimumReleaseAge": "3 days",
   "reviewers": ["rajtslegr"],
   "packageRules": [
     {

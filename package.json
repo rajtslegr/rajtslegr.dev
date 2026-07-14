@@ -30,7 +30,7 @@
     "clsx": "2.1.1",
     "date-fns": "4.4.0",
     "fast-glob": "3.3.3",
-    "framer-motion": "12.42.2",
+    "motion": "12.42.2",
     "gray-matter": "4.0.3",
     "react": "19.2.7",
     "react-dom": "19.2.7",

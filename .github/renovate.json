@@ -7,6 +7,14 @@
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true
+    },
+    {
+      "matchPackageNames": ["framer-motion"],
+      "enabled": false
+    },
+    {
+      "matchPackageNames": ["motion"],
+      "enabled": false
     }
   ]
 }

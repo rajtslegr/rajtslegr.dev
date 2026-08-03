@@ -1,0 +1,57 @@
+---
+import hero from '../../../public/static/images/hero.jpg';
+import { parseDate } from '@/utils/date';
+
+interface Props {
+  title: string;
+  date: Date;
+  image?: string;
+}
+
+const { title, date, image } = Astro.props;
+---
+
+<div class="mx-auto flex flex-col items-center">
+  <article class="w-full max-w-none text-black dark:text-white">
+    <div class="motion-section scroll-mt-24">
+      <h1
+        class="text-4xl leading-[2.8rem] font-bold tracking-tight text-black md:text-5xl md:leading-[3.5rem] dark:text-gray-100"
+      >
+        {title}
+      </h1>
+    </div>
+    <div class="motion-section scroll-mt-24" style="--motion-delay: 0.1s">
+      <div
+        class="mt-4 flex flex-row items-center space-x-2 text-gray-500 dark:text-gray-400"
+      >
+        <div class="flex flex-col">
+          <img
+            class="size-10 overflow-hidden rounded-full shadow-sm"
+            src={hero.src}
+            alt="Petr Rajtslegr"
+          />
+        </div>
+        <div class="flex flex-col text-sm">
+          <p class="font-semibold">by Petr Rajtslegr</p>
+          <p>{parseDate(date.toISOString())}</p>
+        </div>
+      </div>
+      {
+        image && (
+          <div class="mt-12 overflow-hidden rounded-lg text-[0px] shadow-sm">
+            <img
+              src={`/static/images/blog/${image}`}
+              alt="Blog post header image"
+              class="h-auto w-full"
+            />
+          </div>
+        )
+      }
+    </div>
+    <div class="motion-section scroll-mt-24" style="--motion-delay: 0.2s">
+      <div class="prose dark:prose-invert mt-12 max-w-none">
+        <slot />
+      </div>
+    </div>
+  </article>
+</div>

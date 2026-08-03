@@ -76,13 +76,6 @@ export interface PostData {
   date: string;
   image: string;
   readingTime?: ReadTime;
-  views?: string;
-}
-
-export interface PostId {
-  params: {
-    id: PostData['id'];
-  };
 }
 
 export interface ReadTime {

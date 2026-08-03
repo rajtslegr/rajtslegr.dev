@@ -4,16 +4,14 @@ const useOnTop = (): boolean => {
   const [onTop, setOntTop] = useState<boolean>(true);
 
   const handleScroll = (): void => {
-    if (window.pageYOffset > 0) {
-      if (onTop) setOntTop(false);
-    } else if (!onTop) setOntTop(true);
+    setOntTop(window.pageYOffset === 0);
   };
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
     return () => window.removeEventListener('scroll', handleScroll);
-  });
+  }, []);
 
   return onTop;
 };

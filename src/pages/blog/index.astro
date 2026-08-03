@@ -1,17 +1,17 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import ClientLayout from '@/components/layout/ClientLayout';
 import BlogContent from '@/components/blog/BlogContent';
+import ClientLayout from '@/components/layout/ClientLayout';
 import { getSortedPostsData } from '@/lib/posts';
+import Layout from '@/layouts/Layout.astro';
 
-const allPostsData = getSortedPostsData();
+const allPostsData = await getSortedPostsData();
 ---
 
 <Layout
   title="Blog | Petr Rajtslegr"
   description="Thoughts on software development, design, and more."
 >
-  <ClientLayout pathname="/blog" client:load transition:persist>
+  <ClientLayout pathname="/blog" client:load>
     <BlogContent allPostsData={allPostsData} client:load />
   </ClientLayout>
 </Layout>

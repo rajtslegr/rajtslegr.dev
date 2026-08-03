@@ -3,6 +3,8 @@ import { format, subDays } from 'date-fns';
 
 import Layout from '@/layouts/Layout.astro';
 import DashboardContent from '@/components/layout/DashboardContent';
+
+export const prerender = false;
 import { getRecentRepos } from '@/lib/github';
 import { getRecentPhotos } from '@/lib/photos';
 import { getActivities } from '@/lib/strava';
@@ -33,7 +35,7 @@ const settle = (p: Promise<unknown>) =>
   p.catch((error: unknown) => {
     console.warn('Dashboard data fetch failed:', error);
     return undefined;
-  }); 
+  });
 
 const [
   gitHubData,
@@ -72,6 +74,5 @@ const [
     iRacingCars={iRacingCars}
     iRacingTracks={iRacingTracks}
     client:load
-    transition:persist
   />
 </Layout>

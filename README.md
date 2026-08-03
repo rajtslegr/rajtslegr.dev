@@ -8,14 +8,15 @@ Personal portfolio website and blog built with Astro and React islands. Statical
 
 ## Tech Stack
 
-- **Framework**: [Astro 5](https://astro.build/) with [React 18](https://react.dev/) islands
+- **Framework**: [Astro 7](https://astro.build/) with [React 19](https://react.dev/) islands
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS 3](https://tailwindcss.com/) with PostCSS
-- **Content**: MDX blog posts with [rehype-pretty-code](https://github.com/rehype-pretty/rehype-pretty-code) syntax highlighting
-- **Animations**: [Framer Motion 11](https://www.framer.com/motion/)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Content**: Markdown blog posts via Content Collections with [rehype-pretty-code](https://github.com/rehype-pretty/rehype-pretty-code) syntax highlighting
+- **Animations**: CSS (scroll-reveal entrance animations, `prefers-reduced-motion` aware)
+- **Fonts**: Self-hosted Inter via [Fontsource](https://fontsource.org/)
 - **Form Handling**: [Formspree](https://formspree.io/)
 - **Theme**: Custom `useTheme` hook (localStorage-based with system preference detection)
-- **Deployment**: [Vercel](https://vercel.com/) (static output)
+- **Deployment**: [Vercel](https://vercel.com/) (hybrid output: static pages + on-demand dashboard)
 - **Package Manager**: [pnpm](https://pnpm.io/)
 
 ## Project Structure
@@ -23,8 +24,9 @@ Personal portfolio website and blog built with Astro and React islands. Statical
 ```
 src/
 ├── components/      # React components hydrated as islands (client:load / client:visible)
-├── data/
-│   └── blog/        # MDX blog post files
+├── content/
+│   └── blog/        # Markdown blog post files (Content Collections)
+├── content.config.ts # Zod schema for blog posts
 ├── hooks/           # Custom React hooks (useTheme, useOnTop, useScrollBlock)
 ├── layouts/         # Layout.astro — main HTML shell with meta, OG tags, theme script
 ├── lib/             # Data fetching (GitHub, Strava, iRacing, Last.fm, photos, posts)
@@ -75,7 +77,7 @@ src/
 | Command           | Description                                  |
 | ----------------- | -------------------------------------------- |
 | `pnpm dev`        | Start Astro dev server                       |
-| `pnpm build`      | Build static site for production             |
+| `pnpm build`      | Build site for production                    |
 | `pnpm preview`    | Preview the production build locally         |
 | `pnpm type-check` | Run Astro check and TypeScript type checking |
 | `pnpm lint`       | Run ESLint                                   |
@@ -85,20 +87,20 @@ src/
 
 The `/dashboard` page aggregates data from several external services:
 
-| Integration | Fetch Strategy            | Env Variables                                                      |
-| ----------- | ------------------------- | ------------------------------------------------------------------ |
-| **Last.fm** | Client-side (useSWR)      | `PUBLIC_LASTFM_API_KEY`                                            |
-| **Strava**  | Build-time                | `STRAVA_CLIENT_ID`, `STRAVA_CLIENT_SECRET`, `STRAVA_REFRESH_TOKEN` |
-| **iRacing** | Build-time (Garage61 API) | `GARAGE61_API_KEY`                                                 |
-| **GitHub**  | Build-time                | `GITHUB_TOKEN` (optional)                                          |
-| **Photos**  | Build-time                | --                                                                 |
+| Integration | Fetch Strategy          | Env Variables                                                      |
+| ----------- | ----------------------- | ------------------------------------------------------------------ |
+| **Last.fm** | Client-side (polling)   | `PUBLIC_LASTFM_API_KEY`                                            |
+| **Strava**  | On request (ISR cache)  | `STRAVA_CLIENT_ID`, `STRAVA_CLIENT_SECRET`, `STRAVA_REFRESH_TOKEN` |
+| **iRacing** | On request (ISR cache)  | `GARAGE61_API_KEY`                                                 |
+| **GitHub**  | On request (ISR cache)  | --                                                                 |
+| **Photos**  | On request (ISR cache)  | --                                                                 |
 
 ## Features
 
 - Static site generation with Astro islands architecture
 - Dark/light mode with system preference detection
-- Blog with MDX content and syntax-highlighted code blocks
-- Dashboard with live Last.fm data and build-time Strava, iRacing, and GitHub stats
+- Blog with markdown content and syntax-highlighted code blocks
+- Dashboard with live Last.fm data and ISR-cached Strava, iRacing, and GitHub stats
 - Responsive design for all device sizes
 - Contact form via Formspree
 - SEO optimized with sitemap generation

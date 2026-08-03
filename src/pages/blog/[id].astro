@@ -1,30 +1,36 @@
 ---
-import { getPostData, getAllPostIds } from '@/lib/posts';
-import Layout from '@/layouts/Layout.astro';
+import { getEntry, render } from 'astro:content';
+
 import ClientLayout from '@/components/layout/ClientLayout';
-import PostLayout from '@/components/post/PostLayout';
+import PostLayout from '@/components/post/PostLayout.astro';
+import { getAllPostIds } from '@/lib/posts';
+import Layout from '@/layouts/Layout.astro';
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds();
-  return paths.map((path) => ({
-    params: { id: path.params.id },
-  }));
+  return getAllPostIds();
 }
 
 const { id } = Astro.params;
-const postData = await getPostData(id as string);
+const post = await getEntry('blog', id);
+
+if (!post) {
+  throw new Error(`Blog post not found: ${id}`);
+}
+
+const { Content } = await render(post);
+const { title, description, date, image } = post.data;
 ---
 
 <Layout
-  title={`${postData.title} | Petr Rajtslegr`}
-  description={postData.description}
+  title={`${title} | Petr Rajtslegr`}
+  description={description}
   article={true}
-  publishedTime={new Date(postData.date).toISOString()}
+  publishedTime={date.toISOString()}
 >
-  <ClientLayout pathname={`/blog/${id}`} client:load transition:persist>
-    <PostLayout postData={postData} client:load>
+  <ClientLayout pathname={`/blog/${id}`} client:load>
+    <PostLayout title={title} date={date} image={image}>
       <article class="prose dark:prose-invert max-w-none">
-        <div set:html={postData.content} />
+        <Content />
       </article>
     </PostLayout>
   </ClientLayout>

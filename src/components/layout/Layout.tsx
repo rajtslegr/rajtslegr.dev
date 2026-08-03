@@ -1,4 +1,4 @@
-import type { ReactNode, MouseEvent } from 'react';
+import type { ReactNode } from 'react';
 import { useState, useEffect } from 'react';
 
 import Footer from '@/components/layout/Footer';
@@ -19,15 +19,9 @@ const Layout = ({ children, pathname }: LayoutProps) => {
   const [blockScroll, allowScroll] = useScrollBlock();
   const isDashboard = pathname === '/dashboard';
 
-  const navButtonClickHandler = (
-    _event: MouseEvent<HTMLButtonElement>,
-  ): void => {
+  const navButtonClickHandler = (): void => {
     if (showMobileNavigation) {
       setIsNavigationTransitioning(true);
-      setTimeout(() => {
-        setShowMobileNavigation(false);
-        allowScroll();
-      }, 0);
     } else {
       window.scrollTo({ top: 0 });
       setShowMobileNavigation(true);
@@ -35,24 +29,24 @@ const Layout = ({ children, pathname }: LayoutProps) => {
     }
   };
 
-  function linkClickHandler(_event: MouseEvent<HTMLButtonElement>): void {
+  const linkClickHandler = (): void => {
     setIsNavigationTransitioning(true);
-  }
+  };
 
   useEffect(() => {
-    if (isNavigationTransitioning) {
-      const timer = setTimeout(() => {
-        setShowMobileNavigation(false);
-        setIsNavigationTransitioning(false);
-        allowScroll();
-      }, 300);
-
-      return () => {
-        clearTimeout(timer);
-      };
+    if (!isNavigationTransitioning) {
+      return;
     }
 
-    return () => {};
+    const timer = setTimeout(() => {
+      setShowMobileNavigation(false);
+      setIsNavigationTransitioning(false);
+      allowScroll();
+    }, 300);
+
+    return () => {
+      clearTimeout(timer);
+    };
   }, [isNavigationTransitioning, allowScroll]);
 
   return (

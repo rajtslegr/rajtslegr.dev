@@ -37,16 +37,8 @@ const formatDateParam = (dateString: string): string => {
   return dateString;
 };
 
-export const getLinkedAccounts = async (
-  includeRatingHistory: boolean = false,
-): Promise<IRacingAccountsResponse> => {
-  const url = new URL(ENDPOINTS.accounts);
-
-  if (includeRatingHistory) {
-    url.searchParams.append('ratingHistory', 'true');
-  }
-
-  const response = await fetch(url.toString(), {
+export const getLinkedAccounts = async (): Promise<IRacingAccountsResponse> => {
+  const response = await fetch(ENDPOINTS.accounts, {
     headers: createAuthorizationHeader(),
   });
 
@@ -55,30 +47,11 @@ export const getLinkedAccounts = async (
 
 export const getDrivingStatistics = async (
   startDate?: string,
-  endDate?: string,
-  carIds?: number[],
-  trackIds?: number[],
 ): Promise<IRacingDrivingStatisticsResponse> => {
   const url = new URL(ENDPOINTS.statistics);
 
   if (startDate) {
     url.searchParams.append('start', formatDateParam(startDate));
-  }
-
-  if (endDate) {
-    if (endDate.length === 10 && endDate.indexOf('T') === -1) {
-      url.searchParams.append('end', `${endDate}T23:59:59Z`);
-    } else {
-      url.searchParams.append('end', endDate);
-    }
-  }
-
-  if (carIds?.length) {
-    url.searchParams.append('cars', carIds.join(','));
-  }
-
-  if (trackIds?.length) {
-    url.searchParams.append('tracks', trackIds.join(','));
   }
 
   const response = await fetch(url.toString(), {
@@ -94,7 +67,7 @@ export const getCars = async (): Promise<IRacingCar[]> => {
   });
 
   const data = await handleApiResponse(response, { items: [] });
-  return data.items || [];
+  return data.items;
 };
 
 export const getTracks = async (): Promise<IRacingTrack[]> => {
@@ -103,5 +76,5 @@ export const getTracks = async (): Promise<IRacingTrack[]> => {
   });
 
   const data = await handleApiResponse(response, { items: [] });
-  return data.items || [];
+  return data.items;
 };

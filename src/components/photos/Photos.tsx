@@ -17,8 +17,8 @@ const Photos = ({ data }: PhotosProps) => {
   if (data?.photos) {
     render = (
       <div className="grid grid-cols-4 gap-2 sm:gap-3 md:gap-4">
-        {data.photos.slice(0, 12).map((photo, index) => (
-          <PhotoItem key={photo.id} photo={photo} index={index} />
+        {data.photos.slice(0, 12).map((photo) => (
+          <PhotoItem key={photo.id} photo={photo} />
         ))}
       </div>
     );

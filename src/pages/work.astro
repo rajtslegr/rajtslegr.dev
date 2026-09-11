@@ -1,13 +1,13 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import ClientLayout from '@/components/layout/ClientLayout';
+import PageLayout from '@/components/layout/Layout';
 import MotionSection from '@/components/motion/MotionSection';
 import Project from '@/components/work/Project';
 import { projectData } from '@/data/work';
 ---
 
 <Layout title="Work | Petr Rajtslegr">
-  <ClientLayout pathname="/work" client:load>
+  <PageLayout pathname="/work" client:load>
     <MotionSection client:load>
       <h1
         class="mb-8 inline-block font-normal tracking-tight text-black dark:text-white md:mb-12"
@@ -28,5 +28,5 @@ import { projectData } from '@/data/work';
         ))
       }
     </div>
-  </ClientLayout>
+  </PageLayout>
 </Layout>

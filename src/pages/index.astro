@@ -1,13 +1,13 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import ClientLayout from '@/components/layout/ClientLayout';
+import PageLayout from '@/components/layout/Layout';
 import Hero from '@/components/hero/Hero';
 import MotionSection from '@/components/motion/MotionSection';
 import Timeline from '@/components/timeline/Timeline';
 ---
 
 <Layout title="Petr Rajtslegr">
-  <ClientLayout pathname="/" client:load>
+  <PageLayout pathname="/" client:load>
     <div class="min-h-[calc(100vh-144px)]">
       <MotionSection client:load>
         <Hero />
@@ -16,5 +16,5 @@ import Timeline from '@/components/timeline/Timeline';
         <Timeline />
       </MotionSection>
     </div>
-  </ClientLayout>
+  </PageLayout>
 </Layout>

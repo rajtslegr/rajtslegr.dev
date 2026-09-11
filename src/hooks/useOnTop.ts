@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 
 const useOnTop = (): boolean => {
-  const [onTop, setOntTop] = useState<boolean>(true);
+  const [onTop, setOnTop] = useState<boolean>(true);
 
   const handleScroll = (): void => {
-    setOntTop(window.pageYOffset === 0);
+    setOnTop(window.scrollY === 0);
   };
 
   useEffect(() => {

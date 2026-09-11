@@ -1,11 +1,11 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import ClientLayout from '@/components/layout/ClientLayout';
+import PageLayout from '@/components/layout/Layout';
 import MotionSection from '@/components/motion/MotionSection';
 ---
 
 <Layout title="404 - Page Not Found | Petr Rajtslegr">
-  <ClientLayout pathname="" client:load>
+  <PageLayout pathname="" client:load>
     <div
       class="flex min-h-[50vh] flex-col items-center justify-center text-center"
     >
@@ -26,5 +26,5 @@ import MotionSection from '@/components/motion/MotionSection';
         </a>
       </MotionSection>
     </div>
-  </ClientLayout>
+  </PageLayout>
 </Layout>

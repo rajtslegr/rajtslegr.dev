@@ -28,18 +28,12 @@ const NavLink = ({
       ? pathname?.split('/')[1] === String(href).split('/')[1]
       : false;
 
-  const handleClick = () => {
-    if (onClick) {
-      onClick();
-    }
-  };
-
   return (
     <a
       href={href}
       target={target}
       rel={rel}
-      onClick={handleClick}
+      onClick={onClick}
       className={clsx(
         'relative duration-200 motion-safe:transition-all',
         isRouteActive

@@ -21,6 +21,6 @@
     },
     "types": ["astro/client"]
   },
-  "include": ["src/**/*", "scripts/**/*", ".astro/types.d.ts"],
+  "include": ["src/**/*", ".astro/types.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

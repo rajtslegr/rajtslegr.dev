@@ -1,6 +1,6 @@
 ---
 import BlogContent from '@/components/blog/BlogContent';
-import ClientLayout from '@/components/layout/ClientLayout';
+import PageLayout from '@/components/layout/Layout';
 import { getSortedPostsData } from '@/lib/posts';
 import Layout from '@/layouts/Layout.astro';
 
@@ -11,7 +11,7 @@ const allPostsData = await getSortedPostsData();
   title="Blog | Petr Rajtslegr"
   description="Thoughts on software development, design, and more."
 >
-  <ClientLayout pathname="/blog" client:load>
+  <PageLayout pathname="/blog" client:load>
     <BlogContent allPostsData={allPostsData} client:load />
-  </ClientLayout>
+  </PageLayout>
 </Layout>

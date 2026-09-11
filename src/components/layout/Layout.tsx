@@ -5,7 +5,6 @@ import Footer from '@/components/layout/Footer';
 import DashboardNav from '@/components/navigation/DashboardNav';
 import MobileNavigation from '@/components/navigation/MobileNavigation';
 import NavBar from '@/components/navigation/NavBar';
-import { useScrollBlock } from '@/hooks/useScrollBlock';
 
 interface LayoutProps {
   children: ReactNode;
@@ -16,7 +15,6 @@ const Layout = ({ children, pathname }: LayoutProps) => {
   const [showMobileNavigation, setShowMobileNavigation] = useState(false);
   const [isNavigationTransitioning, setIsNavigationTransitioning] =
     useState(false);
-  const [blockScroll, allowScroll] = useScrollBlock();
   const isDashboard = pathname === '/dashboard';
 
   const navButtonClickHandler = (): void => {
@@ -25,7 +23,6 @@ const Layout = ({ children, pathname }: LayoutProps) => {
     } else {
       window.scrollTo({ top: 0 });
       setShowMobileNavigation(true);
-      blockScroll();
     }
   };
 
@@ -41,13 +38,21 @@ const Layout = ({ children, pathname }: LayoutProps) => {
     const timer = setTimeout(() => {
       setShowMobileNavigation(false);
       setIsNavigationTransitioning(false);
-      allowScroll();
     }, 300);
 
     return () => {
       clearTimeout(timer);
     };
-  }, [isNavigationTransitioning, allowScroll]);
+  }, [isNavigationTransitioning]);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root.classList.toggle('scroll-locked', showMobileNavigation);
+
+    return () => {
+      root.classList.remove('scroll-locked');
+    };
+  }, [showMobileNavigation]);
 
   return (
     <div className="flex min-h-screen flex-col bg-white text-gray-700 dark:bg-black dark:text-gray-200">
@@ -65,7 +70,7 @@ const Layout = ({ children, pathname }: LayoutProps) => {
       )}
       {isDashboard && <DashboardNav />}
       <div className="background-gradient mx-auto w-full max-w-[75ch] flex-auto px-4 py-8 md:py-10">
-        {children}
+        <main>{children}</main>
       </div>
       {!showMobileNavigation && <Footer />}
     </div>

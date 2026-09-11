@@ -1,13 +1,10 @@
-import clsx from 'clsx';
-
 import type { Photo } from '@/types/entities';
 
 interface PhotoItemProps {
   photo: Photo;
-  index: number;
 }
 
-const PhotoItem = ({ photo, index }: PhotoItemProps) => (
+const PhotoItem = ({ photo }: PhotoItemProps) => (
   <a
     href={photo.url}
     rel="noopener noreferrer"
@@ -16,10 +13,7 @@ const PhotoItem = ({ photo, index }: PhotoItemProps) => (
   >
     <div className="relative aspect-square overflow-hidden">
       <img
-        className={clsx(
-          'h-full w-full object-cover transition-transform duration-500 group-hover:scale-105',
-          index === 0 && 'md:size-full',
-        )}
+        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         src={photo.src.medium.url}
         alt={photo.title}
         title={photo.title}

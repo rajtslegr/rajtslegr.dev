@@ -1,5 +1,3 @@
-import type { MouseEventHandler } from 'react';
-
 import clsx from 'clsx';
 
 import MotionSection from '../motion/MotionSection';
@@ -7,7 +5,7 @@ import NavigationButton from '@/components/navigation/NavigationButton';
 import NavLink from '@/components/navigation/NavLink';
 
 interface MobileNavigationProps {
-  handleClick: MouseEventHandler<HTMLButtonElement>;
+  handleClick: () => void;
   isTransitioning?: boolean;
   pathname: string;
 }
@@ -17,12 +15,6 @@ const MobileNavigation = ({
   isTransitioning = false,
   pathname,
 }: MobileNavigationProps) => {
-  const handleLinkClick = () => {
-    if (handleClick) {
-      handleClick({} as React.MouseEvent<HTMLButtonElement>);
-    }
-  };
-
   return (
     <div
       className={clsx(
@@ -41,7 +33,7 @@ const MobileNavigation = ({
           <NavLink
             href="/"
             isMobileNavigation
-            onClick={handleLinkClick}
+            onClick={handleClick}
             pathname={pathname}
           >
             Home
@@ -51,7 +43,7 @@ const MobileNavigation = ({
           <NavLink
             href="/dashboard"
             isMobileNavigation
-            onClick={handleLinkClick}
+            onClick={handleClick}
             pathname={pathname}
           >
             Dashboard
@@ -61,7 +53,7 @@ const MobileNavigation = ({
           <NavLink
             href="/work"
             isMobileNavigation
-            onClick={handleLinkClick}
+            onClick={handleClick}
             pathname={pathname}
           >
             Work
@@ -71,7 +63,7 @@ const MobileNavigation = ({
           <NavLink
             href="/blog"
             isMobileNavigation
-            onClick={handleLinkClick}
+            onClick={handleClick}
             pathname={pathname}
           >
             Blog
@@ -83,7 +75,7 @@ const MobileNavigation = ({
             target="_blank"
             rel="noopener noreferrer"
             isMobileNavigation
-            onClick={handleLinkClick}
+            onClick={handleClick}
             pathname={pathname}
           >
             Photos
@@ -93,7 +85,7 @@ const MobileNavigation = ({
           <NavLink
             href="/contact"
             isMobileNavigation
-            onClick={handleLinkClick}
+            onClick={handleClick}
             pathname={pathname}
           >
             Contact

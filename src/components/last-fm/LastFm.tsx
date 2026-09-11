@@ -41,11 +41,9 @@ const LastFm = () => {
         Last.fm
       </h2>
       <div className="grid gap-4 md:grid-cols-2">
-        {data.recenttracks.track
-          ?.filter((_track, index) => index < 6)
-          .map((track) => (
-            <LastFmItem key={track?.date?.uts || 0} track={track} />
-          ))}
+        {data.recenttracks.track.map((track) => (
+          <LastFmItem key={track?.date?.uts || 0} track={track} />
+        ))}
       </div>
     </div>
   );

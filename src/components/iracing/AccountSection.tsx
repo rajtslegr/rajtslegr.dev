@@ -1,4 +1,4 @@
-import type { IRacingAccountsResponse, IRacingRating } from '@/types/entities';
+import type { IRacingAccountsResponse } from '@/types/entities';
 
 interface AccountSectionProps {
   accountsData?: IRacingAccountsResponse;
@@ -34,16 +34,9 @@ const AccountSection = ({ accountsData }: AccountSectionProps) => {
     return 0;
   });
 
-  const categoryGroups: Record<string, IRacingRating[]> = {};
-  sortedRatings?.forEach((rating) => {
-    const category = rating.category.toLowerCase().includes('sports')
-      ? 'sports'
-      : 'formula';
-    if (!categoryGroups[category]) {
-      categoryGroups[category] = [];
-    }
-    categoryGroups[category].push(rating);
-  });
+  const categoryGroups = Object.groupBy(sortedRatings ?? [], (rating) =>
+    rating.category.toLowerCase().includes('sports') ? 'sports' : 'formula',
+  );
 
   const formatCategory = (category: string) => {
     return category === 'sports' ? 'Sports Car' : 'Formula Car';
@@ -68,7 +61,7 @@ const AccountSection = ({ accountsData }: AccountSectionProps) => {
 
   return (
     <div className="grid gap-3 sm:grid-cols-2">
-      {Object.entries(categoryGroups).map(([category, ratings]) => {
+      {Object.entries(categoryGroups).map(([category, ratings = []]) => {
         const iRating = ratings.find((r) => !r.ratingDisplayAs.includes(' '));
         const safetyRating = ratings.find((r) =>
           r.ratingDisplayAs.includes(' '),

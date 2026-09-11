@@ -1,37 +1,15 @@
 export interface Photo {
   id: string;
   title: string;
-  description: string;
   url: string;
-  make: string;
-  model: string;
-  tags?: string[];
-  takenAtNaive: string;
   src: {
-    small: {
-      url: string;
-      width: number;
-      height: number;
-    };
     medium: {
       url: string;
-      width: number;
-      height: number;
-    };
-    large: {
-      url: string;
-      width: number;
-      height: number;
     };
   };
 }
 
 export interface PhotosData {
-  meta: {
-    title: string;
-    url: string;
-    description: string;
-  };
   photos: Photo[];
 }
 
@@ -46,10 +24,9 @@ export interface GitHubData {
 
 export interface LastFmTrack {
   '@attr'?: { nowplaying: boolean };
-  mbid: string;
   url: string;
   name: string;
-  date: { uts: string; '#text': string };
+  date: { uts: string };
   album: { '#text': string };
   artist: { '#text': string };
   image: { '#text': string }[];
@@ -93,70 +70,19 @@ export interface TimelineData {
 
 export interface Activity {
   id: number;
-  resource_state: number;
-  external_id: string | null;
-  upload_id: number | null;
-  athlete: Athlete;
   name: string;
   distance: number;
   moving_time: number;
-  elapsed_time: number;
   total_elevation_gain: number;
   type: string;
-  sport_type: string;
-  start_date: string;
-  start_date_local: string;
-  timezone: string;
-  utc_offset: number;
-  achievement_count: number;
-  kudos_count: number;
-  comment_count: number;
-  athlete_count: number;
-  photo_count: number;
-  map: Map;
-  trainer: boolean;
-  commute: boolean;
-  manual: boolean;
-  private: boolean;
-  flagged: boolean;
-  gear_id: string;
-  from_accepted_tag: boolean | null;
   average_speed: number;
   average_heartrate: number;
-  average_watts: number;
-  max_speed: number;
-  device_watts: boolean;
-  has_heartrate: boolean;
-  pr_count: number;
-  total_photo_count: number;
-  has_kudoed: boolean;
-  workout_type: number | null;
-  description: string | null;
-  calories: number;
-  segment_efforts: unknown[];
-}
-
-export interface Athlete {
-  id: number;
-  resource_state: number;
-}
-
-export interface Map {
-  id: string;
-  polyline: string;
-  resource_state: number;
+  private: boolean;
 }
 
 export interface IRacingRating {
   category: string;
   type: string;
-  rating: number;
-  ratingDisplayAs: string;
-  history?: IRacingRatingHistory[];
-}
-
-export interface IRacingRatingHistory {
-  date: string;
   rating: number;
   ratingDisplayAs: string;
 }

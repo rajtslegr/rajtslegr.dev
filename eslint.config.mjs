@@ -52,7 +52,7 @@ export default defineConfig(
 
   // CommonJS config files at project root
   {
-    files: ['tailwind.config.js', 'postcss.config.js', 'lint-staged.config.js'],
+    files: ['lint-staged.config.js'],
     languageOptions: {
       globals: {
         module: 'readonly',

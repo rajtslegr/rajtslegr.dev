@@ -1,12 +1,12 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import ClientLayout from '@/components/layout/ClientLayout';
+import PageLayout from '@/components/layout/Layout';
 import ContactForm from '@/components/form/ContactForm';
 import MotionSection from '@/components/motion/MotionSection';
 ---
 
 <Layout title="Contact | Petr Rajtslegr">
-  <ClientLayout pathname="/contact" client:load>
+  <PageLayout pathname="/contact" client:load>
     <MotionSection client:load>
       <h1
         class="mb-8 inline-block font-normal tracking-tight text-black dark:text-white md:mb-12"
@@ -23,5 +23,5 @@ import MotionSection from '@/components/motion/MotionSection';
         <ContactForm client:load />
       </div>
     </MotionSection>
-  </ClientLayout>
+  </PageLayout>
 </Layout>

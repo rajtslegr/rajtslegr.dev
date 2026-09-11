@@ -1,7 +1,7 @@
 ---
 import { getEntry, render } from 'astro:content';
 
-import ClientLayout from '@/components/layout/ClientLayout';
+import PageLayout from '@/components/layout/Layout';
 import PostLayout from '@/components/post/PostLayout.astro';
 import { getAllPostIds } from '@/lib/posts';
 import Layout from '@/layouts/Layout.astro';
@@ -27,11 +27,11 @@ const { title, description, date, image } = post.data;
   article={true}
   publishedTime={date.toISOString()}
 >
-  <ClientLayout pathname={`/blog/${id}`} client:load>
+  <PageLayout pathname={`/blog/${id}`} client:load>
     <PostLayout title={title} date={date} image={image}>
       <article class="prose dark:prose-invert max-w-none">
         <Content />
       </article>
     </PostLayout>
-  </ClientLayout>
+  </PageLayout>
 </Layout>

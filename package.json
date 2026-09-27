@@ -26,7 +26,7 @@
     "@fontsource-variable/inter": "^5.2.7",
     "@formspree/react": "3.0.0",
     "@heroicons/react": "2.2.0",
-    "astro": "7.3.4",
+    "astro": "7.3.5",
     "clsx": "2.1.1",
     "date-fns": "4.4.0",
     "react": "19.3.0",

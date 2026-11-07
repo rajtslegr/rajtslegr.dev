@@ -206,8 +206,8 @@ importers:
         specifier: 1.5.0
         version: 1.5.0
       rehype-pretty-code:
-        specifier: 0.14.5
-        version: 0.14.5(shiki@4.5.0)
+        specifier: 0.14.6
+        version: 0.14.6(shiki@4.5.0)
     devDependencies:
       '@astrojs/markdown-remark':
         specifier: 7.3.5
@@ -3447,8 +3447,8 @@ packages:
   rehype-parse@9.0.1:
     resolution: {integrity: sha512-ksCzCD0Fgfh7trPDxr2rSylbwq9iYDkSn8TCDmEJ49ljEUBxDVCzCHv7QNzZOfODanX4+bWQ4WZqLCRWYLfhag==}
 
-  rehype-pretty-code@0.14.5:
-    resolution: {integrity: sha512-+DhMMNMgOwmE0xu2RmagN63nR0GRObPIQ9TuoNdUYYIDcCr8nWXU1CJUG6yca7vg99Gp5d+62A/+ZvksmsQXjA==}
+  rehype-pretty-code@0.14.6:
+    resolution: {integrity: sha512-kyBmvUaB6zAtcO6O0YhMNoPQZNX0iMkQ0f9dCM3mOKG4VN+fq4QVjvOhtrppkaZOSm5zOm2kGoYVxYb+3eQyRQ==}
     engines: {node: '>=18'}
     peerDependencies:
       shiki: ^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0
@@ -7874,7 +7874,7 @@ snapshots:
       hast-util-from-html: 2.0.3
       unified: 11.0.5
 
-  rehype-pretty-code@0.14.5(shiki@4.5.0):
+  rehype-pretty-code@0.14.6(shiki@4.5.0):
     dependencies:
       '@types/hast': 3.0.5
       hast-util-to-string: 3.0.1

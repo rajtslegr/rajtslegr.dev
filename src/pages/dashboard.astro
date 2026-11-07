@@ -8,6 +8,7 @@ export const prerender = false;
 import { getRecentRepos } from '@/lib/github';
 import { getRecentPhotos } from '@/lib/photos';
 import { getActivities } from '@/lib/strava';
+import { STRAVA_ENABLED } from '@/components/strava/constants';
 import {
   getCars,
   getDrivingStatistics,
@@ -48,7 +49,7 @@ const [
 ] = (await Promise.all([
   settle(getRecentRepos()),
   settle(getRecentPhotos()),
-  settle(getActivities()),
+  STRAVA_ENABLED ? settle(getActivities()) : undefined,
   settle(getLinkedAccounts()),
   settle(getDrivingStatistics(startDate)),
   settle(getCars()),

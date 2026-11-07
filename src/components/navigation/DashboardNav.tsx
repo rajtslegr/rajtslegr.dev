@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 
 import clsx from 'clsx';
 
+import { STRAVA_ENABLED } from '@/components/strava/constants';
+
 interface DashboardNavProps {
   className?: string;
 }
@@ -13,6 +15,10 @@ const sections = [
   { id: 'iracing', label: 'iRacing' },
   { id: 'github', label: 'GitHub' },
 ] as const;
+
+const visibleSections = STRAVA_ENABLED
+  ? sections
+  : sections.filter(({ id }) => id !== 'strava');
 
 const DashboardNav = ({ className }: DashboardNavProps) => {
   const [activeSection, setActiveSection] = useState('photos');
@@ -65,7 +71,7 @@ const DashboardNav = ({ className }: DashboardNavProps) => {
     >
       <div className="flex size-full items-center justify-center">
         <div className="mx-auto flex size-full max-w-[75ch] items-center justify-between px-4 md:justify-start md:space-x-6">
-          {sections.map(({ id, label }) => (
+          {visibleSections.map(({ id, label }) => (
             <a
               key={id}
               href={`#${id}`}

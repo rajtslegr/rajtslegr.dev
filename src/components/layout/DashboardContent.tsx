@@ -3,6 +3,7 @@ import IRacing from '@/components/iracing/IRacing';
 import LastFm from '@/components/last-fm/LastFm';
 import MotionSection from '@/components/motion/MotionSection';
 import Photos from '@/components/photos/Photos';
+import { STRAVA_ENABLED } from '@/components/strava/constants';
 import Strava from '@/components/strava/Strava';
 import type {
   Activity,
@@ -53,11 +54,13 @@ export default function DashboardContent({
             <LastFm />
           </MotionSection>
         </div>
-        <div id="strava">
-          <MotionSection delay={0.3}>
-            <Strava data={stravaData} />
-          </MotionSection>
-        </div>
+        {STRAVA_ENABLED && (
+          <div id="strava">
+            <MotionSection delay={0.3}>
+              <Strava data={stravaData} />
+            </MotionSection>
+          </div>
+        )}
         <div id="iracing">
           <MotionSection delay={0.4}>
             <IRacing

@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import { unified } from '@astrojs/markdown-remark';
 import rehypePrettyCode from 'rehype-pretty-code';
 import sitemap from '@astrojs/sitemap';
-import vercel from '@astrojs/vercel';
+import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
   site: 'https://rajtslegr.dev',
@@ -13,7 +13,8 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   output: 'static',
-  adapter: vercel(),
+  adapter: cloudflare(),
+  session: false,
   markdown: {
     syntaxHighlight: false,
     processor: unified({

@@ -12,6 +12,10 @@
 !.env.example
 public/sitemap.xml
 
+# Cloudflare
+/.wrangler
+.dev.vars*
+
 # test
 /coverage
 

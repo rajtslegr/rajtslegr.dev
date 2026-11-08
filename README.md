@@ -4,7 +4,7 @@
 [![CI](https://github.com/rajtslegr/rajtslegr.dev/actions/workflows/CI.yml/badge.svg)](https://github.com/rajtslegr/rajtslegr.dev/actions/workflows/CI.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Personal portfolio website and blog built with Astro and React islands. Statically generated and deployed on Vercel.
+Personal portfolio website and blog built with Astro and React islands. Statically generated and deployed on Cloudflare Workers.
 
 ## Tech Stack
 
@@ -16,7 +16,7 @@ Personal portfolio website and blog built with Astro and React islands. Statical
 - **Fonts**: Self-hosted Inter via [Fontsource](https://fontsource.org/)
 - **Form Handling**: [Formspree](https://formspree.io/)
 - **Theme**: Custom `useTheme` hook (localStorage-based with system preference detection)
-- **Deployment**: [Vercel](https://vercel.com/) (hybrid output: static pages + on-demand dashboard)
+- **Deployment**: [Cloudflare Workers](https://workers.cloudflare.com/) via `@astrojs/cloudflare` (`wrangler.jsonc`; static pages prerendered, `/dashboard` rendered on demand)
 - **Package Manager**: [pnpm](https://pnpm.io/)
 
 ## Project Structure
@@ -79,6 +79,7 @@ src/
 | `pnpm dev`        | Start Astro dev server                       |
 | `pnpm build`      | Build site for production                    |
 | `pnpm preview`    | Preview the production build locally         |
+| `pnpm cf:deploy`     | Build and deploy to Cloudflare Workers       |
 | `pnpm type-check` | Run Astro check and TypeScript type checking |
 | `pnpm lint`       | Run ESLint                                   |
 | `pnpm lint:fix`   | Auto-fix linting issues                      |
@@ -90,10 +91,26 @@ The `/dashboard` page aggregates data from several external services:
 | Integration | Fetch Strategy          | Env Variables                                                      |
 | ----------- | ----------------------- | ------------------------------------------------------------------ |
 | **Last.fm** | Client-side (polling)   | `PUBLIC_LASTFM_API_KEY`                                            |
-| **Strava**  | On request (ISR cache)  | `STRAVA_CLIENT_ID`, `STRAVA_CLIENT_SECRET`, `STRAVA_REFRESH_TOKEN` |
-| **iRacing** | On request (ISR cache)  | `GARAGE61_API_KEY`                                                 |
-| **GitHub**  | On request (ISR cache)  | --                                                                 |
-| **Photos**  | On request (ISR cache)  | --                                                                 |
+| **Strava**  | On request (edge cache) | `STRAVA_CLIENT_ID`, `STRAVA_CLIENT_SECRET`, `STRAVA_REFRESH_TOKEN` |
+| **iRacing** | On request (edge cache) | `GARAGE61_API_KEY`                                                 |
+| **GitHub**  | On request (edge cache) | --                                                                 |
+| **Photos**  | On request (edge cache) | --                                                                 |
+
+## Deployment
+
+Deployed to Cloudflare Workers. `/dashboard` runs on demand in the Worker; every other route is
+prerendered into `dist/client` and served as static assets.
+
+```bash
+pnpm build          # produces dist/client (assets) + dist/server (Worker)
+pnpm wrangler dev   # local preview of the real Worker runtime
+pnpm cf:deploy
+```
+
+Build-time env vars (see table above) are required — the dashboard's API credentials are inlined
+into the server bundle during `astro build`, which is why CI sets them as GitHub secrets. For plain
+`wrangler dev` / `wrangler deploy` without a build, put them in `.dev.vars` locally or use
+`wrangler secret put <NAME>` for the deployed Worker.
 
 ## Features
 

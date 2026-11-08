@@ -10,9 +10,6 @@ const Footer = () => {
         <div className="grid w-full grid-cols-3 gap-x-8 gap-y-6">
           <div className="flex flex-col items-center space-y-3">
             <NavLink href="/">Home</NavLink>
-            <NavLink href="/dashboard">Dashboard</NavLink>
-            <NavLink href="/work">Work</NavLink>
-            <NavLink href="/blog">Blog</NavLink>
             <NavLink href="/contact">Contact</NavLink>
           </div>
           <div className="flex flex-col items-center space-y-3">

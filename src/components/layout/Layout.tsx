@@ -2,7 +2,6 @@ import type { ReactNode } from 'react';
 import { useState, useEffect } from 'react';
 
 import Footer from '@/components/layout/Footer';
-import DashboardNav from '@/components/navigation/DashboardNav';
 import MobileNavigation from '@/components/navigation/MobileNavigation';
 import NavBar from '@/components/navigation/NavBar';
 
@@ -15,7 +14,6 @@ const Layout = ({ children, pathname }: LayoutProps) => {
   const [showMobileNavigation, setShowMobileNavigation] = useState(false);
   const [isNavigationTransitioning, setIsNavigationTransitioning] =
     useState(false);
-  const isDashboard = pathname === '/dashboard';
 
   const navButtonClickHandler = (): void => {
     if (showMobileNavigation) {
@@ -68,7 +66,6 @@ const Layout = ({ children, pathname }: LayoutProps) => {
           pathname={pathname}
         />
       )}
-      {isDashboard && <DashboardNav />}
       <div className="background-gradient mx-auto w-full max-w-[75ch] flex-auto px-4 py-8 md:py-10">
         <main>{children}</main>
       </div>

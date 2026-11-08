@@ -2,7 +2,6 @@ import type { MouseEventHandler } from 'react';
 
 import clsx from 'clsx';
 
-import ProgressBar from '../post/ProgressBar';
 import ThemeButton from '@/components/buttons/ThemeButton';
 import NavigationButton from '@/components/navigation/NavigationButton';
 import NavLink from '@/components/navigation/NavLink';
@@ -23,9 +22,6 @@ const NavBar = ({
   const { resolvedTheme, setTheme } = useTheme();
   const onTop = useOnTop();
 
-  const isBlogPostRoute =
-    pathname?.startsWith('/blog/') && pathname !== '/blog';
-
   return (
     <nav
       className={clsx(
@@ -43,15 +39,6 @@ const NavBar = ({
         <div className="hidden h-full sm:flex sm:items-center sm:space-x-6">
           <NavLink href="/" isHeader={true} pathname={pathname}>
             Home
-          </NavLink>
-          <NavLink href="/dashboard" isHeader={true} pathname={pathname}>
-            Dashboard
-          </NavLink>
-          <NavLink href="/work" isHeader={true} pathname={pathname}>
-            Work
-          </NavLink>
-          <NavLink href="/blog" isHeader={true} pathname={pathname}>
-            Blog
           </NavLink>
           <NavLink
             href="https://photos.rajtslegr.dev/"
@@ -75,7 +62,6 @@ const NavBar = ({
           />
         </div>
       </div>
-      {isBlogPostRoute && <ProgressBar />}
     </nav>
   );
 };

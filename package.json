@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "@astrojs/check": "0.9.12",
-    "@astrojs/cloudflare": "^14.4.6",
     "@astrojs/react": "7.1.2",
     "@astrojs/sitemap": "3.7.4",
     "@fontsource-variable/inter": "^5.2.7",
@@ -29,16 +28,11 @@
     "@heroicons/react": "2.2.0",
     "astro": "7.4.5",
     "clsx": "2.1.1",
-    "date-fns": "4.4.0",
     "react": "19.3.1",
-    "react-dom": "19.3.1",
-    "reading-time": "1.5.0",
-    "rehype-pretty-code": "0.14.6"
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
-    "@astrojs/markdown-remark": "7.3.5",
     "@eslint/js": "10.0.1",
-    "@tailwindcss/typography": "0.5.20",
     "@tailwindcss/vite": "4.3.4",
     "@types/node": "26.6.6",
     "@types/react": "19.3.0",

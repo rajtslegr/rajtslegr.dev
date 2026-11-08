@@ -41,36 +41,6 @@ const MobileNavigation = ({
         </MotionSection>
         <MotionSection delay={0.1}>
           <NavLink
-            href="/dashboard"
-            isMobileNavigation
-            onClick={handleClick}
-            pathname={pathname}
-          >
-            Dashboard
-          </NavLink>
-        </MotionSection>
-        <MotionSection delay={0.2}>
-          <NavLink
-            href="/work"
-            isMobileNavigation
-            onClick={handleClick}
-            pathname={pathname}
-          >
-            Work
-          </NavLink>
-        </MotionSection>
-        <MotionSection delay={0.3}>
-          <NavLink
-            href="/blog"
-            isMobileNavigation
-            onClick={handleClick}
-            pathname={pathname}
-          >
-            Blog
-          </NavLink>
-        </MotionSection>
-        <MotionSection delay={0.4}>
-          <NavLink
             href="https://photos.rajtslegr.dev/"
             target="_blank"
             rel="noopener noreferrer"
@@ -81,7 +51,7 @@ const MobileNavigation = ({
             Photos
           </NavLink>
         </MotionSection>
-        <MotionSection delay={0.5}>
+        <MotionSection delay={0.2}>
           <NavLink
             href="/contact"
             isMobileNavigation

@@ -1,39 +1,33 @@
 # [rajtslegr.dev](https://rajtslegr.dev/)
 
-![Vercel Deployment Status](https://therealsujitk-vercel-badge.vercel.app/?app=rajtslegr-com-git-main-rajcep)
 [![CI](https://github.com/rajtslegr/rajtslegr.dev/actions/workflows/CI.yml/badge.svg)](https://github.com/rajtslegr/rajtslegr.dev/actions/workflows/CI.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Personal portfolio website and blog built with Astro and React islands. Statically generated and deployed on Cloudflare Workers.
+Personal portfolio site built with Astro and React islands. Fully static, deployed on Cloudflare Workers.
 
 ## Tech Stack
 
 - **Framework**: [Astro 7](https://astro.build/) with [React 19](https://react.dev/) islands
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
-- **Content**: Markdown blog posts via Content Collections with [rehype-pretty-code](https://github.com/rehype-pretty/rehype-pretty-code) syntax highlighting
 - **Animations**: CSS (scroll-reveal entrance animations, `prefers-reduced-motion` aware)
 - **Fonts**: Self-hosted Inter via [Fontsource](https://fontsource.org/)
 - **Form Handling**: [Formspree](https://formspree.io/)
 - **Theme**: Custom `useTheme` hook (localStorage-based with system preference detection)
-- **Deployment**: [Cloudflare Workers](https://workers.cloudflare.com/) via `@astrojs/cloudflare` (`wrangler.jsonc`; static pages prerendered, `/dashboard` rendered on demand)
+- **Deployment**: [Cloudflare Workers](https://workers.cloudflare.com/) static assets (`wrangler.jsonc`, serves `./dist`)
 - **Package Manager**: [pnpm](https://pnpm.io/)
 
 ## Project Structure
 
 ```
 src/
-├── components/      # React components hydrated as islands (client:load / client:visible)
-├── content/
-│   └── blog/        # Markdown blog post files (Content Collections)
-├── content.config.ts # Zod schema for blog posts
-├── hooks/           # Custom React hooks (useTheme, useOnTop, useScrollBlock)
+├── components/      # React components hydrated as islands (client:load)
+├── data/            # Timeline content
+├── hooks/           # Custom React hooks (useTheme, useOnTop, useIsMounted)
 ├── layouts/         # Layout.astro — main HTML shell with meta, OG tags, theme script
-├── lib/             # Data fetching (GitHub, Strava, iRacing, Last.fm, photos, posts)
-├── pages/           # Astro pages (.astro) that compose React components
-├── styles/          # Global styles and code highlight theme
-├── types/           # TypeScript type definitions
-└── utils/           # Helper functions
+├── pages/           # Astro pages (.astro): index, contact, 404
+├── styles/          # Global styles
+└── types/           # TypeScript type definitions
 ```
 
 ## Getting Started
@@ -58,19 +52,13 @@ src/
    pnpm install
    ```
 
-3. Create a `.env` file from the example:
-
-   ```bash
-   cp .env.example .env
-   ```
-
-4. Start the development server:
+3. Start the development server:
 
    ```bash
    pnpm dev
    ```
 
-5. Open [http://localhost:4321](http://localhost:4321) in your browser.
+4. Open [http://localhost:4321](http://localhost:4321) in your browser.
 
 ## Available Scripts
 
@@ -79,45 +67,28 @@ src/
 | `pnpm dev`        | Start Astro dev server                       |
 | `pnpm build`      | Build site for production                    |
 | `pnpm preview`    | Preview the production build locally         |
-| `pnpm cf:deploy`     | Build and deploy to Cloudflare Workers       |
+| `pnpm cf:deploy`  | Build and deploy to Cloudflare Workers       |
 | `pnpm type-check` | Run Astro check and TypeScript type checking |
 | `pnpm lint`       | Run ESLint                                   |
 | `pnpm lint:fix`   | Auto-fix linting issues                      |
 
-## Dashboard Integrations
-
-The `/dashboard` page aggregates data from several external services:
-
-| Integration | Fetch Strategy          | Env Variables                                                      |
-| ----------- | ----------------------- | ------------------------------------------------------------------ |
-| **Last.fm** | Client-side (polling)   | `PUBLIC_LASTFM_API_KEY`                                            |
-| **Strava**  | On request (edge cache) | `STRAVA_CLIENT_ID`, `STRAVA_CLIENT_SECRET`, `STRAVA_REFRESH_TOKEN` |
-| **iRacing** | On request (edge cache) | `GARAGE61_API_KEY`                                                 |
-| **GitHub**  | On request (edge cache) | --                                                                 |
-| **Photos**  | On request (edge cache) | --                                                                 |
-
 ## Deployment
 
-Deployed to Cloudflare Workers. `/dashboard` runs on demand in the Worker; every other route is
-prerendered into `dist/client` and served as static assets.
+Every route is prerendered into `dist/` and served as static assets by Cloudflare Workers.
+Cloudflare's Workers Builds pipeline runs `pnpm run build` then `npx wrangler deploy`.
 
 ```bash
-pnpm build          # produces dist/client (assets) + dist/server (Worker)
-pnpm wrangler dev   # local preview of the real Worker runtime
+pnpm build             # static output in dist/
+pnpm wrangler dev      # local preview against the real Workers runtime
 pnpm cf:deploy
 ```
 
-Build-time env vars (see table above) are required — the dashboard's API credentials are inlined
-into the server bundle during `astro build`, which is why CI sets them as GitHub secrets. For plain
-`wrangler dev` / `wrangler deploy` without a build, put them in `.dev.vars` locally or use
-`wrangler secret put <NAME>` for the deployed Worker.
+No environment variables are required.
 
 ## Features
 
 - Static site generation with Astro islands architecture
 - Dark/light mode with system preference detection
-- Blog with markdown content and syntax-highlighted code blocks
-- Dashboard with live Last.fm data and ISR-cached Strava, iRacing, and GitHub stats
 - Responsive design for all device sizes
 - Contact form via Formspree
 - SEO optimized with sitemap generation

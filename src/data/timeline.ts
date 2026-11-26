@@ -5,7 +5,7 @@ export const timelineData: TimelineData[] = [
     timeRange: '2025 - Present',
     job: 'Full Stack Developer at Prusa Research',
     description:
-      'Working in the Prusa Connect team, developing and maintaining cloud-based solutions for 3D printing management. Contributing to the development of scalable and reliable services that enable users to monitor and control their 3D printers remotely.',
+      "Developing web applications and backend services in the Prusa Connect team for remote 3D printer management, from printer control and material tracking to print farm workflows. Contributing to Prusa's open-source projects, including the self-hosted Prusa Connect server and OpenPrintTag.",
   },
   {
     timeRange: '2021 - 2025',
